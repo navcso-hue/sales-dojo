@@ -219,7 +219,12 @@ const MODE_INFO = {
   myths: { name: "Myth or Proven", desc: "Spot the bluff: which popular sales and marketing claims hold up?", max: 8, run: startMyths },
   xray: { name: "Company X-Ray", desc: "Read a real company like a top SDR: fit, timing, who to call, the angle.", max: null, run: startXray },
   copy: { name: "Ad & Copy Lab", desc: "Name the principle, fix a weak line, write a hook.", max: null, run: startCopyLab },
+  mentor: { name: "Mentors", desc: "Voice sessions with AI mentors modelled on Hormozi, Voss, Blount, Rackham, Dunford, Ogilvy, Sharp and Sutherland.", run: () => renderMentors(), label: () => `${play.count.mentor || 0} sessions` },
+  debate: { name: "1v1 Debate", desc: "Argue a sales or marketing motion out loud against an AI opponent. Judged on logic, evidence and rebuttal.", run: () => openDebate(), label: () => `${play.debates?.won || 0} wins` },
+  strategy: { name: "Strategy Room", desc: "A real company and a business case. Present your plan, then the CMO and CFO grill you.", run: () => openStrategy(), label: () => `${play.strategy?.approve || 0} approved` },
+  warmup: { name: "Articulation Warm-up", desc: "60-second no-filler talk, say-it-stronger, your phrase bank, and the pen drill.", run: () => openWarmup(), label: () => (play.best.warmup != null ? `best ${play.best.warmup}/10` : "new") },
 };
+const VOICE_MODES = ["mentor", "debate", "strategy", "warmup"];
 function recordPlay(mode, score) {
   play.count[mode] = (play.count[mode] || 0) + 1;
   const isBest = score > (play.best[mode] ?? -1);
@@ -251,10 +256,11 @@ function finishPlay(s) {
 function renderPlay() {
   const list = $("#playList"); list.innerHTML = "";
   for (const [id, m] of Object.entries(MODE_INFO)) {
+    if (id === VOICE_MODES[0]) list.append(el("h3", null, "Voice rooms"));
     const card = el("button", "card sc");
     const row = el("div", "row");
     const best = play.best[id];
-    row.append(el("span", "co", m.name), el("span", "note", best != null ? `best ${best}${m.max ? "/" + m.max : ""}` : "new"));
+    row.append(el("span", "co", m.name), el("span", "note", m.label ? m.label() : best != null ? `best ${best}${m.max ? "/" + m.max : ""}` : "new"));
     card.append(row, el("div", "who", m.desc));
     if (id === "maths") card.append(el("div", "note", `Level ${play.mathLevel} of 5`));
     card.onclick = () => m.run();

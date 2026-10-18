@@ -175,6 +175,16 @@ textarea{width:100%;font:inherit;color:var(--text);background:var(--bg);border:1
 .holdbtn.on{background:#FFD166;color:#3A2A00}
 .stars{color:var(--warn);font-size:18px;letter-spacing:2px}
 .row2{display:flex;justify-content:flex-end}
+ul.plain{margin:6px 0 0 18px;color:var(--muted)}
+ul.plain li+li{margin-top:6px}
+.callcard.boss{border-color:#5A4A1F}
+.callcard.boss .num{background:#3A2E12;color:var(--warn);border-color:transparent}
+.btn.rec{background:var(--danger);color:#fff;border-color:transparent}
+.warmres{margin-top:14px}
+#mentorList .card+.card{margin-top:12px}
+#mentorList .co{font-weight:700;font-size:17px}
+#warmBody .co{font-weight:700;font-size:17px}
+.ins{color:var(--accent)}
 </style>
 </head>
 <body>
@@ -201,13 +211,14 @@ textarea{width:100%;font:inherit;color:var(--text);background:var(--bg);border:1
   <div id="installHint" class="banner" hidden>For the full-screen app: tap <b>Share → Add to Home Screen</b>. You'll paste your key once more there.</div>
   <div class="stats">
     <div class="stat"><div class="n" id="stStreak">0</div><div class="l">day streak</div></div>
-    <div class="stat"><div class="n" id="stLevel">3.0</div><div class="l">level</div></div>
+    <div class="stat"><div class="n" id="stLevel">3.0</div><div class="l" id="stTier">Silver</div></div>
     <div class="stat"><div class="n" id="stDone">0/5</div><div class="l">calls today</div></div>
   </div>
   <div class="progressbar"><i id="dayBar" style="width:0"></i></div>
   <div id="todayLearn"></div>
   <h3>The Gauntlet</h3>
   <div class="calls" id="callList"></div>
+  <div id="bossBox" style="margin-top:10px"></div>
   <div id="todayMsg" class="note" style="margin-top:10px"></div>
   <div id="coachBox"></div>
   <button class="btn primary" id="nextCallBtn" style="margin-top:16px">Start next call</button>
@@ -248,6 +259,37 @@ textarea{width:100%;font:inherit;color:var(--text);background:var(--bg);border:1
 <section id="rapid" class="view" hidden>
   <div class="top"><button class="btn small" id="rapidBack">✕</button><div class="note">Rapid Fire</div><span></span></div>
   <div id="rapidBody"></div>
+</section>
+
+<!-- MENTORS -->
+<section id="mentors" class="view" hidden>
+  <div class="top"><button class="btn small" id="mentorsBack">‹ Play</button></div>
+  <h1>Mentors</h1>
+  <p class="note" style="margin:4px 0 16px">AI coaches modelled on each person's books and public talks. Not the real people.</p>
+  <div id="mentorList"></div>
+  <div id="mentorNotes"></div>
+</section>
+
+<!-- VOICE ROOM -->
+<section id="room" class="view" hidden>
+  <div class="top"><button class="btn small" id="roomBack">✕</button><div class="note" id="roomTitle"></div><span></span></div>
+  <div class="card brief" id="roomBrief"></div>
+  <div id="roomExtra" style="margin-top:10px"></div>
+  <div class="callhead"><div class="status" id="roomStatus"></div><div class="timer" id="roomTimer">0:00</div></div>
+  <div class="meter"><i id="roomMeter"></i></div>
+  <div class="bubbles" id="roomBubbles"></div>
+  <div id="roomErr" class="err" style="margin-top:12px"></div>
+  <div class="callbar">
+    <button class="btn primary" id="roomStart">Start</button>
+    <button class="btn danger" id="roomEnd" hidden>End</button>
+  </div>
+  <div id="roomResult"></div>
+</section>
+
+<!-- WARM-UP -->
+<section id="warm" class="view" hidden>
+  <div class="top"><button class="btn small" id="warmBack">✕</button><div class="note">Articulation warm-up</div><span></span></div>
+  <div id="warmBody"></div>
 </section>
 
 <!-- PROGRESS -->
@@ -343,11 +385,12 @@ textarea{width:100%;font:inherit;color:var(--text);background:var(--bg);border:1
   </div>
 </nav>
 
-<script src="js/data.js?v=3"></script>
-<script src="js/books.js?v=3"></script>
-<script src="js/core.js?v=3"></script>
-<script src="js/learn.js?v=3"></script>
-<script src="js/play.js?v=3"></script>
-<script src="js/app.js?v=3"></script>
+<script src="js/data.js?v=4"></script>
+<script src="js/books.js?v=4"></script>
+<script src="js/core.js?v=4"></script>
+<script src="js/learn.js?v=4"></script>
+<script src="js/play.js?v=4"></script>
+<script src="js/voice.js?v=4"></script>
+<script src="js/app.js?v=4"></script>
 </body>
 </html>

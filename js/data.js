@@ -114,7 +114,10 @@ const CALL_TYPES = {
   renewal:    { label: "Renewal & upsell", goal: "Secure the renewal and upgrade them to the next plan", setup: "The buyer is an existing customer, renewal is in 30 days, and usage is mixed.", skills: ["discovery", "value", "next_step"] },
   angry:      { label: "Angry customer", goal: "De-escalate, keep the account, and agree a concrete fix with a date", setup: "The buyer is an existing customer and is furious about a recent failure that cost them money.", skills: ["listening", "confidence", "phrasing"] },
   inbound:    { label: "Inbound lead callback", goal: "Qualify them and book a demo", setup: "The buyer filled in a form on your website yesterday asking about pricing.", skills: ["discovery", "listening", "next_step"] },
+  boss:       { label: "Boss Battle", goal: "Get the buying committee to agree to a paid pilot with a start date", setup: "A video call with three people: a champion who likes you, a sceptical finance lead and an operations head worried about disruption. They talk over each other and disagree.", skills: ["discovery", "objections", "next_step"], boss: true },
 };
+const TIERS = [[9.5, "Closer"], [8.5, "Diamond"], [7, "Platinum"], [5, "Gold"], [3, "Silver"], [0, "Bronze"]];
+const tierOf = level => TIERS.find(([min]) => level >= min)[1];
 
 const SKILLS = { opener: "Opener", discovery: "Discovery", listening: "Listening", value: "Value", objections: "Objections", next_step: "Next step", confidence: "Confidence", phrasing: "Phrasing" };
 // Which call types train which skill, for picking the "weakest skill" call each day.

@@ -1,7 +1,7 @@
 "use strict";
 // The Gauntlet: daily plan, buyer generation, calls, judging, streaks and progress.
 
-const APP_VERSION = "v1.2";
+const APP_VERSION = "v1.3";
 const CALLS_PER_DAY = 5;
 const LEVEL_CLASS = l => (l <= 3 ? "easy" : l <= 6 ? "mid" : "hard");
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
@@ -20,6 +20,7 @@ const flagOf = c => FLAGS[COUNTRY_CODE[(c || "").toLowerCase()] || (c || "").toU
 
 function el(tag, cls, text) { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
 function setStatus(html) { $("#status").innerHTML = html; }
+function weekKey(d = new Date()) { const t = new Date(d); t.setHours(12, 0, 0, 0); t.setDate(t.getDate() - ((t.getDay() + 6) % 7)); return todayStr(t); }
 function daysBetween(a, b) { return Math.round((new Date(b + "T12:00") - new Date(a + "T12:00")) / 864e5); }
 
 // ---------------------------------------------------------------- persistent state
@@ -60,7 +61,7 @@ function pickTypes(n) {
   const recent = recentTypes();
   const count = t => recent.filter(x => x === t).length;
   const chosen = new Set([pick(SKILL_TO_TYPES[weakestSkill()])]);
-  for (const t of shuffle(Object.keys(CALL_TYPES)).sort((a, b) => count(a) - count(b))) {
+  for (const t of shuffle(Object.keys(CALL_TYPES).filter(t => !CALL_TYPES[t].boss)).sort((a, b) => count(a) - count(b))) {
     if (chosen.size >= n) break;
     chosen.add(t);
   }
@@ -120,12 +121,14 @@ Rules:
 - Build the situation and pains from the real facts (size, products, news, signals). Do not invent dramatic events about the company (no scandals, layoffs, lawsuits, data breaches).
 - Make the conversion rule specific, testable from a transcript, and matched to the difficulty.
 - Objections are exact spoken lines, natural for this person.
-- English only. The accent should fit the country.
+- English only. The accent should fit the country.${t.boss ? `
+- BOSS BATTLE: this is a buying committee. "person" is the champion. Also invent the other two in "committee": a finance lead (sceptical about cost and payback) and an operations head (worried about disruption). Give each a clear stance.` : ""}
 
 Return JSON only:
 {"person":{"name":"","role":"","gender":"${gender}","personality":"","mood":"","speaking_style":"","accent":""},
 "rep_brief":{"context":"what the rep knows before dialling, 1-2 sentences","goal":"the rep's specific goal for this call"},
-"hidden":{"situation":"2-3 sentences","pains":[{"pain":"","severity":3,"reveal_if":"what the rep must ask or do to hear this"}],"budget":"","authority":"","incumbent":"","timeline":"","objections":[{"line":"","kind":"brush-off"}],"conversion_rule":"","lose_conditions":"","opening_line":""}}`;
+"hidden":{"situation":"2-3 sentences","pains":[{"pain":"","severity":3,"reveal_if":"what the rep must ask or do to hear this"}],"budget":"","authority":"","incumbent":"","timeline":"","objections":[{"line":"","kind":"brush-off"}],"conversion_rule":"","lose_conditions":"","opening_line":""}${t.boss ? `,
+"committee":[{"name":"","role":"","stance":""},{"name":"","role":"","stance":""}]` : ""}}`;
 }
 async function buildBuyer(item) {
   const spec = await generateJSON(buyerSpecPrompt(item), 0.9);
@@ -175,7 +178,8 @@ Say yes to the caller's goal ONLY IF: ${h.conversion_rule}
 End the call if: ${h.lose_conditions}
 Difficulty ${item.level}/10: ${LEVEL_GUIDE[item.level]}
 
-HOW TO TALK:
+${b.committee?.length ? `YOU VOICE THREE PEOPLE on this call: ${b.person.name} (${b.person.role}, the champion: supportive but needs ammunition), ${b.committee.map(m => `${m.name} (${m.role}: ${m.stance})`).join(", ")}. Start every turn with the speaker's first name and a colon, like "${b.person.name.split(" ")[0]}: …". Let them disagree and talk over each other. Agree to the goal only when the conversion rule is met AND the finance and operations concerns have been answered.
+` : ""}HOW TO TALK:
 - This is a phone call. Talk like a busy real person: usually one to three short sentences. No lists, no formatting.
 - You are not an assistant. Do not help the caller sell. Do not volunteer your problems; reveal each pain only when its condition is met.
 - React honestly. Keep small talk short. Push back or cut in when it fits your personality.
@@ -213,6 +217,7 @@ function renderToday() {
   $("#installHint").hidden = !(isIOS && !isStandalone());
   $("#stStreak").textContent = String(currentStreak());
   $("#stLevel").textContent = profile.level.toFixed(1);
+  $("#stTier").textContent = tierOf(profile.level);
   const done = doneCount();
   $("#stDone").textContent = `${done}/${CALLS_PER_DAY}`;
   $("#dayBar").style.width = (100 * done) / CALLS_PER_DAY + "%";
@@ -243,6 +248,14 @@ function renderToday() {
     list.append(card);
   }
 
+  const bossBox = $("#bossBox"); bossBox.innerHTML = "";
+  const bossItem = plan.items.find(i => i.type === "boss");
+  const bossResult = profile.bosses?.[weekKey()];
+  if (!bossItem && !bossResult) {
+    const b = el("button", "card callcard boss");
+    const mid = el("div", "body"); mid.append(el("div", "t", "Weekly Boss Battle"), el("div", "s", `A buying committee at level ${clamp(Math.round(profile.level) + 2, 1, 10)}. Win for a big level boost.`));
+    b.append(el("div", "num", "♛"), mid); b.onclick = startBoss; bossBox.append(b);
+  } else if (bossResult) bossBox.append(el("div", "note", bossResult === "won" ? "♛ Boss defeated this week. New boss on Monday." : "♛ The boss won this week. Rematch on Monday."));
   const failed = plan.items.some(i => i.status === "pending" && i.error);
   $("#todayMsg").textContent = failed ? "Some buyers couldn't be built (Google busy?). Tap a call to retry." : "";
 
@@ -278,12 +291,20 @@ function renderTodayLearn() {
   const rm = el("div", "body"); rm.append(el("div", "t", String(due)), el("div", "s", "to review"));
   r.append(rm); r.onclick = () => (due ? startReview() : openTab("learn")); row.append(r);
   box.append(row);
+  const w = el("button", "btn small", "2-minute articulation warm-up"); w.style.marginTop = "10px"; w.onclick = openWarmup;
+  box.append(w);
+}
+function startBoss() {
+  const used = new Set(plan.items.map(i => i.companyId));
+  const [c] = pickCompanies(1, used);
+  const item = makeItem(c, "boss", clamp(Math.round(profile.level) + 2, 1, 10), plan.items.length, true);
+  plan.items.push(item); savePlan(); renderToday(); openCall(item);
 }
 function nextItem() { return plan.items.find(i => i.status !== "done" && !i.bonus) || plan.items.find(i => i.status !== "done"); }
 function addBonus() {
   const used = new Set(plan.items.map(i => i.companyId));
   const [c] = pickCompanies(1, used);
-  const item = makeItem(c, pick(Object.keys(CALL_TYPES)), clamp(Math.round(profile.level) + 1, 1, 10), plan.items.length, true);
+  const item = makeItem(c, pick(Object.keys(CALL_TYPES).filter(t => !CALL_TYPES[t].boss)), clamp(Math.round(profile.level) + 1, 1, 10), plan.items.length, true);
   plan.items.push(item); savePlan(); renderToday(); openCall(item);
 }
 function currentStreak() {
@@ -376,9 +397,9 @@ function failCall(msg) {
 
 // voice mode — rough on-device speech stats
 function freshStats() { return { userSec: 0, inSpeech: false, segStart: 0, lastVoice: 0, longest: 0, noise: 0.01, awaitingReply: false, newTurn: true }; }
-function onMicChunk(i16, rms) {
-  const m = cur.stats;
-  $("#meter").style.width = Math.min(100, rms * 900) + "%";
+function onMicChunk(i16, rms, c = cur) {
+  const m = c.stats;
+  (c.meterEl || $("#meter")).style.width = Math.min(100, rms * 900) + "%";
   const now = performance.now();
   const buyerTalking = player && player.speaking;
   const voiced = rms > Math.max(0.012, m.noise * 3);
@@ -389,9 +410,9 @@ function onMicChunk(i16, rms) {
   } else if (m.inSpeech && now - m.lastVoice > 400) {
     m.inSpeech = false; m.longest = Math.max(m.longest, (m.lastVoice - m.segStart) / 1000);
   }
-  if (!cur.live || !cur.live.ready) return;
+  if (!c.live || !c.live.ready) return;
   if (store.get("noInterrupt", "0") === "1" && buyerTalking) return;
-  cur.live.sendAudio(i16);
+  c.live.sendAudio(i16);
 }
 async function startVoice() {
   const c = cur; const stale = () => c !== cur || c.ended;
@@ -561,8 +582,16 @@ async function judgeCall(c) {
     judgeInput: j ? undefined : prompt,
   };
   if (j?.frameworks?.missed) rec.flagged = flagMissedTechniques(j.frameworks.missed);
+  if (c.item.type === "boss" && rec.scores) {
+    profile.bosses = profile.bosses || {};
+    profile.bosses[weekKey()] = rec.outcome === "booked" ? "won" : "lost";
+    rec.bossWon = rec.outcome === "booked";
+  }
   calls.push(rec); saveCalls();
+  const tierBefore = tierOf(profile.level);
   applyResult(rec);
+  if (rec.bossWon) { profile.level = clamp(round1(profile.level + 0.6), 1, 10); saveProfile(); }
+  if (tierOf(profile.level) !== tierBefore) rec.tierChange = `${tierBefore} → ${tierOf(profile.level)}`;
   c.item.status = "done"; c.item.resultId = rec.id; savePlan();
   $("#report").textContent = reportText();
   renderDebrief(rec);
@@ -675,6 +704,11 @@ function renderDebrief(rec) {
       for (const f of j.frameworks.missed || []) if (f) c.append(el("span", "chip miss", "✗ " + f));
       body.append(c);
     }
+    if (rec.bossWon != null || rec.tierChange) {
+      const bb = el("div", "banner"); bb.style.marginTop = "10px";
+      bb.textContent = [rec.bossWon === true ? "Boss defeated! Bonus level boost." : rec.bossWon === false ? "The boss won this week. New boss next Monday." : "", rec.tierChange ? `Tier: ${rec.tierChange}` : ""].filter(Boolean).join(" ");
+      body.append(bb);
+    }
     if (rec.flagged?.length) {
       const f = el("div", "banner"); f.style.marginTop = "10px";
       f.textContent = `Added to your review: ${rec.flagged.join(", ")}`;
@@ -739,7 +773,7 @@ function renderProgress() {
   const t = profile.totals;
   const stats = el("div", "stats");
   const stat = (n, l) => { const d = el("div", "stat"); d.append(el("div", "n", n), el("div", "l", l)); return d; };
-  stats.append(stat(profile.level.toFixed(1), "level"), stat(`${currentStreak()}`, `streak (best ${profile.best})`), stat(String(t.calls), "calls"));
+  stats.append(stat(profile.level.toFixed(1), `level · ${tierOf(profile.level)}`), stat(`${currentStreak()}`, `streak (best ${profile.best})`), stat(String(t.calls), "calls"));
   body.append(stats);
   const stats2 = el("div", "stats"); stats2.style.marginTop = "8px";
   stats2.append(stat(t.calls ? Math.round((100 * t.booked) / t.calls) + "%" : "–", "booking rate"), stat(String(t.soft_no), "soft no"), stat(String(t.hard_no), "hard no"));
@@ -889,6 +923,11 @@ $("#backFromCall").onclick = () => {
 $("#sendText").onclick = sendTyped;
 $("#bookBack").onclick = () => openTab("learn");
 $("#rapidBack").onclick = leaveRapid;
+$("#mentorsBack").onclick = () => openTab("play");
+$("#roomBack").onclick = leaveRoom;
+$("#roomStart").onclick = startRoom;
+$("#roomEnd").onclick = () => endRoom();
+$("#warmBack").onclick = leaveWarmup;
 $("#lessonBack").onclick = () => { if (session?.tick) { clearInterval(session.tick); session.tick = null; } openTab((session && session.from) || "learn"); };
 $("#textInput").addEventListener("keydown", e => { if (e.key === "Enter") sendTyped(); });
 $("#debriefDone").onclick = () => { $("#reportBox").hidden = false; openTab("today"); };

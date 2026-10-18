@@ -6,18 +6,51 @@ let play = store.json("play", null) || { best: {}, count: {}, mathLevel: 1 };
 const savePlay = () => store.setJson("play", play);
 
 // ---------------------------------------------------------------- content
-const OBJECTIONS = [
-  "I'm not interested.", "Just send me an email.", "Now's not a good time.", "We're all set, thanks.", "How did you get my number?",
-  "Call me next quarter.", "I'm about to walk into a meeting.", "Take me off your list.",
-  "We already use someone for this.", "We do this in-house.", "We just signed with one of your competitors.", "Our current system works fine.",
-  "It's too expensive.", "We don't have budget for this.", "Your competitor is cheaper.", "Can you do it for half that?", "What's your cheapest plan?",
-  "Maybe next year.", "We're slammed right now.", "We're in the middle of a restructure.", "Let's revisit after Black Friday.",
-  "I'm not the decision-maker.", "I'd need to run it by my boss.", "Procurement handles all of this.", "The board would never approve it.",
-  "I've never heard of you.", "We got burned by an agency last year.", "How do I know this will work for us?", "Do you have case studies in our industry?",
-  "AI makes mistakes. Our customers would hate it.", "We don't really have that problem.", "We're growing fine without it.", "It's just not a priority.",
-  "My team won't use another tool.", "Let me think about it.", "Send me a proposal and I'll take a look.", "Sounds interesting, but I'm not sure.",
-  "I'll get back to you.", "We tried something like this and it didn't work.", "Why should I trust a cold caller?",
+// Objection → a strong model answer (shown in offline practice and as a reference).
+const OBJECTION_PAIRS = [
+  ["I'm not interested.", "Fair enough, you weren't expecting my call. Can I ask one question to see if this is even relevant? Then you can hang up."],
+  ["Just send me an email.", "Happy to. So it's actually useful, what's the one thing you'd want it to cover?"],
+  ["Now's not a good time.", "No problem. Would it be a bad idea to book 15 minutes later this week, when it is?"],
+  ["We're all set, thanks.", "Glad to hear it. Out of curiosity, what are you using today, and what's the one thing you'd change about it?"],
+  ["How did you get my number?", "Fair question. It's from public business listings. I'm calling for one specific reason. Can I take 20 seconds to explain it?"],
+  ["Call me next quarter.", "Will do. What changes next quarter that makes it a better time?"],
+  ["I'm about to walk into a meeting.", "I'll be quick. When's a better two minutes: today at 4, or tomorrow morning?"],
+  ["Take me off your list.", "Absolutely, I'll remove you right now. Thanks for telling me."],
+  ["We already use someone for this.", "Makes sense, most companies your size do. What do you like most about them, and what would you change if you could?"],
+  ["We do this in-house.", "Smart if the team has the capacity. How much of their week does it take, and what would they do with that time back?"],
+  ["We just signed with one of your competitors.", "Congrats on getting it sorted. When that contract comes up, what would you want done differently?"],
+  ["Our current system works fine.", "Good. 'Fine' usually means it isn't on fire. Where does it slow you down the most?"],
+  ["It's too expensive.", "Compared to what? (pause) Setting price aside for a second, would this actually solve the problem?"],
+  ["We don't have budget for this.", "Understood. If the problem costs more than the fix, where would budget usually come from, and who decides that?"],
+  ["Your competitor is cheaper.", "They might be. What would make the difference worth paying for?"],
+  ["Can you do it for half that?", "How am I supposed to do that and still deliver what you need? If budget's the issue, let's look at a smaller scope."],
+  ["What's your cheapest plan?", "I'll tell you, but cheapest only helps if it fixes the problem. What's the one thing it has to do for you?"],
+  ["Maybe next year.", "That's fine. What would need to be true next year that isn't true now?"],
+  ["We're slammed right now.", "That's usually exactly why people talk to us. Is it a bad idea to grab 15 minutes when the rush calms down, say next Tuesday?"],
+  ["We're in the middle of a restructure.", "Makes sense to wait on big changes. Once the new structure's in place, who will own this?"],
+  ["Let's revisit after Black Friday.", "Fair. Is there anything about this Black Friday you're worried about, where getting ahead of it now would help?"],
+  ["I'm not the decision-maker.", "Thanks for telling me. Who else would weigh in, and what would they need to see to take it seriously?"],
+  ["I'd need to run it by my boss.", "Of course. What do you think they'll push back on? Let's make sure you've got the answer."],
+  ["Procurement handles all of this.", "Got it. Before it reaches procurement, who decides whether it's worth solving? I'd value 15 minutes with them."],
+  ["The board would never approve it.", "What would the board need to see to approve something like this?"],
+  ["I've never heard of you.", "That's fair, we're not a household name. That's why I'm asking for 15 minutes, not a contract."],
+  ["We got burned by an agency last year.", "It sounds like they over-promised. What happened? I'd rather know what to avoid than repeat it."],
+  ["How do I know this will work for us?", "You shouldn't take my word for it. What would you need to see in a small pilot to know it's working?"],
+  ["Do you have case studies in our industry?", "Yes. Which result would matter most to you, so I send the right one?"],
+  ["AI makes mistakes. Our customers would hate it.", "That's a real concern. What would a mistake look like for you? Let's look at how we handle exactly that before you decide."],
+  ["We don't really have that problem.", "Great. How do you handle it today? Most teams only spot it once they measure it."],
+  ["We're growing fine without it.", "Congrats. As you keep growing, what's the next bottleneck?"],
+  ["It's just not a priority.", "Understood. What is the priority right now? If this helps with that, it's worth a look. If not, I'll leave you alone."],
+  ["My team won't use another tool.", "Fair, adoption kills most tools. What would it need to look like for your team to actually use it?"],
+  ["Let me think about it.", "Of course. Which part are you unsure about? I'd rather help with that now than leave you guessing."],
+  ["Send me a proposal and I'll take a look.", "Happy to. So it's worth your time, can we spend 10 minutes on what it must include and who else needs to see it?"],
+  ["Sounds interesting, but I'm not sure.", "It sounds like something's holding you back. What is it?"],
+  ["I'll get back to you.", "Great. So it doesn't slip, can we put 10 minutes in for Thursday to decide either way?"],
+  ["We tried something like this and it didn't work.", "What went wrong last time? If it's the same thing, I'll tell you straight."],
+  ["Why should I trust a cold caller?", "You shouldn't, yet. Give me 20 seconds to explain why I called, and you decide if it's worth more."],
 ];
+const OBJECTIONS = OBJECTION_PAIRS.map(p => p[0]);
+const MODEL_ANSWER = Object.fromEntries(OBJECTION_PAIRS);
 
 const MYTHS = [
   { s: "Priming people with words about old age makes them walk more slowly: a solid, replicated finding.", t: false, why: "Large replication attempts failed; social priming is one of the best-known casualties of the replication crisis." },
@@ -202,6 +235,10 @@ Score 0-10 for relevance to this company's real situation, a clear reason for ca
 
 // ---------------------------------------------------------------- ad & copy lab
 function startCopyLab() {
+  if (!online()) {
+    const steps = shuffle(COPY_LINES).slice(0, 6).map(x => mcqFrom("Which principle is this line using?", x.o, `“${x.line}” works through ${x.o[0].toLowerCase()}.`, { label: "Name the principle (offline round)", show: x.line }));
+    return runSession({ type: "play", mode: "copy", title: "Ad & Copy Lab", steps });
+  }
   const steps = shuffle(COPY_LINES).slice(0, 3).map(x => mcqFrom("Which principle is this line using?", x.o, `“${x.line}” works through ${x.o[0].toLowerCase()}.`, { label: "Name the principle", show: x.line }));
   const weak = pick(WEAK_LINES);
   steps.push({ kind: "write", label: "Fix the weak line", show: weak, prompt: "Rewrite it so it's specific, buyer-focused and strong.",
@@ -217,11 +254,11 @@ const MODE_INFO = {
   maths: { name: "Quick Maths & Reasoning", desc: "Discounts, ROI, CAC, funnels, pipeline, ad maths. 8 questions against the clock.", max: null, run: startMaths },
   rapid: { name: "Rapid Fire: Objection Blitz", desc: "60 seconds of objections. Hold to answer out loud. Scored on every answer.", max: 30, run: () => openRapid() },
   myths: { name: "Myth or Proven", desc: "Spot the bluff: which popular sales and marketing claims hold up?", max: 8, run: startMyths },
-  xray: { name: "Company X-Ray", desc: "Read a real company like a top SDR: fit, timing, who to call, the angle.", max: null, run: startXray },
+  xray: { name: "Company X-Ray", desc: "Read a real company like a top SDR: fit, timing, who to call, the angle.", max: null, run: startXray, needsNet: true },
   copy: { name: "Ad & Copy Lab", desc: "Name the principle, fix a weak line, write a hook.", max: null, run: startCopyLab },
-  mentor: { name: "Mentors", desc: "Voice sessions with AI mentors modelled on Hormozi, Voss, Blount, Rackham, Dunford, Ogilvy, Sharp and Sutherland.", run: () => renderMentors(), label: () => `${play.count.mentor || 0} sessions` },
-  debate: { name: "1v1 Debate", desc: "Argue a sales or marketing motion out loud against an AI opponent. Judged on logic, evidence and rebuttal.", run: () => openDebate(), label: () => `${play.debates?.won || 0} wins` },
-  strategy: { name: "Strategy Room", desc: "A real company and a business case. Present your plan, then the CMO and CFO grill you.", run: () => openStrategy(), label: () => `${play.strategy?.approve || 0} approved` },
+  mentor: { needsNet: true, name: "Mentors", desc: "Voice sessions with AI mentors modelled on Hormozi, Voss, Blount, Rackham, Dunford, Ogilvy, Sharp and Sutherland.", run: () => renderMentors(), label: () => `${play.count.mentor || 0} sessions` },
+  debate: { needsNet: true, name: "1v1 Debate", desc: "Argue a sales or marketing motion out loud against an AI opponent. Judged on logic, evidence and rebuttal.", run: () => openDebate(), label: () => `${play.debates?.won || 0} wins` },
+  strategy: { needsNet: true, name: "Strategy Room", desc: "A real company and a business case. Present your plan, then the CMO and CFO grill you.", run: () => openStrategy(), label: () => `${play.strategy?.approve || 0} approved` },
   warmup: { name: "Articulation Warm-up", desc: "60-second no-filler talk, say-it-stronger, your phrase bank, and the pen drill.", run: () => openWarmup(), label: () => (play.best.warmup != null ? `best ${play.best.warmup}/10` : "new") },
 };
 const VOICE_MODES = ["mentor", "debate", "strategy", "warmup"];
@@ -263,7 +300,9 @@ function renderPlay() {
     row.append(el("span", "co", m.name), el("span", "note", m.label ? m.label() : best != null ? `best ${best}${m.max ? "/" + m.max : ""}` : "new"));
     card.append(row, el("div", "who", m.desc));
     if (id === "maths") card.append(el("div", "note", `Level ${play.mathLevel} of 5`));
-    card.onclick = () => m.run();
+    const off = !online() && m.needsNet;
+    if (off) { card.classList.add("off"); card.append(el("div", "note", "Needs internet")); }
+    card.onclick = () => (off ? toast(`${m.name} needs internet. Quick Maths, Myth or Proven, Copy Lab and Rapid Fire practice work offline.`) : m.run());
     list.append(card);
   }
 }
@@ -275,14 +314,20 @@ function openRapid() {
   $("#rapidBody").innerHTML = "";
   const intro = el("div", "card stack");
   intro.append(el("h2", null, "Objection Blitz"), el("p", null, "60 seconds. An objection appears; hold the button and answer it out loud, then let go for the next one. Short, calm answers win. You're scored on every answer at the end."));
-  const v = el("button", "btn primary", "Start with voice"); v.onclick = () => startRapid(true);
-  const t = el("button", "btn", "Start by typing"); t.onclick = () => startRapid(false);
-  intro.append(v, t);
+  if (!online()) {
+    intro.append(el("p", "note", "You're offline, so this is a practice round: answer each objection out loud, tap Next, and compare with a model answer at the end. Scoring comes back online."));
+    const p = el("button", "btn primary", "Start practice"); p.onclick = () => startRapid(false, true);
+    intro.append(p);
+  } else {
+    const v = el("button", "btn primary", "Start with voice"); v.onclick = () => startRapid(true);
+    const t = el("button", "btn", "Start by typing"); t.onclick = () => startRapid(false);
+    intro.append(v, t);
+  }
   $("#rapidBody").append(intro);
   show("rapid");
 }
-async function startRapid(voice) {
-  rapid = { voice, objections: shuffle(OBJECTIONS).slice(0, 10), i: 0, answers: [], t0: 0, timer: null, rec: null, holding: false, done: false };
+async function startRapid(voice, practice = false) {
+  rapid = { voice, practice, objections: shuffle(OBJECTIONS).slice(0, 10), i: 0, answers: [], t0: 0, timer: null, rec: null, holding: false, done: false };
   if (voice) {
     audio.unlock();
     rapid.rec = new Recorder(audio);
@@ -304,6 +349,12 @@ function renderRapid() {
   const timer = el("div", "timerbig", `${Math.max(0, Math.ceil(60 - (performance.now() - rapid.t0) / 1000))}s`); timer.id = "rapidTimer";
   box.append(timer, el("div", "note", `Objection ${rapid.i + 1} of ${rapid.objections.length}`));
   box.append(el("div", "card objcard", `“${rapid.objections[rapid.i]}”`));
+  if (rapid.practice) {
+    const next = el("button", "holdbtn", "Said it out loud: next");
+    next.onclick = () => { rapid.answers.push({ objection: rapid.objections[rapid.i], text: "" }); rapid.i++; renderRapid(); };
+    box.append(next);
+    return;
+  }
   if (rapid.voice) {
     const hold = el("button", "holdbtn", "Hold to answer");
     const meter = el("div", "meter"); const fill = el("i"); meter.append(fill);
@@ -331,6 +382,17 @@ async function endRapid() {
   clearInterval(rapid.timer);
   if (rapid.rec) rapid.rec.close();
   const box = $("#rapidBody");
+  if (rapid.practice) {
+    box.innerHTML = "";
+    box.append(el("div", "card stack", ""));
+    box.firstChild.append(el("h2", null, `Practice done: ${rapid.answers.length} objections`), el("p", null, "Compare each with a model answer. Say the model answer out loud once too."));
+    for (const a of rapid.answers) {
+      const c = el("div", "card stack"); c.style.marginTop = "10px";
+      c.append(el("div", "q", `“${a.objection}”`), el("div", "ins", MODEL_ANSWER[a.objection] || ""));
+      box.append(c);
+    }
+    return addRapidButtons(box);
+  }
   const answered = rapid.answers.filter(a => a.wav || a.text);
   if (!answered.length) { box.innerHTML = ""; box.append(el("div", "card", "No answers recorded. Try again, and hold the button while you speak.")); addRapidButtons(box); return; }
   box.innerHTML = `<div class="card"><span class="spin"></span>Scoring your answers…</div>`;
@@ -338,7 +400,7 @@ async function endRapid() {
 Score each 0-3: 0 = no answer, argues, or caves; 1 = weak; 2 = decent; 3 = excellent (acknowledges, reframes or asks a smart question, and keeps the conversation moving toward a next step).
 Return JSON only: {"items":[{"n":1,"transcript":"","score":0,"better":"a strong one-line answer"}]}` }];
   rapid.answers.forEach((a, i) => {
-    parts.push({ text: `Item ${i + 1}. Objection: "${a.objection}". Answer: ${a.wav ? "(audio clip follows)" : a.text ? `"${a.text.replace(/"/g, "'")}"` : "(none)"}` });
+    parts.push({ text: `Item ${i + 1}. Objection: "${a.objection}". (Reference answer, for calibration only: "${MODEL_ANSWER[a.objection] || ""}") Rep's answer: ${a.wav ? "(audio clip follows)" : a.text ? `"${a.text.replace(/"/g, "'")}"` : "(none)"}` });
     if (a.wav) parts.push({ inlineData: { mimeType: "audio/wav", data: a.wav } });
   });
   let items = null;

@@ -73,6 +73,7 @@ function roomText(who, text) {
 }
 async function startRoom() {
   const r = room; const stale = () => r !== room || r.ended;
+  if (!online()) { $("#roomErr").textContent = "Voice rooms need internet."; return; }
   $("#roomStart").disabled = true; $("#roomErr").textContent = ""; $("#roomExtra").innerHTML = "";
   audio.unlock();
   $("#roomStatus").innerHTML = '<span class="spin"></span>Allow the microphone when asked…';
@@ -328,6 +329,7 @@ function openWarmup() {
 }
 async function warmRecord(kind, btn, card) {
   if (warm.busy) return;
+  if (!online() && !(warm.rec && warm.rec.on)) { toast("Feedback on recordings needs internet. The phrase bank and pen drill work offline."); return; }
   if (warm.rec && warm.rec.on) { // second tap = stop
     const clip = warm.rec.stop(); clearInterval(warm.tick);
     warm.rec.close(); warm.rec = null;

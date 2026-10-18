@@ -1,7 +1,7 @@
 "use strict";
 // The Gauntlet: daily plan, buyer generation, calls, judging, streaks and progress.
 
-const APP_VERSION = "v1.3";
+const APP_VERSION = "v1.4";
 const CALLS_PER_DAY = 5;
 const LEVEL_CLASS = l => (l <= 3 ? "easy" : l <= 6 ? "mid" : "hard");
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
@@ -143,7 +143,7 @@ async function buildBuyer(item) {
 }
 let preparing = false;
 async function prepareBuyers() {
-  if (preparing) return;
+  if (preparing || !online()) return;
   preparing = true;
   try {
     for (const item of plan.items) {
@@ -241,6 +241,7 @@ function renderToday() {
       const rec = calls.find(x => x.id === item.resultId);
       right.append(el("span", `badge ${rec?.outcome || "unjudged"}`, OUTCOME_LABEL[rec?.outcome || "unjudged"]));
     } else if (item.status === "building") { right.innerHTML = '<span class="spin"></span>'; }
+    else if (!online()) right.textContent = "Online only";
     else if (item.status === "pending") right.textContent = item.error ? "Retry" : "Queued";
     else right.textContent = "Ready";
     card.append(num, mid, right);
@@ -257,7 +258,8 @@ function renderToday() {
     b.append(el("div", "num", "♛"), mid); b.onclick = startBoss; bossBox.append(b);
   } else if (bossResult) bossBox.append(el("div", "note", bossResult === "won" ? "♛ Boss defeated this week. New boss on Monday." : "♛ The boss won this week. Rematch on Monday."));
   const failed = plan.items.some(i => i.status === "pending" && i.error);
-  $("#todayMsg").textContent = failed ? "Some buyers couldn't be built (Google busy?). Tap a call to retry." : "";
+  $("#todayMsg").textContent = !online() ? "You're offline. Calls come back when you're online; the daily lesson and reviews work now."
+    : failed ? "Some buyers couldn't be built (Google busy?). Tap a call to retry." : "";
 
   const coach = $("#coachBox"); coach.innerHTML = "";
   if (done >= CALLS_PER_DAY) {
@@ -320,6 +322,7 @@ let wakeLock = null;
 const mode = () => store.get("mode", "voice");
 
 async function openCall(item) {
+  if (!online()) { toast("Calls need internet. Your lessons, reviews and Quick Maths work offline."); return; }
   if (item.status === "pending" || item.status === "building") {
     show("call");
     $("#brief").innerHTML = '<span class="spin"></span>Building this buyer from real company data…';
@@ -863,7 +866,17 @@ async function importBackup(file) {
 }
 
 // ---------------------------------------------------------------- wiring
+function updateOnline() {
+  $("#offlineBar").hidden = online();
+  if (online()) prepareBuyers();
+  if (!$("#today").hidden) renderToday();
+  if (!$("#play").hidden) renderPlay();
+}
+window.addEventListener("online", updateOnline);
+window.addEventListener("offline", updateOnline);
 async function boot() {
+  if ("serviceWorker" in navigator && window.isSecureContext) navigator.serviceWorker.register("sw.js").catch(e => logErr("offline cache", e));
+  $("#offlineBar").hidden = online();
   try { await loadCompanies(); }
   catch (e) { document.querySelector("main").innerHTML = `<div class="card"><p class="err">Couldn't load the company list (${e.message}). Check your connection and reopen.</p></div>`; return; }
   if (!keyNow()) { show("setup"); return; }
@@ -892,6 +905,7 @@ $("#levelRange").oninput = e => { profile.level = Number(e.target.value); $("#le
 $("#liveModel").onchange = e => store.set("liveModel", e.target.value);
 $("#textModel").onchange = e => store.set("textModel", e.target.value);
 $("#regenBtn").onclick = () => {
+  if (!online()) return toast("Rebuilding buyers needs internet.");
   const used = new Set(plan.items.filter(i => i.status === "done").map(i => i.companyId));
   for (const item of plan.items) {
     if (item.status === "done") continue;

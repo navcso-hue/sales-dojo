@@ -234,8 +234,21 @@ function feedback(kind, title, text) {
   const btn = $("#lessonNext"); btn.hidden = false; btn.disabled = false; btn.textContent = "Continue"; btn.onclick = nextStep;
   fb.scrollIntoView({ behavior: "smooth", block: "nearest" });
 }
+function offlineFree(step) {
+  const box = $("#lessonBody"), c = step.conceptId ? CONCEPTS[step.conceptId] : null;
+  box.querySelectorAll(".btn.small").forEach(b => b.remove());
+  $("#freeInput").disabled = true;
+  const fb = el("div", "card feedback mid");
+  fb.append(el("div", "t", "Offline: no grading this time"));
+  if (c) { const m = el("div", "moment"); m.append(el("div", "note", "Compare with the example"), el("div", "ins", c.sounds)); fb.append(m); }
+  else fb.append(el("p", null, "Written answers get graded when you're back online. Say yours out loud once more, slower."));
+  box.append(fb);
+  const btn = $("#lessonNext"); btn.disabled = false; btn.textContent = "Continue"; btn.onclick = nextStep;
+  fb.scrollIntoView({ behavior: "smooth", block: "nearest" });
+}
 async function checkFree(step, answer) {
   if (!answer) { $("#freeInput").focus(); return; }
+  if (!online()) return offlineFree(step);
   const c = step.conceptId ? CONCEPTS[step.conceptId] : null, btn = $("#lessonNext");
   btn.disabled = true; btn.innerHTML = '<span class="spin"></span>Coach is reading…';
   let r = null;

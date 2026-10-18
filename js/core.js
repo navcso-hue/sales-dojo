@@ -14,6 +14,13 @@ const store = {
 };
 const isStandalone = () => window.matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
 const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent);
+const online = () => navigator.onLine !== false;
+function toast(msg) {
+  const t = document.getElementById("toast");
+  if (!t) return;
+  t.textContent = msg; t.hidden = false;
+  clearTimeout(toast.h); toast.h = setTimeout(() => (t.hidden = true), 3200);
+}
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 const pick = a => a[Math.floor(Math.random() * a.length)];
 const shuffle = a => { const b = [...a]; for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; };
@@ -87,6 +94,7 @@ function rankModels(models) {
 
 // Tries the chosen text model, then the next best ones. A 503 (overloaded) gets one quick retry first.
 async function generate(body) {
+  if (!online()) throw new Error("You're offline");
   const chosen = store.get("textModel", "");
   const all = store.json("textModels", []);
   const order = [chosen, ...all.filter(m => m !== chosen)].filter(Boolean).slice(0, 4);

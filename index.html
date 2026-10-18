@@ -185,9 +185,14 @@ ul.plain li+li{margin-top:6px}
 #mentorList .co{font-weight:700;font-size:17px}
 #warmBody .co{font-weight:700;font-size:17px}
 .ins{color:var(--accent)}
+.offline-bar{position:sticky;top:0;z-index:6;margin:calc(-1 * env(safe-area-inset-top) - 14px) -16px 12px;padding:calc(env(safe-area-inset-top) + 8px) 16px 8px;background:#3A2E12;color:#F5D58A;font-size:13px;font-weight:650;text-align:center}
+.toast{position:fixed;left:16px;right:16px;bottom:calc(env(safe-area-inset-bottom) + var(--tabh) + 14px);z-index:9;max-width:488px;margin:0 auto;background:#EDEFF2;color:#0B0D10;border-radius:14px;padding:12px 14px;font-size:14px;font-weight:600;box-shadow:0 8px 30px rgba(0,0,0,.4)}
+.card.off{opacity:.55}
 </style>
 </head>
 <body>
+<div id="offlineBar" class="offline-bar" hidden>Offline · lessons, reviews, maths and quizzes still work</div>
+<div id="toast" class="toast" hidden></div>
 <main>
 
 <!-- SETUP -->
@@ -385,12 +390,12 @@ ul.plain li+li{margin-top:6px}
   </div>
 </nav>
 
-<script src="js/data.js?v=4"></script>
-<script src="js/books.js?v=4"></script>
-<script src="js/core.js?v=4"></script>
-<script src="js/learn.js?v=4"></script>
-<script src="js/play.js?v=4"></script>
-<script src="js/voice.js?v=4"></script>
-<script src="js/app.js?v=4"></script>
+<script src="js/data.js?v=5"></script>
+<script src="js/books.js?v=5"></script>
+<script src="js/core.js?v=5"></script>
+<script src="js/learn.js?v=5"></script>
+<script src="js/play.js?v=5"></script>
+<script src="js/voice.js?v=5"></script>
+<script src="js/app.js?v=5"></script>
 </body>
 </html>

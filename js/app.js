@@ -1,7 +1,7 @@
 "use strict";
 // The Gauntlet: daily plan, buyer generation, calls, judging, streaks and progress.
 
-const APP_VERSION = "v1.0";
+const APP_VERSION = "v1.1";
 const CALLS_PER_DAY = 5;
 const LEVEL_CLASS = l => (l <= 3 ? "easy" : l <= 6 ? "mid" : "hard");
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
@@ -186,16 +186,19 @@ HOW TO TALK:
 }
 
 // ---------------------------------------------------------------- navigation
+let currentTab = "today";
 function show(id) {
   document.querySelectorAll(".view").forEach(v => (v.hidden = v.id !== id));
-  const tabbed = ["today", "progress", "settings"].includes(id);
+  const tabbed = ["today", "learn", "progress", "settings"].includes(id);
   $("#tabbar").hidden = !tabbed;
   document.body.classList.toggle("tabs", tabbed);
   document.querySelectorAll("[data-tab]").forEach(b => b.classList.toggle("on", b.dataset.tab === id));
   window.scrollTo(0, 0);
 }
 function openTab(id) {
+  currentTab = id;
   if (id === "today") renderToday();
+  if (id === "learn") renderLearn();
   if (id === "progress") renderProgress();
   if (id === "settings") renderSettings();
   show(id);
@@ -213,6 +216,7 @@ function renderToday() {
   $("#stDone").textContent = `${done}/${CALLS_PER_DAY}`;
   $("#dayBar").style.width = (100 * done) / CALLS_PER_DAY + "%";
 
+  renderTodayLearn();
   const list = $("#callList"); list.innerHTML = "";
   const next = nextItem();
   for (const item of plan.items) {
@@ -258,6 +262,21 @@ function renderToday() {
   if (done >= CALLS_PER_DAY) { btn.textContent = "Bonus call (doesn't affect streak)"; btn.onclick = addBonus; }
   else { btn.textContent = "Start next call"; btn.onclick = () => next && openCall(next); }
   btn.disabled = done < CALLS_PER_DAY && !next;
+}
+function renderTodayLearn() {
+  const box = $("#todayLearn"); box.innerHTML = "";
+  const nc = nextConcept(), due = dueConcepts().length;
+  box.append(el("h3", null, "Daily lesson"));
+  const row = el("div", "stats");
+  if (nc) {
+    const b = el("button", "card callcard next"); b.style.flex = "2";
+    const mid = el("div", "body"); mid.append(el("div", "t", nc.title), el("div", "s", CONCEPT_BOOK[nc.id].title));
+    b.append(mid); b.onclick = () => startLesson(nc.id); row.append(b);
+  }
+  const r = el("button", "card callcard"); r.style.flex = "1";
+  const rm = el("div", "body"); rm.append(el("div", "t", String(due)), el("div", "s", "to review"));
+  r.append(rm); r.onclick = () => (due ? startReview() : openTab("learn")); row.append(r);
+  box.append(row);
 }
 function nextItem() { return plan.items.find(i => i.status !== "done" && !i.bonus) || plan.items.find(i => i.status !== "done"); }
 function addBonus() {
@@ -540,6 +559,7 @@ async function judgeCall(c) {
     scores: j?.scores || null, judge: j, metrics: m, transcript, bonus: !!c.item.bonus,
     judgeInput: j ? undefined : prompt,
   };
+  if (j?.frameworks?.missed) rec.flagged = flagMissedTechniques(j.frameworks.missed);
   calls.push(rec); saveCalls();
   applyResult(rec);
   c.item.status = "done"; c.item.resultId = rec.id; savePlan();
@@ -654,6 +674,11 @@ function renderDebrief(rec) {
       for (const f of j.frameworks.missed || []) if (f) c.append(el("span", "chip miss", "✗ " + f));
       body.append(c);
     }
+    if (rec.flagged?.length) {
+      const f = el("div", "banner"); f.style.marginTop = "10px";
+      f.textContent = `Added to your review: ${rec.flagged.join(", ")}`;
+      body.append(f);
+    }
     if (j.drill) { body.append(el("h3", null, "Drill")); body.append(el("div", "card", j.drill)); }
   }
   body.append(el("h3", null, "Your speech (rough)"));
@@ -718,6 +743,9 @@ function renderProgress() {
   const stats2 = el("div", "stats"); stats2.style.marginTop = "8px";
   stats2.append(stat(t.calls ? Math.round((100 * t.booked) / t.calls) + "%" : "–", "booking rate"), stat(String(t.soft_no), "soft no"), stat(String(t.hard_no), "hard no"));
   body.append(stats2);
+  const stats3 = el("div", "stats"); stats3.style.marginTop = "8px";
+  stats3.append(stat(String(learn.xp), "XP"), stat(`${learnedCount()}/${totalConcepts()}`, "ideas learned"), stat(String(Object.keys(learn.tests).length), "book tests"));
+  body.append(stats3);
 
   body.append(el("h3", null, "Skills"));
   const sk = el("div", "card scores");
@@ -768,11 +796,11 @@ function renderSettings() {
   fill($("#liveModel"), live.length ? live : ["gemini-3.8-live"], store.get("liveModel"));
   fill($("#textModel"), text.length ? text : ["gemini-2.5-flash"], store.get("textModel"));
   const k = keyNow(); $("#keyLine").textContent = k ? `Key saved: ${k.slice(0, 4)}…${k.slice(-4)}` : "No key saved.";
-  $("#versionLine").textContent = `Sales Dojo ${APP_VERSION} · ${COMPANIES.length} real companies · ${Object.keys(OFFERS).length} offers · ${Object.keys(CALL_TYPES).length} call types`;
+  $("#versionLine").textContent = `Sales Dojo ${APP_VERSION} · ${COMPANIES.length} real companies · ${Object.keys(OFFERS).length} offers · ${Object.keys(CALL_TYPES).length} call types · ${BOOKS.length} books, ${totalConcepts()} ideas`;
   $("#backupMsg").textContent = "";
 }
 function exportBackup() {
-  const data = { app: "sales-dojo", version: APP_VERSION, exported: new Date().toISOString(), profile, calls, plan };
+  const data = { app: "sales-dojo", version: APP_VERSION, exported: new Date().toISOString(), profile, calls, plan, learn };
   const blob = new Blob([JSON.stringify(data)], { type: "application/json" });
   const a = document.createElement("a");
   a.href = URL.createObjectURL(blob); a.download = `sales-dojo-backup-${todayStr()}.json`;
@@ -784,6 +812,7 @@ async function importBackup(file) {
     const data = JSON.parse(await file.text());
     if (data.app !== "sales-dojo" || !data.profile) throw new Error("not a Sales Dojo backup");
     profile = { ...DEFAULT_PROFILE(), ...data.profile }; calls = data.calls || [];
+    if (data.learn) { learn = data.learn; saveLearn(); }
     saveProfile(); saveCalls();
     if (data.plan?.date === todayStr()) { plan = data.plan; savePlan(); }
     $("#backupMsg").textContent = `Restored ${calls.length} calls.`;
@@ -834,8 +863,8 @@ $("#forgetKey").onclick = () => { ["key", "liveModels", "textModels", "liveModel
 let resetArmed = false;
 $("#resetBtn").onclick = e => {
   if (!resetArmed) { resetArmed = true; e.target.textContent = "Tap again to erase everything"; setTimeout(() => { resetArmed = false; e.target.textContent = "Reset all progress"; }, 4000); return; }
-  profile = DEFAULT_PROFILE(); calls = []; plan = null;
-  saveProfile(); saveCalls(); store.del("plan");
+  profile = DEFAULT_PROFILE(); calls = []; plan = null; learn = { xp: 0, c: {}, tests: {} };
+  saveProfile(); saveCalls(); saveLearn(); store.del("plan");
   ensurePlan(); openTab("today"); prepareBuyers();
 };
 $("#startCall").onclick = () => {
@@ -849,6 +878,8 @@ $("#backFromCall").onclick = () => {
   abandonCall(); openTab("today");
 };
 $("#sendText").onclick = sendTyped;
+$("#bookBack").onclick = () => openTab("learn");
+$("#lessonBack").onclick = () => openTab((session && session.from) || "learn");
 $("#textInput").addEventListener("keydown", e => { if (e.key === "Enter") sendTyped(); });
 $("#debriefDone").onclick = () => { $("#reportBox").hidden = false; openTab("today"); };
 $("#copyReport").onclick = async e => {

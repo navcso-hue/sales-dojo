@@ -143,6 +143,29 @@ pre{white-space:pre-wrap;word-break:break-word;font:12px/1.5 ui-monospace,SFMono
 .list .row .m{min-width:0}
 .list .row .t{font-weight:650;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .list .row .s{font-size:13px;color:var(--muted)}
+
+/* learn */
+textarea{width:100%;font:inherit;color:var(--text);background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:13px 14px;margin-top:12px;resize:vertical}
+.big{font-size:17px;line-height:1.5;color:var(--text)}
+.lessoncard h2{font-size:22px}
+.moment.miss{border-left-color:#5A2A2C}
+.qtext{font-size:20px;line-height:1.35;margin:6px 0 16px}
+.options{display:flex;flex-direction:column;gap:10px}
+.opt{appearance:none;text-align:left;font:inherit;font-size:16px;color:var(--text);background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;cursor:pointer}
+.opt.right{border-color:var(--accent);background:#0F3A2A}
+.opt.wrong{border-color:var(--danger);background:#3A1517}
+.feedback{margin-top:14px}
+.feedback .t{font-weight:700;margin-bottom:4px}
+.feedback.good{border-color:#2F5F49}.feedback.good .t{color:var(--accent)}
+.feedback.mid{border-color:#5A4A1F}.feedback.mid .t{color:var(--warn)}
+.feedback.bad{border-color:#5A2A2C}.feedback.bad .t{color:var(--danger)}
+.lessonbar{position:sticky;bottom:calc(env(safe-area-inset-bottom) + 8px);margin-top:18px}
+.sc{display:block;width:100%;text-align:left;font:inherit;color:inherit;cursor:pointer}
+.sc+.sc{margin-top:12px}
+.sc .row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.sc .co{font-weight:700;font-size:17px}
+.sc .who{font-size:14px;color:var(--muted);margin-top:2px}
+#bookList .sc .progressbar{margin-top:10px}
 </style>
 </head>
 <body>
@@ -173,11 +196,37 @@ pre{white-space:pre-wrap;word-break:break-word;font:12px/1.5 ui-monospace,SFMono
     <div class="stat"><div class="n" id="stDone">0/5</div><div class="l">calls today</div></div>
   </div>
   <div class="progressbar"><i id="dayBar" style="width:0"></i></div>
+  <div id="todayLearn"></div>
   <h3>The Gauntlet</h3>
   <div class="calls" id="callList"></div>
   <div id="todayMsg" class="note" style="margin-top:10px"></div>
   <div id="coachBox"></div>
   <button class="btn primary" id="nextCallBtn" style="margin-top:16px">Start next call</button>
+</section>
+
+<!-- LEARN -->
+<section id="learn" class="view tabview" hidden>
+  <div class="top"><div><h1>Learn</h1><div class="sub" id="learnSub"></div></div></div>
+  <div id="learnTop"></div>
+  <h3>Books</h3>
+  <div id="bookList"></div>
+</section>
+
+<!-- BOOK -->
+<section id="book" class="view" hidden>
+  <div class="top"><button class="btn small" id="bookBack">‹ Learn</button></div>
+  <h1 id="bookTitle"></h1>
+  <div class="note" id="bookSub" style="margin:4px 0 16px"></div>
+  <div class="calls" id="conceptList"></div>
+  <button class="btn primary" id="bookTest" style="margin-top:16px">Take the book test</button>
+</section>
+
+<!-- LESSON -->
+<section id="lesson" class="view" hidden>
+  <div class="top"><button class="btn small" id="lessonBack">✕</button><div class="note" id="lessonTitle"></div><span></span></div>
+  <div class="progressbar" style="margin:0 0 18px"><i id="lessonBar" style="width:0"></i></div>
+  <div id="lessonBody"></div>
+  <div class="lessonbar"><button class="btn primary" id="lessonNext">Continue</button></div>
 </section>
 
 <!-- PROGRESS -->
@@ -266,13 +315,16 @@ pre{white-space:pre-wrap;word-break:break-word;font:12px/1.5 ui-monospace,SFMono
 <nav class="tabbar" id="tabbar" hidden>
   <div class="in">
     <button data-tab="today"><span class="i">◎</span>Today</button>
+    <button data-tab="learn"><span class="i">▤</span>Learn</button>
     <button data-tab="progress"><span class="i">↗</span>Progress</button>
     <button data-tab="settings"><span class="i">⚙︎</span>Settings</button>
   </div>
 </nav>
 
-<script src="js/data.js?v=1"></script>
-<script src="js/core.js?v=1"></script>
-<script src="js/app.js?v=1"></script>
+<script src="js/data.js?v=2"></script>
+<script src="js/books.js?v=2"></script>
+<script src="js/core.js?v=2"></script>
+<script src="js/learn.js?v=2"></script>
+<script src="js/app.js?v=2"></script>
 </body>
 </html>

@@ -166,6 +166,15 @@ textarea{width:100%;font:inherit;color:var(--text);background:var(--bg);border:1
 .sc .co{font-weight:700;font-size:17px}
 .sc .who{font-size:14px;color:var(--muted);margin-top:2px}
 #bookList .sc .progressbar{margin-top:10px}
+#playList .sc{margin-top:12px}
+.showline{font-size:16px;line-height:1.5;color:var(--text);margin-bottom:14px;white-space:pre-line}
+.timerbig{font-size:34px;font-weight:800;font-variant-numeric:tabular-nums;text-align:center;margin:10px 0 4px}
+#rapidBody .note{text-align:center}
+.objcard{font-size:22px;line-height:1.35;font-weight:650;text-align:center;padding:28px 18px;margin:14px 0}
+.holdbtn{display:block;width:100%;appearance:none;border:0;border-radius:22px;padding:34px 18px;font:inherit;font-size:18px;font-weight:750;background:var(--accent);color:var(--accent-ink);user-select:none;-webkit-user-select:none;touch-action:none;margin-bottom:10px}
+.holdbtn.on{background:#FFD166;color:#3A2A00}
+.stars{color:var(--warn);font-size:18px;letter-spacing:2px}
+.row2{display:flex;justify-content:flex-end}
 </style>
 </head>
 <body>
@@ -227,6 +236,18 @@ textarea{width:100%;font:inherit;color:var(--text);background:var(--bg);border:1
   <div class="progressbar" style="margin:0 0 18px"><i id="lessonBar" style="width:0"></i></div>
   <div id="lessonBody"></div>
   <div class="lessonbar"><button class="btn primary" id="lessonNext">Continue</button></div>
+</section>
+
+<!-- PLAY -->
+<section id="play" class="view tabview" hidden>
+  <div class="top"><div><h1>Play</h1><div class="sub">Short games that sharpen one skill each</div></div></div>
+  <div id="playList"></div>
+</section>
+
+<!-- RAPID FIRE -->
+<section id="rapid" class="view" hidden>
+  <div class="top"><button class="btn small" id="rapidBack">✕</button><div class="note">Rapid Fire</div><span></span></div>
+  <div id="rapidBody"></div>
 </section>
 
 <!-- PROGRESS -->
@@ -316,15 +337,17 @@ textarea{width:100%;font:inherit;color:var(--text);background:var(--bg);border:1
   <div class="in">
     <button data-tab="today"><span class="i">◎</span>Today</button>
     <button data-tab="learn"><span class="i">▤</span>Learn</button>
+    <button data-tab="play"><span class="i">⚡︎</span>Play</button>
     <button data-tab="progress"><span class="i">↗</span>Progress</button>
     <button data-tab="settings"><span class="i">⚙︎</span>Settings</button>
   </div>
 </nav>
 
-<script src="js/data.js?v=2"></script>
-<script src="js/books.js?v=2"></script>
-<script src="js/core.js?v=2"></script>
-<script src="js/learn.js?v=2"></script>
-<script src="js/app.js?v=2"></script>
+<script src="js/data.js?v=3"></script>
+<script src="js/books.js?v=3"></script>
+<script src="js/core.js?v=3"></script>
+<script src="js/learn.js?v=3"></script>
+<script src="js/play.js?v=3"></script>
+<script src="js/app.js?v=3"></script>
 </body>
 </html>

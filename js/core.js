@@ -173,7 +173,7 @@ class AudioIO {
     this.stream = await navigator.mediaDevices.getUserMedia({
       audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true, channelCount: 1 },
     });
-    diag.mic = "ok";
+    if (diag) diag.mic = "ok";
     const src = this.ctx.createMediaStreamSource(this.stream);
     const sink = this.ctx.createGain(); sink.gain.value = 0; sink.connect(this.ctx.destination);
     try {
@@ -184,11 +184,11 @@ class AudioIO {
       }
       this.node = new AudioWorkletNode(this.ctx, "capture");
       this.node.port.onmessage = e => this.onChunk(new Int16Array(e.data.pcm), e.data.rms);
-      diag.capture = "AudioWorklet";
+      if (diag) diag.capture = "AudioWorklet";
     } catch (e) {
       logErr("worklet (using fallback)", e);
       this.node = this.scriptProcessor();
-      diag.capture = "ScriptProcessor";
+      if (diag) diag.capture = "ScriptProcessor";
     }
     src.connect(this.node); this.node.connect(sink);
     this.src = src;
@@ -310,6 +310,33 @@ class LiveCall {
   sendAudio(i16) { diag.audioChunksOut++; this.send({ realtimeInput: { audio: { data: i16ToB64(i16), mimeType: "audio/pcm;rate=16000" } } }); }
   sendText(text) { this.send({ clientContent: { turns: [{ role: "user", parts: [{ text }] }], turnComplete: true } }); }
   close() { this.ready = false; try { this.ws && this.ws.close(1000, "call ended"); } catch {} }
+}
+
+// ---------------------------------------------------------------- short voice clips
+// Hold-to-talk answers: reuse the mic pipeline (16 kHz PCM) and wrap clips as WAV for Gemini.
+function bytesToB64(u8) {
+  let s = "";
+  for (let i = 0; i < u8.length; i += 0x8000) s += String.fromCharCode.apply(null, u8.subarray(i, i + 0x8000));
+  return btoa(s);
+}
+function wavB64(chunks, rate = 16000) {
+  const n = chunks.reduce((a, c) => a + c.length, 0);
+  const buf = new ArrayBuffer(44 + n * 2), v = new DataView(buf);
+  const w = (o, t) => { for (let i = 0; i < t.length; i++) v.setUint8(o + i, t.charCodeAt(i)); };
+  w(0, "RIFF"); v.setUint32(4, 36 + n * 2, true); w(8, "WAVE"); w(12, "fmt ");
+  v.setUint32(16, 16, true); v.setUint16(20, 1, true); v.setUint16(22, 1, true);
+  v.setUint32(24, rate, true); v.setUint32(28, rate * 2, true); v.setUint16(32, 2, true); v.setUint16(34, 16, true);
+  w(36, "data"); v.setUint32(40, n * 2, true);
+  let o = 44;
+  for (const c of chunks) for (let i = 0; i < c.length; i++, o += 2) v.setInt16(o, c[i], true);
+  return bytesToB64(new Uint8Array(buf));
+}
+class Recorder {
+  constructor(io) { this.io = io; this.chunks = []; this.on = false; this.onLevel = () => {}; }
+  async open() { await this.io.startMic(); this.io.onChunk = (i16, rms) => { if (this.on) this.chunks.push(i16); this.onLevel(rms); }; }
+  start() { this.chunks = []; this.on = true; this.t0 = performance.now(); }
+  stop() { this.on = false; const sec = (performance.now() - this.t0) / 1000; return { wav: this.chunks.length ? wavB64(this.chunks) : null, sec }; }
+  close() { this.on = false; this.io.stopMic(); this.io.suspend(); }
 }
 
 // ---------------------------------------------------------------- read-aloud (text mode)

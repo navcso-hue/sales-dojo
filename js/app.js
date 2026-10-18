@@ -1,7 +1,7 @@
 "use strict";
 // The Gauntlet: daily plan, buyer generation, calls, judging, streaks and progress.
 
-const APP_VERSION = "v1.1";
+const APP_VERSION = "v1.2";
 const CALLS_PER_DAY = 5;
 const LEVEL_CLASS = l => (l <= 3 ? "easy" : l <= 6 ? "mid" : "hard");
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
@@ -189,7 +189,7 @@ HOW TO TALK:
 let currentTab = "today";
 function show(id) {
   document.querySelectorAll(".view").forEach(v => (v.hidden = v.id !== id));
-  const tabbed = ["today", "learn", "progress", "settings"].includes(id);
+  const tabbed = ["today", "learn", "play", "progress", "settings"].includes(id);
   $("#tabbar").hidden = !tabbed;
   document.body.classList.toggle("tabs", tabbed);
   document.querySelectorAll("[data-tab]").forEach(b => b.classList.toggle("on", b.dataset.tab === id));
@@ -199,6 +199,7 @@ function openTab(id) {
   currentTab = id;
   if (id === "today") renderToday();
   if (id === "learn") renderLearn();
+  if (id === "play") renderPlay();
   if (id === "progress") renderProgress();
   if (id === "settings") renderSettings();
   show(id);
@@ -746,6 +747,13 @@ function renderProgress() {
   const stats3 = el("div", "stats"); stats3.style.marginTop = "8px";
   stats3.append(stat(String(learn.xp), "XP"), stat(`${learnedCount()}/${totalConcepts()}`, "ideas learned"), stat(String(Object.keys(learn.tests).length), "book tests"));
   body.append(stats3);
+  const bests = Object.entries(MODE_INFO).filter(([id]) => play.best[id] != null);
+  if (bests.length) {
+    body.append(el("h3", null, "Play bests"));
+    const pl = el("div", "card list");
+    for (const [id, m] of bests) { const row = el("div", "row"); row.style.cursor = "default"; row.append(el("div", "t", m.name), el("span", "note", `${play.best[id]}${m.max ? "/" + m.max : ""} · ${play.count[id] || 0} plays`)); pl.append(row); }
+    body.append(pl);
+  }
 
   body.append(el("h3", null, "Skills"));
   const sk = el("div", "card scores");
@@ -800,7 +808,7 @@ function renderSettings() {
   $("#backupMsg").textContent = "";
 }
 function exportBackup() {
-  const data = { app: "sales-dojo", version: APP_VERSION, exported: new Date().toISOString(), profile, calls, plan, learn };
+  const data = { app: "sales-dojo", version: APP_VERSION, exported: new Date().toISOString(), profile, calls, plan, learn, play };
   const blob = new Blob([JSON.stringify(data)], { type: "application/json" });
   const a = document.createElement("a");
   a.href = URL.createObjectURL(blob); a.download = `sales-dojo-backup-${todayStr()}.json`;
@@ -813,6 +821,7 @@ async function importBackup(file) {
     if (data.app !== "sales-dojo" || !data.profile) throw new Error("not a Sales Dojo backup");
     profile = { ...DEFAULT_PROFILE(), ...data.profile }; calls = data.calls || [];
     if (data.learn) { learn = data.learn; saveLearn(); }
+    if (data.play) { play = data.play; savePlay(); }
     saveProfile(); saveCalls();
     if (data.plan?.date === todayStr()) { plan = data.plan; savePlan(); }
     $("#backupMsg").textContent = `Restored ${calls.length} calls.`;
@@ -863,8 +872,8 @@ $("#forgetKey").onclick = () => { ["key", "liveModels", "textModels", "liveModel
 let resetArmed = false;
 $("#resetBtn").onclick = e => {
   if (!resetArmed) { resetArmed = true; e.target.textContent = "Tap again to erase everything"; setTimeout(() => { resetArmed = false; e.target.textContent = "Reset all progress"; }, 4000); return; }
-  profile = DEFAULT_PROFILE(); calls = []; plan = null; learn = { xp: 0, c: {}, tests: {} };
-  saveProfile(); saveCalls(); saveLearn(); store.del("plan");
+  profile = DEFAULT_PROFILE(); calls = []; plan = null; learn = { xp: 0, c: {}, tests: {} }; play = { best: {}, count: {}, mathLevel: 1 };
+  saveProfile(); saveCalls(); saveLearn(); savePlay(); store.del("plan");
   ensurePlan(); openTab("today"); prepareBuyers();
 };
 $("#startCall").onclick = () => {
@@ -879,7 +888,8 @@ $("#backFromCall").onclick = () => {
 };
 $("#sendText").onclick = sendTyped;
 $("#bookBack").onclick = () => openTab("learn");
-$("#lessonBack").onclick = () => openTab((session && session.from) || "learn");
+$("#rapidBack").onclick = leaveRapid;
+$("#lessonBack").onclick = () => { if (session?.tick) { clearInterval(session.tick); session.tick = null; } openTab((session && session.from) || "learn"); };
 $("#textInput").addEventListener("keydown", e => { if (e.key === "Enter") sendTyped(); });
 $("#debriefDone").onclick = () => { $("#reportBox").hidden = false; openTab("today"); };
 $("#copyReport").onclick = async e => {

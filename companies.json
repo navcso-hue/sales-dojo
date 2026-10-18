@@ -1,0 +1,1735 @@
+[
+ {
+  "id": "pilz-ostfildern",
+  "name": "Pilz GmbH & Co. KG",
+  "country": "Germany",
+  "city": "Ostfildern",
+  "industry": "Industrial automation and machine safety (manufacturer)",
+  "size": "2,504 employees worldwide at 2024-12-31, of which 1,032 in Germany; 137 German job cuts announced 2026-04",
+  "revenue": "EUR 341.1M (FY2024), down 21% on 2023",
+  "what_they_sell": "Industrial automation and machine-safety products and systems for factories and machine builders.",
+  "customers": "Machine builders and industrial manufacturers (B2B).",
+  "channels": "B2B sales; channel mix not verified in an opened source.",
+  "recent_news": [
+   {
+    "date": "2025-05",
+    "fact": "Reported 2024 turnover of EUR 341.1M, down 21% on 2023, from its Ostfildern headquarters."
+   },
+   {
+    "date": "2026-04",
+    "fact": "Announced 137 planned job cuts in Germany, citing weak economic conditions and low sales."
+   }
+  ],
+  "signals": [
+   "137 German job cuts announced (2026-04)",
+   "2024 turnover down 21% year on year"
+  ],
+  "likely_pains": [
+   "Revenue down 21% puts pipeline under pressure with a smaller sales team",
+   "Restructuring leaves little internal bandwidth for prospecting new machine builders",
+   "Long B2B buying cycles with several technical and procurement stakeholders are hard to keep moving in-house"
+  ],
+  "good_fit_offers": [
+   "outbound-sdr",
+   "ai-automation"
+  ],
+  "sources": [
+   "https://www.produktion.de/wirtschaft/schwieriges-geschaeftsjahr-pilz-mit-umsatzrueckgang-728.html",
+   "https://apps.eurofound.europa.eu/restructuring-events/detail/204551"
+  ]
+ },
+ {
+  "id": "vegetarian-butcher-collective",
+  "name": "The Vegetarian Butcher Collective (Vivera and The Vegetarian Butcher)",
+  "country": "Netherlands",
+  "city": null,
+  "industry": "Plant-based food brand",
+  "size": null,
+  "revenue": null,
+  "what_they_sell": "Plant-based meat alternatives sold under The Vegetarian Butcher and Vivera brands.",
+  "customers": "Supermarket shoppers and food-service (hospitality) buyers.",
+  "channels": "Retail listings: The Vegetarian Butcher in more than 55,000 points of sale across 45 countries; Vivera in more than 32,000 supermarkets across 25 European markets (per 2026-06 and 2025-09 coverage).",
+  "recent_news": [
+   {
+    "date": "2025-09",
+    "fact": "Vivera and The Vegetarian Butcher unveiled a joint organisation identity, The Vegetarian Butcher Collective, after Vivera acquired the brand from Unilever."
+   },
+   {
+    "date": "2026-06",
+    "fact": "Appointed a new CEO who previously ran The Vegetarian Butcher, succeeding the executive who oversaw the merger; the predecessor stays as an adviser to year-end."
+   }
+  ],
+  "signals": [
+   "Two brands merged into one collective (2025-09)",
+   "New CEO appointed after integration (2026-06)"
+  ],
+  "likely_pains": [
+   "Post-merger integration of two brands and two sales teams means account lists and retailer listings need consolidating",
+   "A new CEO will want visible growth from the combined portfolio, which pushes retail and foodservice pipeline",
+   "Competing with private-label plant-based ranges in supermarkets means outreach has to be sharper"
+  ],
+  "good_fit_offers": [
+   "outbound-sdr",
+   "ugc-influencer"
+  ],
+  "sources": [
+   "https://www.theplantbasemag.com/news/vivera-and-the-vegetarian-butcher-reveal-new-joint-organisation-identity-following-acquisition",
+   "https://vegconomist.com/company-news/former-brand-chief-returns-lead-the-vegetarian-butcher-collective/"
+  ]
+ },
+ {
+  "id": "le-slip-francais",
+  "name": "Le Slip Francais",
+  "country": "France",
+  "city": "Aubervilliers",
+  "industry": "Apparel brand (made-in-France underwear and basics)",
+  "size": "77 staff at the Aubervilliers factory and 38 at head office (pre-IPO, 2026-06); plans to create 300 jobs",
+  "revenue": "EUR 21.1M in 2025 (pro forma), up 4.3% on 2024",
+  "what_they_sell": "Made-in-France underwear and basics apparel, plus a B2B 'Made in France As a Service' manufacturing offer for other brands.",
+  "customers": "Consumers buying its own-brand basics; third-party brands for the B2B manufacturing offer.",
+  "channels": "Own-brand consumer sales; channel split not verified in an opened source.",
+  "recent_news": [
+   {
+    "date": "2026-06",
+    "fact": "Pre-IPO coverage reported 77 staff at the Aubervilliers factory, 38 at head office, and a plan to create 300 jobs."
+   },
+   {
+    "date": "2026-07",
+    "fact": "First trading scheduled for 2026-07-14 on Euronext Growth Paris (ticker ALLSF) at an offer price of EUR 14.80 per share."
+   }
+  ],
+  "signals": [
+   "Listing on Euronext Growth Paris scheduled 2026-07-14",
+   "Plans 300 new jobs after 77 factory staff at IPO time"
+  ],
+  "likely_pains": [
+   "Newly listed, so investors expect visible growth and paid acquisition and B2B pipeline are under pressure",
+   "Ramp-up toward 300 new jobs means heavy recruiting and onboarding in the factory and head office",
+   "Growing the B2B manufacturing offer needs new brand clients outside its own consumer business"
+  ],
+  "good_fit_offers": [
+   "video-ads",
+   "ugc-influencer",
+   "outbound-sdr"
+  ],
+  "sources": [
+   "https://allnews.ch/node/156031",
+   "https://www.toutsurmesfinances.com/bourse/?p=50133",
+   "https://www.home.saxo/fr-fr/content/articles/equities/ipo-le-slip-francais-30062026"
+  ]
+ },
+ {
+  "id": "dental-and-company",
+  "name": "Dental & Company",
+  "country": "Spain",
+  "city": null,
+  "industry": "Dental clinic network (clinic and allied health group)",
+  "size": "Network approached 100 clinics by 2024-06; headcount not published",
+  "revenue": null,
+  "what_they_sell": "Dental care delivered through its own clinic network.",
+  "customers": "Patients across Spanish regions (B2C).",
+  "channels": "Own-clinic network grown through new openings and incorporations of existing clinics.",
+  "recent_news": [
+   {
+    "date": "2024-06",
+    "fact": "Approached 100 clinics with two new openings in Madrid and Huelva."
+   },
+   {
+    "date": "2026-09",
+    "fact": "Reported 20 clinic openings so far in 2026, including two new centres in Valencia and Cataluna."
+   }
+  ],
+  "signals": [
+   "20 clinic openings so far in 2026 (2026-09)",
+   "Network approached 100 clinics in mid-2024"
+  ],
+  "likely_pains": [
+   "Every new clinic needs local staffing (dentists, hygienists, front desk) on a short timeline",
+   "Patient acquisition for new centres depends on fast answers to calls and appointment requests",
+   "Reviews and reputation have to be managed consistently across many local clinics"
+  ],
+  "good_fit_offers": [
+   "ai-receptionist",
+   "review-mgmt",
+   "crm-automation"
+  ],
+  "sources": [
+   "https://www.alimarket.es/sanidad/noticia_amp/392032/dental---company-se-acerca-a-las-100-clinicas-con-dos-nuevas-aperturas-en-madrid-y-huelva",
+   "https://www.alimarket.es/sanidad/noticia_amp/430233/dental---company-alcanza-las-20-aperturas-en-lo-que-llevamos-de-ano"
+  ]
+ },
+ {
+  "id": "better-energy",
+  "name": "Better Energy",
+  "country": "Denmark",
+  "city": null,
+  "industry": "Solar energy developer and installer",
+  "size": "Headcount not published; around 35-40% of staff cut in a 2024-11 reorganisation",
+  "revenue": "Revenue fell by just over DKK 300M year on year (2024-04 report); absolute figure not verified",
+  "what_they_sell": "Develops and builds solar parks and manages solar energy projects.",
+  "customers": "Investors and landowners in solar projects (B2B).",
+  "channels": "Project development and direct project sales; channel mix not verified.",
+  "recent_news": [
+   {
+    "date": "2024-04",
+    "fact": "Reported revenue down by just over DKK 300M year on year, while pre-tax profit rose by DKK 33M."
+   },
+   {
+    "date": "2024-11",
+    "fact": "Announced a reorganisation cutting around 35-40% of staff as growth moves to a slower, normalised pace."
+   }
+  ],
+  "signals": [
+   "35-40% staff cut announced (2024-11)",
+   "Revenue down over DKK 300M year on year (2024-04 report)"
+  ],
+  "likely_pains": [
+   "A smaller team after the cuts leaves little capacity to prospect new project investors",
+   "A slower market and a shrinking pipeline mean every qualified lead matters",
+   "Restructured management companies and portfolio make pipeline visibility harder to keep"
+  ],
+  "good_fit_offers": [
+   "outbound-sdr",
+   "bi-dashboards"
+  ],
+  "sources": [
+   "https://www.doi.dk/en/solenergi/artikel/better-energy-gik-tilbage-paa-omsaetning-med-frem-paa-indtjening",
+   "https://www.doi.dk/en/solenergi/artikel/ny-markedssituation-better-energy-vil-gennemfoere-stor-fyringsrunde"
+  ]
+ },
+ {
+  "id": "tas-logistyka",
+  "name": "TAS Logistyka",
+  "country": "Poland",
+  "city": "Warsaw",
+  "industry": "Logistics and warehousing (haulage, freight forwarding, storage)",
+  "size": "300+ employees across six warehouse locations in Poland",
+  "revenue": null,
+  "what_they_sell": "Haulage, freight forwarding, storage and combined logistics solutions.",
+  "customers": "Businesses that need road transport, forwarding and warehousing (B2B shippers).",
+  "channels": "Direct B2B contracts; channel mix not verified.",
+  "recent_news": [
+   {
+    "date": "2025-12",
+    "fact": "Leased almost 15,500 m2 of new warehouse space at CTPark Warsaw South; the site total is about 42,000 m2."
+   }
+  ],
+  "signals": [
+   "Almost 15,500 m2 new warehouse space at CTPark Warsaw South (2025-12)",
+   "300+ staff across six Polish warehouses"
+  ],
+  "likely_pains": [
+   "Filling about 15,500 m2 of new space needs more B2B shipper contracts and a bigger sales capacity",
+   "Hiring and retaining warehouse and transport staff quickly for added capacity",
+   "Coordinating six sites and a fleet with largely manual route and order planning is hard to scale"
+  ],
+  "good_fit_offers": [
+   "route-opt",
+   "outbound-sdr"
+  ],
+  "sources": [
+   "https://www.logisticsmanager.com/tas-logistyka-expands-operations-at-ctpark-warsaw-south"
+  ]
+ },
+ {
+  "id": "kelly-partners-sydney",
+  "name": "Kelly+Partners",
+  "country": "Australia",
+  "city": "Sydney",
+  "industry": "Professional services (accounting, tax and advisory)",
+  "size": null,
+  "revenue": null,
+  "what_they_sell": "Accounting, tax, business advisory and wealth services for private business owners and their families.",
+  "customers": "Private business owners and their families across about 20 sectors, including hospitality, medical, retail and transport.",
+  "channels": "Partner-led growth through tuck-in partnerships with local practices; site lists cloud-based delivery with offices as an option.",
+  "recent_news": [
+   {
+    "date": "2024-12",
+    "fact": "Mitchell & Partners joined Kelly+Partners Accountants in a partnership effective 2024-12-12."
+   },
+   {
+    "date": "2025-01",
+    "fact": "The joining team moved into the Kelly+Partners Sydney CBD office at Level 53, 25 Martin Place from 2025-01-06."
+   }
+  ],
+  "signals": [
+   "Sydney CBD tuck-in partnership effective 2024-12-12",
+   "Offices in five countries per own site (Australia, US, Ireland, Hong Kong, India)"
+  ],
+  "likely_pains": [
+   "Integrating newly joined partner teams into one office and one client book",
+   "Owner-managed clients are hard to reach by cold outreach, so growth leans on referrals and partner time",
+   "A partner-led model squeezes business development behind client delivery work"
+  ],
+  "good_fit_offers": [
+   "outbound-sdr",
+   "crm-automation"
+  ],
+  "sources": [
+   "https://www.kellypartners.com.au/partnership/mitchell-partners",
+   "https://www.kellypartners.com.au/"
+  ]
+ },
+ {
+  "id": "good-company-bar-group",
+  "name": "Good Company Bar Group",
+  "country": "Australia",
+  "city": "Melbourne",
+  "industry": "Hospitality group (bars and venues)",
+  "size": "Eight venues in its anniversary programme (2025-04); plans to reach 11 venues within six months; headcount not published",
+  "revenue": null,
+  "what_they_sell": "Bars and hospitality venues offering drinks and events.",
+  "customers": "Local drinkers, event guests and table bookings (B2C).",
+  "channels": "Own venues with citywide events and marketing; channel mix not verified.",
+  "recent_news": [
+   {
+    "date": "2025-04",
+    "fact": "Marked its fifth anniversary with a citywide party and said it plans to grow to 11 venues over the next six months."
+   }
+  ],
+  "signals": [
+   "Target of 11 venues within six months (2025-04)",
+   "Launched in 2020"
+  ],
+  "likely_pains": [
+   "Opening several venues in six months means hiring managers and bar staff at pace",
+   "Table and event bookings across sites need fast, reliable answers to calls and online enquiries",
+   "Hospitality staffing shortages and turnover make a consistent guest experience harder to hold"
+  ],
+  "good_fit_offers": [
+   "ai-receptionist",
+   "pos-loyalty"
+  ],
+  "sources": [
+   "https://www.concreteplayground.com/melbourne/food-drink/good-company-bar-group-5th-birthday/amp"
+  ]
+ },
+ {
+  "id": "blinq",
+  "name": "Blinq",
+  "country": "Australia",
+  "city": "Melbourne",
+  "industry": "B2B SaaS (digital business cards and contact sharing)",
+  "size": "67 employees across Sydney, Melbourne, New York and San Francisco (2025-05)",
+  "revenue": null,
+  "what_they_sell": "Digital business card platform for individuals and companies.",
+  "customers": "Individuals plus about 500,000 companies in the US, Canada, UK and Australia (per 2025-05 coverage).",
+  "channels": "Self-serve product sign-up with team sales to companies; channel mix not verified in detail.",
+  "recent_news": [
+   {
+    "date": "2025-05",
+    "fact": "Raised a US$25M Series A led by Touring Capital."
+   }
+  ],
+  "signals": [
+   "US$25M Series A (2025-05)",
+   "Team grew from five Melbourne staff to 67 across four cities"
+  ],
+  "likely_pains": [
+   "After the Series A, the sales and go-to-market team is scaling across time zones",
+   "Converting free individual users into paid company accounts is the core revenue challenge",
+   "Keeping early-stage sales follow-up consistent across four cities"
+  ],
+  "good_fit_offers": [
+   "outbound-sdr",
+   "crm-automation"
+  ],
+  "sources": [
+   "https://techcrunch.com/2025/05/06/blinq-grabs-25m-series-a-for-its-digital-business-card-platform"
+  ]
+ },
+ {
+  "id": "acton-belle-property",
+  "name": "Acton | Belle Property",
+  "country": "Australia",
+  "city": "Perth",
+  "industry": "Real estate agency (residential sales)",
+  "size": null,
+  "revenue": null,
+  "what_they_sell": "Residential property sales (buying and selling homes) in Perth.",
+  "customers": "Buyers (downsizers, upsizers, domestic and overseas investors) and property vendors.",
+  "channels": "Local office network with principal-led teams; off-the-plan sales.",
+  "recent_news": [
+   {
+    "date": "2026-03",
+    "fact": "Opened a second Perth City office, the network's second after Mount Lawley, led by a new director with two Mount Lawley principals."
+   }
+  ],
+  "signals": [
+   "Second Perth office opened (2026-03)",
+   "Inner-city market described as thriving, with strong off-the-plan and downsizer demand"
+  ],
+  "likely_pains": [
+   "A new office has to build listing stock and an agent pipeline quickly",
+   "Missed calls and slow follow-up on appraisal and listing enquiries cost vendor leads",
+   "Competing with larger Perth groups for inner-city vendor listings"
+  ],
+  "good_fit_offers": [
+   "ai-receptionist",
+   "review-mgmt"
+  ],
+  "sources": [
+   "https://www.realestatebusiness.com.au/industry/31469-agency-expands-in-perth-s-booming-inner-city-market"
+  ]
+ },
+ {
+  "id": "haighs-chocolates",
+  "name": "Haigh's Chocolates",
+  "country": "Australia",
+  "city": "Adelaide",
+  "industry": "Confectionery manufacturer and retail chain",
+  "size": "More than 900 staff; the new Salisbury South site can hold up to 400 employees (2025-09)",
+  "revenue": null,
+  "what_they_sell": "Premium chocolates and confectionery sold through its own stores and online.",
+  "customers": "Retail and online shoppers, including gifting buyers.",
+  "channels": "22 retail stores across Adelaide, Sydney, Melbourne and Canberra, plus online.",
+  "recent_news": [
+   {
+    "date": "2025-09",
+    "fact": "Opened a A$120M production and fulfilment complex at Salisbury South, lifting chocolate capacity from 1,100 to 2,000 tonnes a year."
+   }
+  ],
+  "signals": [
+   "22 stores across four cities plus online (2025-09)",
+   "A$120M plant expansion, capacity 1,100 to 2,000 tonnes a year"
+  ],
+  "likely_pains": [
+   "Doubling plant capacity means store and online sales have to grow to fill it",
+   "Seasonal peaks (Easter and Christmas) strain staffing across many stores",
+   "Hiring and training retail teams across several cities at once"
+  ],
+  "good_fit_offers": [
+   "pos-loyalty",
+   "review-mgmt"
+  ],
+  "sources": [
+   "https://www.processonline.com.au/content/business/news/haigh-s-chocolates-opens-new-sa-facility-891100158"
+  ]
+ },
+ {
+  "id": "ikon-institute-of-australia",
+  "name": "Ikon Institute of Australia",
+  "country": "Australia",
+  "city": "Brisbane",
+  "industry": "Private higher education and VET provider",
+  "size": "170+ team members and 6,000+ students (self-reported on official site, undated)",
+  "revenue": null,
+  "what_they_sell": "Higher education and vocational courses (for example early childhood education and business) delivered on campus and online.",
+  "customers": "International and domestic students.",
+  "channels": "Campus enrolment in Brisbane, Sydney, Melbourne and Adelaide, plus a virtual campus (per official site).",
+  "recent_news": [
+   {
+    "date": "2025-10",
+    "fact": "Parent group EDU Holdings reported 164 new Term 4 2025 enrolments in its Australian Learning Group VET business, up 26% on the prior term and down 43% on the year before."
+   }
+  ],
+  "signals": [
+   "Part of EDU Holdings Limited (per official site)",
+   "Campuses in four cities plus a virtual campus"
+  ],
+  "likely_pains": [
+   "Enrolment volatility: group VET new enrolments fell 43% year on year in Term 4 2025, so admissions teams need more qualified enquiries",
+   "Prospective-student enquiries arrive across many channels and campuses, and slow follow-up loses applicants",
+   "Visa and provider-cap rules add uncertainty to international intake forecasting"
+  ],
+  "good_fit_offers": [
+   "ai-receptionist",
+   "crm-automation"
+  ],
+  "sources": [
+   "https://ikon.edu.au/?p=6445",
+   "https://investorpa.com/announcement/207244/"
+  ]
+ },
+ {
+  "id": "driven-properties",
+  "name": "Driven Properties",
+  "country": "UAE",
+  "city": "Dubai",
+  "industry": "Luxury residential real estate brokerage",
+  "size": "300+ staff from 40+ nationalities (company profile); company-size field lists 1,000",
+  "revenue": null,
+  "what_they_sell": "Brokerage for luxury residential property sales in Dubai, claiming over US$6 billion in aggregate sales (figure from a 2021 profile).",
+  "customers": "Luxury residential buyers; the 2021 profile credits it with deals at Bulgari Residences, One at Palm Jumeirah and Jumeirah Bay Island.",
+  "channels": "Agent-led sales; Forbes Global Properties network member (first Middle East brokerage added, per a 2021 announcement).",
+  "recent_news": [],
+  "signals": [
+   "Company profile lists a Downtown Dubai headquarters",
+   "300+ staff across 40+ nationalities (company profile)"
+  ],
+  "likely_pains": [
+   "A large agent-led team means lead handoffs depend on whichever agent picks up first; slow first response loses luxury buyers",
+   "Enquiries arrive across WhatsApp, portals and phone at all hours, so missed calls directly cost high-value deals",
+   "Fast-moving off-plan and resale inventory needs current pricing and clean CRM records across agents"
+  ],
+  "good_fit_offers": [
+   "ai-receptionist",
+   "crm-automation",
+   "video-ads"
+  ],
+  "sources": [
+   "https://greatplacetowork.me/certified-organization/driven-properties/",
+   "https://www.sme10x.com/10x-industry/driven-properties-becomes-first-brokerage-to-be-awarded-forbes-global-properties-membership-in-the-middle-east"
+  ]
+ },
+ {
+  "id": "tashas-group",
+  "name": "Tashas Group",
+  "country": "UAE",
+  "city": "Dubai",
+  "industry": "Restaurants and cafes (F&B group)",
+  "size": "Restaurants in Dubai and Abu Dhabi (headcount not verified)",
+  "revenue": null,
+  "what_they_sell": "Premium cafe and restaurant dining under the tashas brand, with a second concept, Cafe Sofi, planned for 2026.",
+  "customers": "Diners in Dubai and Abu Dhabi, and residents of new suburban community developments targeted by the Arada joint venture (Sharjah, Al Ain, Nad Al Sheba, Ras Al Khaimah).",
+  "channels": "Owned restaurants; developer-partnered sites in master communities through the Arada joint venture.",
+  "recent_news": [
+   {
+    "date": "2025-09",
+    "fact": "Signed an AED 100 million joint venture with developer Arada to open at least 10 new restaurants across the Gulf within two years, starting with Aljada in Sharjah (announced for December 2025)."
+   }
+  ],
+  "signals": [
+   "At least 10 joint-venture outlets planned within two years",
+   "All joint-venture venues are non-alcoholic",
+   "Two brands in the venture: tashas and Cafe Sofi"
+  ],
+  "likely_pains": [
+   "Opening 10 venues on a set calendar means hiring and training crews for several launches at once",
+   "Non-alcoholic dining relies on daytime and brunch footfall, so reviews and local search drive covers",
+   "Running two brands from one team stretches marketing and social content output"
+  ],
+  "good_fit_offers": [
+   "review-mgmt",
+   "pos-loyalty"
+  ],
+  "sources": [
+   "https://www.arada.com/en/latest-news/arada-enters-aed100m-joint-venture-with-tashas-group-to-open-raft-of-high-end-restaurants-across-the-gcc/",
+   "https://www.rli.uk.com/tashas-group-bets-on-suburban-uae-dining/"
+  ]
+ },
+ {
+  "id": "aster-clinics-uae",
+  "name": "Aster Clinics",
+  "country": "UAE",
+  "city": "UAE-wide (85 clinics)",
+  "industry": "Outpatient clinic network (healthcare)",
+  "size": "85 clinics in the UAE (2026-07); expansion expected to add about 4,100 jobs",
+  "revenue": null,
+  "what_they_sell": "Outpatient clinic care delivered through a UAE network of clinics, part of the Aster DM Healthcare group.",
+  "customers": "UAE residents seeking outpatient care at neighbourhood clinics.",
+  "channels": "Walk-in and appointment-led clinics across the UAE.",
+  "recent_news": [
+   {
+    "date": "2026-07",
+    "fact": "Reported 85 UAE clinics with more opening soon, and plans to invest Dh100 million across 100 new and existing facilities by 2030."
+   }
+  ],
+  "signals": [
+   "Expansion expected to add about 4,100 jobs",
+   "More than 100 facilities targeted by 2030",
+   "Part of Aster DM Healthcare group (large brand)"
+  ],
+  "likely_pains": [
+   "Hiring around 4,100 roles means front-desk and recruitment calls will spike",
+   "Each new clinic needs a fast start on bookings, so missed calls cost early patient numbers",
+   "Patient reviews and online listings across 85+ sites are hard to keep consistent"
+  ],
+  "good_fit_offers": [
+   "ai-receptionist",
+   "review-mgmt"
+  ],
+  "sources": [
+   "https://www.khaleejtimes.com/business/aster-clinics-dh100-million-expand-100-facilities"
+  ]
+ },
+ {
+  "id": "shorages",
+  "name": "Shorages",
+  "country": "UAE",
+  "city": "Dubai",
+  "industry": "E-commerce fulfilment and 3PL logistics",
+  "size": null,
+  "revenue": null,
+  "what_they_sell": "Warehousing, inventory storage and order dispatch for e-commerce brands, with fulfilment centres in the UAE and Saudi Arabia.",
+  "customers": "E-commerce brands selling across the GCC that outsource storage and dispatch.",
+  "channels": "Direct B2B sales to online sellers; growth funded through investor-led rounds.",
+  "recent_news": [
+   {
+    "date": "2024-04",
+    "fact": "Raised USD 1 million pre-Series A (some coverage calls it seed), led by Joa Capital's S3 Ventures Fund, to expand warehouses across the GCC after its Saudi expansion."
+   }
+  ],
+  "signals": [
+   "Fulfilment centres in the UAE and KSA",
+   "Founded 2019"
+  ],
+  "likely_pains": [
+   "Orders from several brands across two countries need tight dispatch cut-offs and courier coordination",
+   "New Saudi warehouse capacity adds stock sync and reporting load across systems",
+   "Brands expect live stock and delivery tracking, and manual updates do not scale"
+  ],
+  "good_fit_offers": [
+   "route-opt",
+   "ai-automation"
+  ],
+  "sources": [
+   "https://enterpriseam.com/logistics/2024/04/29/uaes-shorages-closes-usd-1-mn-pre-series-a-funding-wee-closes-usd-10-mn-pre-seed-round/"
+  ]
+ },
+ {
+  "id": "the-sleep-company",
+  "name": "The Sleep Company",
+  "country": "India",
+  "city": "Mumbai",
+  "industry": "D2C sleep products (mattresses, pillows, bedding) with retail stores",
+  "size": "About 1,500 employees; 160 outlets across 47 cities (2025-08)",
+  "revenue": null,
+  "what_they_sell": "Direct-to-consumer mattresses, pillows and bedding sold online and through its own stores.",
+  "customers": "Urban Indian households buying sleep products.",
+  "channels": "Own website and app plus company-owned retail stores, with stores as the main expansion lever.",
+  "recent_news": [
+   {
+    "date": "2025-08",
+    "fact": "Raised INR 480 crore (about USD 57 million), split evenly between primary and secondary, with ChrysCapital and 360 One Asset participating; plans 130 to 150 new stores over two years."
+   }
+  ],
+  "signals": [
+   "Plans 130 to 150 new stores in two years",
+   "160 outlets across 47 cities"
+  ],
+  "likely_pains": [
+   "Opening 130 to 150 stores in two years needs local marketing and staffing for each launch",
+   "Online and store customers need one loyalty and order view to avoid split experiences",
+   "Paid social costs rise as a mattress brand scales, so creator and video content has to carry more of the load"
+  ],
+  "good_fit_offers": [
+   "video-ads",
+   "ugc-influencer",
+   "pos-loyalty"
+  ],
+  "sources": [
+   "https://india.entrepreneur.com/en-in/news-and-trends/d2c-brand-the-sleep-company-secures-inr-480-cr-to-open/495519"
+  ]
+ },
+ {
+  "id": "holiday-tribe",
+  "name": "Holiday Tribe",
+  "country": "India",
+  "city": "Gurugram",
+  "industry": "Online travel (AI-assisted holiday packages)",
+  "size": "Team size not stated; company site cites 25k+ customers",
+  "revenue": null,
+  "what_they_sell": "Curated holiday packages, either bundled with expert help or planned self-serve with an AI travel advisor; destinations include Bali, Thailand, Dubai, Singapore, Japan and Vietnam.",
+  "customers": "Indian leisure travellers booking international holidays.",
+  "channels": "Direct online booking through its website; AI travel advisor; supplier and hotel network.",
+  "recent_news": [
+   {
+    "date": "2025-08",
+    "fact": "Raised INR 25 crore in a pre-Series A (equity and debt) led by Powerhouse Ventures and GSF, targeting INR 500 crore annualised GMV in 18 to 24 months."
+   }
+  ],
+  "signals": [
+   "Target of INR 500 crore annualised GMV in 18 to 24 months",
+   "Offices listed in Gurugram and Jaipur",
+   "Company says it grew more than 3x since its Sept 2024 seed round"
+  ],
+  "likely_pains": [
+   "Reaching INR 500 crore GMV in 18 to 24 months means roughly multiplying booking volume",
+   "Travel enquiries arrive on chat, WhatsApp and calls, and slow replies lose bookings to faster competitors",
+   "An AI-led planning product needs strong trust messaging against established travel brands"
+  ],
+  "good_fit_offers": [
+   "video-ads",
+   "crm-automation"
+  ],
+  "sources": [
+   "https://entrackr.com/snippets/holiday-tribe-raises-rs-25-cr-in-pre-series-a-round-9653385",
+   "https://holidaytribe.ai/"
+  ]
+ },
+ {
+  "id": "seekho",
+  "name": "Seekho",
+  "country": "India",
+  "city": "Bengaluru",
+  "industry": "Edtech (short-form learning video app)",
+  "size": null,
+  "revenue": null,
+  "what_they_sell": "Short learning video app with educational content in English, Hindi and regional languages, covering business, tech, government exam prep and personal growth.",
+  "customers": "Students, working professionals and general learners in India.",
+  "channels": "Mobile app with subscription plans.",
+  "recent_news": [
+   {
+    "date": "2025-10",
+    "fact": "Closed a USD 28 million (INR 240 crore) Series B led by Bessemer Venture Partners, with Goodwater Capital, Lightspeed and Elevation Capital participating."
+   }
+  ],
+  "signals": [
+   "Series B closed October 2025",
+   "Founded 2020"
+  ],
+  "likely_pains": [
+   "Producing content in several languages on a schedule needs a larger studio and editing team",
+   "Subscription learners often drop off after the trial, so retention drives revenue",
+   "Scaling paid user acquisition with Series B money raises the cost per install"
+  ],
+  "good_fit_offers": [
+   "video-ads",
+   "ugc-influencer"
+  ],
+  "sources": [
+   "https://entrackr.com/decoding/seekhos-valuation-jumps-46x-in-series-b-round-10584358"
+  ]
+ },
+ {
+  "id": "easebuzz",
+  "name": "Easebuzz",
+  "country": "India",
+  "city": "Pune",
+  "industry": "Fintech: payment gateway and merchant payments",
+  "size": "Employee count not stated; company says it serves 200,000+ businesses",
+  "revenue": "INR 650 crore (FY25, company-stated), up from INR 294 crore (FY24)",
+  "what_they_sell": "Online payment aggregation for merchants, plus POS devices and UPI Soundbox hardware and SaaS tools.",
+  "customers": "SMEs, startups and large enterprises accepting online and offline payments.",
+  "channels": "Direct merchant sales, API and SaaS integrations, and an expanding offline device range (POS and Soundbox).",
+  "recent_news": [
+   {
+    "date": "2025-04",
+    "fact": "Raised USD 30 million Series A led by Bessemer Venture Partners, with 8i Ventures and Varanium Capital, to expand SaaS, merchant reach and offline POS and Soundbox products."
+   },
+   {
+    "date": "2025-04",
+    "fact": "Said it received final RBI authorisation to operate as an online payment aggregator and is applying for a cross-border licence."
+   }
+  ],
+  "signals": [
+   "Applying for a cross-border payment aggregator licence",
+   "FY25 processed over USD 30 billion (company-stated)",
+   "Launching offline POS and UPI Soundbox products"
+  ],
+  "likely_pains": [
+   "Offline device sales need field and inside sales capacity to onboard merchants fast",
+   "Payment-gateway competition creates pricing pressure on SME merchants",
+   "Regulated-sector merchants need careful qualification, which lengthens sales cycles"
+  ],
+  "good_fit_offers": [
+   "outbound-sdr",
+   "crm-automation"
+  ],
+  "sources": [
+   "https://easebuzz.in/news-room/press-release/easebuzz-raises-usd30mn-series-a-funding-led-by-bessemer"
+  ]
+ },
+ {
+  "id": "fabex-steel-structures",
+  "name": "Fabex Steel Structures",
+  "country": "India",
+  "city": "Hyderabad",
+  "industry": "Manufacturing: pre-engineered buildings and structural steel",
+  "size": "About 400 staff; target about 800 as the Chityal plant ramps up",
+  "revenue": "INR 4.63 billion turnover in the previous financial year (year not named in article)",
+  "what_they_sell": "Pre-engineered buildings and structural steel for factories, warehouses and logistics infrastructure.",
+  "customers": "Industrial, warehouse and logistics developers in India, and export buyers in North America, Africa and the Middle East.",
+  "channels": "B2B project sales and export orders (no further channel detail verified).",
+  "recent_news": [
+   {
+    "date": "2025-11",
+    "fact": "Commissioned a INR 120 crore plant at Chityal near Hyderabad on 40 acres, adding 50,000 metric tonnes a year and lifting total capacity to 100,000 across two plants."
+   }
+  ],
+  "signals": [
+   "Headcount target of about 800",
+   "Exports to North America, Africa and the Middle East"
+  ],
+  "likely_pains": [
+   "A new 50,000 tonne plant needs a full order pipeline quickly, so sales coverage has to scale with capacity",
+   "Export buyers in North America and Africa need fast quotes and follow-up across time zones",
+   "Doubling headcount to about 800 strains supervision, onboarding and safety training"
+  ],
+  "good_fit_offers": [
+   "outbound-sdr",
+   "bi-dashboards"
+  ],
+  "sources": [
+   "https://machinist.in/2025/11/fabex-steel-structures-commissions-inr-1-2-billion-steel-structures-facility-in-telangana/"
+  ]
+ },
+ {
+  "id": "procurify",
+  "name": "Procurify",
+  "country": "Canada",
+  "city": "Vancouver",
+  "industry": "B2B SaaS: procurement and accounts payable software",
+  "size": null,
+  "revenue": null,
+  "what_they_sell": "Procurement, purchase request, approval and accounts payable automation software for finance and operations teams.",
+  "customers": "Mid-market finance and operations teams; named customers include Questrade, SkipTheDishes, Hootsuite and Asana (2024 coverage).",
+  "channels": "Direct sales to finance and operations leaders; company site cites hundreds of customer teams.",
+  "recent_news": [
+   {
+    "date": "2024-11",
+    "fact": "Launched an AP automation product with invoice data extraction and three-way matching, and secured US$20 million of growth capital (venture debt) from CIBC Innovation Banking."
+   }
+  ],
+  "signals": [
+   "Company says more than $100B is run through the platform",
+   "Named logos include Questrade, Hootsuite and Asana"
+  ],
+  "likely_pains": [
+   "Mid-market finance teams juggle procurement and AP tools, so consolidating the stack is a long sales cycle",
+   "Venture-debt-backed growth raises pressure on pipeline efficiency and deal velocity",
+   "AP automation buyers want proof of invoice accuracy and ROI before they switch from incumbent tools"
+  ],
+  "good_fit_offers": [
+   "outbound-sdr",
+   "seo-content"
+  ],
+  "sources": [
+   "https://betakit.com/procurify-launches-new-accounts-payable-product-following-growth-capital-from-cibc/",
+   "https://www.procurify.com/about/"
+  ]
+ },
+ {
+  "id": "mastermind-toys",
+  "name": "Mastermind Toys",
+  "country": "Canada",
+  "city": "Toronto",
+  "industry": "Specialty toy retail",
+  "size": "48 stores across Canada (2025-10); headcount not stated",
+  "revenue": null,
+  "what_they_sell": "Toys and play products sold through a national chain of physical stores.",
+  "customers": "Canadian families and gift buyers.",
+  "channels": "Physical stores, a new flagship format, and planned franchising.",
+  "recent_news": [
+   {
+    "date": "2025-10",
+    "fact": "Opened a roughly 6,900 sq ft flagship inside Cours Mont-Royal in downtown Montreal on 2025-10-18, its first Quebec store."
+   },
+   {
+    "date": "2025-12",
+    "fact": "Said it is preparing to grow through franchising, starting with Canada and dense markets such as Toronto and Vancouver, and hired a consultancy to get ready."
+   }
+  ],
+  "signals": [
+   "48 stores across Canada",
+   "Franchising push announced December 2025",
+   "Ownership changed after a 2023 creditor-protection filing (acquisition year not confirmed)"
+  ],
+  "likely_pains": [
+   "A franchise build-out needs a steady pipeline of franchisee leads and a clear sales playbook",
+   "Holiday season concentrates sales, so inventory and store staffing have to be right the first time",
+   "Trust after the 2023 creditor-protection filing means reviews and local presence matter for new store sales"
+  ],
+  "good_fit_offers": [
+   "pos-loyalty",
+   "review-mgmt"
+  ],
+  "sources": [
+   "https://retail-insider.com/retail-insider/2025/10/mastermind-toys-enters-quebec-with-downtown-montreal-flagship/",
+   "https://www.bnnbloomberg.ca/business/company-news/2025/12/15/mastermind-toys-about-to-go-into-franchise-business/"
+  ]
+ },
+ {
+  "id": "centennial-business-suites",
+  "name": "Centennial Business Suites",
+  "country": "Singapore",
+  "city": "Singapore",
+  "industry": "Coworking and serviced offices (hospitality-led workspace)",
+  "size": "Seven coworking centres in Singapore (2025-09); headcount not stated",
+  "revenue": null,
+  "what_they_sell": "Flexible private offices for two to twenty people, dedicated desks, virtual offices, meeting rooms and enterprise suites.",
+  "customers": "Startups, SMEs and enterprise teams needing flexible office space in Singapore.",
+  "channels": "Direct enquiries and tours; openings announced through press releases.",
+  "recent_news": [
+   {
+    "date": "2025-09",
+    "fact": "Opened its seventh Singapore coworking centre at The Penthouse, Bugis Junction Towers, directly above Bugis MRT, with private offices for two to twenty people."
+   }
+  ],
+  "signals": [
+   "Seven Singapore centres (2025-09)",
+   "Calls itself Southeast Asia's leading hospitality-led workspace provider (company claim)"
+  ],
+  "likely_pains": [
+   "New centres need occupancy quickly to cover rent, so the time from enquiry to tour matters",
+   "Enquiries from startups and enterprise teams arrive by web, phone and marketplaces, and slow replies lose tours",
+   "Keeping service and brand consistent across seven centres as the network grows"
+  ],
+  "good_fit_offers": [
+   "ai-receptionist",
+   "outbound-sdr"
+  ],
+  "sources": [
+   "https://www.einpresswire.com/article/851306082/centennial-business-suites-launches-new-penthouse-workspace-at-bugis-junction"
+  ]
+ },
+ {
+  "id": "sosandar",
+  "name": "Sosandar plc",
+  "country": "UK",
+  "city": "Wilmslow",
+  "industry": "Womenswear fashion (D2C and stores)",
+  "size": "112 staff at 31 Mar 2025 (97 a year earlier); six stores opened in FY25",
+  "revenue": "£37.1m (FY25, year to 31 Mar 2025), down from £46.3m",
+  "what_they_sell": "Womenswear clothing sold through its own website and its own stores.",
+  "customers": "UK women buying everyday and occasion fashion.",
+  "channels": "Own website (revenue up 15% in FY25) plus owned stores in Marlow, Chelmsford, Gateshead, Cardiff, Bath and Harrogate.",
+  "recent_news": [
+   {
+    "date": "2025-07",
+    "fact": "FY25 results: revenue fell to £37.1m from £46.3m, audited pre-tax loss of £0.1m, net cash £7.3m."
+   },
+   {
+    "date": "2025-07",
+    "fact": "Opened six stores in FY25 and grew own-website revenue 15%."
+   }
+  ],
+  "signals": [
+   "112 staff at 31 Mar 2025, up from 97",
+   "Revenue down about 20% in FY25",
+   "Own-website revenue up 15% in FY25",
+   "Six stores opened in FY25"
+  ],
+  "likely_pains": [
+   "Profit recovery: an audited pre-tax loss in FY25 means every marketing pound has to convert",
+   "Revenue leans on its own website, so acquisition cost and repeat-buyer retention matter",
+   "Store roll-out plus D2C with 112 staff stretches marketing and CRM bandwidth"
+  ],
+  "good_fit_offers": [
+   "video-ads",
+   "crm-automation"
+  ],
+  "sources": [
+   "https://www.ticker.app/lse/SOS/rns/2025-07-15/Full-Year-Results-and-Trading-Update/0148R",
+   "https://find-and-update.company-information.service.gov.uk/search/companies?q=sosandar"
+  ]
+ },
+ {
+  "id": "the-protein-works",
+  "name": "The Protein Works",
+  "country": "UK",
+  "city": "Liverpool",
+  "industry": "Sports nutrition e-commerce (protein shakes and supplements)",
+  "size": "Staff not stated; company plans a 20% headcount increase in marketing, technology and data",
+  "revenue": "£50.7m (year to 31 Aug 2024), pre-tax profit £8.8m",
+  "what_they_sell": "Protein shakes, supplements and nutrition products sold online and shipped internationally.",
+  "customers": "Gym-goers and fitness consumers in the UK and overseas.",
+  "channels": "Direct-to-consumer online sales and international shipping; channel mix not stated in sources.",
+  "recent_news": [
+   {
+    "date": "2025-01",
+    "fact": "Reported sales above £50m for the year to 31 Aug 2024, up from £42.8m, with pre-tax profit of £8.8m."
+   },
+   {
+    "date": "2025-08",
+    "fact": "Announced a £10m self-funded campus in Speke, Liverpool, consolidating its Runcorn sites under one roof."
+   }
+  ],
+  "signals": [
+   "Sales up about 18% year on year to £50.7m",
+   "Plans a 20% headcount increase in marketing, technology and data",
+   "Targets £100m turnover in the coming years"
+  ],
+  "likely_pains": [
+   "Keeping customer acquisition cost efficient while sales keep growing at double digits",
+   "Moving production, fulfilment and marketing onto one campus without a dip in service",
+   "Converting one-off buyers into repeat customers in a crowded supplements market"
+  ],
+  "good_fit_offers": [
+   "video-ads",
+   "crm-automation"
+  ],
+  "sources": [
+   "https://www.cityam.com/?p=2297599",
+   "https://www.foodbev.com/post301/protein-works-opens-10m-facility-in-liverpool-uk"
+  ]
+ },
+ {
+  "id": "gilpin-hotel-lake-house",
+  "name": "Gilpin Hotel & Lake House",
+  "country": "UK",
+  "city": "Windermere",
+  "industry": "Boutique luxury hotel (family-run)",
+  "size": "30 rooms and suites at the Gilpin Hotel; staff numbers not stated",
+  "revenue": null,
+  "what_they_sell": "Luxury country-house hotel stays with a Michelin-starred restaurant, a pan-Asian restaurant, and a spa, set in 100 acres.",
+  "customers": "Upmarket leisure guests, couples and special-occasion diners visiting the Lake District.",
+  "channels": "Direct bookings and restaurant reservations; channel mix not stated in sources.",
+  "recent_news": [
+   {
+    "date": "2026-01",
+    "fact": "Appointed a new general manager across both sites, succeeding a manager who had run the hotel since June 2024."
+   }
+  ],
+  "signals": [
+   "New general manager appointed January 2026",
+   "Two sites under one team: Gilpin Hotel and Lake House",
+   "Family-owned and run with a family-run ethos"
+  ],
+  "likely_pains": [
+   "A new GM settling in needs to lift midweek and off-peak occupancy",
+   "Rooms and dining rely on repeat and referral guests, so reviews drive luxury bookings",
+   "Seasonal Lake District demand makes event and corporate bookings harder to fill"
+  ],
+  "good_fit_offers": [
+   "review-mgmt",
+   "crm-automation"
+  ],
+  "sources": [
+   "https://www.thecaterer.com/news/chris-cooper-named-general-manager-at-gilpin-hotel-lake-house"
+  ]
+ },
+ {
+  "id": "cooper-parry",
+  "name": "Cooper Parry",
+  "country": "UK",
+  "city": "East Midlands Airport",
+  "industry": "Accountancy and business advisory",
+  "size": "Approaching 2,000 people across 13 UK offices (company locations page; Consultancy.uk, Aug 2025)",
+  "revenue": "More than £235m (2025)",
+  "what_they_sell": "Accounting, tax and business advisory services for owner-managed and mid-market businesses, including debt advisory after the Fellwood acquisition.",
+  "customers": "Owner-managed and mid-market businesses across the UK.",
+  "channels": "Acquisition-led growth (16 deals in about two years) plus partner-led client relationships across its office network.",
+  "recent_news": [
+   {
+    "date": "2025-08",
+    "fact": "Acquired debt advisory firm Fellwood Advisory, its 16th deal in two years, taking turnover above £235m."
+   }
+  ],
+  "signals": [
+   "16 acquisitions in about two years",
+   "Approaching 2,000 people",
+   "13 UK offices, including Belfast, Edinburgh, Glasgow, Manchester and London"
+  ],
+  "likely_pains": [
+   "Integrating acquired firms into one client experience and tech stack across 13 offices",
+   "Partner capacity, and cross-selling advisory services into newly acquired client bases",
+   "Recruiting and retaining qualified accountants while the group grows"
+  ],
+  "good_fit_offers": [
+   "crm-automation",
+   "hr-hiring"
+  ],
+  "sources": [
+   "https://www.consultancy.uk/news/41392/cooper-parry-acquires-debt-advisory-specialist-fellwood-advisory",
+   "https://www.cooperparry.com/locations/"
+  ]
+ },
+ {
+  "id": "approach-personnel",
+  "name": "Approach Personnel",
+  "country": "UK",
+  "city": "Nottingham",
+  "industry": "Construction recruitment (staffing)",
+  "size": null,
+  "revenue": null,
+  "what_they_sell": "Recruitment of construction-sector professionals, trades and labour for contractors.",
+  "customers": "UK construction contractors and developers.",
+  "channels": "Consultant-led recruitment, with growth through acquisitions.",
+  "recent_news": [
+   {
+    "date": "2024-05",
+    "fact": "Acquired Nottingham construction recruiter Simon Nicholas Associates; the price was not disclosed."
+   }
+  ],
+  "signals": [
+   "Acquired a Nottingham construction recruiter in May 2024",
+   "Sector focus on construction recruitment only"
+  ],
+  "likely_pains": [
+   "Integrating two consultant teams and their client books",
+   "Fill rates and consultant productivity in a cyclical construction market",
+   "Keeping acquired revenue growing with a steady new-business pipeline"
+  ],
+  "good_fit_offers": [
+   "outbound-sdr",
+   "ai-automation"
+  ],
+  "sources": [
+   "https://www.thebusinessdesk.com/eastmidlands/?p=2085795"
+  ]
+ },
+ {
+  "id": "di-maggios-restaurant-group",
+  "name": "Di Maggio's Restaurant Group (DRG)",
+  "country": "UK",
+  "city": "Glasgow",
+  "industry": "Restaurant group (Italian, tapas and casual dining)",
+  "size": "Number of sites and staff not stated",
+  "revenue": "£49.52m (year to Apr 2024); operating profit before exceptional items £6.23m",
+  "what_they_sell": "Restaurant dining across the Di Maggio's, Café Andaluz (tapas), Paesano and Sugo brands.",
+  "customers": "Diners in Scottish cities, with expansion into England.",
+  "channels": "Owned restaurants with site-led growth; channel mix not stated in sources.",
+  "recent_news": [
+   {
+    "date": "2025-02",
+    "fact": "Reported record turnover of £49.52m for the year to April 2024, up £3.68m, and operating profit before exceptionals of £6.23m."
+   },
+   {
+    "date": "2025-02",
+    "fact": "Planned a £1m Paesano restaurant in Glasgow's Shawlands and was in advanced discussions over a first London restaurant."
+   }
+  ],
+  "signals": [
+   "Record turnover of £49.52m (FY to April 2024)",
+   "Three new openings planned over the following year",
+   "Exploring a first London site"
+  ],
+  "likely_pains": [
+   "Opening several sites across two countries while keeping the guest experience consistent",
+   "Filling restaurants midweek and building repeat diners across four brands",
+   "Kitchen and front-of-house staffing while expanding"
+  ],
+  "good_fit_offers": [
+   "pos-loyalty",
+   "review-mgmt"
+  ],
+  "sources": [
+   "https://www.scottishfinancialnews.com/articles/drg-serves-up-record-turnover-and-profits-amid-expansion-plans"
+  ]
+ },
+ {
+  "id": "caddick-construction",
+  "name": "Caddick Construction",
+  "country": "UK",
+  "city": null,
+  "industry": "Regional construction contractor",
+  "size": "Birmingham office has more than 75 staff (2026); group headcount not stated",
+  "revenue": "£355.1m (year to 31 Aug 2024), up 12% from £317.6m",
+  "what_they_sell": "Construction contracting delivered from regional offices.",
+  "customers": "Commercial and public-sector construction clients (customer detail not stated in sources).",
+  "channels": "Tendering and regional business development from office-based teams in Birmingham and Durham.",
+  "recent_news": [
+   {
+    "date": "2026-03",
+    "fact": "Moved its Birmingham office to a 2,590 sq ft suite at Northspring; the team now has more than 75 people, up from 10 when it opened in 2023."
+   },
+   {
+    "date": "2025-03",
+    "fact": "Opened its North East office in Durham, its first base in that region."
+   }
+  ],
+  "signals": [
+   "Revenue up 12% to £355.1m",
+   "Birmingham team grew from 10 to more than 75 since 2023",
+   "Added a North East base in Durham in 2025"
+  ],
+  "likely_pains": [
+   "Hiring and retaining site and office staff across fast-growing regional offices",
+   "Maintaining bid win rates across several regional markets at once",
+   "Margin pressure on fixed-price tenders as labour and material costs rise"
+  ],
+  "good_fit_offers": [
+   "hr-hiring",
+   "bi-dashboards"
+  ],
+  "sources": [
+   "https://constructionwave.co.uk/2026/03/30/caddick-new-office-signals-next-phase-of-regional-expansion/"
+  ]
+ },
+ {
+  "id": "althorp-and-co",
+  "name": "Althorp & Co",
+  "country": "UK",
+  "city": "Cheltenham",
+  "industry": "Residential estate agency (independent)",
+  "size": "Not stated; new office on Suffolk Parade, Cheltenham",
+  "revenue": null,
+  "what_they_sell": "Residential estate agency services from an independent, director-founded agency.",
+  "customers": "Homeowners and buyers in Cheltenham (customer mix not stated).",
+  "channels": "Local office-led agency; channel detail not stated in sources.",
+  "recent_news": [
+   {
+    "date": "2026-02",
+    "fact": "Opened a new office on Suffolk Parade, Cheltenham, as its new headquarters (article dated 4 Feb 2026)."
+   }
+  ],
+  "signals": [
+   "New Cheltenham office opened early 2026",
+   "Independent, founder-led agency"
+  ],
+  "likely_pains": [
+   "Generating enough local leads for a newly opened office against larger chains",
+   "Keeping valuation appointments and follow-up fast enough to win instructions",
+   "Building local search and review visibility from a new base"
+  ],
+  "good_fit_offers": [
+   "seo-content",
+   "review-mgmt"
+  ],
+  "sources": [
+   "https://www.soglos.com/news/property-interiors/independent-estate-agency-launches-new-cheltenham-headquarters/26669"
+  ]
+ },
+ {
+  "id": "cleanology",
+  "name": "Cleanology",
+  "country": "UK",
+  "city": "London",
+  "industry": "Commercial and office cleaning (facilities services)",
+  "size": "More than 1,200 people across the UK (reported Nov 2022)",
+  "revenue": "In excess of £25m (reported Nov 2022), roughly doubled in a year",
+  "what_they_sell": "Commercial and office cleaning contracts for UK businesses.",
+  "customers": "Commercial offices and business premises across UK cities.",
+  "channels": "Contract tenders plus regional hubs built by acquisition and new bases.",
+  "recent_news": [
+   {
+    "date": "2022-08",
+    "fact": "Opened a Leeds base at Park House, Park Square West, and said it now works in 14 cities, with plans for more hubs."
+   },
+   {
+    "date": "2022-11",
+    "fact": "Acquired Wigan cleaning contractor TC Bibby & Sons; said it now employs more than 1,200 people and revenue has doubled to over £25m."
+   }
+  ],
+  "signals": [
+   "More than 1,200 staff after the TC Bibby & Sons acquisition",
+   "Revenue reported above £25m, roughly doubled in a year",
+   "Working in 14 cities as of 2022"
+  ],
+  "likely_pains": [
+   "Protecting contract margins as wage costs rise",
+   "Integrating acquired regional teams and systems into one operation",
+   "Winning new contracts across many cities with a hub-based sales model"
+  ],
+  "good_fit_offers": [
+   "outbound-sdr",
+   "hr-hiring"
+  ],
+  "sources": [
+   "https://www.thebusinessdesk.com/northwest/?p=2105894",
+   "https://www.thebusinessdesk.com/yorkshire/?p=2098719"
+  ]
+ },
+ {
+  "id": "novem",
+  "name": "Novem",
+  "country": "UK",
+  "city": "Manchester",
+  "industry": "Managed IT and telecoms services (including cybersecurity)",
+  "size": "Over 75 people (May 2026)",
+  "revenue": null,
+  "what_they_sell": "Managed IT, cloud, cybersecurity and telecoms services for businesses.",
+  "customers": "UK businesses buying outsourced IT support (SME focus not stated in sources).",
+  "channels": "Acquisition-led growth plus organic sales, with a new Midlands hub in Coventry.",
+  "recent_news": [
+   {
+    "date": "2026-05",
+    "fact": "Acquired Leicestershire managed IT provider Intalect, its fifth acquisition, and opened a Midlands hub in Coventry (article dated 13 May 2026)."
+   }
+  ],
+  "signals": [
+   "Fifth acquisition (Intalect) in May 2026",
+   "New Midlands hub in Coventry",
+   "Grown to over 75 people"
+  ],
+  "likely_pains": [
+   "Integrating several acquired IT providers into one service desk and toolset",
+   "Cybersecurity demand from SMEs that have no in-house IT team",
+   "Scaling sales to fill new regional hubs"
+  ],
+  "good_fit_offers": [
+   "cyber-security",
+   "outbound-sdr"
+  ],
+  "sources": [
+   "https://comms-dealer.com/node/27759",
+   "https://www.prolificnorth.co.uk/?p=141151"
+  ]
+ },
+ {
+  "id": "fenergo",
+  "name": "Fenergo",
+  "country": "Ireland",
+  "city": "Dublin",
+  "industry": "Regtech / fintech SaaS (client lifecycle management and financial crime)",
+  "size": "Total headcount not stated; announced 300 new Dublin roles and about 500 global roles within three years (July 2025)",
+  "revenue": "€149.4m (FY25, year to 31 Mar 2025), up 7.5%",
+  "what_they_sell": "SaaS client lifecycle management and transaction monitoring platform for banks and financial institutions.",
+  "customers": "Banks and financial institutions with client onboarding and compliance obligations.",
+  "channels": "Enterprise direct sales; recurring software licence revenue of €115m (+15%) from renewals.",
+  "recent_news": [
+   {
+    "date": "2025-07",
+    "fact": "Announced 300 new jobs at its Dublin HQ as part of a €100m R&D plan supported by Enterprise Ireland, with about 500 roles globally within three years."
+   },
+   {
+    "date": "2025-12",
+    "fact": "Reported FY25 profit before tax of €21.1m (up 70%), recurring software licence revenue of €115m (up 15%) and R&D spend of €24.2m."
+   }
+  ],
+  "signals": [
+   "Hiring 300 roles in Dublin, which the company says will double its domestic headcount",
+   "Profit before tax up 70% to €21.1m in FY25",
+   "R&D spend of €24.2m in FY25"
+  ],
+  "likely_pains": [
+   "Hiring engineering and AI talent for 300 Dublin roles in a tight market",
+   "Long enterprise sales cycles and renewal management in regulated banks",
+   "Showing agentic AI progress to customers while scaling headcount"
+  ],
+  "good_fit_offers": [
+   "hr-hiring",
+   "outbound-sdr"
+  ],
+  "sources": [
+   "https://www.fenergo.com/newsroom/fenergo-creates-500-new-jobs-as-part-of-100-million-investment-supported-by-enterprise-ireland",
+   "https://www.crowdfundinsider.com/2025/12/256812-dublin-regtech-fenergo-reports-steady-yoy-business-growth/"
+  ]
+ },
+ {
+  "id": "crust-and-crumb",
+  "name": "Crust & Crumb",
+  "country": "Ireland",
+  "city": "Ballyconnell, Co Cavan",
+  "industry": "Food manufacturing (pizza for retail)",
+  "size": "282 people employed at Ballyconnell site (June 2025), with 120 more jobs planned",
+  "revenue": null,
+  "what_they_sell": "Pizza products made at its Ballyconnell facility for retail supply.",
+  "customers": "Retail supermarket customers, with Tesco as the major contract.",
+  "channels": "Retailer supply contracts; the Tesco contract is worth over €10m a year.",
+  "recent_news": [
+   {
+    "date": "2025-06",
+    "fact": "Announced a €12.5m investment to double Ballyconnell capacity from 40,000 to 80,000 sq ft and add 120 jobs on top of 282 existing staff."
+   }
+  ],
+  "signals": [
+   "282 staff at Ballyconnell with 120 more jobs planned",
+   "Tesco contract worth over €10m a year",
+   "Site capacity doubling to 80,000 sq ft"
+  ],
+  "likely_pains": [
+   "Recruiting around 120 production and warehouse staff while the new build is finished",
+   "Concentration risk on one major retail contract",
+   "Growing retailer relationships beyond a single key account"
+  ],
+  "good_fit_offers": [
+   "hr-hiring",
+   "ai-automation"
+  ],
+  "sources": [
+   "https://www.rte.ie/news/business/2025/0603/1516372-crust-crumb-to-create-120-jobs/"
+  ]
+ },
+ {
+  "id": "sage-dental",
+  "name": "Sage Dental",
+  "country": "US",
+  "city": "Boca Raton, FL",
+  "industry": "Multi-location dental (dental support organization)",
+  "size": "130+ affiliated practices in FL, GA and TN, plus Alabama openings (2024-08)",
+  "revenue": null,
+  "what_they_sell": "Non-clinical management and support services for affiliated general dental practices.",
+  "customers": "Patients of general and family dental practices in its affiliated markets (FL, GA, TN, AL).",
+  "channels": "Practice-by-practice patient acquisition in local markets; growth through new openings and practice affiliations.",
+  "recent_news": [
+   {
+    "date": "2024-08",
+    "fact": "Expanded into Alabama as a new state, opening two of four new locations there."
+   }
+  ],
+  "signals": [
+   "130+ affiliated practices across FL, GA and TN (2024-08)",
+   "Added a fourth state and several openings in one announcement (2024-08)"
+  ],
+  "likely_pains": [
+   "Missed patient calls during chair time at each practice mean lost bookings",
+   "Opening new practices requires fast local hiring of dental assistants and hygienists",
+   "Keeping review scores and reputation consistent across many separately branded local practices"
+  ],
+  "good_fit_offers": [
+   "ai-receptionist",
+   "review-mgmt"
+  ],
+  "sources": [
+   "https://dentistrytoday.com/?p=117286"
+  ]
+ },
+ {
+  "id": "quip",
+  "name": "quip",
+  "country": "US",
+  "city": "Brooklyn, NY",
+  "industry": "Consumer oral care (direct-to-consumer electric toothbrushes and subscriptions)",
+  "size": "101-200 employees (Welcome to the Jungle company profile)",
+  "revenue": null,
+  "what_they_sell": "Electric toothbrushes, replacement heads, water flossers and whitening products, sold direct online with subscription plans.",
+  "customers": "Households buying oral care for home use, including subscription customers and kids' toothbrush buyers.",
+  "channels": "Direct-to-consumer eCommerce with bundles, toothbrush subscriptions, free standard shipping on $70+ orders and subscription orders, plus a store locator.",
+  "recent_news": [],
+  "signals": [
+   "Subscription plans and bundles are a core part of the offer (company site)",
+   "101-200 employees in Brooklyn headquarters (Welcome to the Jungle profile)"
+  ],
+  "likely_pains": [
+   "Subscription churn: keeping toothbrush and refill subscribers from cancelling",
+   "Rising customer acquisition cost for paid social and DTC traffic",
+   "Support load from subscription changes, shipping and returns questions"
+  ],
+  "good_fit_offers": [
+   "crm-automation",
+   "ugc-influencer"
+  ],
+  "sources": [
+   "https://getquip.com/",
+   "https://app.welcometothejungle.com/companies/quip"
+  ]
+ },
+ {
+  "id": "dayton-freight",
+  "name": "Dayton Freight",
+  "country": "US",
+  "city": "Dayton, OH",
+  "industry": "Regional less-than-truckload (LTL) freight carrier",
+  "size": "70+ terminals across 15 Midwest states (2025-09)",
+  "revenue": null,
+  "what_they_sell": "Regional less-than-truckload freight shipping through a network of terminals.",
+  "customers": "Shippers moving palletized freight regionally across the Midwest and into the East.",
+  "channels": "Terminal-based regional service sold direct to shippers; network growth through new terminal openings.",
+  "recent_news": [
+   {
+    "date": "2025-09",
+    "fact": "Announced a new terminal in Bedford, Pennsylvania, extending its regional network further east."
+   }
+  ],
+  "signals": [
+   "Network of 70+ terminals in 15 states (2025-09)",
+   "Described as a privately owned, nonunion carrier (FreightWaves)"
+  ],
+  "likely_pains": [
+   "Each new terminal needs dock staff and drivers recruited and onboarded quickly",
+   "Shipment status and proof-of-delivery calls grow with every new terminal",
+   "Linehaul and pickup routing across a larger multi-state network"
+  ],
+  "good_fit_offers": [
+   "route-opt",
+   "hr-hiring"
+  ],
+  "sources": [
+   "https://www.freightwaves.com/news/dayton-freight-expands-terminal-network-east"
+  ]
+ },
+ {
+  "id": "onpay",
+  "name": "OnPay",
+  "country": "US",
+  "city": "Atlanta, GA",
+  "industry": "Payroll, HR and benefits software for small businesses (B2B SaaS)",
+  "size": "25,000+ small and mid-sized business customers (2025-01); employee count not stated",
+  "revenue": null,
+  "what_they_sell": "Online turnkey payroll, hiring, compliance, benefits and time-tracking software for small businesses.",
+  "customers": "Small and mid-sized businesses across the US.",
+  "channels": "Direct online sign-up with published pricing starting at $55 per month; payroll bundled with benefits such as 401(k) and workers' comp.",
+  "recent_news": [
+   {
+    "date": "2025-01",
+    "fact": "Raised a $63M Series B led by Carrick Capital Partners, bringing total funding to more than $100M including a debt facility."
+   }
+  ],
+  "signals": [
+   "$63M Series B and over $100M total funding (2025-01)",
+   "Over 25,000 SMB customers in the US (2025-01)"
+  ],
+  "likely_pains": [
+   "Support and onboarding load grows as the SMB customer base scales past 25,000 accounts",
+   "Sales and customer-success headcount must keep pace with the post-Series B growth plan",
+   "Pressure to win SMB buyers against larger payroll and HR platforms"
+  ],
+  "good_fit_offers": [
+   "ai-automation",
+   "crm-automation"
+  ],
+  "sources": [
+   "https://www.onpay.com/about",
+   "https://www.carrickcapitalpartners.com/onpay-raises-over-100-million-in-funding"
+  ]
+ },
+ {
+  "id": "shipley-do-nuts",
+  "name": "Shipley Do-Nuts",
+  "country": "US",
+  "city": "Houston, TX",
+  "industry": "Regional quick-service restaurant (donut shops)",
+  "size": "370+ restaurants across 12 states (2025-02)",
+  "revenue": null,
+  "what_they_sell": "Donuts and baked goods sold through company-owned and franchised shops.",
+  "customers": "Walk-in and drive-thru customers in Texas and other regional markets.",
+  "channels": "Shop-level traffic in local markets; franchise-led growth through development agreements.",
+  "recent_news": [
+   {
+    "date": "2025-02",
+    "fact": "Opened the first Austin-area shops (South Austin and Leander) under a development agreement for 15 stores."
+   }
+  ],
+  "signals": [
+   "Development agreement for 15 Austin-area stores (2025-02)",
+   "Mix of company-owned and franchised restaurants; more than 300 franchised stores (Wikipedia)",
+   "Founded 1936 in Houston (Wikipedia)"
+  ],
+  "likely_pains": [
+   "New franchisee-owned shops need local reviews and launch marketing from day one",
+   "Staffing several new shops at once across different cities",
+   "Loyalty and repeat visits across a multi-state footprint of mixed company and franchise stores"
+  ],
+  "good_fit_offers": [
+   "review-mgmt",
+   "pos-loyalty"
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Shipley_Do-Nuts",
+   "https://www.franchising.com/amp/news/20250224_shipley_donuts_continues_austinarea_growth_with_new_shop_openings.html"
+  ]
+ },
+ {
+  "id": "bramlett-partners",
+  "name": "Bramlett Partners",
+  "country": "US",
+  "city": "Austin, TX",
+  "industry": "Residential real estate brokerage",
+  "size": "100+ agents; plans to hire 50 more within a year (2025-01)",
+  "revenue": "$600M in sales (2024), projected $1B for 2025 (company-reported)",
+  "what_they_sell": "Residential real estate brokerage for buyers and sellers in Central Texas, including the Waco area.",
+  "customers": "Home buyers and sellers in the Austin and Waco metro areas.",
+  "channels": "Agent-led brokerage marketing with neighborhood guides and online reviews; agent recruiting pages.",
+  "recent_news": [
+   {
+    "date": "2025-01",
+    "fact": "Rebranded from Bramlett Residential to Bramlett Partners, opened a new Austin headquarters that roughly triples office space, and expanded service to the Waco area."
+   }
+  ],
+  "signals": [
+   "Plans to hire 50 more agents within a year (2025-01)",
+   "Projects sales to rise from $600M in 2024 to $1B in 2025 (company-reported)",
+   "New headquarters doubles as coworking space for agents (2025-01)"
+  ],
+  "likely_pains": [
+   "Recruiting and onboarding about 50 agents in a year, with ramp-up time costs",
+   "Buyer and seller leads from Austin and Waco going unanswered outside office hours",
+   "Keeping the rebrand and a two-metro footprint consistent across agent marketing"
+  ],
+  "good_fit_offers": [
+   "ai-receptionist",
+   "crm-automation"
+  ],
+  "sources": [
+   "https://www.bramlettpartners.com/",
+   "https://www.businesswire.com/news/home/20250103323664/en/Bramlett-Residential-Central-Texass-Fastest-Growing-Independent-Real-Estate-Brokerage-Rebrands-to-Bramlett-Partners-Expands-Footprint-and-Hits-Major-Milestones"
+  ]
+ },
+ {
+  "id": "webb-air-heating-cooling",
+  "name": "Webb Air Heating & Cooling",
+  "country": "US",
+  "city": "Fort Worth, TX",
+  "industry": "Residential and comfort HVAC service (family-owned)",
+  "size": "Fort Worth-area service business; employee count not stated",
+  "revenue": null,
+  "what_they_sell": "Heating and cooling service and comfort solutions for the Fort Worth area, now part of The Chill Brothers.",
+  "customers": "Homeowners in the Fort Worth area.",
+  "channels": "Technician service calls and comfort advisors who sell replacement systems (per the 2025-06 release).",
+  "recent_news": [
+   {
+    "date": "2025-06",
+    "fact": "Acquired by The Chill Brothers, an HVAC services provider in Texas and North Carolina; Webb Air keeps its name."
+   }
+  ],
+  "signals": [
+   "Founded 1941 and described as family-owned (2025-06 release)",
+   "Acquirer is recruiting technicians and comfort advisors for Texas and North Carolina",
+   "Acquirer plans to scale through acquisitions, new sales offices and partnerships"
+  ],
+  "likely_pains": [
+   "Post-acquisition integration: keeping technicians and comfort advisors while new systems roll in",
+   "Peak-season call volume (AC and heating failures) where missed calls turn into lost installs",
+   "Recruiting technicians in a tight labor market while the acquirer is pushing growth"
+  ],
+  "good_fit_offers": [
+   "ai-receptionist",
+   "hr-hiring"
+  ],
+  "sources": [
+   "https://www.einpresswire.com/article/824145970/the-chill-brothers-acquires-webb-air-heating-cooling"
+  ]
+ },
+ {
+  "id": "harris-beach-murtha",
+  "name": "Harris Beach Murtha",
+  "country": "US",
+  "city": null,
+  "industry": "Mid-size law firm (Northeast)",
+  "size": "About 250 lawyers across 16 offices (merger announced 2025-01)",
+  "revenue": null,
+  "what_they_sell": "Full-service legal representation for clients from the combined Harris Beach and Murtha Cullina platform.",
+  "customers": "Businesses and institutions in the Northeast, with cases spanning the US.",
+  "channels": "Firm website positions the practice as 'Northeast Presence. Global Reach.'; client referrals and partner relationships are not verified from sources.",
+  "recent_news": [
+   {
+    "date": "2025-01",
+    "fact": "Merged with Connecticut-based Murtha Cullina into a combined firm of about 250 lawyers and 16 offices across the Northeast, from D.C. to Massachusetts."
+   }
+  ],
+  "signals": [
+   "Two firms combined into one platform of about 250 lawyers and 16 offices (2025-01)"
+  ],
+  "likely_pains": [
+   "Integrating two firms' client intake, billing and matter systems across 16 offices",
+   "Intake calls and consultation requests from a wider geographic footprint",
+   "Cross-selling practices across a combined firm with different client bases"
+  ],
+  "good_fit_offers": [
+   "ai-receptionist",
+   "ai-automation"
+  ],
+  "sources": [
+   "https://www.harrisbeachmurtha.com/",
+   "https://www.legal.io/blog/5562670/Harris-Beach-and-Murtha-Cullina-Merge-to-Create-Northeast-Powerhouse"
+  ]
+ },
+ {
+  "id": "chuze-fitness",
+  "name": "Chuze Fitness",
+  "country": "US",
+  "city": "San Diego, CA",
+  "industry": "Gym and fitness club chain",
+  "size": "57 clubs in seven states (2025-07)",
+  "revenue": null,
+  "what_they_sell": "Gym memberships across its club network.",
+  "customers": "Local members in its club markets across seven states.",
+  "channels": "Club-based membership sales; growth by opening clubs in new metros.",
+  "recent_news": [
+   {
+    "date": "2025-07",
+    "fact": "Opened a fourth Albuquerque-area club, bringing the network to 57 clubs, with more than ten more openings planned over two years."
+   }
+  ],
+  "signals": [
+   "57 clubs in seven states (2025-07)",
+   "Acquired Bailey's Health & Fitness (2023-04, per CB Insights news)",
+   "Private equity backer Main Post Partners (CB Insights)"
+  ],
+  "likely_pains": [
+   "Each new club needs a membership sales ramp, and leads from new markets need fast follow-up",
+   "Member cancellations and win-back campaigns across many clubs",
+   "Hiring trainers and front-desk staff for every opening"
+  ],
+  "good_fit_offers": [
+   "crm-automation",
+   "hr-hiring"
+  ],
+  "sources": [
+   "https://athletechnews.com/chuze-fitness-opens-fourth-albuquerque-gym/",
+   "https://www.cbinsights.com/investor/chuze-fitness"
+  ]
+ },
+ {
+  "id": "basis-independent-schools",
+  "name": "BASIS Independent Schools",
+  "country": "US",
+  "city": "Campbell, CA",
+  "industry": "Private K-12 school network (independent schools)",
+  "size": "11-12 schools across CA, NY, VA and WA; Bothell campus opened with 200+ students and 50+ staff (2025-09)",
+  "revenue": null,
+  "what_they_sell": "Tuition-based independent K-12 education with a liberal arts and sciences curriculum.",
+  "customers": "Families seeking private K-12 schooling in the network's campus markets.",
+  "channels": "Campus-by-campus admissions and local promotion; new campuses launched with ribbon-cutting events.",
+  "recent_news": [
+   {
+    "date": "2025-09",
+    "fact": "Opened BASIS Independent Bothell, a K-12 campus in Washington, with over 200 students and more than 50 faculty and staff."
+   }
+  ],
+  "signals": [
+   "Three California campuses listed, including Dublin (homepage)",
+   "New campuses need large faculty and staff hiring at launch (Bothell: 50+ at opening)"
+  ],
+  "likely_pains": [
+   "Admissions inquiries and tour requests across multiple campuses, many outside office hours",
+   "Teacher and staff recruiting ahead of each new campus opening",
+   "Filling enrollment at a newly opened campus while building local reputation"
+  ],
+  "good_fit_offers": [
+   "ai-receptionist",
+   "hr-hiring"
+  ],
+  "sources": [
+   "https://basisindependent.com/",
+   "https://basisindependent.com/schools/wa/bothell/about/blog/ribbon-cutting-celebration-at-basis-independent-bothell/"
+  ]
+ },
+ {
+  "id": "thrive-market",
+  "name": "Thrive Market",
+  "country": "US",
+  "city": "Los Angeles, CA",
+  "industry": "Membership-based online retailer (natural and organic food and goods)",
+  "size": "974 employees (Revelio Labs, 2026-03)",
+  "revenue": "$700M+ in annual sales (2025-03)",
+  "what_they_sell": "Membership-based online store selling natural and organic food and household goods, including members-only house products.",
+  "customers": "Paying annual members (1.6M as of 2025-03) shopping online, including SNAP EBT customers since 2024-02.",
+  "channels": "Direct-to-consumer online membership model; retail media network launched with Instacart's Carrot ads (2024).",
+  "recent_news": [
+   {
+    "date": "2025-03",
+    "fact": "Reported over $700M in annual sales, more than 750 brands and 1.6M paying members."
+   },
+   {
+    "date": "2024-02",
+    "fact": "Became an online-only retailer accepting SNAP EBT benefits."
+   }
+  ],
+  "signals": [
+   "974 employees; 233 in sales and marketing, 325 in engineering (Revelio Labs, 2026-03)",
+   "Launched a retail media network with Instacart's Carrot ads (2024)"
+  ],
+  "likely_pains": [
+   "Converting and retaining 1.6M paying members as acquisition costs rise",
+   "Member support and onboarding questions as SNAP EBT and new benefit programs expand",
+   "Coordinating brand and supplier marketing through its retail media network"
+  ],
+  "good_fit_offers": [
+   "crm-automation",
+   "seo-content"
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Thrive_Market",
+   "https://www.reveliolabs.com/companies/thrive-market/employees/"
+  ]
+ },
+ {
+  "id": "vestil-manufacturing",
+  "name": "Vestil Manufacturing",
+  "country": "US",
+  "city": "Angola, IN",
+  "industry": "Industrial material handling equipment manufacturer (family-owned)",
+  "size": "1,000,000+ sq ft of manufacturing space; 1,000+ product lines (company site); employee count not verified",
+  "revenue": null,
+  "what_they_sell": "Industrial material handling equipment including loading dock equipment, fork truck attachments, carts, drum handling, storage and packaging equipment.",
+  "customers": "Warehouses, manufacturers and facilities teams buying material handling equipment.",
+  "channels": "Broad catalog of 1,000+ product lines marketed to industrial buyers.",
+  "recent_news": [
+   {
+    "date": "2024-10",
+    "fact": "Announced a 120,000 sq ft building expansion in Angola, Indiana, adding at least 20 jobs and new equipment, with completion targeted for September 2025."
+   }
+  ],
+  "signals": [
+   "Fourth-generation family business (MHI, 2024-10)",
+   "Expansion adds a fiber tube laser, two robotic welders, forklifts, rotational molding and an ERP system (MHI, 2024-10)"
+  ],
+  "likely_pains": [
+   "ERP rollout and production scheduling across a larger plant",
+   "Hiring machine operators and welders for the new equipment",
+   "Quote-to-order speed and order management across 1,000+ product lines"
+  ],
+  "good_fit_offers": [
+   "bi-dashboards",
+   "hr-hiring"
+  ],
+  "sources": [
+   "https://og.mhi.org/media/news/100292",
+   "https://www.vestil.com/"
+  ]
+ }
+]

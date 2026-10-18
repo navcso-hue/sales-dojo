@@ -16,7 +16,7 @@
   --bg:#0B0D10;--surface:#14171C;--surface2:#1B1F26;--line:#262B33;
   --text:#EDEFF2;--muted:#8B94A1;--faint:#5C6470;
   --accent:#3DDC97;--accent-ink:#04261A;--danger:#FF5C61;--warn:#F5B94A;--blue:#7AA2FF;
-  --r:18px;
+  --r:18px;--tabh:64px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 [hidden]{display:none!important}
@@ -27,61 +27,86 @@ body{
   min-height:100dvh;
   padding:calc(env(safe-area-inset-top) + 14px) 16px calc(env(safe-area-inset-bottom) + 28px);
 }
+body.tabs{padding-bottom:calc(env(safe-area-inset-bottom) + var(--tabh) + 24px)}
 main{max-width:520px;margin:0 auto}
 h1{font-size:28px;letter-spacing:-.02em;font-weight:750}
 h2{font-size:20px;letter-spacing:-.01em;font-weight:700}
 h3{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:650;margin:22px 0 10px}
 p{color:var(--muted)}
 a{color:var(--blue)}
-.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}
 .top .sub{font-size:13px;color:var(--muted)}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px}
 .stack>*+*{margin-top:12px}
-.btn{
-  appearance:none;border:0;border-radius:14px;font:inherit;font-weight:650;
-  padding:14px 18px;width:100%;cursor:pointer;color:var(--text);background:var(--surface2);
-  border:1px solid var(--line);
-}
+.btn{appearance:none;border:1px solid var(--line);border-radius:14px;font:inherit;font-weight:650;padding:14px 18px;width:100%;cursor:pointer;color:var(--text);background:var(--surface2)}
 .btn.primary{background:var(--accent);color:var(--accent-ink);border-color:transparent}
 .btn.danger{background:var(--danger);color:#fff;border-color:transparent}
 .btn.small{width:auto;padding:8px 12px;font-size:14px;border-radius:11px}
+.btn.on{background:var(--text);color:var(--bg);border-color:transparent}
 .btn:disabled{opacity:.45}
-.iconbtn{appearance:none;background:var(--surface2);border:1px solid var(--line);color:var(--text);border-radius:12px;width:40px;height:40px;font-size:18px}
-input,select{
-  width:100%;font:inherit;color:var(--text);background:var(--bg);border:1px solid var(--line);
-  border-radius:12px;padding:13px 14px;
-}
+input,select{width:100%;font:inherit;color:var(--text);background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:13px 14px}
+input[type=range]{padding:0;accent-color:var(--accent)}
 label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
 .note{font-size:13px;color:var(--muted)}
 .err{color:var(--danger);font-size:14px}
 .banner{font-size:14px;border-radius:14px;padding:12px 14px;background:#1A2230;border:1px solid #2A3A55;color:#C9D6EE;margin-bottom:14px}
-
-/* scenario cards */
-.sc{display:block;width:100%;text-align:left;font:inherit;color:inherit;cursor:pointer}
-.sc+.sc{margin-top:12px}
-.sc .row{display:flex;justify-content:space-between;align-items:center;gap:8px}
-.sc .co{font-weight:700;font-size:17px}
-.sc .who{font-size:14px;color:var(--muted);margin-top:2px}
-.sc .goal{font-size:14px;margin-top:10px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:13px;border-radius:999px;padding:5px 10px;background:var(--surface2);border:1px solid var(--line)}
+.chip.miss{border-color:#5A2A2C;color:#FFB3B5}
 .lvl{font-size:12px;font-weight:700;border-radius:999px;padding:4px 9px;white-space:nowrap}
 .lvl.easy{background:#123326;color:var(--accent)}
 .lvl.mid{background:#3A2E12;color:var(--warn)}
 .lvl.hard{background:#3A1517;color:var(--danger)}
-.modes{display:flex;gap:8px;margin-top:6px}
-.modes button{flex:1}
-.modes .on{background:var(--text);color:var(--bg);border-color:transparent}
+.badge{font-size:12px;font-weight:750;border-radius:999px;padding:5px 10px;white-space:nowrap}
+.badge.booked{background:#123326;color:var(--accent)}
+.badge.soft_no{background:#3A2E12;color:var(--warn)}
+.badge.hard_no{background:#3A1517;color:var(--danger)}
+.badge.unjudged{background:var(--surface2);color:var(--muted)}
+.spin{display:inline-block;width:16px;height:16px;border:2px solid var(--line);border-top-color:var(--text);border-radius:50%;animation:s .8s linear infinite;vertical-align:-3px;margin-right:8px}
+@keyframes s{to{transform:rotate(360deg)}}
+details{margin-top:14px}
+summary{cursor:pointer;color:var(--muted);font-size:14px}
+pre{white-space:pre-wrap;word-break:break-word;font:12px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--muted);background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px;margin-top:10px}
+
+/* tab bar */
+.tabbar{position:fixed;left:0;right:0;bottom:0;z-index:5;background:rgba(11,13,16,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+.tabbar .in{max-width:520px;margin:0 auto;display:flex;height:var(--tabh)}
+.tabbar button{flex:1;appearance:none;background:none;border:0;color:var(--faint);font:inherit;font-size:12px;font-weight:650;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px}
+.tabbar button .i{font-size:20px;line-height:1}
+.tabbar button.on{color:var(--text)}
+
+/* today */
+.stats{display:flex;gap:8px}
+.stat{flex:1;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 12px}
+.stat .n{font-size:22px;font-weight:750;font-variant-numeric:tabular-nums}
+.stat .l{font-size:12px;color:var(--muted)}
+.calls{display:flex;flex-direction:column;gap:10px}
+.callcard{display:flex;gap:12px;align-items:center;width:100%;text-align:left;font:inherit;color:inherit;cursor:pointer}
+.callcard .num{flex:0 0 34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:750;background:var(--surface2);border:1px solid var(--line);font-size:14px}
+.callcard.done .num{background:#123326;color:var(--accent);border-color:transparent}
+.callcard.next{border-color:#2F5F49}
+.callcard .body{flex:1;min-width:0}
+.callcard .t{font-weight:700;font-size:16px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.callcard .s{font-size:14px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.callcard .r{flex:0 0 auto;text-align:right;font-size:13px;color:var(--muted)}
+.progressbar{height:6px;background:var(--surface2);border-radius:99px;overflow:hidden;margin-top:12px}
+.progressbar i{display:block;height:100%;background:var(--accent);border-radius:99px}
+.coach .head{font-weight:700;font-size:17px;color:var(--text)}
+.coach ul{margin:10px 0 0 18px;color:var(--muted)}
+.coach li+li{margin-top:6px}
 
 /* call */
 .brief .k{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--faint);margin-top:10px}
 .brief .k:first-child{margin-top:0}
 .brief .v{font-size:15px}
-.callhead{display:flex;align-items:center;justify-content:space-between;margin:18px 0 10px}
+.brief ul{margin:4px 0 0 18px;font-size:14px;color:var(--muted)}
+.callhead{display:flex;align-items:center;justify-content:space-between;margin:16px 0 10px}
 .status{font-size:15px;color:var(--muted)}
 .status b{color:var(--text);font-weight:650}
 .timer{font-variant-numeric:tabular-nums;font-weight:650}
 .meter{height:6px;background:var(--surface2);border-radius:99px;overflow:hidden}
 .meter i{display:block;height:100%;width:0;background:var(--accent);transition:width .08s linear}
-.bubbles{margin-top:14px;display:flex;flex-direction:column;gap:8px;min-height:120px}
+.bubbles{margin-top:14px;display:flex;flex-direction:column;gap:8px;min-height:80px}
 .b{max-width:86%;padding:10px 13px;border-radius:16px;font-size:15px;line-height:1.4}
 .b.buyer{background:var(--surface2);border:1px solid var(--line);align-self:flex-start;border-bottom-left-radius:6px}
 .b.you{background:#0F3A2A;color:#D8FBEA;align-self:flex-end;border-bottom-right-radius:6px}
@@ -90,20 +115,16 @@ label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
 .textrow{display:flex;gap:8px;margin-top:12px}
 .textrow input{flex:1}
 .textrow .btn{width:auto}
-.toggle{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:14px;color:var(--muted);margin-top:12px}
+.toggle{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:14px;color:var(--muted)}
 .toggle input{width:auto}
 
 /* debrief */
 .outcome{display:flex;align-items:flex-start;gap:12px}
-.badge{font-size:13px;font-weight:750;border-radius:999px;padding:6px 12px;white-space:nowrap}
-.badge.booked{background:#123326;color:var(--accent)}
-.badge.soft_no{background:#3A2E12;color:var(--warn)}
-.badge.hard_no{background:#3A1517;color:var(--danger)}
 .secret{font-style:italic;color:var(--text);margin-top:10px}
 .scores{display:grid;grid-template-columns:auto 1fr auto;gap:8px 10px;align-items:center;font-size:14px}
 .bar{height:8px;background:var(--surface2);border-radius:99px;overflow:hidden}
 .bar i{display:block;height:100%;border-radius:99px}
-.num{font-variant-numeric:tabular-nums;font-weight:650;width:2ch;text-align:right}
+.numv{font-variant-numeric:tabular-nums;font-weight:650;min-width:2ch;text-align:right}
 .moment{border-left:3px solid var(--line);padding-left:12px}
 .moment+.moment{margin-top:14px}
 .moment .q{color:var(--text)}
@@ -112,71 +133,103 @@ label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
 .metric{background:var(--surface2);border-radius:14px;padding:12px}
 .metric .n{font-size:22px;font-weight:750;font-variant-numeric:tabular-nums}
 .metric .l{font-size:12px;color:var(--muted)}
-.chips{display:flex;flex-wrap:wrap;gap:6px}
-.chip{font-size:13px;border-radius:999px;padding:5px 10px;background:var(--surface2);border:1px solid var(--line)}
-.chip.miss{border-color:#5A2A2C;color:#FFB3B5}
-details{margin-top:18px}
-summary{cursor:pointer;color:var(--muted);font-size:14px}
-pre{white-space:pre-wrap;word-break:break-word;font:12px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--muted);background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px;margin-top:10px}
-.spin{display:inline-block;width:16px;height:16px;border:2px solid var(--line);border-top-color:var(--text);border-radius:50%;animation:s 0.8s linear infinite;vertical-align:-3px;margin-right:8px}
-@keyframes s{to{transform:rotate(360deg)}}
+.trans .line{font-size:14px;margin-top:8px}
+.trans .line b{font-weight:650;color:var(--muted);margin-right:6px}
+
+/* progress */
+.spark{width:100%;height:70px;display:block}
+.list .row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 0;border-top:1px solid var(--line);width:100%;background:none;border-left:0;border-right:0;border-bottom:0;color:inherit;font:inherit;text-align:left;cursor:pointer}
+.list .row:first-child{border-top:0}
+.list .row .m{min-width:0}
+.list .row .t{font-weight:650;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.list .row .s{font-size:13px;color:var(--muted)}
 </style>
 </head>
 <body>
 <main>
 
-<!-- ============ SETUP ============ -->
+<!-- SETUP -->
 <section id="setup" class="view" hidden>
-  <div class="top"><div><h1>Sales Dojo</h1><div class="sub">Phase 0 · voice test</div></div></div>
+  <div class="top"><div><h1>Sales Dojo</h1><div class="sub">Daily sales gauntlet</div></div></div>
   <div class="card stack">
     <h2>Connect Gemini</h2>
-    <p>Paste your free Gemini API key. It stays on this phone and is only sent to Google.</p>
+    <p>Paste your free Gemini API key. It stays on this phone and is only ever sent to Google.</p>
     <p class="note">No key yet? Open <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">aistudio.google.com/apikey</a> → Create API key → copy it.</p>
-    <div><label for="keyInput">API key</label><input id="keyInput" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="AIza…"></div>
+    <div><label for="keyInput">API key</label><input id="keyInput" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Paste key"></div>
     <button class="btn primary" id="saveKey">Check key and continue</button>
     <div id="setupMsg" class="note"></div>
   </div>
 </section>
 
-<!-- ============ HOME ============ -->
-<section id="home" class="view" hidden>
+<!-- TODAY -->
+<section id="today" class="view tabview" hidden>
   <div class="top">
-    <div><h1>Sales Dojo</h1><div class="sub">Phase 0 · voice test</div></div>
-    <button class="iconbtn" id="openSettings" aria-label="Settings">⚙︎</button>
+    <div><h1>Today</h1><div class="sub" id="todayDate"></div></div>
   </div>
-  <div id="installHint" class="banner" hidden>Test it here first, then tap <b>Share → Add to Home Screen</b> and run one call from the home-screen app too. Both results matter.</div>
-  <h3>Mode</h3>
-  <div class="modes">
-    <button class="btn small on" data-mode="voice">Live voice</button>
-    <button class="btn small" data-mode="text">Text + read aloud</button>
+  <div id="installHint" class="banner" hidden>For the full-screen app: tap <b>Share → Add to Home Screen</b>. You'll paste your key once more there.</div>
+  <div class="stats">
+    <div class="stat"><div class="n" id="stStreak">0</div><div class="l">day streak</div></div>
+    <div class="stat"><div class="n" id="stLevel">3.0</div><div class="l">level</div></div>
+    <div class="stat"><div class="n" id="stDone">0/5</div><div class="l">calls today</div></div>
   </div>
-  <p class="note" id="modeNote" style="margin-top:8px"></p>
-  <h3>Pick a buyer</h3>
-  <div id="scenarioList"></div>
-  <details>
-    <summary>Last test report</summary>
-    <pre id="lastReport">No calls yet.</pre>
-    <button class="btn small" id="copyLast" style="margin-top:10px">Copy report</button>
-  </details>
+  <div class="progressbar"><i id="dayBar" style="width:0"></i></div>
+  <h3>The Gauntlet</h3>
+  <div class="calls" id="callList"></div>
+  <div id="todayMsg" class="note" style="margin-top:10px"></div>
+  <div id="coachBox"></div>
+  <button class="btn primary" id="nextCallBtn" style="margin-top:16px">Start next call</button>
 </section>
 
-<!-- ============ SETTINGS ============ -->
-<section id="settings" class="view" hidden>
-  <div class="top"><h2>Settings</h2><button class="btn small" id="closeSettings">Done</button></div>
+<!-- PROGRESS -->
+<section id="progress" class="view tabview" hidden>
+  <div class="top"><h1>Progress</h1></div>
+  <div id="progressBody"></div>
+</section>
+
+<!-- SETTINGS -->
+<section id="settings" class="view tabview" hidden>
+  <div class="top"><h1>Settings</h1></div>
+  <div class="card stack">
+    <div><label>Call mode</label>
+      <div class="chips" id="modeChips">
+        <button class="btn small" data-mode="voice">Live voice</button>
+        <button class="btn small" data-mode="text">Text + read aloud</button>
+      </div>
+    </div>
+    <label class="toggle"><span>Speaker mode: mute my mic while the buyer talks (use if the buyer keeps cutting itself off)</span><input type="checkbox" id="noInterrupt"></label>
+    <div><label for="levelRange">Difficulty level: <b id="levelVal"></b> (adjusts itself after every call)</label><input type="range" id="levelRange" min="1" max="10" step="0.5"></div>
+  </div>
+  <h3>Models</h3>
   <div class="card stack">
     <div><label for="liveModel">Live voice model</label><select id="liveModel"></select></div>
-    <div><label for="liveModelManual">…or type a model id</label><input id="liveModelManual" autocapitalize="off" spellcheck="false" placeholder="gemini-3.8-live"></div>
-    <div><label for="textModel">Judge / text model</label><select id="textModel"></select></div>
+    <div><label for="textModel">Buyer builder and judge model</label><select id="textModel"></select></div>
     <div class="note" id="keyLine"></div>
-    <button class="btn danger" id="forgetKey">Forget API key</button>
   </div>
+  <h3>Today</h3>
+  <div class="card stack">
+    <button class="btn" id="regenBtn">Rebuild today's remaining buyers</button>
+  </div>
+  <h3>Backup</h3>
+  <div class="card stack">
+    <p class="note">Your progress lives on this phone. Save a backup now and then.</p>
+    <button class="btn" id="exportBtn">Save backup file</button>
+    <label class="btn" for="importFile" style="text-align:center;margin:0">Restore from backup</label>
+    <input type="file" id="importFile" accept="application/json,.json" hidden>
+    <div class="note" id="backupMsg"></div>
+  </div>
+  <h3>Danger zone</h3>
+  <div class="card stack">
+    <button class="btn" id="forgetKey">Forget API key</button>
+    <button class="btn danger" id="resetBtn">Reset all progress</button>
+  </div>
+  <p class="note" style="margin-top:16px" id="versionLine"></p>
 </section>
 
-<!-- ============ CALL ============ -->
+<!-- CALL -->
 <section id="call" class="view" hidden>
   <div class="top">
     <button class="btn small" id="backFromCall">‹ Back</button>
-    <span id="callLvl" class="lvl"></span>
+    <div class="chips"><span class="chip" id="callType"></span><span id="callLvl" class="lvl"></span></div>
   </div>
   <div class="card brief" id="brief"></div>
   <div class="callhead">
@@ -184,7 +237,6 @@ pre{white-space:pre-wrap;word-break:break-word;font:12px/1.5 ui-monospace,SFMono
     <div class="timer" id="timer">0:00</div>
   </div>
   <div class="meter"><i id="meter"></i></div>
-  <label class="toggle" id="noInterruptRow"><span>Speaker mode: mute my mic while the buyer talks (use if the buyer keeps cutting itself off)</span><input type="checkbox" id="noInterrupt"></label>
   <div class="bubbles" id="bubbles"></div>
   <div class="textrow" id="textRow" hidden>
     <input id="textInput" placeholder="Tap the keyboard mic to dictate…" autocomplete="off">
@@ -197,795 +249,30 @@ pre{white-space:pre-wrap;word-break:break-word;font:12px/1.5 ui-monospace,SFMono
   </div>
 </section>
 
-<!-- ============ DEBRIEF ============ -->
+<!-- DEBRIEF -->
 <section id="debrief" class="view" hidden>
-  <div class="top"><h2>Debrief</h2><button class="btn small" id="debriefDone">Done</button></div>
+  <div class="top"><h2 id="debriefTitle">Debrief</h2><button class="btn small" id="debriefDone">Done</button></div>
   <div id="debriefBody"></div>
-  <details>
-    <summary>Voice test report (send this to Claude)</summary>
+  <button class="btn primary" id="debriefNext" style="margin-top:18px" hidden>Next call</button>
+  <details id="reportBox">
+    <summary>Technical report</summary>
     <pre id="report"></pre>
     <button class="btn small" id="copyReport" style="margin-top:10px">Copy report</button>
   </details>
 </section>
 
 </main>
-<script>
-"use strict";
-const VERSION = "p0.1";
-const API = "https://generativelanguage.googleapis.com/v1beta";
-const WS_URL = "wss://generativelanguage.googleapis.com/ws/google.ai.generativelanguage.v1beta.GenerativeService.BidiGenerateContent";
-const MAX_CALL_SEC = 8 * 60;
 
-const $ = s => document.querySelector(s);
-const store = {
-  get(k, d = null) { try { const v = localStorage.getItem("sd." + k); return v === null ? d : v; } catch { return d; } },
-  set(k, v) { try { localStorage.setItem("sd." + k, v); } catch {} },
-  del(k) { try { localStorage.removeItem("sd." + k); } catch {} },
-};
-const isStandalone = () => window.matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
-const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent);
+<nav class="tabbar" id="tabbar" hidden>
+  <div class="in">
+    <button data-tab="today"><span class="i">◎</span>Today</button>
+    <button data-tab="progress"><span class="i">↗</span>Progress</button>
+    <button data-tab="settings"><span class="i">⚙︎</span>Settings</button>
+  </div>
+</nav>
 
-// ---------------------------------------------------------------- scenarios
-// Phase 0 uses fictional companies. Real-company buyers arrive in Phase 1.
-const SCENARIOS = [
-  {
-    id: "northwind", level: 2, voice: "Leda",
-    company: "Northwind Dental Group", companyLine: "12 dental clinics across Texas · 140 staff",
-    person: "Maya Chen", role: "Operations Manager",
-    selling: "An AI receptionist that answers every missed call and books appointments 24/7",
-    goal: "Book a 20-minute demo this week",
-    brain: `PERSONALITY: friendly but busy, practical, a little tired of vendor calls. Speaks plainly, American.
-SITUATION: The front desks miss roughly 30% of calls at lunch and after 5pm. Two receptionists quit last quarter and hiring is slow. The owner, Dr. Patel, complains about empty chair time.
-BUDGET: Can approve tools under $1,500 a month herself; above that needs Dr. Patel.
-INCUMBENT: A basic voicemail plus an answering service the staff dislike.
-OBJECTIONS (use naturally, one at a time): "We already have an answering service." / "Patients don't like talking to robots." / "Now's a bad time, I've got a clinic visit in ten minutes."
-CONVERSION RULE: Agree to a demo ONLY if the caller (a) asks about missed calls or front-desk staffing before pitching hard, AND (b) proposes a specific day and time. If both happen, say yes and confirm the time.
-LOSE CONDITION: If the caller talks for a long stretch without asking you anything, get impatient and wrap up politely.`,
-  },
-  {
-    id: "loopwear", level: 5, voice: "Charon",
-    company: "Loopwear", companyLine: "D2C activewear · UK · ~£8M revenue · sells mostly through Meta and TikTok ads",
-    person: "Daniel Okafor", role: "Head of Growth",
-    selling: "Short-form video ad production: 20 new ad creatives a month from a creative agency",
-    goal: "Get a 15-minute call booked with your creative lead",
-    brain: `PERSONALITY: sharp, impatient, analytical, British. Hates fluff and buzzwords. Short answers.
-SITUATION: Cost per acquisition on Meta is up about 40% since summer. The real cause is creative fatigue: the same six ads have run for three months. His one freelancer is slow and the in-house designer only does static images. The CEO is pushing hard on Black Friday targets.
-BUDGET: Has budget if it clearly lowers CPA; will not sign a retainer without a trial.
-INCUMBENT: In-house designer plus one freelance video editor.
-OBJECTIONS: "We do this in-house." / "Just send me an email." / "What does it cost?" (ask this early, to test them) / "Every agency says that."
-CONVERSION RULE: Agree to the 15-minute call ONLY if the caller (a) uncovers through questions that rising CPA or ad fatigue is the real problem, AND (b) offers a low-risk next step such as a small paid pilot or sample creatives. A price range followed by a question back is fine; dodging the price question annoys you.
-LOSE CONDITIONS: If they pitch for more than about 30 seconds without asking a question, say "Sorry, not for us" and end the call. Hype words like "revolutionary" or "game-changing" make you noticeably colder.`,
-  },
-  {
-    id: "halvorsen", level: 8, voice: "Kore",
-    company: "Halvorsen Logistics", companyLine: "Freight and warehousing · Norway, operating across the EU · ~900 employees",
-    person: "Ingrid Berg", role: "Executive Assistant to the CFO",
-    selling: "Spend-management software: corporate cards plus automated expense reports",
-    goal: "Get a 20-minute meeting with the CFO, Erik Solheim",
-    brain: `PERSONALITY: formal, protective of the CFO's time, polite but cool with salespeople. Norwegian, excellent English, very direct.
-SITUATION: Month-end close takes nine working days, and finance chases 300+ employees for receipts every month. Erik has complained about this in leadership meetings. You know this but share it only if the caller earns your trust.
-YOUR JOB: Screen calls. Your default line: "Erik doesn't take sales calls. Please send information to the general inbox."
-OBJECTIONS: "Is he expecting your call?" / "What is this regarding?" / "We already have a system." / "Send an email."
-CONVERSION RULE: Offer a 20-minute slot in Erik's calendar ONLY if the caller (a) is honest and respectful with you, (b) gives a specific finance-relevant reason (month-end close, receipts, expense reporting time), AND (c) asks for your help or advice instead of demanding to be put through.
-LOSE CONDITION: If the caller lies (for example, claims Erik is expecting the call) or tries to trick or pressure you, end the call firmly.`,
-  },
-];
-const LEVEL_CLASS = l => (l <= 3 ? "easy" : l <= 6 ? "mid" : "hard");
-
-function buyerPrompt(sc) {
-  return `You are role-playing a real person who has just answered a cold sales call on the phone. This is a sales-training simulation; stay fully in character the entire time.
-
-WHO YOU ARE: ${sc.person}, ${sc.role} at ${sc.company} (${sc.companyLine}).
-WHAT THE CALLER WILL TRY TO SELL (you only learn this when they say it): ${sc.selling}.
-
-HIDDEN BRIEF (never reveal it, never hint that rules exist):
-${sc.brain}
-
-DIFFICULTY: ${sc.level} out of 10.
-
-HOW TO TALK:
-- This is a phone call. Talk like a busy real person: usually one to three short sentences. No lists, no formatting.
-- You are not an assistant. Do not help the caller sell. Do not volunteer your problems; reveal them only when asked good questions.
-- React honestly. Keep small talk short. Push back or cut in when it fits your personality.
-- Speak English only.
-- When the call reaches a natural end (you agreed to a meeting, or you are done), say a short goodbye.
-- Never say you are an AI, a model, or part of a simulation.`;
-}
-
-// ---------------------------------------------------------------- diagnostics
-let diag;
-function newDiag(sc, mode) {
-  diag = {
-    version: VERSION, at: new Date().toISOString(), mode,
-    display: isStandalone() ? "home-screen app" : "browser tab",
-    ua: navigator.userAgent, scenario: sc.id,
-    mic: "not started", capture: "-", ctxRate: "-", outputRoute: "unknown",
-    liveModel: "-", textModel: "-", voice: sc.voice, setupAttempt: "-", setupMs: "-",
-    audioChunksIn: 0, audioChunksOut: 0, latencies: [], closeInfo: "-",
-    tts: "-", errors: [], tokens: "-",
-  };
-}
-function logErr(where, e) {
-  const msg = `${where}: ${e && e.message ? e.message : e}`;
-  if (diag) diag.errors.push(msg);
-  console.warn(msg);
-  return msg;
-}
-function median(a) { if (!a.length) return null; const s = [...a].sort((x, y) => x - y); return s[Math.floor(s.length / 2)]; }
-function reportText() {
-  if (!diag) return "No report yet.";
-  const lat = diag.latencies;
-  return [
-    `Sales Dojo voice test ${diag.version} · ${diag.at}`,
-    `Mode: ${diag.mode} · Opened as: ${diag.display}`,
-    `Device: ${diag.ua}`,
-    `Mic: ${diag.mic} · Capture: ${diag.capture} · AudioContext rate: ${diag.ctxRate}`,
-    `Live model: ${diag.liveModel} · Voice: ${diag.voice} · Setup: ${diag.setupAttempt} in ${diag.setupMs} ms`,
-    `Text/judge model: ${diag.textModel}`,
-    `Audio chunks sent: ${diag.audioChunksOut} · received: ${diag.audioChunksIn}`,
-    `Reply latency (end of your speech → first buyer audio): median ${median(lat) ?? "-"} ms · all: ${lat.join(", ") || "-"}`,
-    `Read-aloud voice: ${diag.tts}`,
-    `Call ended: ${diag.endReason || "-"} · Socket close: ${diag.closeInfo} · Tokens: ${diag.tokens}`,
-    `Errors: ${diag.errors.length ? "\n  - " + diag.errors.join("\n  - ") : "none"}`,
-  ].join("\n");
-}
-async function copyText(t, btn) {
-  try { await navigator.clipboard.writeText(t); btn.textContent = "Copied ✓"; }
-  catch { btn.textContent = "Copy failed: long-press the text instead"; }
-  setTimeout(() => (btn.textContent = "Copy report"), 2500);
-}
-
-// ---------------------------------------------------------------- Gemini REST
-const keyNow = () => store.get("key", "");
-async function listModels(key) {
-  const r = await fetch(`${API}/models?pageSize=1000`, { headers: { "x-goog-api-key": key } });
-  if (!r.ok) {
-    const t = await r.text();
-    let m = t.slice(0, 180); try { m = JSON.parse(t).error.message; } catch {}
-    throw new Error(`Google rejected the key (${r.status}): ${m}`);
-  }
-  return (await r.json()).models || [];
-}
-const ver = n => { const m = n.match(/gemini-(\d+(?:\.\d+)?)/); return m ? parseFloat(m[1]) : 0; };
-function rankModels(models) {
-  const id = m => m.name.replace(/^models\//, "");
-  const has = (m, x) => (m.supportedGenerationMethods || []).includes(x);
-  const live = models.filter(m => has(m, "bidiGenerateContent")).map(id)
-    .sort((a, b) => score(b, "live") - score(a, "live"));
-  const text = models.filter(m => has(m, "generateContent")).map(id)
-    .filter(n => /^gemini/.test(n) && !/(tts|image|audio|live|embedding|robotics|computer|veo|imagen|lyria|nano)/.test(n))
-    .sort((a, b) => score(b, "text") - score(a, "text"));
-  return { live, text };
-  function score(n, kind) {
-    let s = ver(n) * 10;
-    if (kind === "live") {
-      if (n === "gemini-3.8-live") s += 1000;
-      if (/extended-thinking/.test(n)) s -= 40;
-      if (/native-audio/.test(n)) s += 5;
-    } else {
-      if (/flash/.test(n) && !/lite/.test(n)) s += 30;
-      if (/lite/.test(n)) s += 10;
-      if (/preview|exp/.test(n)) s -= 3;
-    }
-    return s;
-  }
-}
-async function generate(body) {
-  const chosen = store.get("textModel", "");
-  const all = JSON.parse(store.get("textModels", "[]"));
-  const order = [chosen, ...all.filter(m => m !== chosen)].filter(Boolean).slice(0, 4);
-  if (!order.length) order.push("gemini-2.5-flash");
-  let lastErr;
-  for (const model of order) {
-    try {
-      const r = await fetch(`${API}/models/${model}:generateContent`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", "x-goog-api-key": keyNow() },
-        body: JSON.stringify(body),
-      });
-      if (!r.ok) {
-        const t = await r.text(); let m = t.slice(0, 160); try { m = JSON.parse(t).error.message; } catch {}
-        lastErr = new Error(`${model} → ${r.status}: ${m}`); logErr("text model", lastErr); continue;
-      }
-      const j = await r.json();
-      const text = (j.candidates?.[0]?.content?.parts || []).map(p => p.text || "").join("");
-      if (diag) diag.textModel = model;
-      return text;
-    } catch (e) { lastErr = e; logErr("text model", e); }
-  }
-  throw lastErr || new Error("No text model worked");
-}
-
-// ---------------------------------------------------------------- audio helpers
-function i16ToB64(i16) {
-  const u8 = new Uint8Array(i16.buffer, i16.byteOffset, i16.byteLength);
-  let s = "";
-  for (let i = 0; i < u8.length; i += 0x8000) s += String.fromCharCode.apply(null, u8.subarray(i, i + 0x8000));
-  return btoa(s);
-}
-function b64ToI16(b64) {
-  const s = atob(b64), u8 = new Uint8Array(s.length);
-  for (let i = 0; i < s.length; i++) u8[i] = s.charCodeAt(i);
-  return new Int16Array(u8.buffer, 0, u8.length >> 1);
-}
-
-// Mic → 16 kHz 16-bit PCM in 100 ms chunks. Box-filter decimation is plenty for speech.
-const WORKLET_SRC = `
-class Capture extends AudioWorkletProcessor {
-  constructor() { super(); this.ratio = sampleRate / 16000; this.phase = 0; this.acc = 0; this.cnt = 0;
-    this.out = new Int16Array(1600); this.n = 0; this.sq = 0; this.sqn = 0; }
-  process(inputs) {
-    const ch = inputs[0] && inputs[0][0];
-    if (!ch) return true;
-    for (let i = 0; i < ch.length; i++) {
-      const v = ch[i]; this.sq += v * v; this.sqn++;
-      this.acc += v; this.cnt++; this.phase += 1;
-      if (this.phase >= this.ratio) {
-        this.phase -= this.ratio;
-        const s = Math.max(-1, Math.min(1, this.acc / this.cnt));
-        this.acc = 0; this.cnt = 0;
-        this.out[this.n++] = s < 0 ? s * 0x8000 : s * 0x7fff;
-        if (this.n === this.out.length) {
-          const buf = this.out.slice().buffer;
-          this.port.postMessage({ pcm: buf, rms: Math.sqrt(this.sq / this.sqn) }, [buf]);
-          this.n = 0; this.sq = 0; this.sqn = 0;
-        }
-      }
-    }
-    return true;
-  }
-}
-registerProcessor("capture", Capture);`;
-
-class AudioIO {
-  constructor() { this.ctx = null; this.stream = null; this.node = null; this.onChunk = () => {}; }
-  // Must be called synchronously inside the tap handler so iOS unlocks audio.
-  unlock() {
-    if (!this.ctx) this.ctx = new (window.AudioContext || window.webkitAudioContext)();
-    this.ctx.resume();
-    diag.ctxRate = this.ctx.sampleRate;
-  }
-  async startMic() {
-    this.stream = await navigator.mediaDevices.getUserMedia({
-      audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true, channelCount: 1 },
-    });
-    diag.mic = "ok";
-    const src = this.ctx.createMediaStreamSource(this.stream);
-    const sink = this.ctx.createGain(); sink.gain.value = 0; sink.connect(this.ctx.destination);
-    try {
-      const url = URL.createObjectURL(new Blob([WORKLET_SRC], { type: "application/javascript" }));
-      await this.ctx.audioWorklet.addModule(url);
-      this.node = new AudioWorkletNode(this.ctx, "capture");
-      this.node.port.onmessage = e => this.onChunk(new Int16Array(e.data.pcm), e.data.rms);
-      diag.capture = "AudioWorklet";
-    } catch (e) {
-      logErr("worklet (using fallback)", e);
-      this.node = this.scriptProcessor();
-      diag.capture = "ScriptProcessor";
-    }
-    src.connect(this.node); this.node.connect(sink);
-    this.src = src;
-  }
-  scriptProcessor() {
-    const node = this.ctx.createScriptProcessor(4096, 1, 1);
-    const ratio = this.ctx.sampleRate / 16000;
-    let phase = 0, acc = 0, cnt = 0, n = 0, sq = 0, sqn = 0;
-    const out = new Int16Array(1600);
-    node.onaudioprocess = ev => {
-      const ch = ev.inputBuffer.getChannelData(0);
-      for (let i = 0; i < ch.length; i++) {
-        const v = ch[i]; sq += v * v; sqn++; acc += v; cnt++; phase += 1;
-        if (phase >= ratio) {
-          phase -= ratio;
-          const s = Math.max(-1, Math.min(1, acc / cnt)); acc = 0; cnt = 0;
-          out[n++] = s < 0 ? s * 0x8000 : s * 0x7fff;
-          if (n === out.length) { this.onChunk(out.slice(), Math.sqrt(sq / sqn)); n = 0; sq = 0; sqn = 0; }
-        }
-      }
-    };
-    return node;
-  }
-  stopMic() {
-    try { this.src && this.src.disconnect(); this.node && this.node.disconnect(); } catch {}
-    if (this.stream) this.stream.getTracks().forEach(t => t.stop());
-    this.stream = null; this.node = null; this.src = null;
-  }
-}
-
-class Player {
-  constructor(ctx) { this.ctx = ctx; this.out = ctx.createGain(); this.out.connect(ctx.destination); this.next = 0; this.live = new Set(); this.seconds = 0; }
-  play(b64) {
-    const pcm = b64ToI16(b64);
-    if (!pcm.length) return;
-    const buf = this.ctx.createBuffer(1, pcm.length, 24000);
-    const ch = buf.getChannelData(0);
-    for (let i = 0; i < pcm.length; i++) ch[i] = pcm[i] / 32768;
-    const src = this.ctx.createBufferSource();
-    src.buffer = buf; src.connect(this.out);
-    const t = Math.max(this.ctx.currentTime + 0.04, this.next);
-    src.start(t); this.next = t + buf.duration; this.seconds += buf.duration;
-    this.live.add(src); src.onended = () => this.live.delete(src);
-  }
-  flush() { for (const s of this.live) { try { s.stop(); } catch {} } this.live.clear(); this.next = 0; }
-  get speaking() { return this.ctx.currentTime < this.next; }
-}
-
-// ---------------------------------------------------------------- live call
-class LiveCall {
-  constructor(o) { Object.assign(this, o); this.ws = null; this.ready = false; }
-  setupMsg(full) {
-    const setup = {
-      model: `models/${this.model}`,
-      generationConfig: { responseModalities: ["AUDIO"] },
-      systemInstruction: { parts: [{ text: this.system }] },
-      inputAudioTranscription: {},
-      outputAudioTranscription: {},
-    };
-    if (full) {
-      setup.generationConfig.speechConfig = { voiceConfig: { prebuiltVoiceConfig: { voiceName: this.voice } } };
-      setup.realtimeInputConfig = { automaticActivityDetection: { silenceDurationMs: 700 } };
-    }
-    return { setup };
-  }
-  // Tries the full setup (custom voice, tuned turn-taking); if Google rejects it, retries a minimal one.
-  async connect() {
-    try { await this.open(true); diag.setupAttempt = "full"; }
-    catch (e) {
-      logErr("setup (full)", e);
-      if (/api key|permission|quota|exhausted/i.test(e.message)) throw e; // retrying won't help
-      await this.open(false); diag.setupAttempt = "minimal (custom voice rejected)";
-      diag.voice = "default";
-    }
-  }
-  open(full) {
-    return new Promise((resolve, reject) => {
-      const t0 = performance.now();
-      const ws = new WebSocket(`${WS_URL}?key=${encodeURIComponent(keyNow())}`);
-      ws.binaryType = "arraybuffer";
-      let done = false;
-      ws.onopen = () => ws.send(JSON.stringify(this.setupMsg(full)));
-      ws.onmessage = async ev => {
-        let msg;
-        try {
-          const raw = typeof ev.data === "string" ? ev.data
-            : ev.data instanceof ArrayBuffer ? new TextDecoder().decode(ev.data)
-            : await ev.data.text();
-          msg = JSON.parse(raw);
-        } catch (e) { logErr("bad server message", e); return; }
-        if (msg.setupComplete && !done) {
-          done = true; this.ws = ws; this.ready = true;
-          diag.setupMs = Math.round(performance.now() - t0);
-          resolve();
-          return;
-        }
-        this.handle(msg);
-      };
-      ws.onerror = () => {};
-      ws.onclose = ev => {
-        const info = `code ${ev.code}${ev.reason ? " · " + ev.reason : ""}`;
-        if (!done) { reject(new Error(`connection closed before setup (${info})`)); return; }
-        this.ready = false; diag.closeInfo = info; this.onClose(info);
-      };
-    });
-  }
-  handle(msg) {
-    const sc = msg.serverContent;
-    if (msg.usageMetadata) diag.tokens = msg.usageMetadata.totalTokenCount ?? diag.tokens;
-    if (msg.goAway) logErr("server", `goAway, time left ${JSON.stringify(msg.goAway.timeLeft)}`);
-    if (!sc) return;
-    if (sc.interrupted) this.onInterrupted();
-    for (const p of sc.modelTurn?.parts || []) if (p.inlineData?.data) { diag.audioChunksIn++; this.onAudio(p.inlineData.data); }
-    if (sc.inputTranscription?.text) this.onText("you", sc.inputTranscription.text);
-    if (sc.outputTranscription?.text) this.onText("buyer", sc.outputTranscription.text);
-    if (sc.turnComplete) this.onTurnComplete();
-  }
-  send(o) { if (this.ws && this.ws.readyState === 1) this.ws.send(JSON.stringify(o)); }
-  sendAudio(i16) { diag.audioChunksOut++; this.send({ realtimeInput: { audio: { data: i16ToB64(i16), mimeType: "audio/pcm;rate=16000" } } }); }
-  pickUp() { this.send({ clientContent: { turns: [{ role: "user", parts: [{ text: "(The phone rings and you pick up. Answer the way you naturally would.)" }] }], turnComplete: true } }); }
-  close() { this.ready = false; try { this.ws && this.ws.close(1000, "call ended"); } catch {} }
-}
-
-// ---------------------------------------------------------------- app state
-const audio = new AudioIO();
-let player = null;
-let call = null;   // current call state
-let mode = store.get("mode", "voice");
-let wakeLock = null;
-
-function show(id) { document.querySelectorAll(".view").forEach(v => (v.hidden = v.id !== id)); window.scrollTo(0, 0); }
-function setStatus(html) { $("#status").innerHTML = html; }
-
-function renderHome() {
-  $("#installHint").hidden = !(isIOS && !isStandalone());
-  document.querySelectorAll("[data-mode]").forEach(b => b.classList.toggle("on", b.dataset.mode === mode));
-  $("#modeNote").textContent = mode === "voice"
-    ? `Real-time voice with Gemini Live (${store.get("liveModel", "?")}). You can interrupt the buyer.`
-    : "Fallback: you type or dictate, the buyer replies in text and your iPhone reads it aloud.";
-  const list = $("#scenarioList"); list.innerHTML = "";
-  for (const sc of SCENARIOS) {
-    const b = document.createElement("button");
-    b.className = "card sc";
-    b.innerHTML = `<div class="row"><span class="co"></span><span class="lvl ${LEVEL_CLASS(sc.level)}">Level ${sc.level}</span></div>
-      <div class="who"></div><div class="goal"></div>`;
-    b.querySelector(".co").textContent = sc.company;
-    b.querySelector(".who").textContent = `${sc.person} · ${sc.role}`;
-    b.querySelector(".goal").textContent = `Goal: ${sc.goal}`;
-    b.onclick = () => openCall(sc);
-    list.appendChild(b);
-  }
-  $("#lastReport").textContent = store.get("lastReport", "No calls yet.");
-}
-
-function openCall(sc) {
-  call = { sc, turns: [], started: 0, timer: null, ended: false };
-  player = null;
-  newDiag(sc, mode === "voice" ? "live voice" : "text + read aloud");
-  const brief = $("#brief"); brief.innerHTML = "";
-  for (const [k, v] of [["Calling", `${sc.person}, ${sc.role}`], ["Company", `${sc.company} · ${sc.companyLine}`], ["You sell", sc.selling], ["Your goal", sc.goal]]) {
-    const kd = document.createElement("div"); kd.className = "k"; kd.textContent = k;
-    const vd = document.createElement("div"); vd.className = "v"; vd.textContent = v;
-    brief.append(kd, vd);
-  }
-  $("#callLvl").className = `lvl ${LEVEL_CLASS(sc.level)}`; $("#callLvl").textContent = `Level ${sc.level}`;
-  $("#bubbles").innerHTML = ""; $("#callErr").textContent = ""; $("#timer").textContent = "0:00";
-  $("#meter").style.width = "0";
-  $("#startCall").hidden = false; $("#startCall").disabled = false; $("#endCall").hidden = true;
-  $("#textRow").hidden = true;
-  $("#noInterruptRow").hidden = mode !== "voice";
-  $("#noInterrupt").checked = store.get("noInterrupt", "0") === "1";
-  setStatus(mode === "voice" ? "Tap <b>Start call</b>, then talk normally. Earphones work best." : "Tap <b>Start call</b>. Use the keyboard mic to dictate.");
-  show("call");
-}
-
-// transcript: consecutive fragments from the same speaker join into one bubble
-function addText(who, text) {
-  const last = call.turns[call.turns.length - 1];
-  if (last && last.who === who && !last.closed) { last.text += text; last.el.lastChild.textContent = last.text; }
-  else {
-    if (last) last.closed = true;
-    const el = document.createElement("div"); el.className = `b ${who}`;
-    const w = document.createElement("span"); w.className = "who"; w.textContent = who === "you" ? "You" : call.sc.person.split(" ")[0];
-    const t = document.createElement("span"); t.textContent = text;
-    el.append(w, t); $("#bubbles").appendChild(el);
-    call.turns.push({ who, text, el, closed: false });
-  }
-  window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
-}
-
-function tick() {
-  const s = Math.floor((performance.now() - call.started) / 1000);
-  $("#timer").textContent = `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
-  if (s >= MAX_CALL_SEC) endCall("Time's up (8 min)");
-}
-async function keepAwake() { try { wakeLock = await navigator.wakeLock?.request("screen"); } catch {} }
-
-// ---------------------------------------------------------------- voice mode
-// Rough on-device speech stats. Good enough to compare calls with each other.
-function freshStats() { return { userSec: 0, inSpeech: false, segStart: 0, lastVoice: 0, longest: 0, noise: 0.01, awaitingReply: false, newTurn: true }; }
-
-function onMicChunk(i16, rms) {
-  const m = call.stats;
-  $("#meter").style.width = Math.min(100, rms * 900) + "%";
-  const now = performance.now();
-  const buyerTalking = player && player.speaking;
-  const voiced = rms > Math.max(0.012, m.noise * 3);
-  if (!voiced) m.noise = m.noise * 0.95 + rms * 0.05;
-  if (voiced && !buyerTalking) {
-    m.userSec += 0.1; m.lastVoice = now; m.awaitingReply = true;
-    if (!m.inSpeech) { m.inSpeech = true; m.segStart = now; }
-  } else if (m.inSpeech && now - m.lastVoice > 400) {
-    m.inSpeech = false; m.longest = Math.max(m.longest, (m.lastVoice - m.segStart) / 1000);
-  }
-  if (!call.live || !call.live.ready) return;
-  if ($("#noInterrupt").checked && buyerTalking) return;
-  call.live.sendAudio(i16);
-}
-
-async function startVoice() {
-  const c = call; // the user can back out while we wait
-  const stale = () => c !== call || c.ended;
-  call.stats = freshStats();
-  setStatus('<span class="spin"></span>Allow the microphone when asked…');
-  try { await audio.startMic(); }
-  catch (e) { if (stale()) return; diag.mic = "blocked"; return failCall(logErr("mic", e) + ". Allow microphone access for this site, then try again."); }
-  if (stale()) { audio.stopMic(); return; }
-  player = new Player(audio.ctx);
-  audio.onChunk = onMicChunk;
-  const model = store.get("liveModelManual", "") || store.get("liveModel", "gemini-3.8-live");
-  diag.liveModel = model;
-  setStatus('<span class="spin"></span>Dialling…');
-  call.live = new LiveCall({
-    model, voice: call.sc.voice, system: buyerPrompt(call.sc),
-    onAudio: b64 => {
-      const m = call.stats;
-      if (m.newTurn) {
-        m.newTurn = false;
-        if (m.awaitingReply && m.lastVoice) { const l = Math.round(performance.now() - m.lastVoice); if (l > 0 && l < 15000) diag.latencies.push(l); }
-        m.awaitingReply = false;
-      }
-      player.play(b64);
-      setStatus(`<b>${call.sc.person.split(" ")[0]}</b> is talking…`);
-    },
-    onText: addText,
-    onInterrupted: () => { player.flush(); call.stats.newTurn = true; },
-    onTurnComplete: () => { call.stats.newTurn = true; const t = call.turns[call.turns.length - 1]; if (t) t.closed = true; setStatus("Your turn: talk."); },
-    onClose: info => { if (!call.ended) endCall(`Line dropped (${info})`); },
-  });
-  try { await call.live.connect(); }
-  catch (e) {
-    audio.stopMic();
-    if (stale()) return;
-    return failCall(logErr("live connect", e) + ". Try Text mode, or pick another Live model in Settings.");
-  }
-  if (stale()) { c.live.close(); audio.stopMic(); return; }
-  call.live.pickUp();
-  beginTimer();
-  setStatus("Ringing…");
-  setTimeout(() => { if (!call.ended && diag.audioChunksIn === 0) setStatus(`No pickup yet. Say “Hi, is that ${call.sc.person.split(" ")[0]}?”`); }, 5000);
-}
-
-// ---------------------------------------------------------------- text mode
-let ttsVoice = null;
-function pickTtsVoice() {
-  const vs = speechSynthesis.getVoices().filter(v => /^en(-|_|$)/i.test(v.lang));
-  ttsVoice = vs.find(v => /premium/i.test(v.name)) || vs.find(v => /enhanced/i.test(v.name)) || vs.find(v => v.lang === "en-US") || vs[0] || null;
-  if (diag) diag.tts = ttsVoice ? `${ttsVoice.name} (${ttsVoice.lang}) of ${vs.length} English voices` : "none found";
-}
-function speak(text) {
-  try {
-    speechSynthesis.cancel();
-    const u = new SpeechSynthesisUtterance(text);
-    if (ttsVoice) u.voice = ttsVoice;
-    u.rate = 1.03;
-    speechSynthesis.speak(u);
-  } catch (e) { logErr("read aloud", e); }
-}
-async function textTurn(userText) {
-  call.history.push({ role: "user", parts: [{ text: userText }] });
-  setStatus('<span class="spin"></span>…');
-  try {
-    const reply = (await generate({ systemInstruction: { parts: [{ text: buyerPrompt(call.sc) }] }, contents: call.history, generationConfig: { temperature: 0.8 } })).trim();
-    call.history.push({ role: "model", parts: [{ text: reply }] });
-    if (call.turns.length) call.turns[call.turns.length - 1].closed = true;
-    addText("buyer", reply); speak(reply);
-    setStatus("Your turn.");
-  } catch (e) { $("#callErr").textContent = logErr("text call", e); setStatus("Error. See below."); }
-}
-async function startText() {
-  try { speechSynthesis.speak(new SpeechSynthesisUtterance(" ")); } catch {} // unlocks read-aloud on iOS
-  pickTtsVoice();
-  call.history = [];
-  $("#textRow").hidden = false;
-  beginTimer();
-  await textTurn("(The phone rings and you pick up. Answer the way you naturally would.)");
-}
-function sendTyped() {
-  const v = $("#textInput").value.trim();
-  if (!v || call.ended) return;
-  $("#textInput").value = "";
-  if (call.turns.length) call.turns[call.turns.length - 1].closed = true;
-  addText("you", v);
-  textTurn(v);
-}
-
-// ---------------------------------------------------------------- call lifecycle
-function beginTimer() {
-  call.started = performance.now();
-  call.timer = setInterval(tick, 500);
-  $("#startCall").hidden = true; $("#endCall").hidden = false;
-  keepAwake();
-}
-function failCall(msg) {
-  $("#callErr").textContent = msg;
-  setStatus("Couldn't start.");
-  $("#startCall").disabled = false; $("#startCall").textContent = "Try again";
-  saveReport();
-}
-function saveReport() { store.set("lastReport", reportText()); }
-
-async function endCall(reason) {
-  if (!call || call.ended) return;
-  call.ended = true;
-  clearInterval(call.timer);
-  if (call.live) call.live.close();
-  if (player) player.flush();
-  audio.stopMic();
-  try { speechSynthesis.cancel(); } catch {}
-  try { wakeLock && (await wakeLock.release()); } catch {}
-  diag.endReason = reason || "you ended the call";
-  try { audio.ctx && audio.ctx.suspend(); } catch {}
-  if (call.stats && call.stats.inSpeech) call.stats.longest = Math.max(call.stats.longest, (call.stats.lastVoice - call.stats.segStart) / 1000);
-  showDebrief();
-}
-
-// ---------------------------------------------------------------- debrief
-function localMetrics() {
-  const rep = call.turns.filter(t => t.who === "you").map(t => t.text).join(" ");
-  const words = (rep.match(/[A-Za-z0-9']+/g) || []).length;
-  const fillers = rep.match(/\b(um+|uh+|erm|like|basically|actually|you know|kind of|sort of|literally|i mean)\b/gi) || [];
-  const hedges = rep.match(/\b(i think|maybe|just wanted|i guess|probably|hopefully|sorry)\b/gi) || [];
-  const questions = (rep.match(/\?/g) || []).length;
-  const s = call.stats;
-  const buyerSec = player ? player.seconds : 0;
-  const m = { words, fillers: fillers.length, fillerList: [...new Set(fillers.map(f => f.toLowerCase()))], hedges: hedges.length, questions };
-  if (s && s.userSec > 5) {
-    m.wpm = Math.round(words / (s.userSec / 60));
-    m.talkShare = Math.round((100 * s.userSec) / (s.userSec + buyerSec || 1));
-    m.longest = Math.round(s.longest);
-  }
-  return m;
-}
-
-async function showDebrief() {
-  const m = localMetrics();
-  const sc = call.sc;
-  const body = $("#debriefBody");
-  body.innerHTML = `<div class="card"><span class="spin"></span>The judge is reviewing your call…</div>`;
-  $("#report").textContent = reportText(); saveReport();
-  show("debrief");
-
-  const transcript = call.turns.map(t => `${t.who === "you" ? "REP" : "BUYER"}: ${t.text.trim()}`).join("\n");
-  if (call.turns.filter(t => t.who === "you").length === 0) {
-    body.innerHTML = `<div class="card"><p>No speech from you was captured, so there's nothing to judge. Check the report below.</p></div>`;
-    $("#report").textContent = reportText(); saveReport();
-    return;
-  }
-  const metricLine = [
-    m.wpm ? `~${m.wpm} words per minute` : null,
-    `${m.fillers} possible filler words (${m.fillerList.join(", ") || "none"})`,
-    `${m.hedges} hedges`,
-    m.talkShare != null ? `rep talk share ${m.talkShare}%` : null,
-    m.longest != null ? `longest rep monologue ${m.longest}s` : null,
-  ].filter(Boolean).join("; ");
-  const prompt = `You are an elite B2B sales coach reviewing a cold call from a training simulator. Be specific, honest and demanding. Praise only what was genuinely good.
-
-SCENARIO
-Rep's goal: ${sc.goal}
-Buyer: ${sc.person}, ${sc.role} at ${sc.company} (${sc.companyLine})
-Rep was selling: ${sc.selling}
-Difficulty: ${sc.level}/10
-The buyer's hidden brief (the rep could not see this):
-${sc.brain}
-
-TRANSCRIPT (speech-to-text, may contain small errors; punctuation may be missing):
-${transcript}
-
-MEASURED SPEECH METRICS: ${metricLine}
-
-Return JSON only, in exactly this shape:
-{"outcome":"booked|soft_no|hard_no","outcome_reason":"one sentence","buyer_secret":"what the buyer was waiting to hear, said in the buyer's own voice, 1-2 sentences","scores":{"opener":0,"discovery":0,"listening":0,"value":0,"objections":0,"next_step":0,"confidence":0,"phrasing":0},"best_moments":[{"quote":"exact rep words","why":"..."}],"worst_moments":[{"quote":"exact rep words","problem":"...","say_instead":"an exact better line"}],"frameworks":{"used":["..."],"missed":["..."]},"drill":"one specific drill for tomorrow"}
-Scores are 0-10. Give up to 3 best and up to 3 worst moments. Name frameworks concretely (e.g. "SPIN implication questions", "Voss labelling", "Gap Selling current state", "pattern interrupt opener", "specific time close"). If the call is too short to judge fairly, still return the JSON with low scores and say so in outcome_reason.`;
-
-  let j = null, raw = "";
-  try {
-    raw = await generate({ contents: [{ role: "user", parts: [{ text: prompt }] }], generationConfig: { responseMimeType: "application/json", temperature: 0.4 } });
-    j = JSON.parse(raw.replace(/^```json\s*|\s*```$/g, ""));
-  } catch (e) { logErr("judge", e); }
-  $("#report").textContent = reportText(); saveReport();
-  renderDebrief(j, m, raw);
-}
-
-function el(tag, cls, text) { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
-function renderDebrief(j, m, raw) {
-  const body = $("#debriefBody"); body.innerHTML = "";
-  if (!j) {
-    const c = el("div", "card stack");
-    c.append(el("p", "err", "The judge couldn't produce a report. The report below says why."));
-    if (raw) c.append(el("pre", null, raw.slice(0, 1500)));
-    body.append(c);
-  } else {
-    const LABEL = { booked: "Meeting booked", soft_no: "Soft no", hard_no: "Hard no" };
-    const top = el("div", "card");
-    const row = el("div", "outcome");
-    row.append(el("span", `badge ${j.outcome}`, LABEL[j.outcome] || j.outcome), el("span", null, j.outcome_reason || ""));
-    top.append(row);
-    if (j.buyer_secret) top.append(el("p", "secret", `“${j.buyer_secret}”`));
-    body.append(top);
-
-    body.append(el("h3", null, "Scores"));
-    const sc = el("div", "card scores");
-    const NAMES = { opener: "Opener", discovery: "Discovery", listening: "Listening", value: "Value", objections: "Objections", next_step: "Next step", confidence: "Confidence", phrasing: "Phrasing" };
-    for (const [k, name] of Object.entries(NAMES)) {
-      const v = Math.max(0, Math.min(10, Number(j.scores?.[k] ?? 0)));
-      const bar = el("div", "bar"); const fill = el("i");
-      fill.style.width = v * 10 + "%"; fill.style.background = v >= 7 ? "var(--accent)" : v >= 4 ? "var(--warn)" : "var(--danger)";
-      bar.append(fill);
-      sc.append(el("span", null, name), bar, el("span", "num", String(v)));
-    }
-    body.append(sc);
-
-    if (j.worst_moments?.length) {
-      body.append(el("h3", null, "Fix these"));
-      const c = el("div", "card");
-      for (const w of j.worst_moments) {
-        const d = el("div", "moment");
-        d.append(el("div", "q", `“${w.quote}”`), el("p", null, w.problem || ""), el("div", "ins", `Say instead: “${w.say_instead}”`));
-        c.append(d);
-      }
-      body.append(c);
-    }
-    if (j.best_moments?.length) {
-      body.append(el("h3", null, "Keep doing"));
-      const c = el("div", "card");
-      for (const b of j.best_moments) { const d = el("div", "moment"); d.append(el("div", "q", `“${b.quote}”`), el("p", null, b.why || "")); c.append(d); }
-      body.append(c);
-    }
-    if (j.frameworks) {
-      body.append(el("h3", null, "Frameworks"));
-      const c = el("div", "card chips");
-      for (const f of j.frameworks.used || []) c.append(el("span", "chip", "✓ " + f));
-      for (const f of j.frameworks.missed || []) c.append(el("span", "chip miss", "✗ " + f));
-      body.append(c);
-    }
-    if (j.drill) { body.append(el("h3", null, "Tomorrow's drill")); body.append(el("div", "card", j.drill)); }
-  }
-  body.append(el("h3", null, "Your speech (rough)"));
-  const grid = el("div", "metrics");
-  const add = (n, l) => { const d = el("div", "metric"); d.append(el("div", "n", n), el("div", "l", l)); grid.append(d); };
-  add(m.wpm ?? "–", "words / minute");
-  add(String(m.fillers), "possible fillers");
-  add(m.talkShare != null ? m.talkShare + "%" : "–", "your talk share");
-  add(m.longest != null ? m.longest + "s" : "–", "longest monologue");
-  add(String(m.hedges), "hedges");
-  add(median(diag.latencies) != null ? median(diag.latencies) + " ms" : "–", "buyer reply delay");
-  body.append(grid);
-}
-
-// ---------------------------------------------------------------- settings
-function fillSettings() {
-  const live = JSON.parse(store.get("liveModels", "[]")), text = JSON.parse(store.get("textModels", "[]"));
-  const fill = (sel, arr, cur) => { sel.innerHTML = ""; for (const id of arr) { const o = document.createElement("option"); o.value = o.textContent = id; if (id === cur) o.selected = true; sel.append(o); } };
-  fill($("#liveModel"), live.length ? live : ["gemini-3.8-live"], store.get("liveModel"));
-  fill($("#textModel"), text.length ? text : ["gemini-2.5-flash"], store.get("textModel"));
-  $("#liveModelManual").value = store.get("liveModelManual", "");
-  const k = keyNow(); $("#keyLine").textContent = k ? `Key saved: ${k.slice(0, 4)}…${k.slice(-4)}` : "No key saved.";
-}
-
-// ---------------------------------------------------------------- wiring
-$("#saveKey").onclick = async () => {
-  const key = $("#keyInput").value.trim();
-  const msg = $("#setupMsg");
-  if (!key) { msg.textContent = "Paste your key first."; return; }
-  msg.innerHTML = '<span class="spin"></span>Checking with Google…';
-  try {
-    const { live, text } = rankModels(await listModels(key));
-    store.set("key", key);
-    store.set("liveModels", JSON.stringify(live)); store.set("textModels", JSON.stringify(text));
-    store.set("liveModel", live[0] || "gemini-3.8-live"); store.set("textModel", text[0] || "gemini-2.5-flash");
-    $("#keyInput").value = "";
-    msg.textContent = live.length ? "" : "Key works, but Google listed no Live voice models. Text mode will still work; you can type a Live model id in Settings.";
-    renderHome(); show("home");
-  } catch (e) { msg.textContent = e.message; }
-};
-document.querySelectorAll("[data-mode]").forEach(b => (b.onclick = () => { mode = b.dataset.mode; store.set("mode", mode); renderHome(); }));
-$("#openSettings").onclick = () => { fillSettings(); show("settings"); };
-$("#closeSettings").onclick = () => {
-  store.set("liveModel", $("#liveModel").value); store.set("textModel", $("#textModel").value);
-  store.set("liveModelManual", $("#liveModelManual").value.trim());
-  renderHome(); show("home");
-};
-$("#forgetKey").onclick = () => { ["key", "liveModels", "textModels", "liveModel", "textModel"].forEach(k => store.del(k)); show("setup"); };
-$("#startCall").onclick = () => {
-  $("#startCall").disabled = true; $("#callErr").textContent = "";
-  if (mode === "voice") { audio.unlock(); startVoice(); }
-  else startText();
-};
-$("#endCall").onclick = () => endCall();
-$("#backFromCall").onclick = () => {
-  if (call && call.started && !call.ended) return endCall();
-  if (call && !call.ended) { call.ended = true; if (call.live) call.live.close(); audio.stopMic(); try { speechSynthesis.cancel(); } catch {} }
-  renderHome(); show("home");
-};
-$("#sendText").onclick = sendTyped;
-$("#textInput").addEventListener("keydown", e => { if (e.key === "Enter") sendTyped(); });
-$("#noInterrupt").onchange = e => store.set("noInterrupt", e.target.checked ? "1" : "0");
-$("#debriefDone").onclick = () => { renderHome(); show("home"); };
-$("#copyReport").onclick = e => copyText($("#report").textContent, e.target);
-$("#copyLast").onclick = e => copyText($("#lastReport").textContent, e.target);
-if ("speechSynthesis" in window) speechSynthesis.onvoiceschanged = () => { if (call && call.history) pickTtsVoice(); };
-
-// boot
-if (keyNow()) { renderHome(); show("home"); } else show("setup");
-</script>
+<script src="js/data.js?v=1"></script>
+<script src="js/core.js?v=1"></script>
+<script src="js/app.js?v=1"></script>
 </body>
 </html>

@@ -1,0 +1,1103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sales × Content — The 90-Day Roadmap</title>
+<style>
+:root{
+  --ink:#111418; --body:#22262D; --muted:#5B6472; --faint:#8A929E; --line:#E3E6EA; --soft:#F4F6F8;
+  --sales:#0E8A5F; --sales-t:#E8F6EF; --content:#2F5BD3; --content-t:#ECF1FD;
+  --amber:#A86A12; --amber-t:#FDF4E3; --red:#B4381A; --red-t:#FCEDE8;
+  --dark:#0B0D10; --dark2:#14171C; --mint:#3DDC97;
+}
+@page{
+  size:A4; margin:17mm 16mm 19mm 16mm;
+  @bottom-left{content:"Sales × Content · 90-Day Roadmap · v1.0"; font:7.5pt Inter, sans-serif; color:#8A929E}
+  @bottom-right{content:counter(page) " / " counter(pages); font:7.5pt Inter, sans-serif; color:#8A929E}
+}
+@page :first{margin:0; @bottom-left{content:none} @bottom-right{content:none}}
+*{box-sizing:border-box}
+html{-webkit-print-color-adjust:exact; print-color-adjust:exact}
+body{margin:0; font:9.6pt/1.52 Inter, sans-serif; color:var(--body); font-feature-settings:"cv11","ss01"}
+p{margin:0 0 7pt}
+a{color:var(--content); text-decoration:none}
+strong{color:var(--ink); font-weight:650}
+em{font-style:italic}
+ul,ol{margin:0 0 8pt; padding-left:15pt}
+li{margin:0 0 3pt}
+li::marker{color:var(--faint)}
+.sm{font-size:8.4pt}
+.muted{color:var(--muted)}
+.cite{font-size:7pt; color:var(--faint); vertical-align:super; line-height:0; margin-left:1px}
+
+/* ---------- cover ---------- */
+.cover{width:210mm; height:297mm; background:var(--dark); color:#EDEFF2; padding:26mm 22mm 20mm; position:relative; overflow:hidden; break-after:page}
+.cover .brand{font:600 8.5pt Inter; letter-spacing:.18em; text-transform:uppercase; color:var(--mint)}
+.cover h1{font:780 40pt/1.02 "Inter Display", Inter; letter-spacing:-.025em; margin:18mm 0 7mm; color:#fff}
+.cover h1 span{color:var(--mint)}
+.cover .lede{font-size:12.5pt; line-height:1.5; color:#B9C0CA; max-width:140mm}
+.cover .tracks{display:flex; gap:10px; margin-top:12mm}
+.cover .pill{border:1px solid #2A3038; border-radius:999px; padding:6px 12px; font-size:8.6pt; color:#C9D0DA}
+.cover .pill b{color:#fff}
+.cover .meta{position:absolute; left:22mm; right:22mm; bottom:20mm; display:grid; grid-template-columns:repeat(3,1fr); gap:10mm; border-top:1px solid #262B33; padding-top:6mm}
+.cover .meta div{font-size:8.4pt; color:#8B94A1}
+.cover .meta b{display:block; color:#EDEFF2; font-size:9.6pt; font-weight:600; margin-bottom:2px}
+.cover .grid{position:absolute; right:-30mm; top:60mm; width:150mm; height:150mm; border-radius:50%;
+  background:radial-gradient(circle at 50% 50%, rgba(61,220,151,.16), rgba(61,220,151,0) 62%)}
+.cover .rule{height:3px; width:28mm; background:var(--mint); border-radius:2px}
+
+/* ---------- headings ---------- */
+.part{break-before:page}
+.kicker{font:650 7.8pt Inter; letter-spacing:.16em; text-transform:uppercase; color:var(--sales); margin-bottom:3pt}
+.kicker.c{color:var(--content)}
+h1{font:760 21pt/1.12 "Inter Display", Inter; letter-spacing:-.02em; color:var(--ink); margin:0 0 5pt}
+h1 + .sub{font-size:10.5pt; color:var(--muted); margin:0 0 12pt; max-width:150mm}
+h2{font:700 12.5pt/1.25 Inter; color:var(--ink); margin:14pt 0 5pt; break-after:avoid; letter-spacing:-.005em}
+h3{font:680 10pt/1.3 Inter; color:var(--ink); margin:10pt 0 3pt; break-after:avoid}
+h2 + p, h3 + p{margin-top:0}
+.mod{break-inside:avoid; border-top:1px solid var(--line); padding-top:7pt; margin-top:9pt}
+.mod h3{margin-top:0; display:flex; align-items:baseline; gap:7px}
+.mod h3 .n{font:700 8pt Inter; color:#fff; background:var(--sales); border-radius:4px; padding:1px 5px; letter-spacing:.02em}
+.mod.c h3 .n{background:var(--content)}
+.mod .row{display:grid; grid-template-columns:20mm 1fr; gap:2pt 8pt; margin:2pt 0}
+.mod .row .k{font:650 7.4pt Inter; letter-spacing:.08em; text-transform:uppercase; color:var(--faint); padding-top:1.5pt}
+.mod .row .v p:last-child,.mod .row .v ul:last-child{margin-bottom:0}
+
+/* ---------- boxes ---------- */
+.box{border-radius:7px; padding:9pt 11pt; margin:9pt 0; break-inside:avoid; border:1px solid var(--line); background:var(--soft)}
+.box .t{font:700 7.6pt Inter; letter-spacing:.14em; text-transform:uppercase; margin-bottom:4pt; color:var(--muted)}
+.box p:last-child,.box ul:last-child,.box ol:last-child{margin-bottom:0}
+.box.truth{background:var(--dark2); border-color:var(--dark2); color:#D5DAE1}
+.box.truth strong{color:#fff}
+.box.truth .t{color:var(--mint)}
+.box.sales{background:var(--sales-t); border-color:#CBEBDB}
+.box.sales .t{color:var(--sales)}
+.box.content{background:var(--content-t); border-color:#D3DEFA}
+.box.content .t{color:var(--content)}
+.box.warn{background:var(--amber-t); border-color:#F3DEB4}
+.box.warn .t{color:var(--amber)}
+.box.red{background:var(--red-t); border-color:#F4CFC3}
+.box.red .t{color:var(--red)}
+.cols{display:grid; grid-template-columns:1fr 1fr; gap:10pt}
+.cols3{display:grid; grid-template-columns:1fr 1fr 1fr; gap:8pt}
+.cols > .box,.cols3 > .box{margin:0}
+.tag{display:inline-block; font:650 7pt Inter; letter-spacing:.06em; text-transform:uppercase; border-radius:4px; padding:1px 5px; vertical-align:1px}
+.tag.s{background:var(--sales-t); color:var(--sales)}
+.tag.c{background:var(--content-t); color:var(--content)}
+.tag.a{background:var(--amber-t); color:var(--amber)}
+
+/* ---------- tables ---------- */
+table{width:100%; border-collapse:collapse; font-size:8.3pt; line-height:1.42; margin:6pt 0 10pt}
+thead{display:table-header-group}
+tr{break-inside:avoid}
+th{font:650 7.3pt Inter; letter-spacing:.07em; text-transform:uppercase; color:var(--muted); text-align:left; background:var(--soft); padding:5pt 6pt; border-bottom:1px solid var(--line)}
+td{padding:5pt 6pt; border-bottom:1px solid var(--line); vertical-align:top}
+td strong{font-weight:650}
+td.w{white-space:nowrap}
+table.tight td{padding:3.5pt 6pt}
+.wk td:first-child{font-weight:700; color:var(--ink); white-space:nowrap}
+.check li{list-style:none; position:relative; padding-left:2pt}
+.check{padding-left:13pt}
+.check li::before{content:""; position:absolute; left:-12pt; top:2.5pt; width:7.5pt; height:7.5pt; border:1.2px solid var(--faint); border-radius:2px}
+
+/* ---------- funnel ---------- */
+.funnel{margin:8pt 0 4pt}
+.fstage{display:grid; grid-template-columns:72mm 1fr; gap:8pt; align-items:center; margin-bottom:3pt; break-inside:avoid}
+.fbar{height:21pt; border-radius:4px; color:#fff; font:650 8pt Inter; white-space:nowrap; display:flex; align-items:center; padding:0 8pt; margin:0 auto}
+.fdesc{font-size:8.1pt; line-height:1.35; color:var(--body)}
+.fdesc b{color:var(--ink)}
+
+/* ---------- timeline ---------- */
+.phases{display:grid; grid-template-columns:repeat(3,1fr); gap:8pt; margin:6pt 0 10pt}
+.phase{border-radius:7px; border:1px solid var(--line); padding:9pt 10pt; break-inside:avoid}
+.phase .d{font:700 7.5pt Inter; letter-spacing:.12em; text-transform:uppercase; color:var(--faint)}
+.phase .h{font:720 11pt Inter; color:var(--ink); margin:2pt 0 4pt}
+.phase ul{margin:0; padding-left:12pt; font-size:8.3pt}
+
+/* ---------- day types ---------- */
+.day{border-radius:7px; padding:9pt 10pt; border:1px solid var(--line); break-inside:avoid}
+.day .h{font:720 10.5pt Inter; color:var(--ink)}
+.day .m{font-size:7.8pt; color:var(--muted); margin-bottom:5pt}
+.day ol{font-size:8.3pt; margin:0; padding-left:13pt}
+.day.full{border-top:3px solid var(--sales)}
+.day.std{border-top:3px solid var(--content)}
+.day.mvd{border-top:3px solid var(--amber)}
+
+.toc{columns:2; column-gap:12mm; font-size:9.4pt; margin-top:8pt}
+.toc div{break-inside:avoid; padding:4pt 0; border-bottom:1px dotted var(--line); display:flex; justify-content:space-between; gap:6pt}
+.toc div span:first-child b{color:var(--sales); font-weight:700; margin-right:6pt}
+.toc .pg{color:var(--faint); font-variant-numeric:tabular-nums}
+.script{font:8.5pt/1.5 Inter; background:#fff; border:1px dashed #C9CFD6; border-radius:6px; padding:7pt 9pt; margin:5pt 0 8pt; break-inside:avoid}
+.script b{color:var(--sales)}
+.script.c b{color:var(--content)}
+.src{font-size:7.9pt; line-height:1.45}
+.src li{margin-bottom:3pt; word-break:break-word}
+.src a{color:var(--muted)}
+.big{font:760 15pt/1.2 "Inter Display", Inter; color:var(--ink); letter-spacing:-.01em}
+.q{font:600 9.6pt Inter; color:var(--ink)}
+.avoid{break-inside:avoid}
+</style>
+</head>
+<body>
+
+<!-- =============================== COVER =============================== -->
+<section class="cover">
+  <div class="grid"></div>
+  <div class="brand">Sales Dojo · Field Manual</div>
+  <h1>Sales <span>×</span> Content<br>The 90-Day Roadmap</h1>
+  <div class="rule"></div>
+  <p class="lede" style="margin-top:7mm">Earn from sales inside 60 to 90 days without giving up the long game. Everything from how your voice sounds on a call, to how a funnel is built, to how a deal is closed, plus a science and tech content engine that compounds in the background.</p>
+  <div class="tracks">
+    <div class="pill"><b>Track A</b> · High-ticket &amp; product sales</div>
+    <div class="pill"><b>Track B</b> · Sci-tech explainer content</div>
+  </div>
+  <div class="meta">
+    <div><b>Built for</b>5–6 hrs/day · 3 deep hrs on most days · zero prior experience</div>
+    <div><b>Horizon</b>Days 1–90 to first income · Months 4–12 to a real career</div>
+    <div><b>Version</b>v1.0 · November 2026 · answer Part 11 to unlock v2</div>
+  </div>
+</section>
+
+<!-- =============================== ONE PAGE =============================== -->
+<section>
+  <div class="kicker">Start here</div>
+  <h1>If you read only one page</h1>
+  <p class="sub">The whole plan, compressed. Everything after this page explains, justifies, or gives you the tools for one of these lines.</p>
+
+  <div class="box truth">
+    <div class="t">The verdict, straight</div>
+    <p><strong>Sales is your income engine. Content is your compounding asset.</strong> Sales can realistically pay you within 60–90 days because companies pay for revenue <em>today</em>. Science and tech content almost certainly will not. Every creator researched for this document went years before content paid meaningfully. So for the first 90 days you split your time about <strong>two-thirds sales, one-third content</strong>, and you treat content as a lab that trains the same muscle sales uses: get attention, earn trust, explain clearly, ask for action.</p>
+  </div>
+
+  <h2>The plan in 7 lines</h2>
+  <ol>
+    <li><strong>Weeks 1–4: learn and rehearse.</strong> Sales fundamentals (voice, questions, objections, closing) drilled daily in Sales Dojo and with humans. Three rough sci-tech shorts a week. Build a "sales portfolio": a 2-minute video pitch, a resume with numbers, a clean LinkedIn.</li>
+    <li><strong>Weeks 3–6: get a paid seat.</strong> In order of preference for your constraints: a remote <em>appointment-setter</em> role, a salaried <em>inside-sales/SDR</em> role, or selling a <em>content service</em> (editing/scripting) yourself.</li>
+    <li><strong>Weeks 5–12: real reps.</strong> Real conversations every working day. Review one call a day. Track your funnel numbers. Fix the leakiest stage each week.</li>
+    <li><strong>Content runs alongside:</strong> 3 shorts per week, 1 longer video every 2–3 weeks. By day 90: ~36 shorts, ~4 long videos, and data on what works.</li>
+    <li><strong>Fallback rules:</strong> no seat by day 45 → sell a content service using your shorts as a portfolio. No income by day 75 → take any reputable salaried sales role, even off-niche.</li>
+    <li><strong>Bad days are planned for:</strong> Full day (5–6h), Standard day (3h), Minimum Viable Day (30 min). Never zero. Never miss twice.</li>
+    <li><strong>Months 4–12:</strong> setter → closer, or SDR → tech sales. Content moves to long-form, a named "show", and a newsletter. Long-term model: <strong>Justin Welsh</strong> (sales expert turned creator) crossed with <strong>Cleo Abram</strong> (a specific, optimistic sci-tech show).</li>
+  </ol>
+
+  <h2>Day-90 scoreboard</h2>
+  <table class="tight">
+    <thead><tr><th>Area</th><th>Floor (must hit)</th><th>Target</th><th>Stretch</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Income</strong></td><td>First paid commission, salary or client</td><td>Steady monthly income from a sales seat</td><td>Promoted to closer, or a SaaS SDR offer</td></tr>
+      <tr><td><strong>Sales reps</strong></td><td>300 simulated + 200 real conversations</td><td>1,000+ real conversations logged</td><td>Top-3 on your team's board</td></tr>
+      <tr><td><strong>Content</strong></td><td>24 shorts, 2 long videos</td><td>36 shorts, 4 long videos</td><td>One video at 3× your channel's average</td></tr>
+      <tr><td><strong>Proof</strong></td><td>A written log of every week</td><td>One case study with real numbers</td><td>Testimonial from a manager or client</td></tr>
+    </tbody>
+  </table>
+  <p class="sm muted">Income bands for each path are on page 5. They come from job ads and vendor guides, not audited pay data, so treat them as planning ranges, not promises.</p>
+</section>
+
+<!-- =============================== CONTENTS =============================== -->
+<section class="part">
+  <div class="kicker">Map</div>
+  <h1>Contents</h1>
+  <p class="sub">Read Parts 0–4 now. Parts 5–8 are reference: return to one module per day and drill it. Parts 9–11 you'll reread every Sunday.</p>
+  <div class="toc">
+    <div><span><b>00</b>Straight talk: what is realistic</span><span class="pg">4</span></div>
+    <div><span><b>01</b>Research: people who've done it</span><span class="pg">6</span></div>
+    <div><span><b>02</b>Your path: "Seat + Lab"</span><span class="pg">9</span></div>
+    <div><span><b>03</b>The 90-day plan, week by week</span><span class="pg">11</span></div>
+    <div><span><b>04</b>Operating system for a real human</span><span class="pg">13</span></div>
+    <div><span><b>05</b>Sales curriculum: tone → close (13 modules)</span><span class="pg">16</span></div>
+    <div><span><b>06</b>Content curriculum: idea → audience (12 modules)</span><span class="pg">20</span></div>
+    <div><span><b>07</b>Funnels: how it all connects</span><span class="pg">23</span></div>
+    <div><span><b>08</b>Scripts, templates &amp; scorecards</span><span class="pg">25</span></div>
+    <div><span><b>09</b>Traps, scams &amp; red flags</span><span class="pg">29</span></div>
+    <div><span><b>10</b>Minimal library + Sales Dojo map</span><span class="pg">30</span></div>
+    <div><span><b>11</b>Questions for you (to build v2)</span><span class="pg">32</span></div>
+    <div><span><b>&nbsp;&nbsp;</b>Sources</span><span class="pg">33</span></div>
+  </div>
+
+  <h2>How to use this document</h2>
+  <div class="cols">
+    <div class="box sales"><div class="t">Rule 1 · apply within 48 hours</div><p>Never read a module without doing its drill within 48 hours. Reading feels like progress; only practice is progress. Aim for <strong>1 hour learning : 2 hours doing</strong>.</p></div>
+    <div class="box content"><div class="t">Rule 2 · one variable at a time</div><p>When something isn't working (reply rate, close rate, retention), change <strong>one</strong> thing, run it for a week, measure. Changing five things at once teaches you nothing.</p></div>
+    <div class="box warn"><div class="t">Rule 3 · log everything</div><p>Five lines a day: what you did, numbers, one thing that worked, one fix, energy level 1–10. After 30 days the log is better than any coach. It's also your proof.</p></div>
+    <div class="box"><div class="t">Rule 4 · simulated ≠ real</div><p>Sales Dojo is the gym. Real calls and DMs are the match. Use the Dojo to warm up and to drill weak spots. From week 5 onward, real reps should outnumber simulated ones.</p></div>
+  </div>
+</section>
+
+<!-- =============================== PART 0 =============================== -->
+<section class="part">
+  <div class="kicker">Part 00</div>
+  <h1>Straight talk: what is realistic</h1>
+  <p class="sub">You asked not to be told what you want to hear. Here is what the evidence says, including the parts that are inconvenient.</p>
+
+  <h2>Five hard truths</h2>
+  <div class="mod"><h3><span class="n">1</span>Content will not pay you in 90 days. Plan for that.</h3>
+    <p>Ali Abdaal made essentially nothing from his first ~85 videos over about nine months, while working as a doctor.<span class="cite">[10]</span> Cleo Abram spent about five years at Vox learning the craft before going independent in January 2022.<span class="cite">[1]</span> Johnny Harris also spent about five years at Vox, with his own channel as a side project, before leaving in 2020.<span class="cite">[5]</span> Mark Rober worked nine years at NASA's Jet Propulsion Laboratory and four at Apple while his channel grew.<span class="cite">[7]</span> The pattern is clear: <strong>the people you admire kept a paycheck while building.</strong> Your paycheck will come from sales.</p>
+  </div>
+  <div class="mod"><h3><span class="n">2</span>Sales can pay in 60–90 days. It can also pay zero.</h3>
+    <p>Entry-level sales is one of the few skilled jobs that hire people with no degree in the subject and no experience, because your output (booked calls, revenue) is measurable within weeks. But commission-only roles are volatile, many "opportunities" are scams (Part 9), and plenty of beginners quit with nothing. The difference between people who get paid and people who don't is mostly <strong>volume of real conversations plus honest review of each one</strong>.</p>
+  </div>
+  <div class="mod"><h3><span class="n">3</span>Do not split 50/50 for the first 90 days.</h3>
+    <p>Two half-efforts make zero income. Run roughly <strong>65% sales / 35% content</strong> until you have income, then rebalance with data at day 90. If you land a full-time sales job, the job <em>is</em> the sales block and content drops to about 1 hour a day plus a weekend batch.</p>
+  </div>
+  <div class="mod"><h3><span class="n">4</span>Sales and content are one skill wearing two outfits.</h3>
+    <p>A sales call is content for an audience of one; a video is a sales pitch to an audience of thousands. Both need a hook, a clear problem, tension, a simple explanation, proof, and a call to action. Your voice training helps your videos. Your hook writing helps your cold openers. Your sales conversations tell you what people actually care about, which becomes video ideas. <strong>This is the main reason pursuing both is rational, not greedy.</strong></p>
+  </div>
+  <div class="mod"><h3><span class="n">5</span>Motivation is weather. Systems are climate.</h3>
+    <p>You will have bad days, sick days, errands, family stuff. The plan includes a 30-minute Minimum Viable Day so a bad day costs you 30 minutes of progress, not the whole week. Goggins-style intensity is useful in short bursts; as a daily operating mode it leads to burnout. Part 4 shows how to use both.</p>
+  </div>
+
+  <div class="box truth">
+    <div class="t">The unifying idea</div>
+    <p class="big" style="color:#fff">Attention → Trust → Clarity → Action.</p>
+    <p>Every module in this document trains one of those four. When you're unsure what to work on, ask which of the four is weakest right now, and work on that.</p>
+  </div>
+</section>
+
+<section>
+  <div class="avoid">
+  <h2>What income is realistic, by path</h2>
+  <p>These ranges come from job postings and vendor guides, not audited surveys. Vendor guides have an interest in making the work look attractive, so treat the top of each range with suspicion.</p>
+  <table>
+    <thead><tr><th style="width:24%">Path</th><th style="width:28%">Typical structure</th><th>Reported ranges</th><th style="width:20%">Time to first money</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Remote appointment setter</strong> (DM/phone, for coaches, agencies, SaaS)</td><td>Commission per booked or attended call, or a small base plus commission</td><td>One vendor guide: <strong>$500–1,000/mo</strong> for beginners, $1,500–3,000 experienced. Example postings: $100 per attended call + 10%; $7/hr base + $15 per qualified set.<span class="cite">[17]</span></td><td>2–6 weeks after starting, if leads exist</td></tr>
+      <tr><td><strong>Remote closer</strong> (takes the booked calls and closes)</td><td>10–20% of deal value is the most common range</td><td>Vendor guide: $2,000–5,000/mo for beginner closers, more for experienced. Usually needs setter or sales experience first.<span class="cite">[17]</span></td><td>Month 4–6 for most beginners</td></tr>
+      <tr><td><strong>Salaried inside sales / BDA / SDR</strong> (example: India)</td><td>Fixed salary plus incentives; formal training</td><td>Fresher edtech BDA ads: roughly <strong>₹3–6 LPA</strong>. SaaS SDR estimates: ₹4–7 LPA fixed.<span class="cite">[19]</span></td><td>First salary 4–8 weeks after applying</td></tr>
+      <tr><td><strong>Content service</strong> (short-form editing, scripting, clipping)</td><td>Per video or monthly retainer</td><td>Highly variable; depends on your portfolio and outreach. Plan for small first clients.</td><td>4–8 weeks, needs a portfolio</td></tr>
+      <tr><td><strong>Your own sci-tech channel</strong></td><td>Ads, then sponsors, then products</td><td>Ad revenue requires YouTube Partner Program thresholds (see C12).<span class="cite">[22]</span> Expect ~0 in 90 days.</td><td>Usually 9–24 months</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="box warn">
+    <div class="t">Watch the clock if you sell into another time zone</div>
+    <p>Remote setter and closer roles for US or UK clients mean working their business hours. From Asia that often means evenings and late nights. That can be fine, but <strong>a fixed sleep window is non-negotiable</strong>. Sleep is when the brain consolidates what you practised. Wrecking it to earn faster trades away the long-term learning you said you can't compromise on.</p>
+  </div>
+</section>
+
+<!-- =============================== PART 1 =============================== -->
+<section class="part">
+  <div class="kicker">Part 01</div>
+  <h1>Research: people who've already done it</h1>
+  <p class="sub">Ten people across content and sales, focused on what they did before it worked. Where figures are self-reported or from secondary sources, that's noted. Full links are in Sources.</p>
+
+  <h2>Content creators (science, tech, explainers)</h2>
+  <table>
+    <thead><tr><th style="width:17%">Who</th><th style="width:30%">Before it worked</th><th style="width:28%">What they did</th><th>Lesson for you</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Cleo Abram</strong><br><span class="muted sm">Huge If True</span></td><td>About five years at Vox as producer and host, including the YouTube Originals series <em>Glad You Asked</em>; reported Emmy nomination in 2020.<span class="cite">[1][2]</span></td><td>Left in January 2022 to build one specific show: optimistic stories about technology. Each idea had to pass a checklist: is it visual, is there a good explanation, is the story optimistic? Reported 3.5M subscribers in under 2.5 years with a team of about four.<span class="cite">[1][3]</span></td><td><strong>A defined show beats a random channel.</strong> Name your show and write your idea filter before video #1. Her fast growth came <em>after</em> a long apprenticeship.</td></tr>
+      <tr><td><strong>Johnny Harris</strong></td><td>About five years at Vox (Vox Borders). His own channel ran as a side project and was under 1M subscribers when he left in 2020.<span class="cite">[5]</span></td><td>Went independent when Vox cancelled his show; passed about 7.5M subscribers within five years; later built Newpress, a company for creator-journalists.<span class="cite">[5][6]</span></td><td><strong>Build the side channel while being paid to learn.</strong> When the exit came, he had skills and a starting audience.</td></tr>
+      <tr><td><strong>Mark Rober</strong></td><td>Nine years as a NASA JPL mechanical engineer (seven on the Curiosity rover), then four years in product design at Apple.<span class="cite">[7]</span></td><td>YouTube started as a side project during the NASA years. He quit Apple to go full-time only once the channel was big. Later built CrunchLabs (a product business).<span class="cite">[7][8]</span></td><td><strong>Deep expertise first, content as distribution.</strong> Your depth source can be a subject you study hard, or the sales knowledge you are about to gain.</td></tr>
+      <tr><td><strong>Derek Muller</strong><br><span class="muted sm">Veritasium</span></td><td>PhD at the University of Sydney (2008) on designing effective physics videos.<span class="cite">[9]</span></td><td>His research found that clear explanation videos often <em>didn't</em> fix misconceptions and could make students more confident in wrong ideas. Videos that voiced the misconception first, then resolved it, taught better. That became Veritasium's style.<span class="cite">[9]</span></td><td><strong>Open with what people wrongly believe.</strong> It's both a hook and the most effective teaching method. Use it in videos and in sales.</td></tr>
+      <tr><td><strong>Ali Abdaal</strong></td><td>Medical student, then doctor, while making videos.</td><td>Reported ~$2 of AdSense in 2017, ~$16K in 2018, ~$42K in 2019; about 3.5 years of two videos a week before the business took off, then multiple income streams such as courses and sponsors.<span class="cite">[10]</span></td><td><strong>Output volume over years, with a day job.</strong> His early numbers are what "normal" looks like.</td></tr>
+      <tr><td><strong>Dhruv Rathee</strong></td><td>Channel created in 2013, starting with travel videos; about 100K subscribers by 2017.<span class="cite">[11]</span></td><td>Hinglish explainers on news, science and society; now 30M+ subscribers across channels by third-party trackers.<span class="cite">[11]</span></td><td><strong>Language is a strategy decision.</strong> Choosing Hinglish opened a huge, underserved market. Decide yours on purpose (Part 11).</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>Sales people (and the sales-to-content bridge)</h2>
+  <table>
+    <thead><tr><th style="width:17%">Who</th><th style="width:30%">Before it worked</th><th style="width:28%">What they did</th><th>Lesson for you</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Justin Welsh</strong></td><td>About 15 years in sales: pharma, then SaaS; SVP of Sales at PatientPop, reported to have helped scale it to $70M+ in recurring revenue.<span class="cite">[12]</span></td><td>Started posting sales and leadership lessons on LinkedIn in 2019. Built a newsletter and self-paced courses. Self-reported $4.15M+ revenue in 2024 at about 86% margin, with no employees.<span class="cite">[12]</span></td><td><strong>The closest template to your goal.</strong> Sales expertise became the content, and content became the business. The order matters: skill → proof → audience → product.</td></tr>
+      <tr><td><strong>Alex Hormozi</strong></td><td>Left a stable job, opened a gym, reportedly went deep into debt. Ran member sales consultations himself.<span class="cite">[13]</span></td><td>Credits his skill to sheer volume of sales "reps". Turned his gym playbook into Gym Launch (reported $46.2M deal in 2021). Built the CLOSER framework from thousands of calls and posts content daily.<span class="cite">[13][14]</span></td><td><strong>Reps make the skill; results come before audience.</strong> His content works because he had results to talk about.</td></tr>
+      <tr><td><strong>Cole Gordon</strong></td><td>By his own account, failed at blogging and SEO first. As a new closer he was worse than his teammates.<span class="cite">[15]</span></td><td>Hired coaches, invested in training, stayed consistent until he was the best on his team. Now runs Closers.io, which builds and trains sales teams for online businesses.<span class="cite">[15]</span></td><td><strong>Being bad at first is normal. Coaching and call reviews shorten the bad phase.</strong></td></tr>
+      <tr><td><strong>Jeremy Miner</strong></td><td>First sales job: door-to-door home security. Noticed the company scripts weren't working.<span class="cite">[16]</span></td><td>Built a question-led method (NEPQ) using behavioural psychology; founded 7th Level in 2018. His income rankings are self-reported.<span class="cite">[16]</span></td><td><strong>Questions beat pitching.</strong> Let the buyer persuade themselves. Same principle as SPIN and Gap Selling (Part 5).</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Two cautionary cases</h2>
+  <div class="cols">
+    <div class="box red"><div class="t">BYJU'S · pressure selling</div><p>Investigations by Context (Thomson Reuters Foundation), the BBC and others reported aggressive tactics: repeated cold calls, pitches implying children would fall behind, and families unaware they were signing loans. India's child-rights body summoned the CEO. The company denied mis-selling.<span class="cite">[20]</span> <strong>Lesson:</strong> high-pressure closing can hit short-term targets while destroying customers, careers and the company's name. Learn to close <em>honestly</em> from day one.</p></div>
+    <div class="box red"><div class="t">"Closer academies" · pay to get hired</div><p>Remote closing is a real job, but the space is full of programs that charge thousands for a "certification" and promise income. Reports say the US FTC warned and later shut down one such operator, The Sales Mentor (also marketed as Sales Closer Academy).<span class="cite">[18]</span> Verify on ftc.gov before relying on that. <strong>Lesson:</strong> legitimate employers pay <em>you</em>. Part 9 has a checklist for vetting gigs.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Patterns across all ten</h2>
+  <ol>
+    <li><strong>A long apprenticeship or deep expertise came first.</strong> Five years at Vox, nine at NASA, fifteen in sales, a PhD. Nobody went from zero to scale in 90 days. They <em>did</em> earn during the apprenticeship.</li>
+    <li><strong>They kept a paycheck while building.</strong> Rober (NASA, Apple), Harris and Abram (Vox), Abdaal (medicine), Welsh (SaaS executive).</li>
+    <li><strong>A specific, nameable thing.</strong> "Huge If True", "Gym Launch", "NEPQ", "the Saturday Solopreneur". Vague doesn't spread.</li>
+    <li><strong>Reps counted in hundreds or thousands.</strong> Thousands of sales calls (Hormozi), hundreds of videos (Abdaal).</li>
+    <li><strong>Feedback loops.</strong> Coaches (Gordon), research (Muller), editorial teams (Vox), data (MrBeast's team obsessing over click-through and retention).</li>
+  </ol>
+
+  <h2>Not every path is for everyone</h2>
+  <table>
+    <thead><tr><th style="width:20%">Archetype</th><th>Fits you if…</th><th>Avoid (for now) if…</th><th style="width:20%">Examples</th></tr></thead>
+    <tbody>
+      <tr><td><strong>The Apprentice</strong><br><span class="sm muted">join a team first</span></td><td>You want structure, mentorship and steady pay, and can commit to fixed hours</td><td>You need total control of your schedule right now</td><td>Abram, Harris</td></tr>
+      <tr><td><strong>The Rep</strong><br><span class="sm muted">volume and numbers</span></td><td>You like competition and scoreboards, and can handle rejection (or want to build that)</td><td>A "no" ruins your whole day. Start with DM setting, then build up to calls</td><td>Gordon, Miner, Hormozi</td></tr>
+      <tr><td><strong>Expert → Explainer</strong></td><td>You love going deep on a subject and explaining it</td><td>You need content income within a year</td><td>Rober, Muller, Welsh</td></tr>
+      <tr><td><strong>The Volume Grinder</strong></td><td>You love making things and can ship 2–3×/week for 2+ years</td><td>You need content to pay soon</td><td>Abdaal, Rathee</td></tr>
+    </tbody>
+  </table>
+  <div class="box sales"><div class="t">Recommendation for you</div><p><strong>Rep + Apprentice now, Expert → Explainer for the long game.</strong> Get into a paid sales seat on someone else's team (Apprentice), drive volume (Rep), and run content as a lab where you build depth in science and tech (Expert). By month 12 you can sell, you can explain, and you have proof of both. That is the Justin Welsh foundation, aimed at Cleo Abram's subject area.</p></div>
+</section>
+
+<!-- =============================== PART 2 =============================== -->
+<section class="part">
+  <div class="kicker">Part 02</div>
+  <h1>Your path: "Seat + Lab"</h1>
+  <p class="sub">The Seat pays you and trains you. The Lab builds your long-term asset. A Bridge in months 4–12 joins them into one career.</p>
+
+  <div class="cols3">
+    <div class="box sales"><div class="t">The Seat · sales</div><p>A paid sales role on an existing team with a real product, real leads and someone who reviews your calls. You don't need to invent an offer, find a market or build a funnel yet. You need reps and feedback.</p></div>
+    <div class="box content"><div class="t">The Lab · content</div><p>Science and tech explainer shorts, three a week. The point is not followers yet. It's practice at hooks, scripting, delivery and editing, plus a public portfolio that proves you can explain hard things.</p></div>
+    <div class="box"><div class="t">The Bridge · months 4–12</div><p>Your tech content makes you a stronger candidate for <strong>tech sales</strong> (SaaS SDR to account executive), or a closer for a science or edtech creator. Your sales skill makes your content persuasive. The two merge.</p></div>
+  </div>
+
+  <h2>Choosing your Seat: three options</h2>
+  <table>
+    <thead><tr><th style="width:22%">Option</th><th>Pros</th><th>Cons</th><th style="width:22%">Best if</th></tr></thead>
+    <tbody>
+      <tr><td><strong>A · Remote appointment setter</strong><br><span class="sm muted">DM or phone, for a coach, agency or SaaS company</span></td><td>Flexible hours; entry-level; fast feedback; natural path to closer; fits 5–6 hrs/day</td><td>Often commission-heavy; quality of employers varies wildly; time-zone strain</td><td>You can't do 9-to-6, and you want to start within weeks</td></tr>
+      <tr><td><strong>B · Salaried inside sales / BDA / SDR</strong></td><td>Fixed pay; structured training; managers; real CRM and process; strong resume line</td><td>Full-time hours; some companies (especially B2C edtech) push high-pressure selling</td><td>You're free 9-to-6 and want stability plus training. Prefer SaaS/B2B over aggressive B2C</td></tr>
+      <tr><td><strong>C · Sell a content service yourself</strong><br><span class="sm muted">short-form editing, scripting, clipping</span></td><td>Uses both skills at once; your shorts become your portfolio; you learn full-cycle selling</td><td>You do prospecting <em>and</em> delivery; income starts small; no manager reviewing your calls</td><td>No seat by day 45, or you prefer creative work and can edit well by week 4</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Decision tree</h2>
+  <div class="box">
+    <ol style="margin:0">
+      <li><strong>Can you work fixed full-time hours now?</strong> Yes → start with <strong>B</strong> (apply to 5–10 SaaS or B2B inside-sales roles a day). Content shrinks to 1 hr/day plus a weekend batch. No → go to 2.</li>
+      <li><strong>Does messaging strangers feel easier than calling them?</strong> Yes → <strong>A</strong> as a DM setter, and add phone work by month 3. No → <strong>A</strong> as a phone setter, or part-time inside sales.</li>
+      <li><strong>By week 4, can you edit a clean 45-second short in under 2 hours?</strong> Yes → keep <strong>C</strong> as a parallel or backup track. No → keep practising; C becomes your day-45 fallback.</li>
+    </ol>
+  </div>
+
+  <h2>Hard fallback rules</h2>
+  <div class="cols">
+    <div class="box warn"><div class="t">Day 45 · no seat yet</div><p>Switch your outreach hours to <strong>Option C</strong>. By then you'll have about 18 shorts, which is enough portfolio. Offer one free sample edit to 20 creators; aim to convert 1–2 to paid.</p></div>
+    <div class="box warn"><div class="t">Day 75 · no income yet</div><p>Take <strong>any reputable salaried sales role</strong>, even outside tech: insurance, real estate, B2B services. Income plus supervised reps beats waiting for the perfect fit. Keep the Lab running.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Months 4–12: the skill tree</h2>
+  <table>
+    <thead><tr><th style="width:14%">Months</th><th><span class="tag s">Sales</span></th><th><span class="tag c">Content</span></th><th style="width:24%">Proof you're on track</th></tr></thead>
+    <tbody>
+      <tr><td class="w"><strong>4–6</strong></td><td>Setter → shadow closer calls → take overflow calls. Or SDR hitting quota. Learn qualification frameworks properly (MEDDIC for B2B).</td><td>Name your show. One long-form video every two weeks, built from your best-performing short. Start posting text versions on LinkedIn.</td><td>Closing your own calls; a long video that holds viewers past 40% of its length</td></tr>
+      <tr><td class="w"><strong>7–9</strong></td><td>Full closer seat, or move from SDR to a junior account executive track. Specialise in one industry, ideally tech, science or edtech.</td><td>Newsletter launched (an owned audience). First collaboration. A consistent visual style.</td><td>Top-half close rate; 500+ newsletter subscribers</td></tr>
+      <tr><td class="w"><strong>10–12</strong></td><td>Senior closer or account executive. Begin mentoring setters, because teaching locks in skill.</td><td>First sponsor or paid service from your audience. Sharpen the "show" around your strongest topic.</td><td>Content brings you inbound job or client offers</td></tr>
+      <tr><td class="w"><strong>12+</strong></td><td colspan="2">Choose: (a) top-earning tech sales career with a personal brand, (b) your own offer sold through your content (the Welsh model), or (c) full-time creator funded by sponsors and products (the Abram model). You'll choose from data, not hope.</td><td>Options, not a single bet</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- =============================== PART 3 =============================== -->
+<section class="part">
+  <div class="kicker">Part 03</div>
+  <h1>The 90-day plan, week by week</h1>
+  <p class="sub">Each week has a Sales track, a Content track and a proof milestone. Proof is something you can show someone, not a feeling.</p>
+
+  <div class="phases">
+    <div class="phase" style="border-top:3px solid var(--sales)"><div class="d">Days 1–30</div><div class="h">Foundations + first reps</div><ul><li>Learn the core sales sequence</li><li>Drill daily (Dojo + humans)</li><li>Build sales portfolio, start applying</li><li>Publish rough shorts, 3/week</li></ul></div>
+    <div class="phase" style="border-top:3px solid var(--content)"><div class="d">Days 31–60</div><div class="h">Get on a team</div><ul><li>Land the Seat (A, B or C)</li><li>Real conversations daily</li><li>Review one call a day</li><li>First long-form video</li></ul></div>
+    <div class="phase" style="border-top:3px solid var(--amber)"><div class="d">Days 61–90</div><div class="h">Get paid, get better</div><ul><li>Hit your seat's KPIs</li><li>Fix the leakiest funnel stage</li><li>Build a case study with numbers</li><li>Double down on what works in content</li></ul></div>
+  </div>
+
+  <table class="wk">
+    <thead><tr><th style="width:9%">Week</th><th style="width:37%"><span class="tag s">Sales track</span></th><th style="width:31%"><span class="tag c">Content track</span></th><th>Proof by Sunday</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td><strong>Voice + listening.</strong> Modules S1–S2. Daily: Dojo Articulation Warm-up, one Gauntlet (5 calls). Record a 60-second "who I am and why sales" pitch every day and listen back.</td><td><strong>Define the show</strong> (C1): one-line show name and your 3-question idea filter. 30-idea bank. Post 2 rough shorts, ugly is fine.</td><td>2 shorts live · 35 Dojo calls · 7 voice recordings</td></tr>
+      <tr><td>2</td><td><strong>Psychology + discovery.</strong> S3, S7 (SPIN and Gap). Three role-plays with real humans (friends or online sales communities). Record them.</td><td><strong>Hooks + packaging</strong> (C3–C4). Study 10 outlier videos in your niche and write their first lines out by hand. 3 shorts.</td><td>3 recorded role-plays · 5 shorts total</td></tr>
+      <tr><td>3</td><td><strong>Objections + closing.</strong> S9–S10. Dojo Objection Blitz daily. <strong>Build your sales portfolio</strong>: 2-minute video pitch, resume with numbers (even Dojo stats), LinkedIn. Start applying: 30 applications this week.</td><td><strong>Story + script</strong> (C5–C6). 3 shorts. Draft your first 5-minute script.</td><td>Portfolio live · 30 applications · 8 shorts total</td></tr>
+      <tr><td>4</td><td><strong>Prospecting live.</strong> S4–S5. If A/B: 30+ more applications plus 2 mock interviews. If C: 20 personalised outreach messages a day to creators (Part 8 script).</td><td>3 shorts plus your <strong>first long video</strong> (5–8 minutes). It will be rough. That's the point.</td><td>Interviews booked · 11 shorts + 1 long</td></tr>
+      <tr><td>5</td><td><strong>Land the seat.</strong> Accept the best <em>legitimate</em> offer (vet with Part 9). Learn the product and offer cold. Memorise the script, then make it sound like you.</td><td>3 shorts. First analytics review (C11): which short held viewers longest, and why?</td><td>Seat accepted <em>or</em> 60+ applications · 14 shorts</td></tr>
+      <tr><td>6</td><td><strong>Shadow + start.</strong> Listen to top reps' recordings. Your first real conversations. Track the funnel (S12) in a sheet from day one.</td><td>3 shorts. Remake your best short with a better hook.</td><td>First 50 real conversations logged · 17 shorts</td></tr>
+      <tr><td>7</td><td><strong>Volume.</strong> Hit the team's daily activity target. Review one call or DM thread daily with the scorecard (Part 8). Ask your manager for one piece of feedback each week.</td><td>3 shorts plus the second long video (from your best short).</td><td>150 conversations · 20 shorts + 2 long</td></tr>
+      <tr><td>8</td><td><strong>Find the leak.</strong> Which stage drops the most? (Reply → booked? Booked → showed?) Fix one thing.</td><td>3 shorts. Start posting text versions on LinkedIn or X, twice a week.</td><td>One documented fix · 23 shorts</td></tr>
+      <tr><td>9</td><td><strong>Qualification.</strong> S6. Stop wasting calls on people who can't buy. Ask to sit in on closer calls.</td><td>3 shorts. Experiment: misconception-first hooks versus question hooks.</td><td>Show rate or reply rate up · 26 shorts</td></tr>
+      <tr><td>10</td><td><strong>Objections in the wild.</strong> Log every objection you hear. Build your own response bank from what actually worked.</td><td>3 shorts plus the third long video.</td><td>Objection bank of 15+ · 29 shorts + 3 long</td></tr>
+      <tr><td>11</td><td><strong>Get paid.</strong> First commission or salary. Ask satisfied customers or your manager for a testimonial.</td><td>3 shorts. Monthly top 3 / bottom 3 review.</td><td>Income received · 32 shorts</td></tr>
+      <tr><td>12</td><td><strong>Case study.</strong> Write one page: starting numbers → what you changed → results. This is your promotion or next-job document.</td><td>3 shorts plus the fourth long video. Pick your lane for months 4–6.</td><td>Case study written · 35 shorts + 4 long</td></tr>
+      <tr><td>13</td><td colspan="2"><strong>Review and rebalance.</strong> Compare against the Day-90 scoreboard. Decide the sales/content split for the next 90 days from data. Answer Part 11 and build v2 of this plan.</td><td>v2 plan written</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- =============================== PART 4 =============================== -->
+<section class="part">
+  <div class="kicker">Part 04</div>
+  <h1>Operating system for a real human</h1>
+  <p class="sub">You get tired, you have bad days, life interrupts. This system assumes all of that and still moves forward.</p>
+
+  <h2>Three kinds of day</h2>
+  <div class="cols3">
+    <div class="day full"><div class="h">Full Day</div><div class="m">5–6 hrs · the default goal</div>
+      <ol><li><strong>Deep block 1 (90 min):</strong> sales skill. Weeks 1–4 learn + drill; week 5+ live calls or DMs.</li><li><strong>Deep block 2 (90 min):</strong> content. Script and film.</li><li><strong>Shallow (2–3 hrs):</strong> outreach volume, applications, editing, posting, call review, reading.</li><li><strong>5-min log.</strong></li></ol></div>
+    <div class="day std"><div class="h">Standard Day</div><div class="m">~3 hrs · errands, low energy</div>
+      <ol><li><strong>One deep block (90 min):</strong> whichever is more urgent this week (usually sales).</li><li><strong>60 min shallow:</strong> outreach or editing.</li><li><strong>20 min:</strong> one Dojo Gauntlet or one short filmed.</li><li><strong>5-min log.</strong></li></ol></div>
+    <div class="day mvd"><div class="h">Minimum Viable Day</div><div class="m">30 min · sick, sad, slammed</div>
+      <ol><li><strong>10 min sales:</strong> one Dojo call, or ten objection flashcards.</li><li><strong>10 min content:</strong> write five hooks, or film one take.</li><li><strong>5 min:</strong> read your Cookie Jar (below).</li><li><strong>5-min log.</strong> Done. No guilt.</li></ol></div>
+  </div>
+  <p style="margin-top:8pt"><strong>The two rules: never zero, never miss twice.</strong> A Minimum Viable Day counts. Two skipped days in a row is how plans die, so after any miss, the next day is at least Standard. (The "never miss twice" rule is James Clear's, from <em>Atomic Habits</em>.)</p>
+
+  <h2>Sample schedules</h2>
+  <table class="tight">
+    <thead><tr><th style="width:18%">Block</th><th>If your quiet hours are in the morning</th><th>If you work a US/UK-hours setter shift</th></tr></thead>
+    <tbody>
+      <tr><td>Wake + light</td><td>07:00 wake · 10–15 min outdoors · no phone for 30 min</td><td>10:00 wake · outdoors immediately · same time every day</td></tr>
+      <tr><td>Deep block 1</td><td>08:00–09:30 · sales drills or live outreach</td><td>11:00–12:30 · content script and film (your freshest hours)</td></tr>
+      <tr><td>Deep block 2</td><td>10:00–11:30 · content</td><td>13:00–14:30 · sales study, call review, Dojo</td></tr>
+      <tr><td>Recovery</td><td>Lunch · 10–20 min NSDR or a short nap · walk</td><td>Lunch · NSDR · walk · exercise</td></tr>
+      <tr><td>Shallow 3 hrs</td><td>Afternoon: outreach, editing, applications, posting</td><td>Evening shift: live setting or calling (this is your shallow-plus-live time)</td></tr>
+      <tr><td>Shutdown</td><td>5-min log · plan tomorrow's first task · screens down 60 min before bed</td><td>Same, with a fixed bedtime even after a late shift</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>The Huberman layer: biology that makes learning stick</h2>
+  <p class="sm muted">Ranked by strength of evidence. The first three are well supported across sleep and exercise science. The rest are useful, lower-cost habits with weaker evidence; use them if they help you, drop them if they don't.</p>
+  <table class="tight">
+    <thead><tr><th style="width:28%">Habit</th><th>What to do</th><th style="width:26%">Why it matters for you</th></tr></thead>
+    <tbody>
+      <tr><td><strong>1 · Regular sleep window</strong></td><td>Same wake time (±30 min) every day, 7–9 hrs in bed. Protect it even on shift work.</td><td>Memory consolidation happens in sleep. This is your "long-term learning" insurance.</td></tr>
+      <tr><td><strong>2 · Daily movement</strong></td><td>20–30 min walk minimum; 3×/week harder exercise. Take practice calls or listen to recordings while walking.</td><td>Mood, focus, stress resilience on rejection-heavy days.</td></tr>
+      <tr><td><strong>3 · Morning light</strong></td><td>A few minutes outdoors soon after waking, longer on cloudy days; not through a window.</td><td>Anchors your body clock, helps alertness earlier and sleep later.</td></tr>
+      <tr><td>4 · ~90-minute focus blocks</td><td>Work in blocks of about 90 minutes; expect about an hour of real focus inside each. Huberman discusses this in his AMA on ultradian cycles.<span class="cite">[23]</span></td><td>Matches your two deep blocks.</td></tr>
+      <tr><td>5 · Delay caffeine</td><td>First caffeine 60–90 min after waking; none within 8–10 hrs of bed.</td><td>Steadier afternoon energy, better sleep.</td></tr>
+      <tr><td>6 · NSDR / Yoga Nidra</td><td>10–20 min guided rest after lunch.</td><td>Resets for deep block 2 or a shift.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>The Goggins layer: for the days you don't want to</h2>
+  <div class="cols">
+    <div class="box"><div class="t">Accountability Mirror</div><p>Write this week's three targets on sticky notes on your mirror. Look at them every morning. No hiding from the numbers.</p></div>
+    <div class="box"><div class="t">Cookie Jar</div><p>A running list of every hard thing you've already done: first cold DM, first rejection survived, first video posted. On bad days, read it. Evidence beats pep talks.</p></div>
+    <div class="box"><div class="t">Callus the mind</div><p>Do the rep you dread first: the cold call, the camera take, the follow-up after a "no". Avoidance grows; exposure shrinks it.</p></div>
+    <div class="box"><div class="t">The 40% rule, with a guardrail</div><p>Goggins says when you think you're done, you're at 40%. Use it <strong>inside a session</strong> ("five more dials"). Don't use it to skip sleep or work through illness. That's how you lose weeks.</p></div>
+  </div>
+  <div class="box truth"><div class="t">The rational blend</div><p><strong>Goggins for the first 20 minutes, Huberman for the rest of the day.</strong> Use intensity to start the hard thing. Use recovery science to keep doing it for 12 months.</p></div>
+</section>
+
+<section>
+  <h2>When life interrupts: the disruption playbook</h2>
+  <table>
+    <thead><tr><th style="width:24%">Situation</th><th>Do this</th><th style="width:30%">Don't do this</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Low mood, no energy</strong></td><td>Minimum Viable Day. 10-minute walk outside first. Read the Cookie Jar.</td><td>Scroll for two hours and then call the day a write-off</td></tr>
+      <tr><td><strong>Urgent errand, half day lost</strong></td><td>Standard Day: protect one deep block, cut shallow work.</td><td>Push the deep block "to tonight"</td></tr>
+      <tr><td><strong>Sick</strong></td><td>Rest. Optionally listen to one call recording. Log "sick". Resume with a Standard Day.</td><td>Use the 40% rule on your immune system</td></tr>
+      <tr><td><strong>Travel or family event (2–5 days)</strong></td><td>"Phone-only mode": listen to recordings, write hooks in notes, reply to leads. Batch-film two extra shorts the week before if you can see it coming.</td><td>Drop everything, then try to restart cold</td></tr>
+      <tr><td><strong>Lost a whole week</strong></td><td>Restart with three Standard Days, then Full. Pick up the plan where you are, not where the calendar says.</td><td>Try to "make up" hours with 12-hour days (leads to burnout and another lost week)</td></tr>
+      <tr><td><strong>Brutal rejection day</strong></td><td>Review one call honestly, write one lesson, then stop. Rejection is data about the offer, timing or your delivery, not a verdict on you.</td><td>Replay it for hours, or quit the role in the moment</td></tr>
+      <tr><td><strong>A video flops</strong></td><td>Check the retention graph: where did people leave? Fix that one thing in the next video.</td><td>Delete it, change niche, or buy a new camera</td></tr>
+    </tbody>
+  </table>
+
+  <h2>The Sunday review (45 minutes)</h2>
+  <ol class="check">
+    <li>Fill in the weekly scorecard (Part 8): activity numbers, conversion rates, content metrics, days completed by type.</li>
+    <li>Find the single weakest number. Write one change to test this week.</li>
+    <li>Re-read last week's log. What surprised you?</li>
+    <li>Update the Accountability Mirror: three targets for next week.</li>
+    <li>Add 2–3 entries to the Cookie Jar.</li>
+    <li>Plan the week: which days are Full and which are Standard, given what you know is coming.</li>
+    <li>Batch: write next week's three short scripts.</li>
+  </ol>
+</section>
+
+<!-- =============================== PART 5 =============================== -->
+<section class="part">
+  <div class="kicker">Part 05</div>
+  <h1>Sales curriculum: from tone to close</h1>
+  <p class="sub">Thirteen modules, from smallest to biggest. Each has: what it is, what to do, a drill, and the most common mistake. Sales Dojo already contains lessons from most of the books cited here. Use it to drill each module.</p>
+
+  <div class="mod"><h3><span class="n">S1</span>Voice and tonality</h3>
+    <div class="row"><div class="k">What</div><div class="v"><p>On a call your voice decides whether your words are believed. You'll often hear that communication is "7% words, 38% tone, 55% body language". That's a misreading of Albert Mehrabian's 1960s experiments, which looked at single words expressing feelings. Mehrabian himself says it doesn't apply to communication in general. <strong>Words matter. Tone decides whether they land.</strong></p></div></div>
+    <div class="row"><div class="k">Do</div><div class="v"><ul>
+      <li><strong>Three voices (Chris Voss):</strong> <em>positive/playful</em> as your default; the calm, slow <em>late-night FM DJ</em> voice with a downward inflection for key points, limits and price; <em>assertive</em> almost never, because it creates pushback.</li>
+      <li><strong>Pace:</strong> slow down on what matters. Nervous people speed up; confident people pause.</li>
+      <li><strong>Pause</strong> 1–2 seconds after asking a question and after saying a price. Let the silence work.</li>
+      <li><strong>Downward inflection on statements</strong> signals certainty. Rising tone on a statement ("We help coaches?") sounds unsure.</li>
+      <li><strong>Smile while talking:</strong> it's audible. Cut fillers: um, like, basically, honestly, just.</li></ul></div></div>
+    <div class="row"><div class="k">Drill</div><div class="v"><p>Daily: Dojo Articulation Warm-up (5 min). Record a 60-second explanation, listen at 1×, note one fix, re-record.</p></div></div>
+    <div class="row"><div class="k">Mistake</div><div class="v"><p>Copying a "salesy" voice. Aim for <em>you, calm and clear</em>, not a radio announcer.</p></div></div>
+  </div>
+
+  <div class="mod"><h3><span class="n">S2</span>Language and listening</h3>
+    <div class="row"><div class="k">What</div><div class="v"><p>Tactical empathy (Voss): make the other person feel understood, and they open up and trust you.</p></div></div>
+    <div class="row"><div class="k">Do</div><div class="v"><ul>
+      <li><strong>Mirror:</strong> repeat the last 1–3 key words as a question. "…we've tried agencies before." → "Tried agencies before?" Then wait.</li>
+      <li><strong>Label:</strong> "It sounds like…", "It seems like…", "It feels like…". Name the emotion or the situation.</li>
+      <li><strong>Calibrated questions</strong> (How/What): "What's the biggest challenge there?" "How would you want this to work?"</li>
+      <li><strong>Accusation audit:</strong> say their objections first. "You probably think this is another sales pitch…"</li>
+      <li><strong>Summarise until they say "that's right"</strong>, not "you're right". "That's right" means they feel understood.</li>
+      <li>One question at a time. Aim to talk less than half the call.</li></ul></div></div>
+    <div class="row"><div class="k">Drill</div><div class="v"><p>In normal conversations, label three emotions a day. Dojo: <em>Never Split the Difference</em> lessons.</p></div></div>
+    <div class="row"><div class="k">Mistake</div><div class="v"><p>Asking a question, then answering it yourself because the silence felt awkward.</p></div></div>
+  </div>
+
+  <div class="mod"><h3><span class="n">S3</span>Buyer psychology, used ethically</h3>
+    <div class="row"><div class="k">What</div><div class="v"><p>People don't buy products; they buy a change from their current state to a better one (Keenan, <em>Gap Selling</em>). They act when staying the same costs more than changing.</p></div></div>
+    <div class="row"><div class="k">Do</div><div class="v"><ul>
+      <li><strong>Hormozi's value equation</strong> (<em>$100M Offers</em>): Value = (Dream outcome × Perceived likelihood of achieving it) ÷ (Time delay × Effort and sacrifice). To raise value, increase the top or shrink the bottom.</li>
+      <li><strong>Cialdini's seven principles</strong> (<em>Influence</em>): reciprocity, commitment and consistency, social proof, authority, liking, scarcity, unity. Use only true versions: real testimonials, real deadlines, real expertise.</li>
+      <li><strong>Loss framing:</strong> help them see the honest cost of doing nothing, in their own numbers.</li></ul></div></div>
+    <div class="row"><div class="k">Drill</div><div class="v"><p>Pick any product you own. Write its value equation. Which of the four terms would you improve first?</p></div></div>
+    <div class="row"><div class="k">Mistake</div><div class="v"><p>Fake scarcity ("only 2 spots left!"). It works once, then trust is gone for good.</p></div></div>
+  </div>
+
+  <div class="mod"><h3><span class="n">S4</span>Prospecting: finding people to talk to</h3>
+    <div class="row"><div class="k">What</div><div class="v"><p>Jeb Blount's core point (<em>Fanatical Prospecting</em>): an empty pipeline is the real killer. Most sales failures are activity failures.</p></div></div>
+    <div class="row"><div class="k">Do</div><div class="v"><ul>
+      <li><strong>Ideal customer profile (ICP):</strong> who exactly, what pain, where they spend time, which events trigger buying (new funding, a new hire, a launch, a complaint post).</li>
+      <li><strong>The 30-day rule:</strong> prospecting you do this month pays off over the next 90 days. Never stop, even when busy.</li>
+      <li><strong>Golden hours:</strong> prospect when buyers can be reached; do admin and research outside those hours.</li>
+      <li><strong>Balanced prospecting:</strong> mix phone, email, DM, referrals and content. Don't rely on one channel.</li>
+      <li><strong>Personalise with one specific line.</strong> Cap research at about 2 minutes per prospect.</li></ul></div></div>
+    <div class="row"><div class="k">Drill</div><div class="v"><p>Dojo Company X-Ray: one company in 5 minutes. Who buys, why, what's changing.</p></div></div>
+    <div class="row"><div class="k">Mistake</div><div class="v"><p>Researching for 20 minutes, then sending a generic message anyway.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="mod"><h3><span class="n">S5</span>Openers: call, DM and email</h3>
+    <div class="row"><div class="k">Call</div><div class="v"><p><strong>Blount's five steps:</strong> get attention (use their name), identify yourself, give the reason for the call, a "because" statement, then ask directly for the meeting. Alternative <strong>permission opener</strong>: "I know I'm calling out of the blue. Can I take 30 seconds to tell you why, and you tell me if it's worth continuing?"</p></div></div>
+    <div class="row"><div class="k">DM</div><div class="v"><p>Context + a genuine curiosity question. <strong>No pitch in the first message.</strong> The goal of message 1 is message 2.</p></div></div>
+    <div class="row"><div class="k">Email</div><div class="v"><p>A 2–4 word subject. Three to five sentences: trigger → problem → proof → one ask. Readable on a phone in ten seconds.</p></div></div>
+    <div class="row"><div class="k">Mistake</div><div class="v"><p>"Hope you're doing well! I wanted to reach out to…" Every word before the point costs you attention.</p></div></div>
+  </div>
+
+  <div class="mod"><h3><span class="n">S6</span>Qualifying: who is worth your time</h3>
+    <div class="row"><div class="k">B2C / high-ticket</div><div class="v"><p><strong>Need</strong> (a real problem) · <strong>Urgency</strong> (why now?) · <strong>Ability</strong> (can they invest without harming themselves?) · <strong>Authority</strong> (do they decide, or is a spouse or parent involved?) · <strong>Coachability</strong> (will they actually do the work?).</p></div></div>
+    <div class="row"><div class="k">B2B</div><div class="v"><p>Start with <strong>BANT</strong> (Budget, Authority, Need, Timing). Graduate to <strong>MEDDIC</strong>: Metrics, Economic buyer, Decision criteria, Decision process, Identify pain, Champion.</p></div></div>
+    <div class="row"><div class="k">Mindset</div><div class="v"><p><strong>Disqualifying is a skill, not a failure.</strong> A clear "this isn't for you" protects your time and the buyer's money, and it makes you more credible with the ones who are a fit.</p></div></div>
+  </div>
+
+  <div class="mod"><h3><span class="n">S7</span>Discovery: where deals are actually won</h3>
+    <div class="row"><div class="k">SPIN</div><div class="v"><p>From Neil Rackham's research on thousands of sales calls: <strong>S</strong>ituation questions (use sparingly, they bore buyers) → <strong>P</strong>roblem → <strong>I</strong>mplication (what does this problem cause?) → <strong>N</strong>eed-payoff (what would solving it be worth?). Implication and need-payoff questions do the heavy lifting in larger sales.</p></div></div>
+    <div class="row"><div class="k">Gap</div><div class="v"><p><strong>Current state</strong> (facts, pain, root cause, impact in numbers) → <strong>future state</strong> (what they want) → <strong>the gap</strong> between them is the value. The bigger and clearer the gap, the easier the close.</p></div></div>
+    <div class="row"><div class="k">Do</div><div class="v"><p>Spend most of the call here. Get the root cause ("Why do you think that keeps happening?") and quantify it ("Roughly what does that cost you a month?"). Question bank in Part 8.</p></div></div>
+    <div class="row"><div class="k">Mistake</div><div class="v"><p>Pitching the moment you hear a problem. Hold your solution until you understand the whole gap.</p></div></div>
+  </div>
+
+  <div class="mod"><h3><span class="n">S8</span>Presenting the offer</h3>
+    <div class="row"><div class="k">Do</div><div class="v"><ul>
+      <li><strong>Recap in their words first:</strong> "You said X, Y and Z. Did I get that right?"</li>
+      <li>Present <strong>only the parts that close their gap</strong>. Keenan: demo only what closes the gap.</li>
+      <li><strong>Benefits beat features:</strong> connect each part to a need they stated (Rackham).</li>
+      <li><strong>Teach something</strong> (from <em>The Challenger Sale</em>): an insight about their problem they didn't have. Your sci-tech research habit is an edge here.</li>
+      <li><strong>Say the price plainly, then stop talking.</strong></li></ul></div></div>
+    <div class="row"><div class="k">Mistake</div><div class="v"><p>Feature dumping: listing everything the product does "just in case".</p></div></div>
+  </div>
+
+  <div class="mod"><h3><span class="n">S9</span>Objections</h3>
+    <div class="row"><div class="k">Sequence</div><div class="v"><p><strong>Pause → Label → Clarify/isolate → Respond → Confirm.</strong> "It sounds like price is the concern. Aside from price, is this the right solution for you?" → respond with options, evidence or a reframe → "Does that address it?"</p></div></div>
+    <div class="row"><div class="k">Prevent</div><div class="v"><p>Most objections are discovery failures (Rackham). If you hear "too expensive", the gap wasn't big or clear enough. Fix discovery, not your rebuttal.</p></div></div>
+    <div class="row"><div class="k">Drill</div><div class="v"><p>Dojo Objection Blitz daily in weeks 3–4. Full response table in Part 8.</p></div></div>
+    <div class="row"><div class="k">Mistake</div><div class="v"><p>Arguing. You can win the argument and lose the sale. Respond with questions.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="mod"><h3><span class="n">S10</span>Closing</h3>
+    <div class="row"><div class="k">CLOSER</div><div class="v"><p>Hormozi's sequence:<span class="cite">[14]</span> <strong>C</strong>larify why they're here → <strong>L</strong>abel the problem → <strong>O</strong>verview past pain (what they've tried and why it failed) → <strong>S</strong>ell the vacation (the outcome, not the flight) → <strong>E</strong>xplain away concerns → <strong>R</strong>einforce the decision after they buy.</p></div></div>
+    <div class="row"><div class="k">The ask</div><div class="v"><p>Direct, simple, then silence. "Based on what you've told me, X, Y and Z, I think this is a fit. Want to get started?" Then <strong>say nothing</strong> until they answer.</p></div></div>
+    <div class="row"><div class="k">Advance</div><div class="v"><p>Rackham: every call ends with an <strong>advance</strong> (a concrete next step with a date), not a <em>continuation</em> ("let's stay in touch").</p></div></div>
+    <div class="row"><div class="k">Mistake</div><div class="v"><p>Never actually asking. Many beginners present beautifully, then wait for the buyer to volunteer.</p></div></div>
+  </div>
+
+  <div class="mod"><h3><span class="n">S11</span>Follow-up and a simple CRM</h3>
+    <div class="row"><div class="k">Do</div><div class="v"><ul>
+      <li>Many deals aren't decided on the first call. Use a follow-up cadence (Part 8): recap → value → check-in → polite close-the-file.</li>
+      <li>A CRM can be a Google Sheet. Columns: name · source · stage · last touch · <strong>next step + date</strong> · notes.</li>
+      <li><strong>Rule: no lead without a next date.</strong></li></ul></div></div>
+  </div>
+
+  <div class="mod"><h3><span class="n">S12</span>Metrics and self-coaching</h3>
+    <div class="row"><div class="k">Setter</div><div class="v"><p>Touches → replies → conversations → qualified → booked → showed. Watch the reply rate and the show rate.</p></div></div>
+    <div class="row"><div class="k">Closer</div><div class="v"><p>Show rate · close rate · cash collected per call · refund rate. A high close rate with high refunds means you're overselling.</p></div></div>
+    <div class="row"><div class="k">B2B</div><div class="v"><p>Activities → meetings → opportunities → won. Pipeline coverage: pipeline value relative to quota.</p></div></div>
+    <div class="row"><div class="k">Review</div><div class="v"><p>Score one call a day (Part 8). Record only with consent, and follow local laws on call recording. Weekly: find the leakiest stage and fix one thing.</p></div></div>
+  </div>
+
+  <div class="mod"><h3><span class="n">S13</span>Ethics and reputation</h3>
+    <div class="row"><div class="k">Rules</div><div class="v"><ul>
+      <li>Never lie about results, scarcity or what's included.</li>
+      <li>Don't sell to people who can't afford it or won't benefit. Never push credit or loans on someone who's stretched (the BYJU'S lesson).</li>
+      <li>The test: would you sell this, at this price, to your own family member in this situation?</li></ul></div></div>
+    <div class="row"><div class="k">Why</div><div class="v"><p>Your reputation compounds just like content. Honest closers get referrals, testimonials and better jobs. Pushy ones get refunds, chargebacks and bad reviews.</p></div></div>
+  </div>
+</section>
+
+<!-- =============================== PART 6 =============================== -->
+<section class="part">
+  <div class="kicker c">Part 06</div>
+  <h1>Content curriculum: from idea to audience</h1>
+  <p class="sub">Twelve modules for science and tech explainers. The goal for the first 90 days is skill and portfolio, not follower count.</p>
+
+  <div class="mod c"><h3><span class="n">C1</span>Define your show (positioning)</h3>
+    <div class="row"><div class="k">What</div><div class="v"><p>Cleo Abram's growth is attributed to a <em>specific show</em> with a defined brand (optimism about technology) and an idea checklist: is it genuinely visual, is there a good explanation, is the story optimistic?<span class="cite">[3]</span></p></div></div>
+    <div class="row"><div class="k">Do</div><div class="v"><ul>
+      <li>One line: <strong>"[Topic] for [audience] through [lens]."</strong> Examples: "The physics hiding in everyday things." "New tech explained in 60 seconds, with one honest caveat." "How the machines around you actually work."</li>
+      <li>Write your own <strong>3-question idea filter</strong>. Every idea must pass all three.</li>
+      <li><strong>Pick your language on purpose:</strong> English (global, more competition) or Hindi/Hinglish (huge, less saturated for deep sci-tech; see Dhruv Rathee). Part 11 asks you this.</li></ul></div></div>
+    <div class="row"><div class="k">Mistake</div><div class="v"><p>"Random interesting stuff." Nobody subscribes to random.</p></div></div>
+  </div>
+
+  <div class="mod c"><h3><span class="n">C2</span>Idea sourcing and research</h3>
+    <div class="row"><div class="k">Sources</div><div class="v"><p>University press releases (EurekAlert!), <em>Nature</em> and <em>Science</em> news, Quanta Magazine, company engineering blogs, product launches, Our World in Data, questions on Reddit and in your comments, and <strong>outlier videos</strong> in your niche (videos doing 3× or more their channel's average).</p></div></div>
+    <div class="row"><div class="k">Do</div><div class="v"><ul>
+      <li>Keep an idea bank of 100 or more. Score each 1–5 on curiosity, how visual it is, and your ability to explain it.</li>
+      <li><strong>Accuracy rule:</strong> two credible sources per claim. Label speculation clearly. "Huge if true" is itself a caveat format.</li>
+      <li>If you get something wrong, correct it publicly. In science content, trust is the product.</li></ul></div></div>
+  </div>
+
+  <div class="mod c"><h3><span class="n">C3</span>Packaging: title and thumbnail first</h3>
+    <div class="row"><div class="k">What</div><div class="v"><p>MrBeast's leaked production guide (2024) reportedly has the team start with the title and thumbnail, and track three core metrics: click-through rate, average view duration, average percentage viewed.<span class="cite">[21]</span></p></div></div>
+    <div class="row"><div class="k">Do</div><div class="v"><ul>
+      <li>Write 10 titles for each long video. Pick the clearest promise, not the cleverest phrase.</li>
+      <li>Thumbnail: one subject, at most 1–3 words, high contrast, readable at phone size.</li>
+      <li>For shorts, the first frame and on-screen text are the packaging.</li>
+      <li>The video must deliver what the title promised, fast. Misleading packaging kills retention.</li></ul></div></div>
+  </div>
+
+  <div class="mod c"><h3><span class="n">C4</span>Hooks</h3>
+    <div class="row"><div class="k">Window</div><div class="v"><p>The first 1–3 seconds for shorts. The first 30–60 seconds for long-form, which the MrBeast guide reportedly calls the most important minute because that's when most viewers leave.<span class="cite">[21]</span></p></div></div>
+    <div class="row"><div class="k">Types</div><div class="v"><ul>
+      <li><strong>Misconception:</strong> "You were taught X. It's wrong." This works as a hook and as teaching (Derek Muller's research).<span class="cite">[9]</span></li>
+      <li><strong>Stakes:</strong> "This could make every battery on Earth obsolete."</li>
+      <li><strong>Visual surprise:</strong> show the weird thing first, explain after.</li>
+      <li><strong>Specific number:</strong> "This chip does 1,000 trillion operations a second."</li>
+      <li><strong>Tension question:</strong> "Why don't planes fly in a straight line?"</li></ul></div></div>
+    <div class="row"><div class="k">Drill</div><div class="v"><p>Write 10 hooks a day for two weeks (5 minutes). Dojo Ad &amp; Copy Lab trains the same skill.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="mod c"><h3><span class="n">C5</span>Story structure</h3>
+    <div class="row"><div class="k">ABT</div><div class="v"><p>Scientist-turned-filmmaker Randy Olson's template: "<strong>And</strong>… <strong>But</strong>… <strong>Therefore</strong>…". Setup, then problem, then consequence. The <em>South Park</em> creators make the same point: scenes should connect with "but" and "therefore", never "and then".</p></div></div>
+    <div class="row"><div class="k">Do</div><div class="v"><ul>
+      <li><strong>Open a loop early, close it late.</strong> Ask the question at second 3, answer it at second 50.</li>
+      <li>Include people: a scientist, a team, a failure. Stories are about someone.</li>
+      <li>One analogy per concept, and check that it doesn't teach something false.</li>
+      <li>End with "so what": what it means for the viewer, plus the honest caveat.</li></ul></div></div>
+  </div>
+
+  <div class="mod c"><h3><span class="n">C6</span>Scriptwriting for the ear</h3>
+    <div class="row"><div class="k">Steps</div><div class="v"><p>Research notes → one-sentence thesis → beat outline (ABT) → draft → <strong>read aloud</strong> → cut 20–30% → add a visuals column (a two-column script: words | what's on screen).</p></div></div>
+    <div class="row"><div class="k">Feynman</div><div class="v"><p>Explain the topic to an imaginary 12-year-old. Wherever you stumble, you don't understand it yet. Go back and research.</p></div></div>
+    <div class="row"><div class="k">Style</div><div class="v"><p>Short sentences. One idea per sentence. Concrete beats abstract. Write how you talk.</p></div></div>
+  </div>
+
+  <div class="mod c"><h3><span class="n">C7</span>On-camera delivery</h3>
+    <div class="row"><div class="k">Do</div><div class="v"><ul>
+      <li>Everything in S1 (voice) applies: <strong>one skill, two uses.</strong></li>
+      <li>Energy about 20% above normal conversation, because the camera flattens you. Look into the lens.</li>
+      <li>Record in short chunks. Do the first 3 seconds five times and keep the best.</li>
+      <li>Camera-shy? Start with voice-over plus visuals, but plan to show your face by about short #20. A face tends to build trust faster.</li></ul></div></div>
+  </div>
+
+  <div class="mod c"><h3><span class="n">C8</span>Minimum viable production kit</h3>
+    <div class="row"><div class="k">Kit</div><div class="v"><p>Your phone's rear camera · a clip-on mic (<strong>audio matters more than video</strong>) · window light · a cheap tripod. Editing: CapCut to start, DaVinci Resolve (free) later. Visuals: your own footage, screen recordings, simple diagrams in Canva or Keynote, free stock footage.</p></div></div>
+    <div class="row"><div class="k">Rule</div><div class="v"><p><strong>No new gear until 30 videos are posted.</strong> Gear is the most comfortable form of procrastination.</p></div></div>
+  </div>
+
+  <div class="mod c"><h3><span class="n">C9</span>Editing for retention</h3>
+    <div class="row"><div class="k">Do</div><div class="v"><p>Cut every pause and breath. In shorts, change the visual every few seconds. Use captions (many people watch muted). On-screen text reinforces the key number. Keep sound design subtle. Before exporting, watch once at full speed and note anywhere <em>you'd</em> swipe away, then fix it.</p></div></div>
+  </div>
+
+  <div class="mod c"><h3><span class="n">C10</span>Platforms and cadence</h3>
+    <div class="row"><div class="k">Days 1–90</div><div class="v"><p>YouTube Shorts, Instagram Reels, plus TikTok where available: <strong>3 a week</strong>, the same video cross-posted. These are fast feedback reps. One long video (5–10 min) every 2–3 weeks, built from your best short.</p></div></div>
+    <div class="row"><div class="k">Bridge</div><div class="v"><p>From week 8, post text versions on LinkedIn or X twice a week. LinkedIn is where Justin Welsh built his business, and where tech sales hiring managers spend time.<span class="cite">[12]</span></p></div></div>
+    <div class="row"><div class="k">Later</div><div class="v"><p>A newsletter (an audience you own, not rented from an algorithm) from around month 6.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="mod c"><h3><span class="n">C11</span>Analytics and iteration</h3>
+    <div class="row"><div class="k">Metrics</div><div class="v"><ul>
+      <li><strong>Long-form:</strong> click-through rate, average view duration, average percentage viewed, and the retention curve (where exactly people leave).</li>
+      <li><strong>Shorts:</strong> viewed vs. swiped away, average percentage viewed, <strong>shares and saves</strong> (strongest signal that a video was valuable), comments.</li></ul></div></div>
+    <div class="row"><div class="k">Method</div><div class="v"><p>Change one variable per experiment: hook type, length, topic, thumbnail style. Monthly: compare your top 3 and bottom 3 and write down why you think they differ.</p></div></div>
+    <div class="row"><div class="k">Mistake</div><div class="v"><p>Watching subscriber count daily. It's a lagging number. Retention and shares are leading numbers.</p></div></div>
+  </div>
+
+  <div class="mod c"><h3><span class="n">C12</span>Monetisation ladder (realistic order)</h3>
+    <div class="row"><div class="k">Order</div><div class="v"><ol>
+      <li><strong>Indirect:</strong> content makes you a stronger sales hire or wins you clients. This comes first and is usually the biggest early.</li>
+      <li><strong>Services:</strong> editing or scripting for others (Option C).</li>
+      <li><strong>Sponsorships:</strong> need a consistent, engaged audience in a clear niche.</li>
+      <li><strong>Ad revenue:</strong> needs YouTube Partner Program eligibility. Third-party guides describe a lower tier around 500 subscribers (fan funding) and full ad revenue at 1,000 subscribers plus 4,000 public watch hours in 12 months, or a Shorts-views route.<span class="cite">[22]</span> Check the official YouTube Help page; rules change.</li>
+      <li><strong>Own products:</strong> courses, newsletters, communities. Highest margin, needs the most trust (the Welsh and Abdaal models).</li></ol></div></div>
+  </div>
+
+  <div class="box content"><div class="t">The 2-hour content sprint (one deep block)</div>
+    <ol style="margin:0">
+      <li><strong>0:00–0:20</strong> · pick an idea from the bank, read two sources, write a one-sentence thesis.</li>
+      <li><strong>0:20–0:45</strong> · write five hooks, pick one, outline with ABT.</li>
+      <li><strong>0:45–1:05</strong> · script in two columns (words | visuals), read aloud, cut 25%.</li>
+      <li><strong>1:05–1:30</strong> · film: hook ×5 takes, then the body in chunks.</li>
+      <li><strong>1:30–2:00</strong> · rough edit plus captions. Polish and post in shallow time.</li>
+    </ol>
+    <p style="margin-top:5pt"><strong>Publish the B+ version.</strong> Your first 30 videos are tuition. Perfectionism at this stage is fear in disguise. Ship it, then fix one thing in the next video.</p>
+  </div>
+</section>
+
+<!-- =============================== PART 7 =============================== -->
+<section class="part">
+  <div class="kicker">Part 07</div>
+  <h1>Funnels: how it all connects</h1>
+  <p class="sub">A funnel is the path from a stranger to a paying customer to a referral. Every job in sales and content lives on one stage of it. Know which stage you own and which number measures you.</p>
+
+  <div class="funnel">
+    <div class="fstage"><div class="fbar" style="width:100%; background:#0B0D10">1 · Attention</div><div class="fdesc"><b>Content, outbound, ads.</b> Metric: reach, views, outbound touches. <span class="tag c">you, creator</span></div></div>
+    <div class="fstage"><div class="fbar" style="width:95%; background:#1F2A37">2 · Interest</div><div class="fdesc"><b>Profile, pinned video, free resource.</b> Metric: profile visits, follows, replies.</div></div>
+    <div class="fstage"><div class="fbar" style="width:90%; background:#1E4D6B">3 · Conversation</div><div class="fdesc"><b>DM, email, call.</b> Metric: conversations started. <span class="tag s">setter</span></div></div>
+    <div class="fstage"><div class="fbar" style="width:85%; background:#2F5BD3">4 · Qualification</div><div class="fdesc"><b>Need, urgency, ability, authority.</b> Metric: % qualified. <span class="tag s">setter</span></div></div>
+    <div class="fstage"><div class="fbar" style="width:80%; background:#2B7A9E">5 · Appointment</div><div class="fdesc"><b>Booked, confirmed, reminded.</b> Metric: booked, show rate. <span class="tag s">setter</span></div></div>
+    <div class="fstage"><div class="fbar" style="width:75%; background:#178C7A">6 · Discovery + offer</div><div class="fdesc"><b>SPIN or Gap, then a tailored offer.</b> Metric: offers made. <span class="tag s">closer / AE</span></div></div>
+    <div class="fstage"><div class="fbar" style="width:70%; background:#0E8A5F">7 · Close</div><div class="fdesc"><b>The ask, objections, payment.</b> Metric: close rate, cash collected. <span class="tag s">closer / AE</span></div></div>
+    <div class="fstage"><div class="fbar" style="width:65%; background:#3A9A4A">8 · Onboard + deliver</div><div class="fdesc"><b>Reinforce the decision, deliver results.</b> Metric: refund and churn rate.</div></div>
+    <div class="fstage"><div class="fbar" style="width:60%; background:#A86A12">9 · Proof + referral</div><div class="fdesc"><b>Testimonials, case studies, referrals.</b> These feed back into stage 1. <span class="tag c">content again</span></div></div>
+  </div>
+
+  <h2>Three funnels you'll meet</h2>
+  <div class="cols3">
+    <div class="box"><div class="t">A · Creator / coach (high-ticket)</div><p class="sm">Short-form → long-form → free resource → email list → application form → <strong>setter</strong> (DM or call) → <strong>closer</strong> call → onboarding. This is where most remote setter and closer jobs are.</p></div>
+    <div class="box"><div class="t">B · B2B tech sales</div><p class="sm">Target account list → multichannel sequence (call, email, LinkedIn) by an <strong>SDR</strong> → discovery → demo → proposal → negotiation → close by an <strong>AE</strong> → expansion. The Bridge career path.</p></div>
+    <div class="box"><div class="t">C · Your content service</div><p class="sm">Your shorts as portfolio → shortlist 50 creators → personalised DM with a free sample (re-edit one of <em>their</em> clips) → short call → paid trial → monthly retainer → referrals.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Why small improvements compound: illustrative math</h2>
+  <p>The numbers below are <strong>assumptions for illustration</strong>, not benchmarks. Your real numbers come from your own tracking.</p>
+  <table class="tight">
+    <thead><tr><th>Stage</th><th>Baseline rate</th><th>Baseline result</th><th>+20% better at each stage</th><th>Result</th></tr></thead>
+    <tbody>
+      <tr><td>Outreach touches</td><td>—</td><td>1,000</td><td>—</td><td>1,000</td></tr>
+      <tr><td>Replies</td><td>10%</td><td>100</td><td>12%</td><td>120</td></tr>
+      <tr><td>Booked</td><td>30%</td><td>30</td><td>36%</td><td>43</td></tr>
+      <tr><td>Showed</td><td>70%</td><td>21</td><td>84%</td><td>36</td></tr>
+      <tr><td>Closed</td><td>20%</td><td><strong>≈ 4 sales</strong></td><td>24%</td><td><strong>≈ 9 sales</strong></td></tr>
+    </tbody>
+  </table>
+  <div class="box truth"><div class="t">The insight</div><p>Getting <strong>20% better at four stages roughly doubles the output</strong> (1.2 × 1.2 × 1.2 × 1.2 ≈ 2.07), with no extra effort at the top of the funnel. That's why the weekly "find the leak, fix one thing" habit beats simply working more hours.</p></div>
+
+  <h2>Show-rate checklist (setters)</h2>
+  <ul class="check">
+    <li>Book the call while they're still talking to you. Offer two specific times; don't just send a link and hope.</li>
+    <li>Confirm immediately with the time in <em>their</em> time zone.</li>
+    <li>Send a short value piece before the call (a 2-minute video or a case study) so they arrive warmer.</li>
+    <li>Remind them 24 hours and 1 hour before, by personal message, not only automated email.</li>
+    <li>If they no-show, follow up within 10 minutes, kindly. Rebook once.</li>
+  </ul>
+
+  <h2>Map yourself onto the funnel</h2>
+  <table class="tight">
+    <thead><tr><th style="width:22%">When</th><th>Stages you own</th><th>Your key number</th></tr></thead>
+    <tbody>
+      <tr><td>Days 1–30</td><td>1 (content), 3 (practice conversations)</td><td>Shorts posted, Dojo score, role-plays done</td></tr>
+      <tr><td>Days 31–90</td><td>3–5 (setter or SDR) · or 1–7 (Option C, solo)</td><td>Show rate, or booked meetings</td></tr>
+      <tr><td>Months 4–9</td><td>6–7 (closer or AE) · 1–2 (content growing)</td><td>Close rate, cash collected</td></tr>
+      <tr><td>Months 10+</td><td>All of them, if you build your own offer</td><td>Revenue per hour, referral rate</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- =============================== PART 8 =============================== -->
+<section class="part">
+  <div class="kicker">Part 08</div>
+  <h1>Scripts, templates &amp; scorecards</h1>
+  <p class="sub">Starting points, not magic words. Read them aloud until they sound like you, then adapt. A script you sound natural with beats a "perfect" one you recite.</p>
+
+  <h2>1 · DM setter flow (inbound: someone engaged with content)</h2>
+  <div class="script">
+    <b>Open</b> · "Hey {name}, saw you commented on {post}. What made that one hit home for you?"<br>
+    <b>Connect</b> · "Got it. Where are you at with {topic} right now?"<br>
+    <b>Pain</b> · "How long has it been like that?" · "What have you tried so far?" · "What happened with that?"<br>
+    <b>Future</b> · "If this was solved 90 days from now, what would be different for you?"<br>
+    <b>Why now</b> · "What made you start looking at this now rather than six months ago?"<br>
+    <b>Qualify</b> · "If it turned out to be a good fit, are you in a position to invest in solving this? No pressure either way, I just don't want to waste your time."<br>
+    <b>Book</b> · "It might make sense to hop on a call with {closer}. They'll map out a plan, and it's useful either way. Tuesday 7pm or Wednesday 6pm, which is better?"<br>
+    <b>Confirm</b> · time in their time zone + a 2-minute value video + reminders at 24h and 1h.
+  </div>
+
+  <h2>2 · Cold call opener (B2B)</h2>
+  <div class="script">
+    <b>Blount 5-step</b> · "Hi {name}, this is {you} from {company}. The reason I'm calling is to set up a time to talk about {specific problem}. I'm calling because we've been helping {similar companies} {result}. How about Thursday at 2?"<br>
+    <b>Permission version</b> · "Hi {name}, {you} here. I know I'm calling out of the blue. Can I take 30 seconds to tell you why, and you tell me if it's worth continuing?"<br>
+    <b>Brush-off ledge</b> · "Totally fair. Most people I call say that, until they see {result}. Would a quick 15 minutes on Thursday be crazy?"
+  </div>
+
+  <h2>3 · Cold email</h2>
+  <div class="script">
+    <b>Subject</b> · {2–4 words, e.g. "{company}'s onboarding"}<br>
+    <b>Body</b> · "{Name}, saw {trigger: new hire / funding / launch / post}. Teams at that stage often hit {problem}. We helped {similar company} {specific result}. Worth a 15-minute look next week?"<br>
+    <b>Rules</b> · readable on a phone in 10 seconds, one ask, no attachments in the first email.
+  </div>
+
+  <h2>4 · Content-service outreach (Option C)</h2>
+  <div class="script c">
+    <b>Message 1</b> · "Hey {name}, loved your video on {topic}, especially {specific moment}. I edit short-form sci-tech explainers. I cut a 40-second short from it as an experiment, here: {link}. Free to use either way."<br>
+    <b>If they reply</b> · "Glad you liked it! How are you handling shorts right now? … Would it help to have 3 a week done like this? Happy to do a paid trial week to see if it's a fit."
+  </div>
+</section>
+
+<section>
+  <h2>5 · Discovery question bank</h2>
+  <table class="tight">
+    <thead><tr><th style="width:18%">Type</th><th>Questions</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Situation</strong> <span class="sm muted">(few)</span></td><td>"Walk me through how you handle {X} today." · "Who's involved in that?"</td></tr>
+      <tr><td><strong>Problem</strong></td><td>"What's not working about that?" · "What's the hardest part?" · "What do you wish was different?"</td></tr>
+      <tr><td><strong>Implication</strong></td><td>"What happens if that doesn't change in the next six months?" · "How does that affect {revenue / time / team / family}?"</td></tr>
+      <tr><td><strong>Root cause</strong></td><td>"Why do you think that keeps happening?" · "What have you tried, and why didn't it stick?"</td></tr>
+      <tr><td><strong>Quantify</strong></td><td>"Roughly what does that cost you a month, in money or hours?"</td></tr>
+      <tr><td><strong>Need-payoff</strong></td><td>"If you fixed that, what would it do for you?" · "What would that be worth?"</td></tr>
+      <tr><td><strong>Decision</strong></td><td>"Who else weighs in on a decision like this?" · "How have you made decisions like this before?" · "What would make this a clear yes?"</td></tr>
+      <tr><td><strong>Voss calibrated</strong></td><td>"What about this is important to you?" · "How am I supposed to do that?" · "What's the biggest challenge you face?"</td></tr>
+    </tbody>
+  </table>
+
+  <h2>6 · Objection responses</h2>
+  <table>
+    <thead><tr><th style="width:19%">They say</th><th style="width:25%">Often means</th><th>Respond with</th></tr></thead>
+    <tbody>
+      <tr><td><strong>"It's too expensive."</strong></td><td>Value not established, or a genuine budget limit</td><td>"Totally fair. Compared to what?" → isolate: "Price aside, is this the right solution for you?" Yes → discuss options or a payment plan. No → go back to the gap. Can't afford it → disqualify kindly.</td></tr>
+      <tr><td><strong>"I need to think about it."</strong></td><td>One unresolved concern</td><td>"Makes sense. Usually when someone says that, there's one specific piece they're unsure about. What's yours?"</td></tr>
+      <tr><td><strong>"I need to ask my spouse / partner / boss."</strong></td><td>A real stakeholder, or a polite exit</td><td>"Of course. If they were here, what do you think they'd ask?" → offer a joint call. "What would <em>you</em> recommend to them?"</td></tr>
+      <tr><td><strong>"Send me some info."</strong></td><td>A brush-off</td><td>"Happy to. So I send the right thing, what specifically would you be looking for?" → book a 10-minute follow-up to go through it.</td></tr>
+      <tr><td><strong>"Not the right time."</strong></td><td>Low priority, or an unclear cost of waiting</td><td>"What would need to change for it to be the right time?" · "What happens if you wait six months?"</td></tr>
+      <tr><td><strong>"I've tried something like this before."</strong></td><td>Trust gap</td><td>"What happened? … What would need to be different this time for it to work?"</td></tr>
+      <tr><td><strong>"We already use X."</strong> <span class="sm muted">(B2B)</span></td><td>Status quo is comfortable</td><td>"Great. What do you like about it? If you could change one thing, what would it be?"</td></tr>
+    </tbody>
+  </table>
+  <p class="sm"><strong>Ethics rule:</strong> if the honest answer is "it's not a fit", say so. You'll lose this sale and gain a reputation.</p>
+</section>
+
+<section>
+  <h2>7 · Closing and follow-up lines</h2>
+  <div class="script">
+    <b>Direct close</b> · "Based on what you told me, {X}, {Y}, {Z}, I think this is a fit. Want to get started?" <em>(then silence)</em><br>
+    <b>B2B advance</b> · "What's the next step on your side to make a decision, and can we put a date on it?"<br>
+    <b>Reinforce</b> · "Great decision. Here's exactly what happens next: {step 1}, {step 2}. You'll hear from {name} by {time}."<br>
+    <b>Follow-up D1</b> · recap of their goals + the agreed next step.<br>
+    <b>Follow-up D3</b> · one useful thing (an article, a case study, an answer to a question they raised).<br>
+    <b>Follow-up D7</b> · "Any new questions since we spoke?"<br>
+    <b>Follow-up D14</b> · "Haven't heard back, so I'll assume the timing isn't right. Should I close your file for now?" (often gets the most replies)
+  </div>
+
+  <h2>8 · Short-form script template (45–60 seconds)</h2>
+  <table class="tight">
+    <thead><tr><th style="width:15%">Time</th><th style="width:25%">Beat</th><th>Example: "Why is the sky blue?"</th></tr></thead>
+    <tbody>
+      <tr><td>0–3s</td><td><strong>Hook</strong> (misconception or stakes)</td><td>"The sky isn't blue because it reflects the ocean. And it isn't really blue for the reason you think."</td></tr>
+      <tr><td>3–10s</td><td><strong>Context</strong> (And)</td><td>"Sunlight looks white, but it's every colour mixed together…"</td></tr>
+      <tr><td>10–40s</td><td><strong>Explanation</strong> (But / Therefore)</td><td>"<em>But</em> when it hits air molecules, shorter wavelengths scatter far more… <em>therefore</em> blue light comes at you from every direction."</td></tr>
+      <tr><td>40–55s</td><td><strong>Payoff + caveat</strong></td><td>"So why not violet? Violet scatters even more, <em>but</em> the Sun gives off less of it and your eyes are less sensitive to it."</td></tr>
+      <tr><td>55–60s</td><td><strong>Loop / CTA</strong></td><td>"So why are sunsets red? That's part two."</td></tr>
+    </tbody>
+  </table>
+
+  <h2>9 · Long-form outline (8–15 minutes)</h2>
+  <ol class="sm">
+    <li><strong>Cold open (0:00–0:45):</strong> the most surprising visual or claim, plus the promise of the video.</li>
+    <li><strong>Stakes:</strong> why this matters to the viewer's life or future.</li>
+    <li><strong>Act 1 · how it works:</strong> the simplest correct explanation, with one strong analogy.</li>
+    <li><strong>Act 2 · the twist:</strong> the problem, the failure or the surprising complication (the "But").</li>
+    <li><strong>Act 3 · what's next:</strong> the breakthrough, the people working on it, what changes if it works.</li>
+    <li><strong>Honest caveats:</strong> what's unproven, timelines, who disagrees.</li>
+    <li><strong>Close:</strong> one memorable line plus a pointer to a related video.</li>
+  </ol>
+</section>
+
+<section>
+  <h2>10 · Call review scorecard (one call a day, 10 minutes)</h2>
+  <table class="tight">
+    <thead><tr><th>Criterion</th><th style="width:16%">Score 1–5</th><th style="width:34%">Evidence / fix</th></tr></thead>
+    <tbody>
+      <tr><td>Opening: clear reason, warm tone, permission or agenda set</td><td></td><td></td></tr>
+      <tr><td>Talk time: did I talk less than half?</td><td></td><td></td></tr>
+      <tr><td>Discovery: problem → implication → root cause → quantified</td><td></td><td></td></tr>
+      <tr><td>Labels and mirrors used; got a "that's right"</td><td></td><td></td></tr>
+      <tr><td>Offer tied to <em>their</em> words; no feature dump</td><td></td><td></td></tr>
+      <tr><td>Price stated plainly, followed by silence</td><td></td><td></td></tr>
+      <tr><td>Objections answered with questions, not arguments</td><td></td><td></td></tr>
+      <tr><td>Clear ask, or a dated next step (an advance)</td><td></td><td></td></tr>
+      <tr><td>Voice: pace, pauses, downward inflection, no fillers</td><td></td><td></td></tr>
+      <tr><td>Honesty: nothing I'd be uncomfortable hearing played back</td><td></td><td></td></tr>
+    </tbody>
+  </table>
+
+  <h2>11 · Content post-mortem (each video, 5 minutes)</h2>
+  <table class="tight">
+    <thead><tr><th>Question</th><th style="width:48%">Answer</th></tr></thead>
+    <tbody>
+      <tr><td>Viewed vs. swiped (shorts) or click-through rate (long)?</td><td></td></tr>
+      <tr><td>Average % viewed? Where is the biggest drop on the retention curve?</td><td></td></tr>
+      <tr><td>What was on screen and being said at that moment?</td><td></td></tr>
+      <tr><td>Shares and saves relative to views?</td><td></td></tr>
+      <tr><td>Best comment, and does it suggest a follow-up video?</td><td></td></tr>
+      <tr><td>The ONE thing I'll change next time:</td><td></td></tr>
+    </tbody>
+  </table>
+
+  <h2>12 · Weekly scorecard</h2>
+  <table class="tight">
+    <thead><tr><th>Metric</th><th>Target</th><th>Actual</th><th>Metric</th><th>Target</th><th>Actual</th></tr></thead>
+    <tbody>
+      <tr><td>Full / Standard / MVD days</td><td>4 / 2 / 1</td><td></td><td>Shorts posted</td><td>3</td><td></td></tr>
+      <tr><td>Dojo calls (Gauntlet)</td><td>20+</td><td></td><td>Hooks written</td><td>35+</td><td></td></tr>
+      <tr><td>Real conversations</td><td>set by seat</td><td></td><td>Avg % viewed (shorts)</td><td>track trend</td><td></td></tr>
+      <tr><td>Booked / showed</td><td>set by seat</td><td></td><td>Shares + saves</td><td>track trend</td><td></td></tr>
+      <tr><td>Calls reviewed with scorecard</td><td>5</td><td></td><td>Long video progress</td><td>on schedule?</td><td></td></tr>
+      <tr><td>Applications / outreach</td><td>wk 3–5: 30+</td><td></td><td>Ideas added to bank</td><td>10</td><td></td></tr>
+      <tr><td>Hours of sleep (avg)</td><td>7+</td><td></td><td>Energy (avg 1–10)</td><td>—</td><td></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- =============================== PART 9 =============================== -->
+<section class="part">
+  <div class="kicker">Part 09</div>
+  <h1>Traps, scams &amp; red flags</h1>
+  <p class="sub">Most beginners don't fail from lack of talent. They fail from one of these.</p>
+
+  <h2>Vetting a setter or closer gig: ask before you accept</h2>
+  <table class="tight">
+    <thead><tr><th style="width:42%">Ask</th><th>Green flag</th><th>Red flag</th></tr></thead>
+    <tbody>
+      <tr><td>Do I pay anything to join?</td><td>No. They pay you.</td><td>A "certification" or "training fee" before any work</td></tr>
+      <tr><td>Where do leads come from?</td><td>Their content, ads or an existing list; numbers shared</td><td>"You generate your own leads", for a role called closer</td></tr>
+      <tr><td>What's the offer, the price and the refund rate?</td><td>Clear answers; a product that gets real results</td><td>Vague; income claims; "just sell the dream"</td></tr>
+      <tr><td>Can I hear call recordings from the current team?</td><td>Yes</td><td>No, or the calls are high-pressure</td></tr>
+      <tr><td>How is commission calculated, and when is it paid?</td><td>In writing, with dates</td><td>Verbal only; "after the client finishes paying"</td></tr>
+      <tr><td>Can I speak to a current rep?</td><td>Yes</td><td>Excuses</td></tr>
+      <tr><td>What does the first month look like?</td><td>Onboarding, scripts, call reviews</td><td>"Just start dialling"</td></tr>
+    </tbody>
+  </table>
+
+  <h2>The ten traps</h2>
+  <div class="cols">
+    <div>
+      <ol>
+        <li><strong>Pay-to-get-hired academies</strong> promising income. Legitimate employers pay you.<span class="cite">[18]</span></li>
+        <li><strong>Selling something that hurts buyers.</strong> Short-term money, long-term damage (BYJU'S).<span class="cite">[20]</span></li>
+        <li><strong>Tutorial hell.</strong> Courses and books feel productive. Keep the 1:2 learning-to-doing ratio.</li>
+        <li><strong>Gear before reps.</strong> No new equipment before 30 videos.</li>
+        <li><strong>Vanity metrics.</strong> Followers and likes. Track retention, replies, show rate and cash.</li>
+      </ol>
+    </div>
+    <div>
+      <ol start="6">
+        <li><strong>Comparing your chapter 1 to someone's chapter 20.</strong> Cleo Abram's 2.5-year sprint came after five years at Vox.</li>
+        <li><strong>Hustle culture and sleep debt.</strong> It wrecks the consolidation that makes skill permanent.</li>
+        <li><strong>Niche-hopping every two weeks.</strong> Commit for 90 days, then review with data.</li>
+        <li><strong>Doing everything at 100%.</strong> That's why the MVD exists. Sustainable beats heroic.</li>
+        <li><strong>Waiting until you feel ready.</strong> Readiness comes <em>after</em> reps, not before.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="box red"><div class="t">The one-line test</div><p>If an "opportunity" talks more about lifestyle (cars, laptops on beaches, "quit your 9–5") than about the product, the customer and the work, walk away.</p></div>
+</section>
+
+<!-- =============================== PART 10 =============================== -->
+<section class="part">
+  <div class="kicker">Part 10</div>
+  <h1>Minimal library + Sales Dojo map</h1>
+  <p class="sub">Few books, read deeply, applied immediately. One at a time. Your Sales Dojo app already contains lessons from the sales books, so use those instead of rereading.</p>
+
+  <table>
+    <thead><tr><th style="width:30%">Resource</th><th style="width:12%">When</th><th>Use it for</th><th style="width:22%">In Sales Dojo</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Fanatical Prospecting</strong> · Jeb Blount</td><td>Wks 1–4</td><td>Pipeline mindset, phone framework, brush-off ledge</td><td>Learn · Gauntlet</td></tr>
+      <tr><td><strong>Never Split the Difference</strong> · Chris Voss</td><td>Wks 1–3</td><td>Voice, mirroring, labelling, calibrated questions</td><td>Learn · Articulation Warm-up</td></tr>
+      <tr><td><strong>SPIN Selling</strong> · Neil Rackham</td><td>Wks 2–4</td><td>Discovery questions, advances, objection prevention</td><td>Learn · Gauntlet</td></tr>
+      <tr><td><strong>Gap Selling</strong> · Keenan</td><td>Wks 2–4</td><td>Current state → future state, root cause, quantifying</td><td>Learn</td></tr>
+      <tr><td><strong>$100M Offers / $100M Leads</strong> · Alex Hormozi</td><td>Wks 3–8</td><td>Value equation, offers, lead generation</td><td>Learn · Strategy Room</td></tr>
+      <tr><td><strong>Influence</strong> · Robert Cialdini</td><td>Wks 4–8</td><td>Ethical persuasion principles</td><td>Learn · Myth or Proven</td></tr>
+      <tr><td><strong>The Challenger Sale</strong> · Dixon &amp; Adamson</td><td>Months 3–6</td><td>Teaching-led selling for B2B</td><td>Learn · 1v1 Debate</td></tr>
+      <tr><td><strong>Obviously Awesome</strong> · April Dunford</td><td>Months 4–6</td><td>Positioning, for offers and for your show</td><td>Learn · Company X-Ray</td></tr>
+      <tr><td><strong>Breakthrough Advertising</strong> · Eugene Schwartz</td><td>Months 4–9</td><td>Market awareness and headlines; feeds your hooks</td><td>Learn · Ad &amp; Copy Lab</td></tr>
+      <tr><td><strong>How Brands Grow</strong> · Byron Sharp</td><td>Months 6+</td><td>How brands actually grow; evidence over myths</td><td>Learn</td></tr>
+      <tr><td><strong>Houston, We Have a Narrative</strong> · Randy Olson</td><td>Wks 2–4</td><td>The ABT story template for science content</td><td>—</td></tr>
+      <tr><td><strong>Made to Stick</strong> · Chip &amp; Dan Heath</td><td>Wks 4–8</td><td>Simple, unexpected, concrete, credible, emotional stories</td><td>—</td></tr>
+      <tr><td><strong>Peak</strong> · Anders Ericsson</td><td>Wk 1</td><td>Deliberate practice: how skill is actually built</td><td>—</td></tr>
+      <tr><td><strong>Atomic Habits</strong> · James Clear</td><td>Wk 1</td><td>Systems, "never miss twice"</td><td>—</td></tr>
+      <tr><td><strong>Can't Hurt Me</strong> · David Goggins</td><td>Bad weeks</td><td>Accountability Mirror, Cookie Jar</td><td>—</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Watch list</h2>
+  <ul>
+    <li>Colin and Samir's interview with Cleo Abram on how she built Huge If True.<span class="cite">[3]</span> Plus Cleo's own "Why I left Vox".<span class="cite">[4]</span></li>
+    <li>Alex Hormozi, "I taught 116+ salesmen my closing framework" (CLOSER).<span class="cite">[14]</span></li>
+    <li>Ali Abdaal's income breakdown videos, as a reality check on timelines.<span class="cite">[10]</span></li>
+    <li>Any Veritasium video: notice how it starts from a misconception.</li>
+  </ul>
+
+  <h2>Daily Sales Dojo routine</h2>
+  <div class="cols">
+    <div class="box sales"><div class="t">Weeks 1–4 · Dojo as primary practice</div><p>Articulation Warm-up (5 min) → one lesson plus quiz (10 min) → full Gauntlet, 5 calls (30 min) → Objection Blitz (5 min). About 50 minutes a day.</p></div>
+    <div class="box"><div class="t">Week 5+ · Dojo as warm-up</div><p>Articulation Warm-up plus one Gauntlet call before your real shift (15 min). Use Strategy Room or 1v1 Debate on weak spots your real-call reviews reveal.</p></div>
+  </div>
+</section>
+
+<!-- =============================== PART 11 =============================== -->
+<section class="part">
+  <div class="kicker">Part 11</div>
+  <h1>Questions for you (to build v2)</h1>
+  <p class="sub">This plan works with defaults. Your answers will sharpen it into a personal plan: the right market, the right hours, the right language, real numbers.</p>
+  <ol>
+    <li class="q">Where are you based, and which market do you want to sell into: local, or remote for US/UK/other clients?</li>
+    <p class="sm muted">Changes the income ranges, your working hours, and whether Option A or B is realistic.</p>
+    <li class="q">What fills the rest of your day: college, a job, family business? Which exact hours are your 3 silent hours?</li>
+    <p class="sm muted">Decides whether a full-time salaried seat (Option B) is even possible right now.</p>
+    <li class="q">What is the minimum you need to earn by day 90, and how many months could you go with no income?</li>
+    <p class="sm muted">Sets your Floor, and how aggressive the fallback rules should be.</p>
+    <li class="q">Content language: English, Hindi, or Hinglish? Face on camera, or voice-over to start?</li>
+    <p class="sm muted">The single biggest strategic choice for your channel.</p>
+    <li class="q">Calling strangers or messaging strangers: which feels less scary today?</li>
+    <p class="sm muted">We start where friction is lowest, then deliberately stretch.</p>
+    <li class="q">Do you have depth in any subject (engineering, physics, biology, coding, space) or a hobby you'd happily research for two years?</li>
+    <p class="sm muted">That becomes your content edge and your best sales niche.</p>
+    <li class="q">"Random brainstorm": which channel did you mean? A link or handle helps.</li>
+    <p class="sm muted">I couldn't find a creator by that name, so they aren't in Part 1 yet.</p>
+    <li class="q">Equipment: which phone and laptop do you have? Any mic?</li>
+    <p class="sm muted">Determines the exact editing workflow to use.</p>
+  </ol>
+  <div class="box truth"><div class="t">Last word</div><p>Ninety days from now you'll either have results or reasons. The plan above is built so that even on bad weeks you collect <strong>reps, proof and income</strong>. Show up, log it, fix one thing a week. That is the whole game.</p></div>
+</section>
+
+<!-- =============================== SOURCES =============================== -->
+<section class="part">
+  <div class="kicker">Reference</div>
+  <h1>Sources</h1>
+  <p class="sub">Research done November 2026. Many creator and sales-leader figures are self-reported or come from secondary write-ups, and are flagged as such in the text. Books referenced without links are listed in Part 10.</p>
+  <ol class="src">
+    <li>Cleo Abram, Wikipedia. <a href="https://en.wikipedia.org/wiki/Cleo_Abram">en.wikipedia.org/wiki/Cleo_Abram</a></li>
+    <li>YouTube Official Blog, "5 Huge If True moments for Cleo Abram". <a href="https://blog.youtube/creator-and-artist-stories/5-huge-if-true-moments-for-cleo-abram/">blog.youtube/…/5-huge-if-true-moments-for-cleo-abram</a></li>
+    <li>Colin and Samir, "How Cleo Abram Dominated YouTube in Under 1 Year" (summary). <a href="https://recapio.com/digest/how-cleo-abram-dominated-youtube-in-under-1-year-by-colin-and-samir">recapio.com/digest/how-cleo-abram-dominated-youtube…</a></li>
+    <li>Cleo Abram, "Why I left Vox" (transcript). <a href="https://rosetta.to/u/cleoabram/why-i-left-vox">rosetta.to/u/cleoabram/why-i-left-vox</a></li>
+    <li>journalism.co.uk, "YouTube content creator Johnny Harris shows how independent journalism can thrive". <a href="https://www.journalism.co.uk/youtube-content-creator-johnny-harris-shows-how-independent-journalism-can-thrive/">journalism.co.uk/…johnny-harris…</a> · "Why the best journalists on YouTube are all former Vox employees". <a href="https://thelongstory.substack.com/p/why-the-best-journalists-on-youtube">thelongstory.substack.com</a></li>
+    <li>Tubefilter, Johnny Harris and Newpress (March 2026). <a href="https://www.tubefilter.com/2026/03/12/johnny-harris-newpress-creator-journalist-production-company-platform/amp/">tubefilter.com/2026/03/12/johnny-harris-newpress…</a></li>
+    <li>Mark Rober, Reddit AMA (December 2019). <a href="https://www.reddit.com/r/IAmA/comments/eenred/">reddit.com/r/IAmA/comments/eenred</a></li>
+    <li>How I Built This, "CrunchLabs: Mark Rober". <a href="https://metacast.app/podcast/how-i-built-this-with-guy-raz/CAByD7vI/crunchlabs-mark-rober/GCSl33Ej">metacast.app/…/crunchlabs-mark-rober</a></li>
+    <li>University of Sydney, "The element of truth" (2024). <a href="https://www.sydney.edu.au/news-opinion/news/2024/11/05/the-element-of-truth.html">sydney.edu.au/news-opinion/news/2024/11/05/the-element-of-truth</a> · THE Journal, "Watching videos does not necessarily lead to learning". <a href="https://thejournal.com/articles/2015/05/05/watching-videos-does-not-necessarily-lead-to-learning.aspx">thejournal.com/articles/2015/05/05/…</a></li>
+    <li>Ali Abdaal, "How much money I earn as a doctor + YouTuber". <a href="https://rosetta.to/u/aliabdaal/how-much-money-i-earn-as-a-doctor-youtuber">rosetta.to/u/aliabdaal/…</a> · The Hustlers, "Turning a side hustle into a $4.6M YouTube empire". <a href="https://thehustlers.substack.com/p/special-edition-turning-a-side-hustle">thehustlers.substack.com</a></li>
+    <li>vidIQ channel profile, Dhruv Rathee. <a href="https://vidiq.com/youtube-stats/channel/@dhruvrathee/about/index.md">vidiq.com/youtube-stats/channel/@dhruvrathee</a> · The Swaddle, "The people's YouTuber". <a href="https://www.theswaddle.com/the-people-s-youtuber">theswaddle.com/the-people-s-youtuber</a></li>
+    <li>Indie Hackers, Justin Welsh, "Growing to $6.8M and 1M followers in 5 years". <a href="https://indiehackers.com/post/FzLRweGZuhK45W82J7Rt">indiehackers.com/post/FzLRweGZuhK45W82J7Rt</a> · GTMnow, "Hire slow &amp; fire fast with Justin Welsh". <a href="https://gtmnow.com/gtm-53-hire-slow-fire-fast-justin-welsh">gtmnow.com/gtm-53…</a></li>
+    <li>The Game with Alex Hormozi, "Why selling wasn't always second nature (with Ali Abdaal)". <a href="https://www.globalplayer.com/podcasts/episodes/7DroGZb">globalplayer.com/podcasts/episodes/7DroGZb</a> · Young and Profiting, "Alex Hormozi: from soul-sucking job to $100M in revenue". <a href="https://youngandprofiting.com/yapclassic-alex-hormozi-from-soul-sucking-job-to-100m-in-revenue/">youngandprofiting.com/…</a></li>
+    <li>Alex Hormozi, "I taught 116+ salesmen my closing framework". <a href="https://rosetta.to/u/alexhormozi/i-taught-116-salesmen-my-closing-framework">rosetta.to/u/alexhormozi/…</a></li>
+    <li>Entrepreneurs on Fire, Cole Gordon episode. <a href="https://www.eofire.com/?p=45777">eofire.com/?p=45777</a> · Beyond a Million, "Teaching strategic sales systems with Cole Gordon". <a href="https://metacast.app/podcast/beyond-a-million/c8uGhOwg/022-2-5m-month-teaching-strategic-sales-systems-with-cole-gordon/LYUQus8v">metacast.app/podcast/beyond-a-million/…</a></li>
+    <li>Young and Profiting E297, "Jeremy Miner: the neuroscience of selling". <a href="https://youngandprofiting.com/jeremy-miner-the-neuroscience-of-selling-master-the-secrets-to-effortless-sales-e297/">youngandprofiting.com/jeremy-miner…</a></li>
+    <li>SetSmart, "High ticket closing: setter-closer playbook" and "What is a remote closer?" (vendor sources). <a href="https://setsmart.io/blog/high-ticket-closing">setsmart.io/blog/high-ticket-closing</a> · <a href="https://setsmart.io/blog/what-is-a-remote-closer">setsmart.io/blog/what-is-a-remote-closer</a> · DashClicks, "Commission structures for closers &amp; setters". <a href="https://www.dashclicks.com/blog/commission-structures-for-closers">dashclicks.com/blog/commission-structures-for-closers</a></li>
+    <li>Activated Scale, "High ticket sales scam" (reports FTC action against The Sales Mentor). <a href="https://www.activatedscale.com/blog/high-ticket-sales-scam">activatedscale.com/blog/high-ticket-sales-scam</a> · "Do research before signing up for job or training offers". <a href="https://www.aol.com/too-good-true-research-signing-110619755.html">aol.com/too-good-true-research…</a> · FTC, deceptive conduct actions. <a href="https://www.ftc.gov/terms/deceptivemisleading-conduct">ftc.gov/terms/deceptivemisleading-conduct</a></li>
+    <li>Payscale India, Business Development Associate (inside sales). <a href="https://www.payscale.com/research/IN/Job=Business_Development_Associate/Salary/8a30005b/Inside-Sales">payscale.com/research/IN/…</a> · Jobrise, "Tech sales in India: SDR and AE jobs". <a href="https://jobrise.io/hi/blog/tech-sales-india-sdr-ae-jobs/">jobrise.io/hi/blog/tech-sales-india-sdr-ae-jobs</a></li>
+    <li>Context (Thomson Reuters Foundation), "Loss after loss: Indian parents say Byju's pushed them into debt". <a href="https://www.context.news/money-power-people/loss-after-loss-indian-parents-say-byjus-pushed-them-into-debt">context.news/…</a> · Scroll.in. <a href="https://scroll.in/article/1039797/worst-decision-of-my-life-byjus-accused-of-driving-parents-into-debt-with-predatory-practices">scroll.in/article/1039797</a> · Free Press Journal, NCPCR summons. <a href="https://www.freepressjournal.in/amp/india/child-rights-commission-issues-summons-to-byjus-ceo-over-hard-selling-of-courses">freepressjournal.in/…</a></li>
+    <li>Tubefilter, "MrBeast's leaked production guide" (September 2024). <a href="https://www.tubefilter.com/2024/09/17/mrbeast-internal-production-guide-leaked-key-points/">tubefilter.com/2024/09/17/mrbeast-internal-production-guide…</a></li>
+    <li>vidIQ, "YouTube Partner Program: requirements and how to join in 2026". <a href="https://vidiq.com/blog/post/monetize-youtube-guide/">vidiq.com/blog/post/monetize-youtube-guide</a> · Verify on YouTube Help: <a href="https://support.google.com/youtube/answer/72851">support.google.com/youtube/answer/72851</a></li>
+    <li>Huberman Lab, "AMA #1: Leveraging ultradian cycles…" (transcript). <a href="https://rosetta.to/u/hubermanlab/ama-1-leveraging-ultradian-cycles-how-to-protect-your-brain-seed-oils-examined-a">rosetta.to/u/hubermanlab/ama-1…</a></li>
+  </ol>
+</section>
+
+</body>
+</html>

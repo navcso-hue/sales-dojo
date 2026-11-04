@@ -50,7 +50,8 @@ def plan_json():
              for w in P.WEEKS]
     return {"start": P.START_SUGGESTED, "weeks": weeks, "days": days,
             "gates": {str(k): list(v) for k, v in P.GATES.items()},
-            "holidays": [list(h) for h in P.HOLIDAYS]}
+            "holidays": [list(h) for h in P.HOLIDAYS],
+            "prestart": [list(x) for x in P.PRESTART]}
 
 
 def weeks_table():
@@ -76,7 +77,9 @@ def part14():
            '<strong>Sunday</strong>: a 45-minute review, then rest.</p></div>',
            '    <div class="box warn"><div class="t">Gates</div><p class="sm">Days 21, 35, 45, 60, 75 and 90 carry a decision. They are what make the deadline fixed: '
            'each one switches you to a more certain income source in time.</p></div>',
-           '  </div>']
+           '  </div>',
+           '  <div class="box sales"><div class="t">Before day 1</div><ul class="check" style="margin:0">'
+           + "".join(f"<li>{esc(t)}</li>" for _, t in P.PRESTART) + '</ul></div>']
     days = all_days()
     for w in P.WEEKS:
         dnums = sorted(w["days"])

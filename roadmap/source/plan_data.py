@@ -16,6 +16,18 @@ SHIFT = ("Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). "
 RP = "Review yesterday's conversations (45 min): score 3 threads with the call scorecard. "
 BODY = " Body topic: use NHS, Mayo Clinic or peer-reviewed sources."
 
+# Before day 1 (the days between today and your start date).
+PRESTART = [
+    ("tracker", "Set your start date in the tracker (More tab). A Monday keeps weekends in line with US/UK days off."),
+    ("payments", "Start Wise or Payoneer verification now. It can take several days."),
+    ("power", "Order the router UPS and test your iPhone hotspot on a 20-minute video call."),
+    ("read", "Read Parts 00–06 of the roadmap once, end to end."),
+    ("copper", "Decide CopperMediaAI's role for these 90 days (Part 08): keep it automated with approvals done in the morning, or pause it."),
+    ("tools", "Review your AI-tool spend. Keep what earns or trains you; every ₹5K a month you save is about 14% of the ₹35K target."),
+    ("betonme", "Put the gate days (21, 35, 45, 60, 75) into Bet On Me as promises with a stake."),
+    ("name", "Optional head start: shortlist two show names and check the handles."),
+]
+
 PLAN_B = {
     "sales": "Dojo routine, then prepare for your next interview: research the company and rehearse 3 answers.",
     "live": ("Plan B: 6 remote applications, 10 creator DMs with a free sample edit (seat option 2), "
@@ -76,7 +88,7 @@ WEEKS = [
          days={
              1: dict(c="Set up your show (Part 08): pick a name, check the handle on YouTube, Instagram and TikTok, write your 3-question idea filter, paste the 30-question bank into Notes.",
                      s="Read S1 (voice). Rung 1: record a 60-second voice memo explaining your show idea; listen once, delete it. " + DOJO,
-                     l="Setup: start Wise or Payoneer verification, add London, New York and Los Angeles clocks, order a router UPS, test your iPhone hotspot on a 20-minute video call."),
+                     l="Finish whatever is left of the Before-day-1 list (tracker), add London, New York and Los Angeles clocks to your phone, and write one line on why you want this (it goes into your LinkedIn and your Loom)."),
              2: dict(c=sa(1, "Does 4D exist?", extra="Start from the worked script in Part 08 and make it sound like you."),
                      s="S1 drill: record one 30-second pitch twice, in the calm 'late-night FM DJ' voice and in the playful voice. Rung 2: one Gauntlet call in voice mode. Then the rest of the Dojo routine.",
                      l="Rewrite LinkedIn in clear English: headline, About section, photo (Part 04 has a headline idea)."),

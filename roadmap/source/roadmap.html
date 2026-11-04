@@ -12,7 +12,7 @@
 }
 @page{
   size:A4; margin:17mm 16mm 19mm 16mm;
-  @bottom-left{content:"Sales × Content · 90-Day Roadmap · v3.0"; font:7.5pt Inter, sans-serif; color:#8A929E}
+  @bottom-left{content:"Sales × Content · 90-Day Roadmap · v3.1"; font:7.5pt Inter, sans-serif; color:#8A929E}
   @bottom-right{content:counter(page) " / " counter(pages); font:7.5pt Inter, sans-serif; color:#8A929E}
 }
 @page :first{margin:0; @bottom-left{content:none} @bottom-right{content:none}}
@@ -130,9 +130,27 @@ table.tight td{padding:3.5pt 6pt}
 .script{font:8.5pt/1.5 Inter; background:#fff; border:1px dashed #C9CFD6; border-radius:6px; padding:7pt 9pt; margin:5pt 0 8pt; break-inside:avoid}
 .script b{color:var(--sales)}
 .script.c b{color:var(--content)}
-.src{font-size:7.2pt; line-height:1.36}
-.src li{margin-bottom:1.5pt; word-break:break-word}
+.src{font-size:7pt; line-height:1.3}
+.onepage{font-size:9pt; line-height:1.45}
+.onepage h2{margin:9pt 0 4pt}
+.onepage ol li{margin-bottom:2pt}
+.onepage .box{padding:7pt 10pt; margin:7pt 0}
+.onepage table{margin:4pt 0 6pt}
+.src li{margin-bottom:1pt; word-break:break-word}
 .src a{color:var(--muted)}
+.wkblock{break-inside:avoid; margin:12pt 0 14pt}
+.wkhead{display:flex; flex-wrap:wrap; align-items:baseline; gap:3pt 10pt; border-bottom:2px solid var(--ink); padding-bottom:3pt; break-after:avoid}
+.wkn{font:760 12pt "Inter Display", Inter; color:var(--ink)}
+.wkt{font:650 10pt Inter; color:var(--sales)}
+.wkd{font-size:8pt; color:var(--muted); margin-left:auto}
+.wkproof,.wknote{font-size:8pt; margin:4pt 0; break-after:avoid}
+.wknote{background:var(--amber-t); border-radius:5px; padding:4pt 7pt}
+table.daytable{font-size:7.5pt; line-height:1.36; margin:4pt 0 0}
+table.daytable td{padding:4pt 5pt}
+table.daytable td.dcell{color:var(--ink)}
+table.daytable tr.gate td{background:var(--amber-t); color:var(--ink)}
+.lbl{font:700 6.8pt Inter; letter-spacing:.08em; text-transform:uppercase; color:var(--sales); margin-right:4pt}
+.hol{display:block; font-size:6.6pt; line-height:1.25; color:var(--red); margin-top:2pt}
 .big{font:760 15pt/1.2 "Inter Display", Inter; color:var(--ink); letter-spacing:-.01em}
 .q{font:600 9.6pt Inter; color:var(--ink)}
 .avoid{break-inside:avoid}
@@ -153,14 +171,14 @@ table.tight td{padding:3.5pt 6pt}
     <div class="pill"><b>Starting point</b> · fear → reps</div>
   </div>
   <div class="meta">
-    <div><b>Built for</b>India-based · ~6 hrs/day (3 silent) · live client work in your evening</div>
+    <div><b>Built for</b>India-based · ~33–38 hrs a week (3 silent hrs a day) · live client work in your evening</div>
     <div><b>Target</b>₹35K/month floor by day 90 · months 4–12 to a real career</div>
-    <div><b>Version</b>v3.0 · November 2026 · personalised from your answers</div>
+    <div><b>Version</b>v3.1 · November 2026 · cross-checked, with a day-by-day plan</div>
   </div>
 </section>
 
 <!-- =============================== ONE PAGE =============================== -->
-<section>
+<section class="onepage">
   <div class="kicker">Start here</div>
   <h1>If you read only one page</h1>
   <p class="sub">Your whole plan, compressed. Everything after this page explains, justifies, or gives you the tools for one of these lines.</p>
@@ -173,10 +191,10 @@ table.tight td{padding:3.5pt 6pt}
   <h2>The plan in 7 lines</h2>
   <ol>
     <li><strong>Weeks 1–2: climb the first fear rungs while learning.</strong> Private voice memos, Sales Dojo's AI calls, public comments, role-plays with friends. Learn voice, listening and discovery. Set up Wise or Payoneer and an English LinkedIn profile.</li>
-    <li><strong>Weeks 3–5: apply to 60+ remote roles</strong> (appointment setter, SDR, lead generation) for US/UK companies, each with a 2-minute Loom. Prefer roles with an hourly base or per-show pay. Commission-only is upside, not your floor.</li>
+    <li><strong>Weeks 3–5: apply to 60+ remote roles</strong> (appointment setter, SDR, lead generation) for US/UK companies, each with your 2-minute Loom. Prefer roles with an hourly base or per-show pay. Commission-only is upside, not your floor.</li>
     <li><strong>Weeks 6–12: work the seat 19:00–23:00 IST, Monday to Friday.</strong> That's the UK afternoon and the US East Coast morning. Review your conversations daily. Fix the leakiest funnel stage weekly.</li>
-    <li><strong>Content alongside:</strong> 3 faceless English shorts a week, each answering one curiosity question ("Does 4D exist?"). Your voice, your script, your visuals. About 35 shorts and 4 long videos by day 90.</li>
-    <li><strong>Fallbacks:</strong> no seat by day 45 → sell short-form editing to US/UK creators (async, text-only). Under ₹20K a month at day 60 → add a second client. No income by day 75 → a full-time Indian US-process sales job as a 3–6-month bridge.</li>
+    <li><strong>Content alongside:</strong> 3 faceless English shorts a week, each answering one curiosity question ("Does 4D exist?"). Your voice, your script, your visuals. About 33 shorts and 4 long videos by day 90.</li>
+    <li><strong>Gates keep the deadline fixed:</strong> no seat by day 35 → run three pipelines at once (remote roles, editing for US/UK creators, a backup salaried sales job). Still nothing at day 45 → take the best offer that meets the floor. Under ₹20K a month at day 60 → add a second income line. Target window: <strong>day 70 on the fast lane, day 90 at the latest.</strong></li>
     <li><strong>Your week:</strong> one 3-hour silent block every weekday plus the evening live block; light weekends. About 33–38 hours a week, inside your 5–6 h/day budget. Bad days have a 30-minute minimum. Never zero, never miss twice. No regular shifts past midnight IST.</li>
     <li><strong>Months 4–12:</strong> setter → closer, or SDR → account executive. Content moves to long-form, a named show and a newsletter. Long-term model: <strong>Justin Welsh</strong> (sales expert turned creator) crossed with <strong>Cleo Abram</strong> (a specific, optimistic sci-tech show).</li>
   </ol>
@@ -187,42 +205,44 @@ table.tight td{padding:3.5pt 6pt}
     <tbody>
       <tr><td><strong>Income</strong></td><td>₹35K/month run-rate</td><td>₹50K/month</td><td>Closer seat, or ₹80K+/month</td></tr>
       <tr><td><strong>Fear ladder</strong></td><td>Rung 8 + K5: a mock call and a mock video interview</td><td>Rung 10: real setter conversations daily</td><td>Rung 11: real voice calls with leads</td></tr>
-      <tr><td><strong>Sales reps</strong></td><td>300 simulated + 200 real conversations</td><td>1,000+ real conversations logged</td><td>Top-3 on your team's board</td></tr>
-      <tr><td><strong>Content</strong></td><td>24 shorts, 2 long videos</td><td>35 shorts, 4 long videos</td><td>One video at 3× your channel's average</td></tr>
+      <tr><td><strong>Sales reps</strong></td><td>150 simulated + 200 real conversations</td><td>1,000+ real conversations logged</td><td>Top-3 on your team's board</td></tr>
+      <tr><td><strong>Content</strong></td><td>24 shorts, 2 long videos</td><td>30 shorts, 4 long videos</td><td>One video at 3× your channel's average</td></tr>
     </tbody>
   </table>
-  <p class="sm muted">₹35K is about $400 a month at ₹85–90 per dollar; check the live rate. The math for getting there is in Part 02. Pay ranges come from job ads and recruiter or vendor guides, not audited pay data, so treat them as planning ranges, not promises.</p>
+  <p class="sm muted">₹35K ≈ $400 a month at ₹85–90 per dollar (check the live rate); the math is in Part 02. Pay ranges come from job ads and recruiter or vendor guides: planning ranges, not promises.</p>
+  <div class="box sales" style="margin-top:7pt"><div class="t">Your phone tracker</div><p>Today's tasks from the day-by-day plan (Part 14), your daily log, fear scores, income and the ₹35K goal, on your phone: <a href="https://claude.ai/artifact/ShABr2b43XRjRJPr6a9CVv">https://claude.ai/artifact/ShABr2b43XRjRJPr6a9CVv</a></p></div>
 </section>
 
 <!-- =============================== CONTENTS =============================== -->
 <section class="part">
   <div class="kicker">Map</div>
   <h1>Contents</h1>
-  <p class="sub">Read Parts 00–06 now. Parts 07–10 are reference: return to one module per day and drill it. Parts 11–13 you'll reread every Sunday.</p>
+  <p class="sub">Read Parts 00–06 now. Parts 07–10 are reference: return to one module per day and drill it. Parts 11–13 you'll reread every Sunday. Part 14 is your daily checklist, also in your tracker.</p>
   <div class="toc">
     <div><span><b>00</b>Straight talk: what is realistic</span><span class="pg">4</span></div>
     <div><span><b>01</b>Research: people who've done it</span><span class="pg">6</span></div>
     <div><span><b>02</b>Your plan, personalised (+ ₹35K math)</span><span class="pg">9</span></div>
-    <div><span><b>03</b>Fear → reps: your exposure ladder</span><span class="pg">12</span></div>
-    <div><span><b>04</b>Working for US/UK clients from India</span><span class="pg">15</span></div>
-    <div><span><b>05</b>The 90-day plan, week by week</span><span class="pg">17</span></div>
-    <div><span><b>06</b>Operating system for a real human</span><span class="pg">19</span></div>
-    <div><span><b>07</b>Sales curriculum: tone → close (13 modules)</span><span class="pg">22</span></div>
-    <div><span><b>08</b>Your show + content curriculum (12 modules)</span><span class="pg">26</span></div>
-    <div><span><b>09</b>Funnels: how it all connects</span><span class="pg">31</span></div>
-    <div><span><b>10</b>Scripts, templates &amp; scorecards</span><span class="pg">33</span></div>
-    <div><span><b>11</b>Traps, scams &amp; red flags</span><span class="pg">37</span></div>
-    <div><span><b>12</b>Minimal library + Sales Dojo map</span><span class="pg">38</span></div>
-    <div><span><b>13</b>Your answers, and what comes next</span><span class="pg">40</span></div>
-    <div><span><b>&nbsp;&nbsp;</b>Sources</span><span class="pg">41</span></div>
+    <div><span><b>03</b>Fear → reps: your exposure ladder</span><span class="pg">13</span></div>
+    <div><span><b>04</b>Working for US/UK clients from India</span><span class="pg">16</span></div>
+    <div><span><b>05</b>The 90-day plan, week by week</span><span class="pg">18</span></div>
+    <div><span><b>06</b>Operating system for a real human</span><span class="pg">20</span></div>
+    <div><span><b>07</b>Sales curriculum: tone → close (13 modules)</span><span class="pg">23</span></div>
+    <div><span><b>08</b>Your show + content curriculum (12 modules)</span><span class="pg">27</span></div>
+    <div><span><b>09</b>Funnels: how it all connects</span><span class="pg">32</span></div>
+    <div><span><b>10</b>Scripts, templates &amp; scorecards</span><span class="pg">34</span></div>
+    <div><span><b>11</b>Traps, scams &amp; red flags</span><span class="pg">38</span></div>
+    <div><span><b>12</b>Minimal library + Sales Dojo map</span><span class="pg">39</span></div>
+    <div><span><b>13</b>Your answers, and what comes next</span><span class="pg">41</span></div>
+    <div><span><b>14</b>Day by day: all 90 days</span><span class="pg">42</span></div>
+    <div><span><b>&nbsp;&nbsp;</b>Sources</span><span class="pg">55</span></div>
   </div>
 
   <h2>How to use this document</h2>
   <div class="cols">
     <div class="box sales"><div class="t">Rule 1 · apply within 48 hours</div><p>Never read a module without doing its drill within 48 hours. Reading feels like progress; only practice is progress. Aim for <strong>1 hour learning : 2 hours doing</strong>.</p></div>
     <div class="box content"><div class="t">Rule 2 · one variable at a time</div><p>When something isn't working (reply rate, close rate, retention), change <strong>one</strong> thing, run it for a week, measure. Changing five things at once teaches you nothing.</p></div>
-    <div class="box warn"><div class="t">Rule 3 · log everything</div><p>Five lines a day: what you did, numbers, one thing that worked, one fix, energy level 1–10. After 30 days the log is better than any coach. It's also your proof.</p></div>
-    <div class="box"><div class="t">Rule 4 · simulated ≠ real</div><p>Sales Dojo is the gym. Real calls and DMs are the match. Use the Dojo to warm up and to drill weak spots. From week 5 onward, real reps should outnumber simulated ones.</p></div>
+    <div class="box warn"><div class="t">Rule 3 · log everything</div><p>Two minutes a day in your tracker: tasks done, numbers, fear scores, one win, one fix. After 30 days the log is better than any coach. It's also your proof.</p></div>
+    <div class="box"><div class="t">Rule 4 · simulated ≠ real</div><p>Sales Dojo is the gym. Real calls and DMs are the match. Use the Dojo to warm up and to drill weak spots. From week 6, once you're in a seat, real reps should outnumber simulated ones.</p></div>
   </div>
 </section>
 
@@ -234,13 +254,13 @@ table.tight td{padding:3.5pt 6pt}
 
   <h2>Five hard truths</h2>
   <div class="mod"><h3><span class="n">1</span>Content will not pay you in 90 days. Plan for that.</h3>
-    <p>Ali Abdaal made essentially nothing from his first ~85 videos over about nine months, while working as a doctor.<span class="cite">[10]</span> Cleo Abram spent about five years at Vox learning the craft before going independent in January 2022.<span class="cite">[1]</span> Johnny Harris also spent about five years at Vox, with his own channel as a side project, before leaving in 2020.<span class="cite">[5]</span> Mark Rober worked nine years at NASA's Jet Propulsion Laboratory and four at Apple while his channel grew.<span class="cite">[7]</span> The pattern is clear: <strong>the people you admire kept a paycheck while building.</strong> Your paycheck will come from sales.</p>
+    <p>Ali Abdaal made essentially nothing from his first ~85 videos over about nine months, while still a medical student.<span class="cite">[10]</span> Cleo Abram spent about five years at Vox learning the craft before going independent in January 2022.<span class="cite">[1]</span> Johnny Harris also spent about five years at Vox, with his own channel as a side project, before leaving in 2020.<span class="cite">[5]</span> Mark Rober worked nine years at NASA's Jet Propulsion Laboratory and four at Apple while his channel grew.<span class="cite">[7]</span> The pattern is clear: <strong>the people you admire kept a paycheck while building.</strong> Your paycheck will come from sales.</p>
   </div>
   <div class="mod"><h3><span class="n">2</span>Sales can pay in 60–90 days. It can also pay zero.</h3>
     <p>Entry-level sales is one of the few skilled jobs that hire people with no degree in the subject and no experience, because your output (booked calls, revenue) is measurable within weeks. But commission-only roles are volatile, many "opportunities" are scams (Part 11), and plenty of beginners quit with nothing. The difference between people who get paid and people who don't is mostly <strong>volume of real conversations plus honest review of each one</strong>.</p>
   </div>
   <div class="mod"><h3><span class="n">3</span>Do not split 50/50 for the first 90 days.</h3>
-    <p>Two half-efforts make zero income. Run roughly <strong>65% sales / 35% content</strong> until you have income, then rebalance with data at day 90. If you land a full-time sales job, the job <em>is</em> the sales block and content drops to about 1 hour a day plus a weekend batch.</p>
+    <p>Two half-efforts make zero income. Run roughly <strong>70% sales / 30% content</strong> (about 75/25 once you're in a seat) until you have income, then rebalance with data at day 90. If you land a full-time sales job, the job <em>is</em> the sales block and content drops to about 1 hour a day plus a weekend batch.</p>
   </div>
   <div class="mod"><h3><span class="n">4</span>Sales and content are one skill wearing two outfits.</h3>
     <p>A sales call is content for an audience of one; a video is a sales pitch to an audience of thousands. Both need a hook, a clear problem, tension, a simple explanation, proof, and a call to action. Your voice training helps your videos. Your hook writing helps your cold openers. Your sales conversations tell you what people actually care about, which becomes video ideas. <strong>This is the main reason pursuing both is rational, not greedy.</strong></p>
@@ -314,7 +334,7 @@ table.tight td{padding:3.5pt 6pt}
   <h2>Two cautionary cases</h2>
   <div class="cols">
     <div class="box red"><div class="t">BYJU'S · pressure selling</div><p>Investigations by Context (Thomson Reuters Foundation), the BBC and others reported aggressive tactics: repeated cold calls, pitches implying children would fall behind, and families unaware they were signing loans. India's child-rights body summoned the CEO. The company denied mis-selling.<span class="cite">[20]</span> <strong>Lesson:</strong> high-pressure closing can hit short-term targets while destroying customers, careers and the company's name. Learn to close <em>honestly</em> from day one.</p></div>
-    <div class="box red"><div class="t">"Closer academies" · pay to get hired</div><p>Remote closing is a real job, but the space is full of programs that charge thousands for a "certification" and promise income. Reports say the US FTC warned and later shut down one such operator, The Sales Mentor (also marketed as Sales Closer Academy).<span class="cite">[18]</span> Verify on ftc.gov before relying on that. <strong>Lesson:</strong> legitimate employers pay <em>you</em>. Part 11 has a checklist for vetting gigs.</p></div>
+    <div class="box red"><div class="t">"Closer academies" · pay to get hired</div><p>Remote closing is a real job, but the space is full of programs that charge thousands for a "certification" and promise income. In 2023 the US FTC settled charges against one of them, The Sales Mentor (also sold as Sales Closer Academy and Inbound Closer), over misleading earnings claims; people had paid it over $29 million since 2019, and the FTC has since sent refunds.<span class="cite">[18]</span> <strong>Lesson:</strong> legitimate employers pay <em>you</em>. Part 11 has a checklist for vetting gigs.</p></div>
   </div>
 </section>
 
@@ -322,7 +342,7 @@ table.tight td{padding:3.5pt 6pt}
   <h2>Patterns across all ten</h2>
   <ol>
     <li><strong>A long apprenticeship or deep expertise came first.</strong> Five years at Vox, nine at NASA, fifteen in sales, a PhD. Nobody went from zero to scale in 90 days. They <em>did</em> earn during the apprenticeship.</li>
-    <li><strong>They kept a paycheck while building.</strong> Rober (NASA, Apple), Harris and Abram (Vox), Abdaal (medicine), Welsh (SaaS executive).</li>
+    <li><strong>They kept a paycheck while building.</strong> Rober (NASA, Apple), Harris and Abram (Vox), Abdaal (medicine).</li>
     <li><strong>A specific, nameable thing.</strong> "Huge If True", "Gym Launch", "NEPQ", "the Saturday Solopreneur". Vague doesn't spread.</li>
     <li><strong>Reps counted in hundreds or thousands.</strong> Thousands of sales calls (Hormozi), hundreds of videos (Abdaal).</li>
     <li><strong>Feedback loops.</strong> Coaches (Gordon), research (Muller), editorial teams (Vox), data (MrBeast's team obsessing over click-through and retention).</li>
@@ -352,10 +372,10 @@ table.tight td{padding:3.5pt 6pt}
     <thead><tr><th style="width:20%">You said</th><th style="width:38%">What it means</th><th>What changes in the plan</th></tr></thead>
     <tbody>
       <tr><td><strong>India-based; US/UK/foreign clients are the priority</strong></td><td>You earn in dollars or pounds and work their business hours, which fall in your afternoon and evening. Your competition is other offshore setters, mainly in the Philippines.</td><td>Your Seat is a remote role for a US/UK company. Live work 19:00–23:00 IST. Prefer UK and US East Coast clients; avoid West-Coast-only roles, because their day is your night. See Part 04.</td></tr>
-      <tr><td><strong>Day holds training, sleep, cooking, eating and leisure you won't cut</strong></td><td>No job or college competes for your hours, so about 6 hours a day is genuinely available. A full-time 9-hour job doesn't fit.</td><td>The salaried full-time option becomes a fallback only. Your day is three fixed blocks: two silent 90-minute blocks plus an evening live block (Part 06).</td></tr>
-      <tr><td><strong>At least ₹35K a month</strong></td><td>About $400 a month. Reachable from an entry-level offshore role with an hourly base. Not guaranteed by commission-only work.</td><td>Prioritise base or per-show pay. A day-60 checkpoint: under ₹20K run-rate means adding a second income line.</td></tr>
+      <tr><td><strong>Day holds training, sleep, cooking, eating and leisure you won't cut</strong></td><td>No job or college competes for your hours, so about 6 hours a day is genuinely available. A full-time 9-hour job doesn't fit.</td><td>The salaried full-time option becomes a fallback only. Your day is one 3-hour silent block (two 90-minute halves) plus an evening live block (Part 06).</td></tr>
+      <tr><td><strong>At least ₹35K a month</strong></td><td>About $400 a month. Reachable from an entry-level offshore role with an hourly base. Not guaranteed by commission-only work.</td><td>Prioritise base or per-show pay. Gates on days 35, 45, 60 and 75 (below) switch you to a surer income source in time.</td></tr>
       <tr><td><strong>English only</strong></td><td>A bigger, more competitive market. Every English video also proves to a US/UK employer that you communicate clearly.</td><td>Content language is fixed. Each short doubles as a portfolio piece you link in job applications.</td></tr>
-      <tr><td><strong>"Everything scares me right now"</strong></td><td>Normal when starting from zero. Fear shrinks with gradual, repeated exposure and grows with avoidance. It's the main risk to this plan, ahead of skill or time.</td><td>A new Part 03: a 12-rung sales ladder and a 6-rung camera ladder. You start text-first (DM setting) and faceless.</td></tr>
+      <tr><td><strong>"Everything scares me right now"</strong></td><td>Normal when starting from zero. Fear shrinks with gradual, repeated exposure and grows with avoidance. It's the main risk to this plan, ahead of skill or time.</td><td>Part 03: a 12-rung sales ladder and two 6-rung camera ladders (one you need for job applications, one optional for content). You start text-first (DM setting) and faceless.</td></tr>
       <tr><td><strong>3 silent hours of deep focus, no disturbance</strong></td><td>One unbroken 3-hour block is your most valuable asset: roughly two full focus cycles back to back.</td><td>Part 06: one silent block (content 90 min → 15-min break → sales 90 min). Evenings stay for live client work.</td></tr>
       <tr><td><strong>Space and AI (and, quietly, the human body)</strong></td><td>Three topics, one audience: curious people who think "wait, is that true?". The question format works across topics.</td><td>Your show: weird questions about space, AI and the body, answered in under a minute (Part 08). AI knowledge is also an edge later if you move into tech sales.</td></tr>
       <tr><td><strong>"Random brainstorm" = questions like "Does 4D exist?" or "Can you cry from one eye?"</strong></td><td>Not a random channel: a proven format. One curious question, one surprising true answer.</td><td>It becomes your show's format, and possibly its name (Part 08).</td></tr>
@@ -366,7 +386,7 @@ table.tight td{padding:3.5pt 6pt}
 
   <div class="cols3">
     <div class="box sales"><div class="t">The Seat · sales</div><p>A remote, text-first sales role for a US/UK company: appointment setter, SDR or lead-generation specialist. You start in DMs, where fear is lowest, and move onto calls as you climb the ladder.</p></div>
-    <div class="box content"><div class="t">The Lab · content</div><p>English science and tech shorts, three a week, faceless at first. The point is practice at hooks, scripts and delivery, plus public proof that you can explain hard things in English.</p></div>
+    <div class="box content"><div class="t">The Lab · content</div><p>English science and tech shorts, three a week (two in long-video weeks), faceless at first. The point is practice at hooks, scripts and delivery, plus public proof that you can explain hard things in English.</p></div>
     <div class="box"><div class="t">The Bridge · months 4–12</div><p>Setter → closer (higher pay per hour), or SDR → account executive in tech sales. Your tech content makes you a stronger hire; your sales skill makes your content persuasive.</p></div>
   </div>
 
@@ -401,12 +421,25 @@ table.tight td{padding:3.5pt 6pt}
 
   <div class="box truth"><div class="t">The hours, honestly</div><p>At entry-level offshore rates, ₹35K needs about <strong>4 paid hours a day</strong>. Add your 3-hour silent block and weekdays become ~7 hours. That still fits your budget, because US/UK clients don't work weekends: <strong>~7h × 5 weekdays + ~3h at the weekend ≈ 38 hours a week</strong>, the same as 5.4 hours a day. Heavier weekdays, lighter weekends, same total.</p></div>
 
-  <h2>Hard fallback rules</h2>
+  <h2>Gates: how the deadline stays fixed</h2>
+  <p>No plan can force someone to hire you by a date. What this plan fixes is everything you control, plus gates that switch you to a surer income source while there is still time for it to pay by day 90. Getting hired and paid takes about 4–6 weeks, so the backup has to start by day 35, not day 75. If you start on 9 November, days 46–54 fall over Christmas and New Year, when US and UK hiring slows down: another reason the seat target is day 35.</p>
+  <table class="tight">
+    <thead><tr><th style="width:9%">Day</th><th style="width:30%">Check</th><th>If the answer is no</th></tr></thead>
+    <tbody>
+      <tr><td><strong>21</strong></td><td>Resume, LinkedIn and master Loom done; 30+ applications sent</td><td>Finishing them is your only extra task; drop to 2 shorts until it's done.</td></tr>
+      <tr><td><strong>35</strong></td><td>Seat accepted</td><td>Plan B from day 36, three pipelines at once: 6 remote applications a day, 10 creator DMs a day with a free sample edit (seat option 2), and 3 applications a day to Indian US-process sales roles that pay ₹35K a month or more including typical incentives.</td></tr>
+      <tr><td><strong>45</strong></td><td>Any seat or offer</td><td>Accept the best offer in any pipeline that meets the floor, the same day. Starting by about day 50 is the latest that can still pay by day 90.</td></tr>
+      <tr><td><strong>60</strong></td><td>Income pace of ₹20K a month or more</td><td>Add a second income line that week (a second part-time setter client or one editing client), or extend your shift to 5 hours for a month.</td></tr>
+      <tr><td><strong>75</strong></td><td>Income pace of ₹35K a month or more</td><td>Add paid hours now. No income at all: start the best backup job you can, today.</td></tr>
+      <tr><td><strong>90</strong></td><td>Target hit</td><td>Hit means ₹35K or more received in the last 30 days, or guaranteed pay of ₹35K a month with work already started.</td></tr>
+    </tbody>
+  </table>
   <div class="cols3">
-    <div class="box warn"><div class="t">Day 45 · no seat yet</div><p>Move half your outreach hours to <strong>option 2</strong>: short-form editing for US/UK creators. By then you'll have about 17 shorts as a portfolio. Offer one free sample edit to 20 creators; aim to convert 1–2 to paid. Keep applying for seats.</p></div>
-    <div class="box warn"><div class="t">Day 60 · under ₹20K/month</div><p>Add a <strong>second income line</strong>: a second part-time setter client, or one editing client. Or extend your live block to 5 hours for a month. You said you'd adjust once results show; this is that moment.</p></div>
-    <div class="box warn"><div class="t">Day 75 · no income yet</div><p>Apply to <strong>Indian US-process sales jobs</strong> (option 3). Treat it as a paid 3–6-month bridge: salary, supervised reps, a resume line. Keep the Lab alive on weekends, then move back to remote work.</p></div>
+    <div class="box sales"><div class="t">Fast lane · by about day 70</div><p>Seat by day 35, first pay in the following 2–4 weeks. Most likely when you hit every application target in weeks 3–5.</p></div>
+    <div class="box content"><div class="t">Standard lane · by about day 80</div><p>A seat between days 36 and 45 through Plan B. Pay builds through weeks 8–11.</p></div>
+    <div class="box warn"><div class="t">Backup lane · by day 90</div><p>A salaried bridge job started by about day 50–60. It breaks your 6-hour day, so it's a 3–6-month bridge, not the destination.</p></div>
   </div>
+  <p class="sm muted">If you'd refuse a full-time bridge job under any circumstances, decide that now: the deadline then rests entirely on remote roles, which no plan can guarantee.</p>
 
   <h2>Months 4–12: the skill tree</h2>
   <table>
@@ -434,7 +467,7 @@ table.tight td{padding:3.5pt 6pt}
 
   <h2>The rules</h2>
   <ol>
-    <li><strong>Rate your fear 0–10 before each attempt</strong> (therapists call this a SUDS score) and write it in your daily log.</li>
+    <li><strong>Rate your fear 0–10 before each attempt</strong> (a simple version of what therapists call a SUDS rating) and write it in your daily log.</li>
     <li><strong>Start on the rung that scores about 3–4.</strong> Not 0 (no growth), not 8 (you'll quit).</li>
     <li><strong>Repeat a rung daily until it scores 2 or less, or feels boring.</strong> Then step up one rung.</li>
     <li><strong>Stay until the fear starts to fall.</strong> Leaving at the peak teaches escape.</li>
@@ -468,12 +501,12 @@ table.tight td{padding:3.5pt 6pt}
   <table class="tight">
     <thead><tr><th style="width:7%">Rung</th><th>Exposure</th><th style="width:15%">Rough timing</th></tr></thead>
     <tbody>
-      <tr><td><strong>C1</strong></td><td>Write the script only.</td><td>Week 1</td></tr>
-      <tr><td><strong>C2</strong></td><td>Record the voice-over. Don't post it.</td><td>Week 1</td></tr>
-      <tr><td><strong>C3</strong></td><td>Post a faceless short: your voice over visuals.</td><td>Weeks 1–5</td></tr>
-      <tr><td><strong>C4</strong></td><td>Hands or screen on camera: sketching, pointing, demoing.</td><td>When you choose</td></tr>
-      <tr><td><strong>C5</strong></td><td>Your face in the first 3 seconds only, then visuals.</td><td>When you choose</td></tr>
-      <tr><td><strong>C6</strong></td><td>A full face-to-camera short.</td><td>When you choose</td></tr>
+      <tr><td><strong>V1</strong></td><td>Write the script only.</td><td>Week 1</td></tr>
+      <tr><td><strong>V2</strong></td><td>Record the voice-over. Don't post it.</td><td>Week 1</td></tr>
+      <tr><td><strong>V3</strong></td><td>Post a faceless short: your voice over visuals.</td><td>Weeks 1–5</td></tr>
+      <tr><td><strong>V4</strong></td><td>Hands or screen on camera: sketching, pointing, demoing.</td><td>When you choose</td></tr>
+      <tr><td><strong>V5</strong></td><td>Your face in the first 3 seconds only, then visuals.</td><td>When you choose</td></tr>
+      <tr><td><strong>V6</strong></td><td>A full face-to-camera short.</td><td>When you choose</td></tr>
     </tbody>
   </table>
   <p>Given your ranking, <strong>stay faceless as long as you like.</strong> Kurzgesagt grew from Philipp Dettmer's 2013 side project into a studio of about seventy people with no presenter on screen.<span class="cite">[31]</span> Zack D. Films reached about 29M subscribers with animated curiosity shorts.<span class="cite">[30]</span> Your voice does the work a face would.</p>
@@ -512,7 +545,7 @@ table.tight td{padding:3.5pt 6pt}
       <tr><td><strong>5:00 pm</strong></td><td>22:30 IST</td><td>03:30 IST</td><td>06:30 IST</td></tr>
     </tbody>
   </table>
-  <div class="box sales"><div class="t">Your golden window: 19:00–23:00 IST</div><p>That's 13:30–17:30 in the UK and 08:30–12:30 on the US East Coast: both markets are awake, and you're asleep by midnight. Turn down roles that need West Coast hours or regular shifts past 1am; the sleep cost will eat your long-term learning. When the US moves clocks forward on 14 March 2027 and the UK on 28 March 2027, the same hours arrive one hour earlier in IST.</p></div>
+  <div class="box sales"><div class="t">Your golden window: 19:00–23:00 IST</div><p>That's 13:30–17:30 in the UK and 08:30–12:30 on the US East Coast: both markets are awake, and you're asleep by midnight. Turn down roles that need West Coast hours or regular shifts past midnight IST; the sleep cost will eat your long-term learning. When the US moves clocks forward on 14 March 2027 and the UK on 28 March 2027, the same hours arrive one hour earlier in IST.</p></div>
 
   <h2>Where to find roles</h2>
   <ul>
@@ -577,7 +610,7 @@ table.tight td{padding:3.5pt 6pt}
 <section class="part">
   <div class="kicker">Part 05</div>
   <h1>The 90-day plan, week by week</h1>
-  <p class="sub">Each week has a Sales track, a Content track and a proof milestone. Proof is something you can show someone, not a feeling. Fear rungs (1–12) and career camera rungs (K1–K6) are in Part 03.</p>
+  <p class="sub">Each week has a Sales track, a Content track and a proof milestone. Proof is something you can show someone, not a feeling. Fear rungs (1–12) and career camera rungs (K1–K6) are in Part 03. Part 14 breaks every week into daily tasks, and your tracker shows them one day at a time.</p>
 
   <div class="phases">
     <div class="phase" style="border-top:3px solid var(--sales)"><div class="d">Days 1–30</div><div class="h">Foundations + fear rungs 1–8</div><ul><li>Learn the core sales sequence</li><li>Climb rungs 1–8 + camera K1–K5</li><li>Set up payments, LinkedIn, Loom</li><li>Apply to 60+ US/UK roles</li><li>3 faceless shorts a week</li></ul></div>
@@ -585,24 +618,26 @@ table.tight td{padding:3.5pt 6pt}
     <div class="phase" style="border-top:3px solid var(--amber)"><div class="d">Days 61–90</div><div class="h">Reach ₹35K</div><ul><li>Hit your seat's KPIs</li><li>Voice calls with leads (rung 11)</li><li>Fix the leakiest funnel stage</li><li>Case study with real numbers</li><li>Best short remade, better visuals</li></ul></div>
   </div>
 
+  <!-- WEEKS:START -->
   <table class="wk">
     <thead><tr><th style="width:8%">Week</th><th style="width:40%"><span class="tag s">Sales track</span></th><th style="width:29%"><span class="tag c">Content track</span></th><th>Proof by Sunday</th></tr></thead>
     <tbody>
-      <tr><td>1</td><td><strong>Voice + listening</strong> (S1–S2). Fear rungs 1–3 + K1. Dojo Gauntlet daily. Do the week-1 setup checklist (Part 04).</td><td><strong>Set up your show</strong> (Part 08): pick a name, lock the format, copy the 30-question bank into your notes. Post 2 faceless shorts.</td><td>Setup done · 2 shorts · rung 3 reached</td></tr>
-      <tr><td>2</td><td><strong>Psychology + discovery</strong> (S3, S7). Rungs 4–5: text, then voice, role-plays with friends. K2: a camera-on call with a friend.</td><td><strong>Hooks + packaging</strong> (C3–C4). Write out the first lines of 10 outlier videos by hand. 3 shorts.</td><td>2 recorded role-plays · 5 shorts</td></tr>
-      <tr><td>3</td><td><strong>Objections + closing</strong> (S9–S10). Rungs 6–7 + K3–K4: five no-pitch DMs a day; a video role-play; record your Loom; LinkedIn live. Apply to 30 US/UK roles.</td><td><strong>Story + script</strong> (C5–C6). 3 shorts. Draft your first 5-minute script.</td><td>30 applications · 8 shorts</td></tr>
-      <tr><td>4</td><td><strong>Prospecting</strong> (S4–S5). Rung 8 + K5: a mock call and a mock video interview with strangers. 30 more applications plus 10 direct agency pitches a day.</td><td>3 shorts plus your <strong>first long video</strong> (voice-over). Rough is fine.</td><td>Interviews booked · 11 shorts + 1 long</td></tr>
-      <tr><td>5</td><td><strong>Rung 9 / K6: video interviews.</strong> Accept the best legitimate offer with base or per-show pay (Part 02 math, Part 11 vetting). Learn the offer cold.</td><td>3 shorts. First analytics review (C11).</td><td>Seat accepted <em>or</em> 60+ applications · 14 shorts</td></tr>
-      <tr><td>6</td><td><strong>Rung 10: first real DMs.</strong> Shift 19:00–23:00 IST. Track the funnel (S12) from day one.</td><td>3 shorts. Upgrade visuals: one Keynote-animated diagram per short.</td><td>First 50 real conversations · 17 shorts</td></tr>
-      <tr><td>7</td><td><strong>Volume.</strong> Hit the team's activity target. Review one thread a day with the scorecard. Ask your manager for one piece of feedback.</td><td>3 shorts plus the second long video.</td><td>150 conversations · 20 shorts + 2 long</td></tr>
-      <tr><td>8</td><td><strong>Find the leak:</strong> fix one thing. If your role includes calls, start rung 11.</td><td>3 shorts. LinkedIn text posts twice a week. Camera rung C4 only if you want it.</td><td>One documented fix · 23 shorts</td></tr>
-      <tr><td>9</td><td><strong>Qualification</strong> (S6). <strong>Day-60 checkpoint:</strong> under ₹20K run-rate → add a second income line (Part 02).</td><td>3 shorts. Experiment: misconception hooks vs question hooks.</td><td>Run-rate known · 26 shorts</td></tr>
-      <tr><td>10</td><td><strong>Objections in the wild.</strong> Log every objection and build your own response bank. Rung 11 regularly.</td><td>3 shorts plus the third long video.</td><td>Objection bank 15+ · 29 shorts + 3 long</td></tr>
-      <tr><td>11</td><td><strong>Get paid:</strong> first full month. Ask a satisfied lead or your manager for a testimonial.</td><td>3 shorts. Remake your best short with stronger visuals and a sharper hook.</td><td>₹35K run-rate · 32 shorts</td></tr>
-      <tr><td>12</td><td><strong>Case study:</strong> one page, starting numbers → changes → results. Ask about shadowing closers.</td><td>3 shorts plus the fourth long video. Pick your lane for months 4–6.</td><td>Case study · 35 shorts + 4 long</td></tr>
-      <tr><td>13</td><td colspan="2"><strong>Review and rebalance.</strong> Compare against the Day-90 scoreboard. Decide the sales/content split for the next 90 days from data. Build v3 of this plan.</td><td>v3 plan written</td></tr>
+      <tr><td>1</td><td><strong>Voice, listening, setup.</strong> Voice + listening (S1–S2). Fear rungs 1–3 + K1. Dojo routine daily. Week-1 setup checklist (Part 04).</td><td>Set up your show (Part 08). Shorts 1–2: “Does 4D exist?” and fingers wrinkling in water.</td><td>Setup done · rung 3 reached · 2 shorts</td></tr>
+      <tr><td>2</td><td><strong>Buyer psychology and discovery.</strong> Psychology + discovery (S3, S7). Rungs 4–5 (role-plays) + K2. Resume, master message and Loom script ready.</td><td>Shorts 3–5: tickling, cold space, AI making things up.</td><td>2 recorded role-plays · 5 shorts</td></tr>
+      <tr><td>3</td><td><strong>Objections, closing, first 30 applications.</strong> Objections + closing (S9–S10). Rungs 6–7 + K3–K4. Master Loom recorded. 30 applications.</td><td>Shorts 6–8: yawning, dark space, how AI sees a photo.</td><td>Portfolio live · 30 applications · 8 shorts</td></tr>
+      <tr><td>4</td><td><strong>Prospect yourself into a seat.</strong> Prospecting + openers (S4–S5). Rung 8 + K5. 30 more applications + 50 direct pitches.</td><td>Shorts 9–10 + long video 1 (from your best short).</td><td>60 applications + 50 pitches · interviews booked · 10 shorts + 1 long</td></tr>
+      <tr><td>5</td><td><strong>Interviews and the offer.</strong> Rung 9 / K6: interviews. Vet offers (Part 11) and accept base or per-show pay. Gate on day 35.</td><td>Shorts 11–13. First analytics review (C11).</td><td>Seat accepted, or Plan B ready · 13 shorts</td></tr>
+      <tr><td>6</td><td><strong>First real conversations.</strong> In a seat: rung 10, first shifts 19:00–23:00 IST, daily reviews. Not yet: Plan B, three pipelines.</td><td>Shorts 14–16. One animated diagram per short from now on.</td><td>In a seat: first 50 real conversations · Not yet: 3 interviews booked · 16 shorts</td></tr>
+      <tr><td>7</td><td><strong>Volume.</strong> Volume and manager feedback. Gate on day 45: no seat → take the best offer that meets the floor.</td><td>Shorts 17–18 + long video 2.</td><td>In a seat: 150 conversations · Not yet: an offer accepted · 18 shorts + 2 long</td></tr>
+      <tr><td>8</td><td><strong>Find the leak.</strong> Find the leakiest funnel stage and fix one thing. Rung 11 if your role includes calls.</td><td>Shorts 19–21. LinkedIn text posts twice a week.</td><td>One documented fix · 21 shorts</td></tr>
+      <tr><td>9</td><td><strong>Qualify harder · day-60 check.</strong> Qualification (S6). Gate on day 60: under ₹20K a month → add a second income line.</td><td>Shorts 22–24. Hook experiment: misconception vs question.</td><td>Day-60 income pace known · 24 shorts</td></tr>
+      <tr><td>10</td><td><strong>Objections in the wild.</strong> Log and answer every objection you meet (S9). Rung 11 regularly. Fast-track check on day 70.</td><td>Shorts 25–26 + long video 3.</td><td>Objection bank 15+ · 26 shorts + 3 long</td></tr>
+      <tr><td>11</td><td><strong>Get paid, prove it.</strong> Get paid and ask for a testimonial. Gate on day 75: under a ₹35K pace → add paid hours now.</td><td>Shorts 27–29 (29 is a remake of your best).</td><td>₹35K-a-month pace · testimonial · 29 shorts</td></tr>
+      <tr><td>12</td><td><strong>Case study and the next step.</strong> One-page case study with real numbers. Ask to shadow closer calls.</td><td>Shorts 30–31 + long video 4. Pick your lane for months 4–6.</td><td>Case study written · 31 shorts + 4 long</td></tr>
+      <tr><td>13</td><td><strong>Day-90 review.</strong> Day-90 review against the scoreboard; plan v4.</td><td>Shorts 32–33 from your comments.</td><td>Day-90 scoreboard filled · 33 shorts · v4 plan</td></tr>
     </tbody>
   </table>
+  <!-- WEEKS:END -->
 </section>
 
 <!-- =============================== PART 4 =============================== -->
@@ -613,12 +648,13 @@ table.tight td{padding:3.5pt 6pt}
 
   <h2>Three kinds of day</h2>
   <div class="cols3">
-    <div class="day full"><div class="h">Full Day</div><div class="m">5–6 hrs · the default goal</div>
-      <ol><li><strong>Deep block 1 (90 min):</strong> sales skill. Weeks 1–4 learn + drill; week 5+ live calls or DMs.</li><li><strong>Deep block 2 (90 min):</strong> content. Script and film.</li><li><strong>Shallow (2–3 hrs):</strong> outreach volume, applications, editing, posting, call review, reading.</li><li><strong>5-min log.</strong></li></ol></div>
-    <div class="day std"><div class="h">Standard Day</div><div class="m">~3 hrs · errands, low energy</div>
-      <ol><li><strong>One deep block (90 min):</strong> whichever is more urgent this week (usually sales).</li><li><strong>60 min shallow:</strong> outreach or editing.</li><li><strong>20 min:</strong> one Dojo Gauntlet or one short filmed.</li><li><strong>5-min log.</strong></li></ol></div>
+    <div class="day full"><div class="h">Full Day</div><div class="m">6–7 hrs · the default on weekdays</div>
+      <ol><li><strong>Silent block (3 h):</strong> content 90 min → 15-min break → sales 90 min.</li><li><strong>Live block:</strong> 3 hours of outreach until you have a seat, then your 4-hour paid shift.</li><li><strong>5-min log</strong> in your tracker.</li></ol></div>
+    <div class="day std"><div class="h">Standard Day</div><div class="m">~3–4 hrs · errands, low energy</div>
+      <ol><li><strong>One 90-minute half</strong> of the silent block: the one tied to this week's main goal.</li><li><strong>Your paid shift</strong> if you have one; it's a commitment. No seat yet: 60 minutes of outreach.</li><li><strong>5-min log.</strong></li></ol></div>
     <div class="day mvd"><div class="h">Minimum Viable Day</div><div class="m">30 min · sick, sad, slammed</div>
-      <ol><li><strong>10 min sales:</strong> one Dojo call, or ten objection flashcards.</li><li><strong>10 min content:</strong> write five hooks, or film one take.</li><li><strong>5 min:</strong> read your Cookie Jar (below).</li><li><strong>5-min log.</strong> Done. No guilt.</li></ol></div>
+      <ol><li><strong>10 min sales:</strong> one Dojo call, or ten objection flashcards.</li><li><strong>10 min content:</strong> five hooks, or one voice-over take.</li><li><strong>5 min:</strong> read your Cookie Jar.</li><li><strong>5-min log.</strong> Done. No guilt.</li></ol>
+      <p class="sm" style="margin:5pt 0 0">With a paid shift: tell your manager early if you can't work. The minimum day covers your own practice; it never replaces a shift.</p></div>
   </div>
   <p style="margin-top:8pt"><strong>The two rules: never zero, never miss twice.</strong> A Minimum Viable Day counts. Two skipped days in a row is how plans die, so after any miss, the next day is at least Standard. (The "never miss twice" rule is James Clear's, from <em>Atomic Habits</em>.)</p>
 
@@ -637,7 +673,7 @@ table.tight td{padding:3.5pt 6pt}
       <tr><td>19:00–22:00/23:00</td><td><strong>Live block (3h):</strong> applications, outreach, role-plays, Looms. UK afternoon / US East morning.</td><td><strong>Setter shift 19:00–23:00:</strong> UK 13:30–17:30 / US East 08:30–12:30</td></tr>
       <tr><td>23:00–00:00</td><td colspan="2">Shutdown: 5-minute log, plan tomorrow's first task, screens down</td></tr>
       <tr><td>00:00–08:00</td><td colspan="2"><strong>Sleep, 8 hours.</strong> Non-negotiable.</td></tr>
-      <tr><td>Weekends</td><td colspan="2">US/UK clients are off. <strong>Saturday:</strong> batch 2 shorts (2h). <strong>Sunday:</strong> 45-minute review, then off. <strong>Weekly total:</strong> ~33h in weeks 1–5, ~38h in the seat.</td></tr>
+      <tr><td>Weekends</td><td colspan="2">US/UK clients are off. <strong>Saturday:</strong> a 2-hour batch to finish the week's last short or long video. <strong>Sunday:</strong> 45-minute review, then off. <strong>Weekly total:</strong> ~33h in weeks 1–5, ~38h in the seat.</td></tr>
     </tbody>
   </table>
 </section>
@@ -651,9 +687,9 @@ table.tight td{padding:3.5pt 6pt}
       <tr><td><strong>1 · Regular sleep window</strong></td><td>Same wake time (±30 min) every day, 7–9 hrs in bed. Protect it even on shift work.</td><td>Memory consolidation happens in sleep. This is your "long-term learning" insurance.</td></tr>
       <tr><td><strong>2 · Daily movement</strong></td><td>20–30 min walk minimum; 3×/week harder exercise. Take practice calls or listen to recordings while walking.</td><td>Mood, focus, stress resilience on rejection-heavy days.</td></tr>
       <tr><td><strong>3 · Morning light</strong></td><td>A few minutes outdoors soon after waking, longer on cloudy days; not through a window.</td><td>Anchors your body clock, helps alertness earlier and sleep later.</td></tr>
-      <tr><td>4 · ~90-minute focus blocks</td><td>Work in blocks of about 90 minutes; expect about an hour of real focus inside each. Huberman discusses this in his AMA on ultradian cycles.<span class="cite">[23]</span></td><td>Matches your two deep blocks.</td></tr>
+      <tr><td>4 · ~90-minute focus blocks</td><td>Work in blocks of about 90 minutes; expect about an hour of real focus inside each. Huberman discusses this in his AMA on ultradian cycles.<span class="cite">[23]</span></td><td>Matches the two halves of your silent block.</td></tr>
       <tr><td>5 · Delay caffeine</td><td>First caffeine 60–90 min after waking; none within 8–10 hrs of bed.</td><td>Steadier afternoon energy, better sleep.</td></tr>
-      <tr><td>6 · NSDR / Yoga Nidra</td><td>10–20 min guided rest after lunch.</td><td>Resets for deep block 2 or a shift.</td></tr>
+      <tr><td>6 · NSDR / Yoga Nidra</td><td>10–20 min guided rest after lunch.</td><td>Resets you before the evening live block.</td></tr>
     </tbody>
   </table>
 
@@ -673,9 +709,9 @@ table.tight td{padding:3.5pt 6pt}
     <thead><tr><th style="width:24%">Situation</th><th>Do this</th><th style="width:30%">Don't do this</th></tr></thead>
     <tbody>
       <tr><td><strong>Low mood, no energy</strong></td><td>Minimum Viable Day. 10-minute walk outside first. Read the Cookie Jar.</td><td>Scroll for two hours and then call the day a write-off</td></tr>
-      <tr><td><strong>Urgent errand, half day lost</strong></td><td>Standard Day: protect one deep block, cut shallow work.</td><td>Push the deep block "to tonight"</td></tr>
-      <tr><td><strong>Sick</strong></td><td>Rest. Optionally listen to one call recording. Log "sick". Resume with a Standard Day.</td><td>Use the 40% rule on your immune system</td></tr>
-      <tr><td><strong>Travel or family event (2–5 days)</strong></td><td>"Phone-only mode": listen to recordings, write hooks in notes, reply to leads. Batch-film two extra shorts the week before if you can see it coming.</td><td>Drop everything, then try to restart cold</td></tr>
+      <tr><td><strong>Urgent errand, half day lost</strong></td><td>Standard Day: keep your paid shift if you have one, plus one 90-minute half of the silent block. Drop the rest.</td><td>Push the silent block "to tonight", into your shift</td></tr>
+      <tr><td><strong>Sick</strong></td><td>Rest. If you have a shift, message your manager before it starts. Log "sick". Resume with a Standard Day.</td><td>Use the 40% rule on your immune system</td></tr>
+      <tr><td><strong>Travel or family event (2–5 days)</strong></td><td>"Phone-only mode": listen to recordings, write hooks in notes, reply to leads. Batch two extra shorts the week before if you can see it coming, and tell your manager early if it overlaps shifts.</td><td>Drop everything, then try to restart cold</td></tr>
       <tr><td><strong>Lost a whole week</strong></td><td>Restart with three Standard Days, then Full. Pick up the plan where you are, not where the calendar says.</td><td>Try to "make up" hours with 12-hour days (leads to burnout and another lost week)</td></tr>
       <tr><td><strong>Brutal rejection day</strong></td><td>Review one call honestly, write one lesson, then stop. Rejection is data about the offer, timing or your delivery, not a verdict on you.</td><td>Replay it for hours, or quit the role in the moment</td></tr>
       <tr><td><strong>A video flops</strong></td><td>Check the retention graph: where did people leave? Fix that one thing in the next video.</td><td>Delete it, change niche, or buy a new camera</td></tr>
@@ -684,7 +720,7 @@ table.tight td{padding:3.5pt 6pt}
 
   <h2>The Sunday review (45 minutes)</h2>
   <ol class="check">
-    <li>Fill in the weekly scorecard (Part 10): activity numbers, conversion rates, content metrics, days completed by type.</li>
+    <li>Review the week in your tracker (or the scorecard in Part 10): activity numbers, conversion rates, content metrics, days completed by type.</li>
     <li>Find the single weakest number. Write one change to test this week.</li>
     <li>Re-read last week's log. What surprised you?</li>
     <li>Update the Accountability Mirror: three targets for next week.</li>
@@ -825,7 +861,7 @@ table.tight td{padding:3.5pt 6pt}
   <p class="sub">Twelve modules for science and tech explainers. The goal for the first 90 days is skill and portfolio, not follower count.</p>
 
   <h2>Your show: weird questions about space, AI and the human body</h2>
-  <p>What you called "random brainstorm" is a proven format: <strong>one question people secretly wonder about, one surprising and true answer, in under a minute.</strong> The topics can vary; the format and the promise must not. Vsauce has worked this way since 2010, with Michael Stevens building the channel on "what if" and "why" questions across any topic.<span class="cite">[32]</span> Zack D. Films does it today with faceless, animated curiosity shorts: about 29M subscribers by vidIQ's October 2026 count, from a 2021 start.<span class="cite">[30]</span></p>
+  <p>What you called "random brainstorm" is a proven format: <strong>one question people secretly wonder about, one surprising and true answer, in under a minute.</strong> The topics can vary; the format and the promise must not. Vsauce, on YouTube since 2010, became known for exactly this: Michael Stevens' "what if" and "why" questions across any topic.<span class="cite">[32]</span> Zack D. Films does it today with faceless, animated curiosity shorts: about 29M subscribers by vidIQ's October 2026 count, from a 2021 start.<span class="cite">[30]</span></p>
   <div class="cols">
     <div class="box content"><div class="t">Your format promise</div><p class="big" style="font-size:12pt">"A question you've wondered about. An answer you didn't expect. Under 60 seconds, and it's true."</p><p class="sm">Every short: the question on screen in the first second, a misconception or surprise by second 3, one honest caveat before the end.</p></div>
     <div class="box"><div class="t">Name ideas (you decide)</div><ul style="margin:0"><li><strong>Random Brainstorm:</strong> your own phrase and memorable, but "random" promises nothing specific.</li><li><strong>2AM Questions:</strong> names the feeling of lying awake wondering.</li><li><strong>Is That Even Possible?:</strong> names the promise.</li><li><strong>Weird Question Lab:</strong> playful, and fits all three topics.</li></ul><p class="sm" style="margin-top:4pt">Check the handle is free on YouTube, Instagram and TikTok. Pick in week 1; you can rename later.</p></div>
@@ -867,11 +903,11 @@ table.tight td{padding:3.5pt 6pt}
     <div class="box content"><div class="t">Faceless production on your Mac + iPhone</div><ul style="margin:0">
       <li><strong>Voice:</strong> record on the iPhone in a quiet room with soft furnishings (curtains, bed, cupboard). Your voice is your face.</li>
       <li><strong>Visuals:</strong> Keynote's Magic Move for simple animated diagrams; screen recordings (Shift-Cmd-5); NASA imagery (check NASA's media-use guidelines, and never use their logo); free stock from Pexels or Pixabay; your own iPhone footage of hands, objects and sky.</li>
-      <li><strong>Edit:</strong> CapCut for shorts; DaVinci Resolve (free, runs on the M2) for long-form.</li>
+      <li><strong>Edit:</strong> Edits (Instagram's free editor, with auto-captions) or iMovie on the iPhone for shorts; DaVinci Resolve (free, runs on the M2) for long videos. CapCut is blocked in India, so don't build your workflow on it.<span class="cite">[34][36]</span></li>
       <li><strong>Later:</strong> Blender (free) for 3D, the Zack D. Films route, once you have 30 shorts and know what works.</li></ul></div>
     <div class="box warn"><div class="t">Two rules that protect the channel</div><ul style="margin:0">
       <li><strong>Body questions border on health claims.</strong> Use the NHS, Mayo Clinic or peer-reviewed reviews as sources. Never give medical advice; add "see a doctor if…" where it applies.</li>
-      <li><strong>Use AI as an assistant, not the author.</strong> Since July 2025, YouTube's "inauthentic content" rule has blocked money from mass-produced, repetitive videos, however they're made.<span class="cite">[33]</span> Faceless is allowed; template farming isn't. Write your own scripts, use your own voice, and label realistic AI-generated visuals when YouTube asks you to.</li></ul></div>
+      <li><strong>Use AI as an assistant, not the author.</strong> YouTube doesn't pay for mass-produced, repetitive videos; in July 2025 it renamed and clarified this as its "inauthentic content" policy, which applies however the videos are made.<span class="cite">[33]</span> Faceless is allowed; template farming isn't. Write your own scripts, use your own voice, and label realistic AI-generated visuals when YouTube asks you to.</li></ul></div>
   </div>
 
   <div class="mod c"><h3><span class="n">C1</span>Define your show (positioning)</h3>
@@ -937,7 +973,7 @@ table.tight td{padding:3.5pt 6pt}
   </div>
 
   <div class="mod c"><h3><span class="n">C8</span>Minimum viable production kit</h3>
-    <div class="row"><div class="k">Kit</div><div class="v"><p><strong>You already have it:</strong> iPhone 16 Plus for voice-over and B-roll, MacBook Air M2 for editing. <strong>Audio matters more than video:</strong> record in a quiet, soft-furnished room. Editing: CapCut to start, DaVinci Resolve (free) later. Visuals: Keynote diagrams, screen recordings, NASA imagery, free stock, your own iPhone footage.</p></div></div>
+    <div class="row"><div class="k">Kit</div><div class="v"><p><strong>You already have it:</strong> iPhone 16 Plus for voice-over and B-roll, MacBook Air M2 for editing. <strong>Audio matters more than video:</strong> record in a quiet, soft-furnished room. Editing: Edits or iMovie for shorts, DaVinci Resolve (free) for long videos. Visuals: Keynote diagrams, screen recordings, NASA imagery, free stock, your own iPhone footage.</p></div></div>
     <div class="row"><div class="k">Rule</div><div class="v"><p><strong>No new gear until 30 videos are posted.</strong> Gear is the most comfortable form of procrastination.</p></div></div>
   </div>
 
@@ -946,7 +982,7 @@ table.tight td{padding:3.5pt 6pt}
   </div>
 
   <div class="mod c"><h3><span class="n">C10</span>Platforms and cadence</h3>
-    <div class="row"><div class="k">Days 1–90</div><div class="v"><p>YouTube Shorts, Instagram Reels, plus TikTok where available: <strong>3 a week</strong>, the same video cross-posted. These are fast feedback reps. One long video (5–10 min) every 2–3 weeks, built from your best short.</p></div></div>
+    <div class="row"><div class="k">Days 1–90</div><div class="v"><p>YouTube Shorts and Instagram Reels first, TikTok as a bonus: <strong>3 a week</strong> (2 in long-video weeks), the same video cross-posted. These are fast feedback reps. One long video (3–5 min) every 3 weeks, built from your best short. On TikTok: it's officially blocked in India, so treat it as a channel that could vanish, and its creator payouts need you to live in an eligible country, which India isn't. It's reach and practice, not income.<span class="cite">[34][35]</span></p></div></div>
     <div class="row"><div class="k">Bridge</div><div class="v"><p>From week 8, post text versions on LinkedIn or X twice a week. LinkedIn is where Justin Welsh built his business, and where tech sales hiring managers spend time.<span class="cite">[12]</span></p></div></div>
     <div class="row"><div class="k">Later</div><div class="v"><p>A newsletter (an audience you own, not rented from an algorithm) from around month 6.</p></div></div>
   </div>
@@ -964,21 +1000,18 @@ table.tight td{padding:3.5pt 6pt}
   <div class="mod c"><h3><span class="n">C12</span>Monetisation ladder (realistic order)</h3>
     <div class="row"><div class="k">Order</div><div class="v"><ol>
       <li><strong>Indirect:</strong> content makes you a stronger sales hire or wins you clients. This comes first and is usually the biggest early.</li>
-      <li><strong>Services:</strong> editing or scripting for others (Option C).</li>
+      <li><strong>Services:</strong> editing or scripting for others (seat option 2).</li>
       <li><strong>Sponsorships:</strong> need a consistent, engaged audience in a clear niche.</li>
-      <li><strong>Ad revenue:</strong> needs YouTube Partner Program eligibility. Third-party guides describe a lower tier around 500 subscribers (fan funding) and full ad revenue at 1,000 subscribers plus 4,000 public watch hours in 12 months, or a Shorts-views route.<span class="cite">[22]</span> Check the official YouTube Help page; rules change.</li>
+      <li><strong>Ad revenue:</strong> needs YouTube Partner Program eligibility. Per third-party guides: 500 subscribers, 3 recent uploads and either 3,000 watch hours in 12 months or 3 million Shorts views in 90 days unlock fan funding; 1,000 subscribers and either 4,000 watch hours in 12 months or 10 million Shorts views in 90 days unlock ad revenue.<span class="cite">[22]</span> Check YouTube Help before relying on these; rules change.</li>
       <li><strong>Own products:</strong> courses, newsletters, communities. Highest margin, needs the most trust (the Welsh and Abdaal models).</li></ol></div></div>
   </div>
 
-  <div class="box content"><div class="t">The 2-hour content sprint (one deep block)</div>
+  <div class="box content"><div class="t">How one short gets made: two 90-minute sprints</div>
     <ol style="margin:0">
-      <li><strong>0:00–0:20</strong> · pick an idea from the bank, read two sources, write a one-sentence thesis.</li>
-      <li><strong>0:20–0:45</strong> · write five hooks, pick one, outline with ABT.</li>
-      <li><strong>0:45–1:05</strong> · script in two columns (words | visuals), read aloud, cut 25%.</li>
-      <li><strong>1:05–1:30</strong> · film: hook ×5 takes, then the body in chunks.</li>
-      <li><strong>1:30–2:00</strong> · rough edit plus captions. Polish and post in shallow time.</li>
+      <li><strong>Sprint A · script and voice:</strong> 0:00–0:15 pick a question, read two sources, write a one-sentence answer · 0:15–0:30 five hooks and an ABT outline · 0:30–0:55 two-column script (words | visuals), read aloud, cut 25% · 0:55–1:30 record the voice-over, five takes of the hook.</li>
+      <li><strong>Sprint B · visuals and post:</strong> build the visuals, cut them to your voice, add captions, export, post to Shorts, Reels and TikTok.</li>
     </ol>
-    <p style="margin-top:5pt"><strong>Publish the B+ version.</strong> Your first 30 videos are tuition. Perfectionism at this stage is fear in disguise. Ship it, then fix one thing in the next video.</p>
+    <p style="margin-top:5pt">Three shorts a week = six sprints: Monday to Friday plus Saturday's batch. In long-video weeks, Friday and Saturday go to the long video, so you make two shorts. <strong>Publish the B+ version.</strong> Your first 30 videos are tuition; ship, then fix one thing in the next.</p>
   </div>
 </section>
 
@@ -1037,7 +1070,7 @@ table.tight td{padding:3.5pt 6pt}
     <thead><tr><th style="width:22%">When</th><th>Stages you own</th><th>Your key number</th></tr></thead>
     <tbody>
       <tr><td>Days 1–30</td><td>1 (content), 3 (practice conversations)</td><td>Shorts posted, Dojo score, role-plays done</td></tr>
-      <tr><td>Days 31–90</td><td>3–5 (setter or SDR) · or 1–7 (Option C, solo)</td><td>Show rate, or booked meetings</td></tr>
+      <tr><td>Days 31–90</td><td>3–5 (setter or SDR) · or 1–7 (seat option 2, solo)</td><td>Show rate, or booked meetings</td></tr>
       <tr><td>Months 4–9</td><td>6–7 (closer or AE) · 1–2 (content growing)</td><td>Close rate, cash collected</td></tr>
       <tr><td>Months 10+</td><td>All of them, if you build your own offer</td><td>Revenue per hour, referral rate</td></tr>
     </tbody>
@@ -1076,7 +1109,7 @@ table.tight td{padding:3.5pt 6pt}
     <b>Rules</b> · readable on a phone in 10 seconds, one ask, no attachments in the first email.
   </div>
 
-  <h2>4 · Content-service outreach (Option C)</h2>
+  <h2>4 · Content-service outreach (seat option 2)</h2>
   <div class="script c">
     <b>Message 1</b> · "Hey {name}, loved your video on {topic}, especially {specific moment}. I edit short-form sci-tech explainers. I cut a 40-second short from it as an experiment, here: {link}. Free to use either way."<br>
     <b>If they reply</b> · "Glad you liked it! How are you handling shorts right now? … Would it help to have 3 a week done like this? Happy to do a paid trial week to see if it's a fit."
@@ -1131,15 +1164,15 @@ table.tight td{padding:3.5pt 6pt}
   <table class="tight">
     <thead><tr><th style="width:15%">Time</th><th style="width:25%">Beat</th><th>Example: "Why is the sky blue?"</th></tr></thead>
     <tbody>
-      <tr><td>0–3s</td><td><strong>Hook</strong> (misconception or stakes)</td><td>"The sky isn't blue because it reflects the ocean. And it isn't really blue for the reason you think."</td></tr>
-      <tr><td>3–10s</td><td><strong>Context</strong> (And)</td><td>"Sunlight looks white, but it's every colour mixed together…"</td></tr>
-      <tr><td>10–40s</td><td><strong>Explanation</strong> (But / Therefore)</td><td>"<em>But</em> when it hits air molecules, shorter wavelengths scatter far more… <em>therefore</em> blue light comes at you from every direction."</td></tr>
+      <tr><td>0–5s</td><td><strong>Hook</strong> (misconception or stakes)</td><td>"The sky isn't blue because it reflects the ocean. So why is it blue, and why not violet?"</td></tr>
+      <tr><td>5–12s</td><td><strong>Context</strong> (And)</td><td>"Sunlight looks white, but it's every colour mixed together…"</td></tr>
+      <tr><td>12–40s</td><td><strong>Explanation</strong> (But / Therefore)</td><td>"<em>But</em> when it hits air molecules, shorter wavelengths scatter far more… <em>therefore</em> blue light comes at you from every direction."</td></tr>
       <tr><td>40–55s</td><td><strong>Payoff + caveat</strong></td><td>"So why not violet? Violet scatters even more, <em>but</em> the Sun gives off less of it and your eyes are less sensitive to it."</td></tr>
       <tr><td>55–60s</td><td><strong>Loop / CTA</strong></td><td>"So why are sunsets red? That's part two."</td></tr>
     </tbody>
   </table>
 
-  <h2>9 · Long-form outline (8–15 minutes)</h2>
+  <h2>9 · Long-video outline (3–5 minutes now, 8–15 later)</h2>
   <ol class="sm">
     <li><strong>Cold open (0:00–0:45):</strong> the most surprising visual or claim, plus the promise of the video.</li>
     <li><strong>Stakes:</strong> why this matters to the viewer's life or future.</li>
@@ -1186,12 +1219,13 @@ table.tight td{padding:3.5pt 6pt}
   <table class="tight">
     <thead><tr><th>Metric</th><th>Target</th><th>Actual</th><th>Metric</th><th>Target</th><th>Actual</th></tr></thead>
     <tbody>
-      <tr><td>Full / Standard / MVD days</td><td>4 / 2 / 1</td><td></td><td>Shorts posted</td><td>3</td><td></td></tr>
-      <tr><td>Dojo calls (Gauntlet)</td><td>20+</td><td></td><td>Hooks written</td><td>35+</td><td></td></tr>
+      <tr><td>Full weekdays (of 5)</td><td>4+</td><td></td><td>Shorts posted</td><td>3 (2 in long-video weeks)</td><td></td></tr>
+      <tr><td>Dojo calls (Gauntlet)</td><td>wk 1–5: 25 · then 5</td><td></td><td>Hooks written</td><td>35+</td><td></td></tr>
       <tr><td>Real conversations</td><td>set by seat</td><td></td><td>Avg % viewed (shorts)</td><td>track trend</td><td></td></tr>
       <tr><td>Booked / showed</td><td>set by seat</td><td></td><td>Shares + saves</td><td>track trend</td><td></td></tr>
-      <tr><td>Calls reviewed with scorecard</td><td>5</td><td></td><td>Long video progress</td><td>on schedule?</td><td></td></tr>
+      <tr><td>Threads reviewed with scorecard</td><td>15 (3 a day, in a seat)</td><td></td><td>Long video progress</td><td>on schedule?</td><td></td></tr>
       <tr><td>Applications / outreach</td><td>wk 3–5: 30+</td><td></td><td>Ideas added to bank</td><td>10</td><td></td></tr>
+      <tr><td>Fear rungs attempted</td><td>5+</td><td></td><td>Income received (₹)</td><td>toward 35K a month</td><td></td></tr>
       <tr><td>Hours of sleep (avg)</td><td>7+</td><td></td><td>Energy (avg 1–10)</td><td>—</td><td></td></tr>
     </tbody>
   </table>
@@ -1278,8 +1312,8 @@ table.tight td{padding:3.5pt 6pt}
 
   <h2>Daily Sales Dojo routine</h2>
   <div class="cols">
-    <div class="box sales"><div class="t">Weeks 1–4 · Dojo as primary practice</div><p>Articulation Warm-up (5 min) → one lesson plus quiz (10 min) → full Gauntlet, 5 calls (30 min) → Objection Blitz (5 min). About 50 minutes a day.</p></div>
-    <div class="box"><div class="t">Week 5+ · Dojo as warm-up</div><p>Articulation Warm-up plus one Gauntlet call before your real shift (15 min). Use Strategy Room or 1v1 Debate on weak spots your real-call reviews reveal.</p></div>
+    <div class="box sales"><div class="t">Weeks 1–5 · Dojo as primary practice</div><p>Articulation Warm-up (5 min) → one lesson plus quiz (10 min) → full Gauntlet, 5 calls (30 min) → Objection Blitz (5 min). About 50 minutes a day.</p></div>
+    <div class="box"><div class="t">Week 6+ · Dojo as warm-up</div><p>Articulation Warm-up plus one Gauntlet call before your real shift (15 min). Use Strategy Room or 1v1 Debate on weak spots your real-call reviews reveal.</p></div>
   </div>
 </section>
 
@@ -1287,7 +1321,7 @@ table.tight td{padding:3.5pt 6pt}
 <section class="part">
   <div class="kicker">Part 13</div>
   <h1>Your answers, and what comes next</h1>
-  <p class="sub">v3 is built on everything you've told me. The next version should be built on data from your first two weeks.</p>
+  <p class="sub">v3.1 is built on everything you've told me, cross-checked line by line. The next version (v4) should be built on data from your first two weeks, which your tracker collects: <a href="https://claude.ai/artifact/ShABr2b43XRjRJPr6a9CVv">open your tracker</a>.</p>
   <table class="tight">
     <thead><tr><th style="width:28%">Question</th><th style="width:30%">Your answer</th><th>Where it changed the plan</th></tr></thead>
     <tbody>
@@ -1303,7 +1337,7 @@ table.tight td{padding:3.5pt 6pt}
     </tbody>
   </table>
 
-  <h2>Send me these after two weeks (for v4)</h2>
+  <h2>After two weeks, ask me to read your tracker (for v4)</h2>
   <ol>
     <li class="q">Your fear scores (0–10) for each rung you attempted, before and after.</li>
     <p class="sm muted">Shows whether the ladder is pitched right or needs smaller steps.</p>
@@ -1317,11 +1351,247 @@ table.tight td{padding:3.5pt 6pt}
   <div class="box truth"><div class="t">Last word</div><p>Ninety days from now you'll either have results or reasons. This plan is built so that even on scared or bad weeks you collect <strong>rungs, reps and rupees</strong>. Start with your least scary thing today. Log it. Fix one thing a week. That is the whole game.</p></div>
 </section>
 
+<!-- =============================== PART 14 =============================== -->
+<!-- PART14:START -->
+<section class="part">
+  <div class="kicker">Part 14</div>
+  <h1>Day by day: all 90 days</h1>
+  <p class="sub">Every block of every day. The same plan is in your tracker, where Today shows only today's tasks. Dates assume you start on Monday 9 November 2026; the tracker recalculates them for any start date.</p>
+  <div class="cols3">
+    <div class="box"><div class="t">Weekdays</div><p class="sm"><strong>10:30</strong> content (90 min) · <strong>12:15</strong> sales (90 min) · <strong>19:00</strong> live block: 3 hours of outreach until you have a seat, then your 4-hour shift.</p></div>
+    <div class="box"><div class="t">Weekends</div><p class="sm"><strong>Saturday</strong>: a 2-hour batch to finish the week's last short or long video. <strong>Sunday</strong>: a 45-minute review, then rest.</p></div>
+    <div class="box warn"><div class="t">Gates</div><p class="sm">Days 21, 35, 45, 60, 75 and 90 carry a decision. They are what make the deadline fixed: each one switches you to a more certain income source in time.</p></div>
+  </div>
+  <div class="wkblock">
+    <div class="wkhead"><span class="wkn">Week 1</span><span class="wkt">Voice, listening, setup</span><span class="wkd">Days 1–7 · 9 Nov – 15 Nov</span></div>
+    <p class="wkproof"><strong>Proof by Sunday:</strong> Setup done · rung 3 reached · 2 shorts</p>
+    <table class="daytable">
+      <thead><tr><th style="width:11%">Day</th><th style="width:30%">10:30 · content</th><th style="width:30%">12:15 · sales</th><th>19:00 · live (3 h)</th></tr></thead>
+      <tbody>
+        <tr><td class="dcell"><strong>D1</strong><br>Mon 9 Nov</td><td>Set up your show (Part 08): pick a name, check the handle on YouTube, Instagram and TikTok, write your 3-question idea filter, paste the 30-question bank into Notes.</td><td>Read S1 (voice). Rung 1: record a 60-second voice memo explaining your show idea; listen once, delete it. Dojo routine (about 50 min): Articulation Warm-up, one lesson and quiz, the 5-call Gauntlet, one Objection Blitz.</td><td>Setup: start Wise or Payoneer verification, add London, New York and Los Angeles clocks, order a router UPS, test your iPhone hotspot on a 20-minute video call.</td></tr>
+        <tr><td class="dcell"><strong>D2</strong><br>Tue 10 Nov</td><td>Short 1, sprint A: “Does 4D exist?” Read two sources, write a one-sentence answer and five hooks, script in two columns, record the voice-over. Start from the worked script in Part 08 and make it sound like you.</td><td>S1 drill: record one 30-second pitch twice, in the calm 'late-night FM DJ' voice and in the playful voice. Rung 2: one Gauntlet call in voice mode. Then the rest of the Dojo routine.</td><td>Rewrite LinkedIn in clear English: headline, About section, photo (Part 04 has a headline idea).</td></tr>
+        <tr><td class="dcell"><strong>D3</strong><br>Wed 11 Nov</td><td>Short 1, sprint B: build the visuals, cut to your voice, add captions, post to YouTube Shorts, Instagram Reels and TikTok.</td><td>Read S2 (listening). Use one label ('It sounds like…') in three real conversations today. Rung 2 again. Dojo routine.</td><td>Build your Applications sheet (company, link, time zone, pay type, date sent, reply). Add 30 targets from LinkedIn Jobs, Upwork, Wellfound and Remotive.</td></tr>
+        <tr><td class="dcell"><strong>D4</strong><br>Thu 12 Nov</td><td>Short 2, sprint A: “Why do fingers wrinkle in water?” Read two sources, write a one-sentence answer and five hooks, script in two columns, record the voice-over. Body topic: use NHS, Mayo Clinic or peer-reviewed sources.</td><td>S2 drill: write 10 'what/how' questions for a coach's lead. Rung 3: five thoughtful public comments on US/UK founders' or creators' posts. Dojo routine.</td><td>Read 5 real setter job posts and list what they ask for. Draft a one-page resume: skills, training, Dojo stats, the UK/US hours you cover.</td></tr>
+        <tr><td class="dcell"><strong>D5</strong><br>Fri 13 Nov</td><td>Short 2, sprint B: build the visuals, cut to your voice, add captions, post to YouTube Shorts, Instagram Reels and TikTok. Add 10 questions to your idea bank.</td><td>Listen back to this week's memos and write one fix. K1: record a 30-second selfie video, watch it once, delete it. Rung 3 again. Dojo routine.</td><td>Watch Hormozi's CLOSER video (Sources, item 14) and note each step. Add 20 targets to your sheet.</td></tr>
+        <tr><td class="dcell"><strong>D6</strong><br>Sat 14 Nov</td><td colspan="3"><span class="lbl">Batch · 2 h</span> Check shorts 1–2: viewed vs swiped and average % viewed. Outline next week's three shorts (tickling, cold space, AI making things up).</td></tr>
+        <tr><td class="dcell"><strong>D7</strong><br>Sun 15 Nov</td><td colspan="3"><span class="lbl">Review · 45 min</span> Sunday review (45 min): log the week in your tracker, set next week's 3 targets (Accountability Mirror), add 2 wins to the Cookie Jar. Rest for the remainder.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="wkblock">
+    <div class="wkhead"><span class="wkn">Week 2</span><span class="wkt">Buyer psychology and discovery</span><span class="wkd">Days 8–14 · 16 Nov – 22 Nov</span></div>
+    <p class="wkproof"><strong>Proof by Sunday:</strong> 2 recorded role-plays · 5 shorts</p>
+    <table class="daytable">
+      <thead><tr><th style="width:11%">Day</th><th style="width:30%">10:30 · content</th><th style="width:30%">12:15 · sales</th><th>19:00 · live (3 h)</th></tr></thead>
+      <tbody>
+        <tr><td class="dcell"><strong>D8</strong><br>Mon 16 Nov</td><td>Short 3, sprint A: “Why can't you tickle yourself?” Read two sources, write a one-sentence answer and five hooks, script in two columns, record the voice-over. Body topic: use NHS, Mayo Clinic or peer-reviewed sources.</td><td>Read S3 (buyer psychology). Write the value equation for something you own. Dojo routine (about 50 min): Articulation Warm-up, one lesson and quiz, the 5-call Gauntlet, one Objection Blitz.</td><td>Finish your resume as a PDF. Set LinkedIn to 'Open to work: remote, UK &amp; US hours'.</td></tr>
+        <tr><td class="dcell"><strong>D9</strong><br>Tue 17 Nov</td><td>Short 3, sprint B: build the visuals, cut to your voice, add captions, post to YouTube Shorts, Instagram Reels and TikTok.</td><td>Read S7 (discovery). Write S, P, I and N questions for a coaching lead. Ask two implication questions in every Gauntlet call. Dojo routine.</td><td>Write your master application message (Part 04) and three versions of it: coach, agency, SaaS. Read each aloud.</td></tr>
+        <tr><td class="dcell"><strong>D10</strong><br>Wed 18 Nov</td><td>Short 4, sprint A: “How cold is space, really?” Read two sources, write a one-sentence answer and five hooks, script in two columns, record the voice-over.</td><td>Gap drill: current state → future state → gap for two Gauntlet companies. Rung 4: WhatsApp role-play with a friend using the DM setter flow (Part 10).</td><td>Draft your 2-minute Loom script: who you are, the hours you cover, why you, one proof, the ask. Read it aloud 3 times.</td></tr>
+        <tr><td class="dcell"><strong>D11</strong><br>Thu 19 Nov</td><td>Short 4, sprint B: build the visuals, cut to your voice, add captions, post to YouTube Shorts, Instagram Reels and TikTok.</td><td>Rung 5: voice role-play with a friend who raises objections; record it. K2: keep your camera on for the first 10 minutes of a call with a friend. Short Dojo session.</td><td>Join 2 online sales communities where people do practice calls (search Discord, Reddit and Skool for SDR or setter groups). Introduce yourself.</td></tr>
+        <tr><td class="dcell"><strong>D12</strong><br>Fri 20 Nov</td><td>Short 5, sprint A: “Why does AI make things up?” Read two sources, write a one-sentence answer and five hooks, script in two columns, record the voice-over.</td><td>Score yesterday's role-play with the call scorecard (Part 10) and write 3 fixes. Repeat rung 4 or 5, whichever still scores above 2. Dojo routine.</td><td>Add 30 targets. Sort the sheet: UK and US East Coast first; delete anything that needs West Coast hours or asks you to pay.</td></tr>
+        <tr><td class="dcell"><strong>D13</strong><br>Sat 21 Nov</td><td colspan="3"><span class="lbl">Batch · 2 h</span> Short 5, sprint B: build the visuals, cut to your voice, add captions, post to YouTube Shorts, Instagram Reels and TikTok. Note which of shorts 1–4 held viewers best, and why.</td></tr>
+        <tr><td class="dcell"><strong>D14</strong><br>Sun 22 Nov</td><td colspan="3"><span class="lbl">Review · 45 min</span> Sunday review (45 min): log the week in your tracker, set next week's 3 targets (Accountability Mirror), add 2 wins to the Cookie Jar. Rest for the remainder.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="wkblock">
+    <div class="wkhead"><span class="wkn">Week 3</span><span class="wkt">Objections, closing, first 30 applications</span><span class="wkd">Days 15–21 · 23 Nov – 29 Nov</span></div>
+    <p class="wkproof"><strong>Proof by Sunday:</strong> Portfolio live · 30 applications · 8 shorts</p>
+    <table class="daytable">
+      <thead><tr><th style="width:11%">Day</th><th style="width:30%">10:30 · content</th><th style="width:30%">12:15 · sales</th><th>19:00 · live (3 h)</th></tr></thead>
+      <tbody>
+        <tr><td class="dcell"><strong>D15</strong><br>Mon 23 Nov</td><td>Short 6, sprint A: “Why is yawning contagious?” Read two sources, write a one-sentence answer and five hooks, script in two columns, record the voice-over. Body topic: use NHS, Mayo Clinic or peer-reviewed sources.</td><td>Read S9 (objections). Three rounds of Objection Blitz. Rung 6: five no-pitch DMs to US/UK founders or creators, one real question each.</td><td>Send 6 applications with your master message. Log each one.</td></tr>
+        <tr><td class="dcell"><strong>D16</strong><br>Tue 24 Nov</td><td>Short 6, sprint B: build the visuals, cut to your voice, add captions, post to YouTube Shorts, Instagram Reels and TikTok.</td><td>Read S10 (closing). Write a CLOSER walk-through for one Gauntlet company. Rung 6: five DMs. Dojo routine.</td><td>Send 6 applications. Reply to any rung-6 replies as a conversation, with no pitch.</td></tr>
+        <tr><td class="dcell"><strong>D17</strong><br>Wed 25 Nov</td><td>Short 7, sprint A: “Why is space dark if there are billions of stars?” Read two sources, write a one-sentence answer and five hooks, script in two columns, record the voice-over.</td><td>K3: video role-play with a friend, you as the setter. Rung 6: five DMs. Dojo routine.</td><td>Send 6 applications.</td></tr>
+        <tr><td class="dcell"><strong>D18</strong><br>Thu 26 Nov<br><span class="hol">US Thanksgiving: US companies are off. Favour UK targets today.</span></td><td>Short 7, sprint B: build the visuals, cut to your voice, add captions, post to YouTube Shorts, Instagram Reels and TikTok.</td><td>K4 + rung 7: record your master Loom with the face bubble on for the first 10 seconds. Three takes at most; keep the best.</td><td>Send 6 applications, each with your Loom. For your top 3, re-record only the first 10 seconds with their name.</td></tr>
+        <tr><td class="dcell"><strong>D19</strong><br>Fri 27 Nov</td><td>Short 8, sprint A: “How does an AI 'see' a photo?” Read two sources, write a one-sentence answer and five hooks, script in two columns, record the voice-over.</td><td>Write your own answers to the 7 objections in Part 10. Three rounds of Objection Blitz. Dojo routine.</td><td>Send 6 applications with your Loom (30 this week). Answer every reply.</td></tr>
+        <tr><td class="dcell"><strong>D20</strong><br>Sat 28 Nov</td><td colspan="3"><span class="lbl">Batch · 2 h</span> Short 8, sprint B: build the visuals, cut to your voice, add captions, post to YouTube Shorts, Instagram Reels and TikTok.</td></tr>
+        <tr><td class="dcell"><strong>D21</strong><br>Sun 29 Nov</td><td colspan="3"><span class="lbl">Review · 45 min</span> Sunday review (45 min): log the week in your tracker, set next week's 3 targets (Accountability Mirror), add 2 wins to the Cookie Jar. Rest for the remainder.</td></tr>
+        <tr class="gate"><td colspan="4"><strong>Gate · day 21.</strong> Resume, LinkedIn and master Loom done, and 30+ applications sent? If not, finishing them is your only extra task this week; drop to 2 shorts until it's done.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="wkblock">
+    <div class="wkhead"><span class="wkn">Week 4</span><span class="wkt">Prospect yourself into a seat</span><span class="wkd">Days 22–28 · 30 Nov – 6 Dec</span></div>
+    <p class="wkproof"><strong>Proof by Sunday:</strong> 60 applications + 50 pitches · interviews booked · 10 shorts + 1 long</p>
+    <table class="daytable">
+      <thead><tr><th style="width:11%">Day</th><th style="width:30%">10:30 · content</th><th style="width:30%">12:15 · sales</th><th>19:00 · live (3 h)</th></tr></thead>
+      <tbody>
+        <tr><td class="dcell"><strong>D22</strong><br>Mon 30 Nov</td><td>Short 9, sprint A: “Why do we get goosebumps?” Read two sources, write a one-sentence answer and five hooks, script in two columns, record the voice-over. Body topic: use NHS, Mayo Clinic or peer-reviewed sources.</td><td>Read S4 (prospecting). Write your hiring ICP: who needs a setter (coaches, agencies, SaaS) and what triggers hiring (a launch, new ads, a new offer). Dojo routine.</td><td>6 applications + 10 direct pitches to small US/UK agencies or coaches (message + Loom).</td></tr>
+        <tr><td class="dcell"><strong>D23</strong><br>Tue 1 Dec</td><td>Short 9, sprint B: build the visuals, cut to your voice, add captions, post to YouTube Shorts, Instagram Reels and TikTok.</td><td>Read S5 (openers). Write a DM, an email and a 15-second call opener that pitch you as a setter. Dojo routine.</td><td>6 applications + 10 direct pitches.</td></tr>
+        <tr><td class="dcell"><strong>D24</strong><br>Wed 2 Dec</td><td>Short 10, sprint A: “Why are planets round but asteroids lumpy?” Read two sources, write a one-sentence answer and five hooks, script in two columns, record the voice-over.</td><td>Rung 8: a mock sales call with someone from your sales community. Score it with the call scorecard.</td><td>6 applications + 10 direct pitches. One polite follow-up on week-3 applications with no reply.</td></tr>
+        <tr><td class="dcell"><strong>D25</strong><br>Thu 3 Dec</td><td>Short 10, sprint B: build the visuals, cut to your voice, add captions, post to YouTube Shorts, Instagram Reels and TikTok.</td><td>K5: a mock video interview. Practise 'Why should we hire you?', 'How do you handle rejection?' and 'Walk me through how you'd book a call.'</td><td>6 applications + 10 direct pitches.</td></tr>
+        <tr><td class="dcell"><strong>D26</strong><br>Fri 4 Dec</td><td>Long video 1, script: expand your best-performing short into a 3–5 minute script (outline in Part 10, item 9). Reuse its research.</td><td>Write answers to 10 common setter interview questions. Record yourself answering 3 and watch once. Dojo routine.</td><td>6 applications + 10 direct pitches (60 applications and 50 pitches so far).</td></tr>
+        <tr><td class="dcell"><strong>D27</strong><br>Sat 5 Dec</td><td colspan="3"><span class="lbl">Batch · 2 h</span> Long video 1: record the voice-over, edit (reuse the short's visuals), add captions, post to YouTube.</td></tr>
+        <tr><td class="dcell"><strong>D28</strong><br>Sun 6 Dec</td><td colspan="3"><span class="lbl">Review · 45 min</span> Sunday review (45 min): log the week in your tracker, set next week's 3 targets (Accountability Mirror), add 2 wins to the Cookie Jar. Rest for the remainder.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="wkblock">
+    <div class="wkhead"><span class="wkn">Week 5</span><span class="wkt">Interviews and the offer</span><span class="wkd">Days 29–35 · 7 Dec – 13 Dec</span></div>
+    <p class="wkproof"><strong>Proof by Sunday:</strong> Seat accepted, or Plan B ready · 13 shorts</p>
+    <table class="daytable">
+      <thead><tr><th style="width:11%">Day</th><th style="width:30%">10:30 · content</th><th style="width:30%">12:15 · sales</th><th>19:00 · live (3 h)</th></tr></thead>
+      <tbody>
+        <tr><td class="dcell"><strong>D29</strong><br>Mon 7 Dec</td><td>Short 11, sprint A: “Can AI dream?” Read two sources, write a one-sentence answer and five hooks, script in two columns, record the voice-over.</td><td>Rung 9 / K6: any interviews you've booked. None yet? Read S6 (qualifying), then the Dojo routine.</td><td>Follow up every application older than 5 days. 6 new applications. Research the company behind each interview you have.</td></tr>
+        <tr><td class="dcell"><strong>D30</strong><br>Tue 8 Dec</td><td>Short 11, sprint B: build the visuals, cut to your voice, add captions, post to YouTube Shorts, Instagram Reels and TikTok.</td><td>Interviews. Vet every offer with the Part 11 checklist: pay type, lead source, call recordings, payment dates.</td><td>6 applications + 10 direct pitches.</td></tr>
+        <tr><td class="dcell"><strong>D31</strong><br>Wed 9 Dec</td><td>Short 12, sprint A: “Could you survive a minute in space without a suit?” Read two sources, write a one-sentence answer and five hooks, script in two columns, record the voice-over.</td><td>Interviews. Read S11 and build your CRM sheet: name, source, stage, last touch, next step + date.</td><td>6 applications + 10 direct pitches.</td></tr>
+        <tr><td class="dcell"><strong>D32</strong><br>Thu 10 Dec</td><td>Short 12, sprint B: build the visuals, cut to your voice, add captions, post to YouTube Shorts, Instagram Reels and TikTok. Then your first analytics review (C11): which short held viewers longest, and why?</td><td>Compare offers with the ₹35K math (Part 02). Accept the best legitimate offer with base or per-show pay. Agree a start date and 19:00–23:00 IST shifts.</td><td>Accepted? Read their scripts, offer page and FAQs. Not yet? 6 applications + 10 direct pitches.</td></tr>
+        <tr><td class="dcell"><strong>D33</strong><br>Fri 11 Dec</td><td>Short 13, sprint A: “What happens to your brain if you don't sleep?” Read two sources, write a one-sentence answer and five hooks, script in two columns, record the voice-over. Body topic: use NHS, Mayo Clinic or peer-reviewed sources.</td><td>Read S12 and set up your funnel sheet: touches → replies → conversations → qualified → booked → showed. Dojo routine.</td><td>In a seat? Listen to 5 recorded conversations by the top rep and note their openers. Not yet? 6 applications + 10 direct pitches.</td></tr>
+        <tr><td class="dcell"><strong>D34</strong><br>Sat 12 Dec</td><td colspan="3"><span class="lbl">Batch · 2 h</span> Short 13, sprint B: build the visuals, cut to your voice, add captions, post to YouTube Shorts, Instagram Reels and TikTok.</td></tr>
+        <tr><td class="dcell"><strong>D35</strong><br>Sun 13 Dec</td><td colspan="3"><span class="lbl">Review · 45 min</span> Sunday review (45 min): log the week in your tracker, set next week's 3 targets (Accountability Mirror), add 2 wins to the Cookie Jar. Rest for the remainder.</td></tr>
+        <tr class="gate"><td colspan="4"><strong>Gate · day 35.</strong> Seat accepted? Yes: start your shifts tomorrow. No: Plan B from tomorrow. Run three pipelines at once: 6 remote applications a day, 10 creator DMs a day with a free sample edit (seat option 2), and 3 applications a day to Indian US-process sales roles that pay ₹35K a month or more including typical incentives.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="wkblock">
+    <div class="wkhead"><span class="wkn">Week 6</span><span class="wkt">First real conversations</span><span class="wkd">Days 36–42 · 14 Dec – 20 Dec</span></div>
+    <p class="wkproof"><strong>Proof by Sunday:</strong> In a seat: first 50 real conversations · Not yet: 3 interviews booked · 16 shorts</p>
+    <p class="wknote"><strong>Not in a seat yet?</strong> Replace the sales block with: Dojo routine, then prepare for your next interview: research the company and rehearse 3 answers. Replace the evening with: Plan B: 6 remote applications, 10 creator DMs with a free sample edit (seat option 2), 3 applications to Indian US-process sales roles (backup pipeline).</p>
+    <table class="daytable">
+      <thead><tr><th style="width:11%">Day</th><th style="width:30%">10:30 · content</th><th style="width:30%">12:15 · sales</th><th>19:00 · shift (4 h)</th></tr></thead>
+      <tbody>
+        <tr><td class="dcell"><strong>D36</strong><br>Mon 14 Dec</td><td>Short 14, sprint A: “Why can AI write essays but miscount letters in a word?” Read two sources, write a one-sentence answer and five hooks, script in two columns, record the voice-over. From now on, add one animated diagram per short (Keynote Magic Move).</td><td>Rung 10, before your first shift: re-read the DM setter flow (Part 10) and S2. Warm up with one voice Gauntlet call.</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet. First shift: ask questions, follow the team's script.</td></tr>
+        <tr><td class="dcell"><strong>D37</strong><br>Tue 15 Dec</td><td>Short 14, sprint B: build the visuals, cut to your voice, add captions, post to YouTube Shorts, Instagram Reels and TikTok.</td><td>Review yesterday's conversations (45 min): score 3 threads with the call scorecard. Then S6: qualify in the first three messages.</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet.</td></tr>
+        <tr><td class="dcell"><strong>D38</strong><br>Wed 16 Dec</td><td>Short 15, sprint A: “Does time pass differently on Mars?” Read two sources, write a one-sentence answer and five hooks, script in two columns, record the voice-over.</td><td>Review yesterday's conversations (45 min): score 3 threads with the call scorecard. Then S2: use one label per conversation.</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet.</td></tr>
+        <tr><td class="dcell"><strong>D39</strong><br>Thu 17 Dec</td><td>Short 15, sprint B: build the visuals, cut to your voice, add captions, post to YouTube Shorts, Instagram Reels and TikTok.</td><td>Review yesterday's conversations (45 min): score 3 threads with the call scorecard. Then S7: ask one implication question per conversation.</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet.</td></tr>
+        <tr><td class="dcell"><strong>D40</strong><br>Fri 18 Dec</td><td>Short 16, sprint A: “Can you cry from only one eye?” Read two sources, write a one-sentence answer and five hooks, script in two columns, record the voice-over. Body topic: use NHS, Mayo Clinic or peer-reviewed sources.</td><td>Review yesterday's conversations (45 min): score 3 threads with the call scorecard. Then ask your manager for one piece of feedback and write it down.</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet.</td></tr>
+        <tr><td class="dcell"><strong>D41</strong><br>Sat 19 Dec</td><td colspan="3"><span class="lbl">Batch · 2 h</span> Short 16, sprint B: build the visuals, cut to your voice, add captions, post to YouTube Shorts, Instagram Reels and TikTok.</td></tr>
+        <tr><td class="dcell"><strong>D42</strong><br>Sun 20 Dec</td><td colspan="3"><span class="lbl">Review · 45 min</span> Sunday review (45 min): log the week in your tracker, set next week's 3 targets (Accountability Mirror), add 2 wins to the Cookie Jar. Rest for the remainder.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="wkblock">
+    <div class="wkhead"><span class="wkn">Week 7</span><span class="wkt">Volume</span><span class="wkd">Days 43–49 · 21 Dec – 27 Dec</span></div>
+    <p class="wkproof"><strong>Proof by Sunday:</strong> In a seat: 150 conversations · Not yet: an offer accepted · 18 shorts + 2 long</p>
+    <p class="wknote"><strong>Not in a seat yet?</strong> Replace the sales block with: Dojo routine, then prepare for your next interview: research the company and rehearse 3 answers. Replace the evening with: Plan B: 6 remote applications, 10 creator DMs with a free sample edit (seat option 2), 3 applications to Indian US-process sales roles (backup pipeline).</p>
+    <table class="daytable">
+      <thead><tr><th style="width:11%">Day</th><th style="width:30%">10:30 · content</th><th style="width:30%">12:15 · sales</th><th>19:00 · shift (4 h)</th></tr></thead>
+      <tbody>
+        <tr><td class="dcell"><strong>D43</strong><br>Mon 21 Dec</td><td>Short 17, sprint A: “Is there a centre of the universe?” Read two sources, write a one-sentence answer and five hooks, script in two columns, record the voice-over.</td><td>Review yesterday's conversations (45 min): score 3 threads with the call scorecard. Then S12: work out your reply, booked and show rates so far.</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet. Hit the team's daily activity target.</td></tr>
+        <tr><td class="dcell"><strong>D44</strong><br>Tue 22 Dec</td><td>Short 17, sprint B: build the visuals, cut to your voice, add captions, post to YouTube Shorts, Instagram Reels and TikTok.</td><td>Review yesterday's conversations (45 min): score 3 threads with the call scorecard. Then S3: use honest loss framing ('What happens if nothing changes?').</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet.</td></tr>
+        <tr><td class="dcell"><strong>D45</strong><br>Wed 23 Dec</td><td>Short 18, sprint A: “Why does AI need so much electricity?” Read two sources, write a one-sentence answer and five hooks, script in two columns, record the voice-over.</td><td>Review yesterday's conversations (45 min): score 3 threads with the call scorecard. Then S10: tighten your booking line (two specific times, in their time zone).</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet.</td></tr>
+        <tr class="gate"><td colspan="4"><strong>Gate · day 45.</strong> Still no seat? Accept the best offer in any pipeline that meets the floor, today. A start by about day 50 is the latest that can still pay ₹35K a month by day 90.</td></tr>
+        <tr><td class="dcell"><strong>D46</strong><br>Thu 24 Dec<br><span class="hol">Christmas Eve: expect a short or no shift.</span></td><td>Short 18, sprint B: build the visuals, cut to your voice, add captions, post to YouTube Shorts, Instagram Reels and TikTok.</td><td>Review yesterday's conversations (45 min): score 3 threads with the call scorecard. Then S9: list the 3 objections you heard most this week.</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet.</td></tr>
+        <tr><td class="dcell"><strong>D47</strong><br>Fri 25 Dec<br><span class="hol">Christmas Day: UK and US are off. Use the time for content.</span></td><td>Long video 2, script: expand your best-performing short into a 3–5 minute script (outline in Part 10, item 9). Reuse its research.</td><td>Review yesterday's conversations (45 min): score 3 threads with the call scorecard. Then ask your manager what the top setter does differently.</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet.</td></tr>
+        <tr><td class="dcell"><strong>D48</strong><br>Sat 26 Dec<br><span class="hol">Boxing Day: the UK is off.</span></td><td colspan="3"><span class="lbl">Batch · 2 h</span> Long video 2: record the voice-over, edit (reuse the short's visuals), add captions, post to YouTube.</td></tr>
+        <tr><td class="dcell"><strong>D49</strong><br>Sun 27 Dec</td><td colspan="3"><span class="lbl">Review · 45 min</span> Sunday review (45 min): log the week in your tracker, set next week's 3 targets (Accountability Mirror), add 2 wins to the Cookie Jar. Rest for the remainder.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="wkblock">
+    <div class="wkhead"><span class="wkn">Week 8</span><span class="wkt">Find the leak</span><span class="wkd">Days 50–56 · 28 Dec – 3 Jan</span></div>
+    <p class="wkproof"><strong>Proof by Sunday:</strong> One documented fix · 21 shorts</p>
+    <p class="wknote"><strong>Not in a seat yet?</strong> Replace the sales block with: Interview follow-ups and offer decisions first. Started a backup job? Use this block for content or rest. Replace the evening with: Past gate 45: start the best offer you have. Until it starts, keep Plan B and push every open interview to a decision this week.</p>
+    <table class="daytable">
+      <thead><tr><th style="width:11%">Day</th><th style="width:30%">10:30 · content</th><th style="width:30%">12:15 · sales</th><th>19:00 · shift (4 h)</th></tr></thead>
+      <tbody>
+        <tr><td class="dcell"><strong>D50</strong><br>Mon 28 Dec</td><td>Short 19, sprint A: “Can you actually die of a broken heart?” Read two sources, write a one-sentence answer and five hooks, script in two columns, record the voice-over. Body topic: use NHS, Mayo Clinic or peer-reviewed sources.</td><td>Find the leak: compare reply → booked → showed with last week. Pick the weakest stage and write one fix to test all week.</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet. Apply this week's one fix.</td></tr>
+        <tr><td class="dcell"><strong>D51</strong><br>Tue 29 Dec</td><td>Short 19, sprint B: build the visuals, cut to your voice, add captions, post to YouTube Shorts, Instagram Reels and TikTok. Post a 5-line LinkedIn text version.</td><td>Review yesterday's conversations (45 min): score 3 threads with the call scorecard. Then Dojo Strategy Room on your weakest stage.</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet.</td></tr>
+        <tr><td class="dcell"><strong>D52</strong><br>Wed 30 Dec</td><td>Short 20, sprint A: “Could we ever hear sound in space?” Read two sources, write a one-sentence answer and five hooks, script in two columns, record the voice-over.</td><td>Review yesterday's conversations (45 min): score 3 threads with the call scorecard. If your role includes calls: rung 11, your first voice call with a lead (ask a teammate to listen).</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet.</td></tr>
+        <tr><td class="dcell"><strong>D53</strong><br>Thu 31 Dec<br><span class="hol">New Year's Eve: expect a short or no shift.</span></td><td>Short 20, sprint B: build the visuals, cut to your voice, add captions, post to YouTube Shorts, Instagram Reels and TikTok.</td><td>Review yesterday's conversations (45 min): score 3 threads with the call scorecard. Then S5: rewrite your opening message and test it tonight against the old one.</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet.</td></tr>
+        <tr><td class="dcell"><strong>D54</strong><br>Fri 1 Jan<br><span class="hol">New Year's Day: UK and US are off. Use the time for content.</span></td><td>Short 21, sprint A: “How does your phone recognise your face in the dark?” Read two sources, write a one-sentence answer and five hooks, script in two columns, record the voice-over. Post a LinkedIn text version of short 20.</td><td>Review yesterday's conversations (45 min): score 3 threads with the call scorecard. Then measure: did this week's fix move the number? Write down the result.</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet.</td></tr>
+        <tr><td class="dcell"><strong>D55</strong><br>Sat 2 Jan</td><td colspan="3"><span class="lbl">Batch · 2 h</span> Short 21, sprint B: build the visuals, cut to your voice, add captions, post to YouTube Shorts, Instagram Reels and TikTok.</td></tr>
+        <tr><td class="dcell"><strong>D56</strong><br>Sun 3 Jan</td><td colspan="3"><span class="lbl">Review · 45 min</span> Sunday review (45 min): log the week in your tracker, set next week's 3 targets (Accountability Mirror), add 2 wins to the Cookie Jar. Rest for the remainder.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="wkblock">
+    <div class="wkhead"><span class="wkn">Week 9</span><span class="wkt">Qualify harder · day-60 check</span><span class="wkd">Days 57–63 · 4 Jan – 10 Jan</span></div>
+    <p class="wkproof"><strong>Proof by Sunday:</strong> Day-60 income pace known · 24 shorts</p>
+    <p class="wknote"><strong>Not in a seat yet?</strong> Replace the sales block with: Interview follow-ups and offer decisions first. Started a backup job? Use this block for content or rest. Replace the evening with: Past gate 45: start the best offer you have. Until it starts, keep Plan B and push every open interview to a decision this week.</p>
+    <table class="daytable">
+      <thead><tr><th style="width:11%">Day</th><th style="width:30%">10:30 · content</th><th style="width:30%">12:15 · sales</th><th>19:00 · shift (4 h)</th></tr></thead>
+      <tbody>
+        <tr><td class="dcell"><strong>D57</strong><br>Mon 4 Jan</td><td>Short 22, sprint A: “Why does time feel faster as you get older?” Read two sources, write a one-sentence answer and five hooks, script in two columns, record the voice-over. Experiment: open with a misconception hook.</td><td>Review yesterday's conversations (45 min): score 3 threads with the call scorecard. Then S6: write your 3 disqualifying questions and use them tonight.</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet.</td></tr>
+        <tr><td class="dcell"><strong>D58</strong><br>Tue 5 Jan</td><td>Short 22, sprint B: build the visuals, cut to your voice, add captions, post to YouTube Shorts, Instagram Reels and TikTok.</td><td>Review yesterday's conversations (45 min): score 3 threads with the call scorecard. Then S7: one root-cause question per conversation.</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet.</td></tr>
+        <tr><td class="dcell"><strong>D59</strong><br>Wed 6 Jan</td><td>Short 23, sprint A: “What would happen if you fell into a black hole?” Read two sources, write a one-sentence answer and five hooks, script in two columns, record the voice-over. Experiment: open with a question hook.</td><td>Review yesterday's conversations (45 min): score 3 threads with the call scorecard. Then S11: give every open lead a next step and a date.</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet.</td></tr>
+        <tr><td class="dcell"><strong>D60</strong><br>Thu 7 Jan</td><td>Short 23, sprint B: build the visuals, cut to your voice, add captions, post to YouTube Shorts, Instagram Reels and TikTok.</td><td>Gate day: add your income for the last 30 days and your guaranteed pay (see the gate). Then review yesterday's threads.</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet.</td></tr>
+        <tr class="gate"><td colspan="4"><strong>Gate · day 60.</strong> Add the income received in the last 30 days and your guaranteed monthly pay. Under ₹20K a month? Add a second income line this week (a second part-time setter client or one editing client), or extend your shift to 5 hours for a month.</td></tr>
+        <tr><td class="dcell"><strong>D61</strong><br>Fri 8 Jan</td><td>Short 24, sprint A: “What is a neural network, in plain English?” Read two sources, write a one-sentence answer and five hooks, script in two columns, record the voice-over. Compare the two hook styles' average % viewed.</td><td>Review yesterday's conversations (45 min): score 3 threads with the call scorecard. Then S9: refresh your objection answers with this week's real wording.</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet.</td></tr>
+        <tr><td class="dcell"><strong>D62</strong><br>Sat 9 Jan</td><td colspan="3"><span class="lbl">Batch · 2 h</span> Short 24, sprint B: build the visuals, cut to your voice, add captions, post to YouTube Shorts, Instagram Reels and TikTok.</td></tr>
+        <tr><td class="dcell"><strong>D63</strong><br>Sun 10 Jan</td><td colspan="3"><span class="lbl">Review · 45 min</span> Sunday review (45 min): log the week in your tracker, set next week's 3 targets (Accountability Mirror), add 2 wins to the Cookie Jar. Rest for the remainder.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="wkblock">
+    <div class="wkhead"><span class="wkn">Week 10</span><span class="wkt">Objections in the wild</span><span class="wkd">Days 64–70 · 11 Jan – 17 Jan</span></div>
+    <p class="wkproof"><strong>Proof by Sunday:</strong> Objection bank 15+ · 26 shorts + 3 long</p>
+    <p class="wknote"><strong>Not in a seat yet?</strong> Replace the sales block with: Interview follow-ups and offer decisions first. Started a backup job? Use this block for content or rest. Replace the evening with: Past gate 45: start the best offer you have. Until it starts, keep Plan B and push every open interview to a decision this week.</p>
+    <table class="daytable">
+      <thead><tr><th style="width:11%">Day</th><th style="width:30%">10:30 · content</th><th style="width:30%">12:15 · sales</th><th>19:00 · shift (4 h)</th></tr></thead>
+      <tbody>
+        <tr><td class="dcell"><strong>D64</strong><br>Mon 11 Jan</td><td>Short 25, sprint A: “How long can you survive without water?” Read two sources, write a one-sentence answer and five hooks, script in two columns, record the voice-over. Body topic: use NHS, Mayo Clinic or peer-reviewed sources.</td><td>Objection bank: write every objection from last week's shifts and your best answer to each (S9).</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet.</td></tr>
+        <tr><td class="dcell"><strong>D65</strong><br>Tue 12 Jan</td><td>Short 25, sprint B: build the visuals, cut to your voice, add captions, post to YouTube Shorts, Instagram Reels and TikTok.</td><td>Review yesterday's conversations (45 min): score 3 threads with the call scorecard. Then rung 11: at least one voice call with a lead, if your role allows it.</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet.</td></tr>
+        <tr><td class="dcell"><strong>D66</strong><br>Wed 13 Jan</td><td>Short 26, sprint A: “What's beyond the observable universe?” Read two sources, write a one-sentence answer and five hooks, script in two columns, record the voice-over.</td><td>Review yesterday's conversations (45 min): score 3 threads with the call scorecard. Then add tonight's new objections to your bank.</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet.</td></tr>
+        <tr><td class="dcell"><strong>D67</strong><br>Thu 14 Jan</td><td>Short 26, sprint B: build the visuals, cut to your voice, add captions, post to YouTube Shorts, Instagram Reels and TikTok.</td><td>Review yesterday's conversations (45 min): score 3 threads with the call scorecard. Then S8: tie your booking pitch to the lead's own words.</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet.</td></tr>
+        <tr><td class="dcell"><strong>D68</strong><br>Fri 15 Jan</td><td>Long video 3, script: expand your best-performing short into a 3–5 minute script (outline in Part 10, item 9). Reuse its research.</td><td>Review yesterday's conversations (45 min): score 3 threads with the call scorecard. Then count your objection bank (target 15+).</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet.</td></tr>
+        <tr><td class="dcell"><strong>D69</strong><br>Sat 16 Jan</td><td colspan="3"><span class="lbl">Batch · 2 h</span> Long video 3: record the voice-over, edit (reuse the short's visuals), add captions, post to YouTube.</td></tr>
+        <tr><td class="dcell"><strong>D70</strong><br>Sun 17 Jan</td><td colspan="3"><span class="lbl">Review · 45 min</span> Sunday review (45 min): log the week in your tracker, set next week's 3 targets (Accountability Mirror), add 2 wins to the Cookie Jar. Rest for the remainder.</td></tr>
+        <tr class="gate"><td colspan="4"><strong>Fast-track check · day 70.</strong> Received ₹35K or more in the last 30 days? Target hit. The next 20 days are about making it reliable.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="wkblock">
+    <div class="wkhead"><span class="wkn">Week 11</span><span class="wkt">Get paid, prove it</span><span class="wkd">Days 71–77 · 18 Jan – 24 Jan</span></div>
+    <p class="wkproof"><strong>Proof by Sunday:</strong> ₹35K-a-month pace · testimonial · 29 shorts</p>
+    <p class="wknote"><strong>Not in a seat yet?</strong> Replace the sales block with: Interview follow-ups and offer decisions first. Started a backup job? Use this block for content or rest. Replace the evening with: Past gate 45: start the best offer you have. Until it starts, keep Plan B and push every open interview to a decision this week.</p>
+    <table class="daytable">
+      <thead><tr><th style="width:11%">Day</th><th style="width:30%">10:30 · content</th><th style="width:30%">12:15 · sales</th><th>19:00 · shift (4 h)</th></tr></thead>
+      <tbody>
+        <tr><td class="dcell"><strong>D71</strong><br>Mon 18 Jan</td><td>Short 27, sprint A: “Can we control our emotions fully?” Read two sources, write a one-sentence answer and five hooks, script in two columns, record the voice-over. Body topic: use NHS, Mayo Clinic or peer-reviewed sources.</td><td>Ask a satisfied lead or your manager for a two-line written testimonial. Then review yesterday's threads.</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet.</td></tr>
+        <tr><td class="dcell"><strong>D72</strong><br>Tue 19 Jan</td><td>Short 27, sprint B: build the visuals, cut to your voice, add captions, post to YouTube Shorts, Instagram Reels and TikTok.</td><td>Review yesterday's conversations (45 min): score 3 threads with the call scorecard. Then S13: check every claim you make in DMs is true and provable.</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet.</td></tr>
+        <tr><td class="dcell"><strong>D73</strong><br>Wed 20 Jan</td><td>Short 28, sprint A: “Could AI ever be conscious, and how would we know?” Read two sources, write a one-sentence answer and five hooks, script in two columns, record the voice-over.</td><td>Review yesterday's conversations (45 min): score 3 threads with the call scorecard. Then S10: practise the direct ask in 3 Gauntlet calls.</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet.</td></tr>
+        <tr><td class="dcell"><strong>D74</strong><br>Thu 21 Jan</td><td>Short 28, sprint B: build the visuals, cut to your voice, add captions, post to YouTube Shorts, Instagram Reels and TikTok.</td><td>Review yesterday's conversations (45 min): score 3 threads with the call scorecard. Then list what you'd need to learn to take closer calls.</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet.</td></tr>
+        <tr><td class="dcell"><strong>D75</strong><br>Fri 22 Jan</td><td>Short 29, sprint A: remake your best-performing short with a sharper hook and one new visual. Re-record the voice-over.</td><td>Gate day: check your 30-day income and pace (see the gate). Then review yesterday's threads.</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet.</td></tr>
+        <tr class="gate"><td colspan="4"><strong>Gate · day 75.</strong> Under a ₹35K-a-month pace? Add paid hours now (a second client, longer shifts). No income at all? Start the best backup job you can, today.</td></tr>
+        <tr><td class="dcell"><strong>D76</strong><br>Sat 23 Jan</td><td colspan="3"><span class="lbl">Batch · 2 h</span> Short 29, sprint B: build the visuals, cut to your voice, add captions, post to YouTube Shorts, Instagram Reels and TikTok.</td></tr>
+        <tr><td class="dcell"><strong>D77</strong><br>Sun 24 Jan</td><td colspan="3"><span class="lbl">Review · 45 min</span> Sunday review (45 min): log the week in your tracker, set next week's 3 targets (Accountability Mirror), add 2 wins to the Cookie Jar. Rest for the remainder.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="wkblock">
+    <div class="wkhead"><span class="wkn">Week 12</span><span class="wkt">Case study and the next step</span><span class="wkd">Days 78–84 · 25 Jan – 31 Jan</span></div>
+    <p class="wkproof"><strong>Proof by Sunday:</strong> Case study written · 31 shorts + 4 long</p>
+    <p class="wknote"><strong>Not in a seat yet?</strong> Replace the sales block with: Interview follow-ups and offer decisions first. Started a backup job? Use this block for content or rest. Replace the evening with: Past gate 45: start the best offer you have. Until it starts, keep Plan B and push every open interview to a decision this week.</p>
+    <table class="daytable">
+      <thead><tr><th style="width:11%">Day</th><th style="width:30%">10:30 · content</th><th style="width:30%">12:15 · sales</th><th>19:00 · shift (4 h)</th></tr></thead>
+      <tbody>
+        <tr><td class="dcell"><strong>D78</strong><br>Mon 25 Jan</td><td>Short 30, sprint A: “Does AI actually understand anything?” Read two sources, write a one-sentence answer and five hooks, script in two columns, record the voice-over.</td><td>Write your one-page case study: starting numbers → what you changed → results. It's your promotion or next-job document.</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet.</td></tr>
+        <tr><td class="dcell"><strong>D79</strong><br>Tue 26 Jan</td><td>Short 30, sprint B: build the visuals, cut to your voice, add captions, post to YouTube Shorts, Instagram Reels and TikTok.</td><td>Review yesterday's conversations (45 min): score 3 threads with the call scorecard. Then ask your manager about shadowing closer calls (rung 12 is next).</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet.</td></tr>
+        <tr><td class="dcell"><strong>D80</strong><br>Wed 27 Jan</td><td>Short 31, sprint A: “Can AI predict the weather better than meteorologists?” Read two sources, write a one-sentence answer and five hooks, script in two columns, record the voice-over.</td><td>Review yesterday's conversations (45 min): score 3 threads with the call scorecard. Then clean your CRM: every lead gets a next step and a date.</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet.</td></tr>
+        <tr><td class="dcell"><strong>D81</strong><br>Thu 28 Jan</td><td>Short 31, sprint B: build the visuals, cut to your voice, add captions, post to YouTube Shorts, Instagram Reels and TikTok.</td><td>Review yesterday's conversations (45 min): score 3 threads with the call scorecard. Then update LinkedIn with the real numbers from your case study.</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet.</td></tr>
+        <tr><td class="dcell"><strong>D82</strong><br>Fri 29 Jan</td><td>Long video 4, script: expand your best-performing short into a 3–5 minute script (outline in Part 10, item 9). Reuse its research. Then pick your lane for months 4–6: the topic with the most shares and saves.</td><td>Review yesterday's conversations (45 min): score 3 threads with the call scorecard. Then decide: setter → closer, or SDR → account executive? Write the next 3 skills you need.</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet.</td></tr>
+        <tr><td class="dcell"><strong>D83</strong><br>Sat 30 Jan</td><td colspan="3"><span class="lbl">Batch · 2 h</span> Long video 4: record the voice-over, edit (reuse the short's visuals), add captions, post to YouTube.</td></tr>
+        <tr><td class="dcell"><strong>D84</strong><br>Sun 31 Jan</td><td colspan="3"><span class="lbl">Review · 45 min</span> Sunday review (45 min): log the week in your tracker, set next week's 3 targets (Accountability Mirror), add 2 wins to the Cookie Jar. Rest for the remainder.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="wkblock">
+    <div class="wkhead"><span class="wkn">Week 13</span><span class="wkt">Day-90 review</span><span class="wkd">Days 85–90 · 1 Feb – 6 Feb</span></div>
+    <p class="wkproof"><strong>Proof by Sunday:</strong> Day-90 scoreboard filled · 33 shorts · v4 plan</p>
+    <p class="wknote"><strong>Not in a seat yet?</strong> Replace the sales block with: Interview follow-ups and offer decisions first. Started a backup job? Use this block for content or rest. Replace the evening with: Past gate 45: start the best offer you have. Until it starts, keep Plan B and push every open interview to a decision this week.</p>
+    <table class="daytable">
+      <thead><tr><th style="width:11%">Day</th><th style="width:30%">10:30 · content</th><th style="width:30%">12:15 · sales</th><th>19:00 · shift (4 h)</th></tr></thead>
+      <tbody>
+        <tr><td class="dcell"><strong>D85</strong><br>Mon 1 Feb</td><td>Short 32, sprint A: “the best question from your comments” Read two sources, write a one-sentence answer and five hooks, script in two columns, record the voice-over.</td><td>Review yesterday's conversations (45 min): score 3 threads with the call scorecard. Then a Dojo session on your weakest skill.</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet.</td></tr>
+        <tr><td class="dcell"><strong>D86</strong><br>Tue 2 Feb</td><td>Short 32, sprint B: build the visuals, cut to your voice, add captions, post to YouTube Shorts, Instagram Reels and TikTok.</td><td>Review yesterday's conversations (45 min): score 3 threads with the call scorecard. Then write the 3 things that moved your numbers most.</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet.</td></tr>
+        <tr><td class="dcell"><strong>D87</strong><br>Wed 3 Feb</td><td>Short 33, sprint A: “part two of your best short” Read two sources, write a one-sentence answer and five hooks, script in two columns, record the voice-over.</td><td>Review yesterday's conversations (45 min): score 3 threads with the call scorecard. Then list what you'll stop doing next quarter.</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet.</td></tr>
+        <tr><td class="dcell"><strong>D88</strong><br>Thu 4 Feb</td><td>Short 33, sprint B: build the visuals, cut to your voice, add captions, post to YouTube Shorts, Instagram Reels and TikTok.</td><td>Review yesterday's conversations (45 min): score 3 threads with the call scorecard. Then ask for feedback on what would get you promoted.</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet.</td></tr>
+        <tr><td class="dcell"><strong>D89</strong><br>Fri 5 Feb</td><td>Content review: list your top 3 and bottom 3 shorts and write why they differ (C11).</td><td>Fill in the Day-90 scoreboard in your tracker: income, conversations, shorts, long videos, highest fear rung.</td><td>Shift 19:00–23:00 IST (UK 13:30–17:30, US East 08:30–12:30). Log every conversation in your funnel sheet.</td></tr>
+        <tr><td class="dcell"><strong>D90</strong><br>Sat 6 Feb</td><td colspan="3"><span class="lbl">Batch · 2 h</span> Day 90 review: compare with the scoreboard, decide the split for the next 90 days, and ask me to read your tracker for v4.</td></tr>
+        <tr class="gate"><td colspan="4"><strong>Day 90.</strong> Target hit = ₹35K or more received in the last 30 days, or guaranteed pay of ₹35K a month with work already started.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<!-- PART14:END -->
+
 <!-- =============================== SOURCES =============================== -->
 <section class="part">
   <div class="kicker">Reference</div>
   <h1>Sources</h1>
-  <p class="sub">Research done November 2026 (v1), updated for v2 and v3. Many creator and sales-leader figures are self-reported or come from secondary write-ups, and are flagged as such in the text. Books referenced without links are listed in Part 12.</p>
+  <p class="sub">Research done November 2026 (v1), updated for v2, v3 and the v3.1 cross-check. Many creator and sales-leader figures are self-reported or come from secondary write-ups, and are flagged as such in the text. Books referenced without links are listed in Part 12.</p>
   <ol class="src">
     <li>Cleo Abram, Wikipedia. <a href="https://en.wikipedia.org/wiki/Cleo_Abram">en.wikipedia.org/wiki/Cleo_Abram</a></li>
     <li>YouTube Official Blog, "5 Huge If True moments for Cleo Abram". <a href="https://blog.youtube/creator-and-artist-stories/5-huge-if-true-moments-for-cleo-abram/">blog.youtube/…/5-huge-if-true-moments-for-cleo-abram</a></li>
@@ -1340,7 +1610,7 @@ table.tight td{padding:3.5pt 6pt}
     <li>Entrepreneurs on Fire, Cole Gordon episode. <a href="https://www.eofire.com/?p=45777">eofire.com/?p=45777</a> · Beyond a Million, "Teaching strategic sales systems with Cole Gordon". <a href="https://metacast.app/podcast/beyond-a-million/c8uGhOwg/022-2-5m-month-teaching-strategic-sales-systems-with-cole-gordon/LYUQus8v">metacast.app/podcast/beyond-a-million/…</a></li>
     <li>Young and Profiting E297, "Jeremy Miner: the neuroscience of selling". <a href="https://youngandprofiting.com/jeremy-miner-the-neuroscience-of-selling-master-the-secrets-to-effortless-sales-e297/">youngandprofiting.com/jeremy-miner…</a></li>
     <li>SetSmart, "High ticket closing: setter-closer playbook" and "What is a remote closer?" (vendor sources). <a href="https://setsmart.io/blog/high-ticket-closing">setsmart.io/blog/high-ticket-closing</a> · <a href="https://setsmart.io/blog/what-is-a-remote-closer">setsmart.io/blog/what-is-a-remote-closer</a> · DashClicks, "Commission structures for closers &amp; setters". <a href="https://www.dashclicks.com/blog/commission-structures-for-closers">dashclicks.com/blog/commission-structures-for-closers</a></li>
-    <li>Activated Scale, "High ticket sales scam" (reports FTC action against The Sales Mentor). <a href="https://www.activatedscale.com/blog/high-ticket-sales-scam">activatedscale.com/blog/high-ticket-sales-scam</a> · "Do research before signing up for job or training offers". <a href="https://www.aol.com/too-good-true-research-signing-110619755.html">aol.com/too-good-true-research…</a> · FTC, deceptive conduct actions. <a href="https://www.ftc.gov/terms/deceptivemisleading-conduct">ftc.gov/terms/deceptivemisleading-conduct</a></li>
+    <li>FTC, "Sales Mentor refunds". <a href="https://www.ftc.gov/enforcement/refunds/sales-mentor-refunds">ftc.gov/enforcement/refunds/sales-mentor-refunds</a> · Orrick InfoBytes, "FTC announces settlement of charges against operators of alleged telemarketing training scheme" (December 2023). <a href="https://infobytes.orrick.com/2023-12-14/ftc-announces-settlement-charges-against-operators-alleged-telemarketing-training-scheme/">infobytes.orrick.com/2023-12-14/…</a> · "Do research before signing up for job or training offers". <a href="https://www.aol.com/too-good-true-research-signing-110619755.html">aol.com/too-good-true-research…</a></li>
     <li>Payscale India, Business Development Associate (inside sales). <a href="https://www.payscale.com/research/IN/Job=Business_Development_Associate/Salary/8a30005b/Inside-Sales">payscale.com/research/IN/…</a> · Jobrise, "Tech sales in India: SDR and AE jobs". <a href="https://jobrise.io/hi/blog/tech-sales-india-sdr-ae-jobs/">jobrise.io/hi/blog/tech-sales-india-sdr-ae-jobs</a></li>
     <li>Context (Thomson Reuters Foundation), "Loss after loss: Indian parents say Byju's pushed them into debt". <a href="https://www.context.news/money-power-people/loss-after-loss-indian-parents-say-byjus-pushed-them-into-debt">context.news/…</a> · Scroll.in. <a href="https://scroll.in/article/1039797/worst-decision-of-my-life-byjus-accused-of-driving-parents-into-debt-with-predatory-practices">scroll.in/article/1039797</a> · Free Press Journal, NCPCR summons. <a href="https://www.freepressjournal.in/amp/india/child-rights-commission-issues-summons-to-byjus-ceo-over-hard-selling-of-courses">freepressjournal.in/…</a></li>
     <li>Tubefilter, "MrBeast's leaked production guide" (September 2024). <a href="https://www.tubefilter.com/2024/09/17/mrbeast-internal-production-guide-leaked-key-points/">tubefilter.com/2024/09/17/mrbeast-internal-production-guide…</a></li>
@@ -1356,6 +1626,9 @@ table.tight td{padding:3.5pt 6pt}
     <li>Kurzgesagt, Wikipedia. <a href="https://en.wikipedia.org/wiki/Kurzgesagt">en.wikipedia.org/wiki/Kurzgesagt</a> · Kurzgesagt, "Who we are". <a href="https://kurzgesagt.org/who-we-are">kurzgesagt.org/who-we-are</a></li>
     <li>Vsauce, Wikipedia. <a href="https://en.wikipedia.org/wiki/Vsauce">en.wikipedia.org/wiki/Vsauce</a> · Digiday, "The secret sauce behind YouTube giant Vsauce". <a href="https://digiday.com/media/secret-sauce-behind-youtube-giant-vsauce/">digiday.com/media/secret-sauce-behind-youtube-giant-vsauce</a></li>
     <li>Plagiarism Today, "YouTube targets 'inauthentic' content" (July 2025). <a href="https://www.plagiarismtoday.com/2025/07/08/youtube-targets-inauthentic-content/">plagiarismtoday.com/2025/07/08/youtube-targets-inauthentic-content</a> · Digiday, "YouTube's AI slop crackdown". <a href="https://digiday.com/media/youtubes-ai-slop-crackdown-has-creators-concerned-marketers-cheering">digiday.com/media/youtubes-ai-slop-crackdown…</a></li>
+    <li>News On AIR, "No order issued to lift ban on TikTok in India" (August 2025). <a href="https://www.newsonair.gov.in/no-order-issued-to-lift-ban-on-tiktok-in-india-govt">newsonair.gov.in/no-order-issued-to-lift-ban-on-tiktok-in-india-govt</a> · Storyboard18, "TikTok ban in India still stands". <a href="https://www.storyboard18.com/amp/brand-makers/tiktok-ban-in-india-still-stands-company-clarifies-after-brief-website-access-79505.htm">storyboard18.com/…</a> · Fluxnote, "CapCut alternative for India 2026: CapCut is banned here". <a href="https://fluxnote.io/guides/capcut-alternative-india">fluxnote.io/guides/capcut-alternative-india</a></li>
+    <li>TikTok Creator Rewards eligibility by country (third-party summaries; check TikTok Studio for your account). <a href="https://ttcalculator.net/learn/creator-fund-countries/">ttcalculator.net/learn/creator-fund-countries</a> · <a href="https://shortsfast.com/blog/tiktok-creator-rewards-eligibility-2026/">shortsfast.com/blog/tiktok-creator-rewards-eligibility-2026</a></li>
+    <li>Business Standard, "Instagram 'Edits', AI-powered video editing app, available on iOS, Android" (April 2025). <a href="https://business-standard.com/amp/technology/tech-news/instagram-edits-ai-powered-video-editing-app-available-on-ios-android-125042300730_1.html">business-standard.com/…</a> · App Store, "Edits: Video Editor". <a href="https://apps.apple.com/app/id6738967378">apps.apple.com/app/id6738967378</a></li>
   </ol>
 </section>
 

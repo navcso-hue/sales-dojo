@@ -1,5 +1,6 @@
 // Renders roadmap.html to the PDF one folder up.
 // Usage: node roadmap/source/build.js   (needs Playwright + Chromium)
+// If you edited plan_data.py, run python3 roadmap/source/build_plan.py first.
 const path = require('path');
 const { chromium } = require('playwright');
 

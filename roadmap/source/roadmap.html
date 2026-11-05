@@ -12,7 +12,7 @@
 }
 @page{
   size:A4; margin:17mm 16mm 19mm 16mm;
-  @bottom-left{content:"Sales × Content · 90-Day Roadmap · v3.3"; font:7.5pt Inter, sans-serif; color:#8A929E}
+  @bottom-left{content:"Sales × Content · 90-Day Roadmap · v3.4"; font:7.5pt Inter, sans-serif; color:#8A929E}
   @bottom-right{content:counter(page) " / " counter(pages); font:7.5pt Inter, sans-serif; color:#8A929E}
 }
 @page :first{margin:0; @bottom-left{content:none} @bottom-right{content:none}}
@@ -132,13 +132,13 @@ table.tight td{padding:3.5pt 6pt}
 .script{font:8.5pt/1.5 Inter; background:#fff; border:1px dashed #C9CFD6; border-radius:6px; padding:7pt 9pt; margin:5pt 0 8pt; break-inside:avoid}
 .script b{color:var(--sales)}
 .script.c b{color:var(--content)}
-.src{font-size:7pt; line-height:1.2}
+.src{font-size:7pt; line-height:1.3}
 .onepage{font-size:9pt; line-height:1.45}
 .onepage h2{margin:9pt 0 4pt}
 .onepage ol li{margin-bottom:2pt}
 .onepage .box{padding:7pt 10pt; margin:7pt 0}
 .onepage table{margin:4pt 0 6pt}
-.src li{margin-bottom:.6pt; word-break:break-word}
+.src li{margin-bottom:1pt; word-break:break-word}
 .src a{color:var(--muted)}
 .wkblock{break-inside:avoid; margin:12pt 0 14pt}
 .wkhead{display:flex; flex-wrap:wrap; align-items:baseline; gap:3pt 10pt; border-bottom:2px solid var(--ink); padding-bottom:3pt; break-after:avoid}
@@ -175,7 +175,7 @@ table.daytable tr.gate td{background:var(--amber-t); color:var(--ink)}
   <div class="meta">
     <div><b>Built for</b>India-based · ~33–38 hrs a week (3 silent hrs a day) · live client work in your evening</div>
     <div><b>Target</b>₹35K/month floor by day 90 · months 4–12 to a real career</div>
-    <div><b>Version</b>v3.3 · November 2026 · cross-checked, day by day, rebuilt for bad weeks</div>
+    <div><b>Version</b>v3.4 · November 2026 · cross-checked, day by day, with a nightly debrief</div>
   </div>
 </section>
 
@@ -673,7 +673,7 @@ table.daytable tr.gate td{background:var(--amber-t); color:var(--ink)}
       <p style="margin-top:4pt"><strong>No streak counter.</strong> When a log shows a broken streak, people become less likely to continue, whatever they actually did, and the drop is bigger when they blame themselves.<span class="cite">[40]</span> Your tracker counts the days you showed up, a number that can only grow.</p></div>
     <div class="box sales"><div class="t">The way back in · after 2+ days away</div><ol style="margin:0">
       <li><strong>Open Today, not Score.</strong> Do a Minimum Viable Day now, not "from Monday". Call today a fresh start: in experiments, framing a day as a new beginning made people keener to start.<span class="cite">[41]</span></li>
-      <li><strong>Write one line: what got in the way?</strong> An after-action note, not a verdict. In one observational study, students who forgave themselves for procrastinating procrastinated less before their next exams.<span class="cite">[42]</span></li>
+      <li><strong>Do the debrief: what got in the way?</strong> It judges the reason, never you. In one observational study, students who forgave themselves for procrastinating procrastinated less before their next exams.<span class="cite">[42]</span></li>
       <li><strong>Repeat your last cleared fear rung once</strong> before stepping up. Some fear returns after a break; that's expected.</li>
       <li><strong>The calendar doesn't pause.</strong> If a gate passed while you were away, do its check today. That's what the gates are for.</li></ol></div>
   </div>
@@ -692,7 +692,7 @@ table.daytable tr.gate td{background:var(--amber-t); color:var(--ink)}
       <tr><td>13:45–16:00</td><td colspan="2">Lunch and leisure (uncuttable) · last caffeine by 14:00</td></tr>
       <tr><td>16:00–19:00</td><td colspan="2">Dinner prep, early dinner, walk, 10–20 min NSDR, leisure</td></tr>
       <tr><td>19:00–22:00/23:00</td><td><strong>Live block (3h):</strong> applications, outreach, role-plays, Looms. UK afternoon / US East morning.</td><td><strong>Setter shift 19:00–23:00:</strong> UK 13:30–17:30 / US East 08:30–12:30</td></tr>
-      <tr><td>23:00–00:00</td><td colspan="2">Shutdown: 5-minute log, plan tomorrow's first task, screens down</td></tr>
+      <tr><td>23:00–00:00</td><td colspan="2">Shutdown: log, then the nightly debrief (Part 10, item 16); plan tomorrow's first task; screens down</td></tr>
       <tr><td>00:00–08:00</td><td colspan="2"><strong>Sleep, 8 hours.</strong> Non-negotiable.</td></tr>
       <tr><td>Weekends</td><td colspan="2">US/UK clients are off. <strong>Saturday:</strong> a 2-hour batch to finish the week's last short or long video. <strong>Sunday:</strong> 45-minute review, then off. <strong>Weekly total:</strong> ~33h in weeks 1–5, ~38h in the seat.</td></tr>
     </tbody>
@@ -1295,6 +1295,24 @@ table.daytable tr.gate td{background:var(--amber-t); color:var(--ink)}
       <tr><td>1:45–2:00</td><td>The ask: a paid trial week.</td></tr>
     </tbody>
   </table>
+
+  <h2>16 · The nightly debrief (in your tracker)</h2>
+  <p class="sm">An end-of-day interview you can't skip or talk your way past: about 3 minutes, at shutdown. Debriefs work: across 46 samples they improved performance by about 20–25%.<span class="cite">[43]</span> Knowing all day that you'll account for it tonight helps too: people who expect to justify themselves to an audience whose views they don't know think more self-critically before acting.<span class="cite">[44]</span></p>
+  <div class="cols">
+    <div class="box"><div class="t">How it runs</div><ol style="margin:0">
+      <li><strong>Facts first.</strong> Each block: done, partly or missed. Your logged numbers. Your Screen Time and top app, as the phone measured them.</li>
+      <li><strong>A reason for every miss:</strong> a cause, then what happened instead, in specifics (when, what, how long).</li>
+      <li><strong>The judge</strong> (Claude, on your account) may ask up to two follow-up questions, then rules on each miss: valid, partly or drift.</li>
+      <li><strong>One if-then plan for tomorrow</strong>, in your words: "If [cue], then I will [first action]." Across 94 tests, plans like this had a medium-to-large effect on reaching goals.<span class="cite">[45]</span></li>
+      <li><strong>No quiet skipping.</strong> Until yesterday's debrief is done, Today shows only the debrief. After a gap, one debrief covers all the days you missed.</li></ol></div>
+    <div class="box warn"><div class="t">How it judges, and why it's hard to fool</div><ul style="margin:0">
+      <li><strong>The 30-minute test.</strong> Valid means a specific obstacle outside your control stopped the block: illness, an emergency, an outage, paid work running over. If a shorter version was still possible, it's partly. Scrolling, "busy", "tired" and avoidance are drift.</li>
+      <li><strong>It expects excuses.</strong> People credit themselves for successes and blame circumstances for failures, a large effect across 266 studies.<span class="cite">[46]</span> Vague causes get a follow-up, and Screen Time is checked against "no time".</li>
+      <li><strong>Ticks need evidence:</strong> an evening block marked done with nothing logged is flagged. <strong>Patterns count:</strong> it reads your last 14 debriefs.</li>
+      <li><strong>One verdict.</strong> Once your answers reach the judge they're locked, so you can't re-roll it.</li>
+      <li><strong>Honest beats polished.</strong> "I avoided it" is still drift, but it gets a next step, not contempt. It judges the reason, never you: shame about who you are makes people hide; guilt about what they did makes them repair.<span class="cite">[47]</span></li></ul></div>
+  </div>
+  <p class="sm" style="margin-top:5pt"><strong>What it can't do: know the truth.</strong> Lie consistently and it will believe you. The gates can't be fooled: conversations, applications, shorts and money are the ground truth. The debrief is a mirror; the gates are the scale.</p>
 </section>
 
 <!-- =============================== PART 9 =============================== -->
@@ -1387,7 +1405,7 @@ table.daytable tr.gate td{background:var(--amber-t); color:var(--ink)}
 <section class="part">
   <div class="kicker">Part 13</div>
   <h1>Your answers, and what comes next</h1>
-  <p class="sub">v3.1 is built on everything you've told me, cross-checked line by line. The next version (v4) should be built on data from your first two weeks, which your tracker collects: <a href="https://claude.ai/artifact/ShABr2b43XRjRJPr6a9CVv">open your tracker</a>.</p>
+  <p class="sub">v3.4 is built on everything you've told me, cross-checked line by line. The next version (v4) should be built on data from your first two weeks, which your tracker collects: <a href="https://claude.ai/artifact/ShABr2b43XRjRJPr6a9CVv">open your tracker</a>.</p>
   <table class="tight">
     <thead><tr><th style="width:28%">Question</th><th style="width:30%">Your answer</th><th>Where it changed the plan</th></tr></thead>
     <tbody>
@@ -1401,22 +1419,18 @@ table.daytable tr.gate td{background:var(--amber-t); color:var(--ink)}
       <tr><td>Fear ranking?</td><td>Camera → calls → rejection → messaging</td><td>Part 03: messaging-first seat, faceless content, a career-only camera ladder</td></tr>
       <tr><td>Equipment?</td><td>MacBook Air M2, iPhone 16 Plus, fair-good internet, mostly reliable power</td><td>Parts 04 and 08: no content gear needed; router UPS and hotspot backup</td></tr>
       <tr><td>Your other chats (searched at your request)</td><td>CopperMediaAI, AI-tool budget, Sales Dojo, AI-news automation</td><td>Parts 02, 04, 08 and 10: funnel skills as proof, an own-voice show, a tighter tool budget</td></tr>
-      <tr><td>Update, 5 November</td><td>CopperMediaAI hasn't posted for weeks; you close Bet On Me when you see your record</td><td>Parts 02, 06 and 08 and the tracker: CopperMediaAI paused on purpose, the record rule, the way back in, no streak counter</td></tr>
+      <tr><td>Updates, 5 November</td><td>CopperMediaAI is paused; you close Bet On Me when you see your record; you rationalise to avoid shame and want a debrief you can't skip</td><td>Parts 02, 06, 08 and 10 and the tracker: the record rule, the way back in, no streaks, and a nightly debrief that locks the next day until it's done</td></tr>
     </tbody>
   </table>
 
   <h2>After two weeks, ask me to read your tracker (for v4)</h2>
   <ol>
-    <li class="q">Your fear scores (0–10) for each rung you attempted, before and after.</li>
-    <p class="sm muted">Shows whether the ladder is pitched right or needs smaller steps.</p>
-    <li class="q">Your show name and links to your first 5 shorts.</li>
-    <p class="sm muted">I'll review hooks, pacing and accuracy against modules C3–C6.</p>
-    <li class="q">How many applications and Looms you've sent, and any replies.</li>
-    <p class="sm muted">Tells us whether the problem is volume, the message, or the targeting.</p>
-    <li class="q">The details of any job offer before you accept it.</li>
-    <p class="sm muted">We vet it against Part 11 and the ₹35K math in Part 02.</p>
+    <li class="q">Your fear scores (0–10) for each rung you attempted, before and after. <span class="sm muted" style="font-weight:400">Shows whether the ladder is pitched right or needs smaller steps.</span></li>
+    <li class="q">Your show name and links to your first 5 shorts. <span class="sm muted" style="font-weight:400">I'll review hooks, pacing and accuracy against modules C3–C6.</span></li>
+    <li class="q">How many applications and Looms you've sent, and any replies. <span class="sm muted" style="font-weight:400">Tells us whether the problem is volume, the message, or the targeting.</span></li>
+    <li class="q">The details of any job offer before you accept it. <span class="sm muted" style="font-weight:400">We vet it against Part 11 and the ₹35K math in Part 02.</span></li>
   </ol>
-  <div class="box truth"><div class="t">Last word</div><p>Ninety days from now you'll either have results or reasons. This plan is built so that even on scared or bad weeks you collect <strong>rungs, reps and rupees</strong>. Start with your least scary thing today. Log it. Fix one thing a week. That is the whole game.</p></div>
+  <div class="box truth"><div class="t">Last word</div><p>Ninety days from now you'll either have results or reasons. This plan is built so that even on scared or bad weeks you collect <strong>rungs, reps and rupees</strong>. Start with your least scary thing today. Log it, debrief it, fix one thing a week. That is the whole game.</p></div>
 </section>
 
 <!-- =============================== PART 14 =============================== -->
@@ -1430,7 +1444,7 @@ table.daytable tr.gate td{background:var(--amber-t); color:var(--ink)}
     <div class="box"><div class="t">Weekends</div><p class="sm"><strong>Saturday</strong>: a 2-hour batch to finish the week's last short or long video. <strong>Sunday</strong>: a 45-minute review, then rest.</p></div>
     <div class="box warn"><div class="t">Gates</div><p class="sm">Days 21, 35, 45, 60, 75 and 90 carry a decision. They are what make the deadline fixed: each one switches you to a more certain income source in time.</p></div>
   </div>
-  <div class="box sales"><div class="t">Before day 1</div><ul class="check" style="margin:0"><li>Set your start date in the tracker (More tab). A Monday keeps weekends in line with US/UK days off.</li><li>Start Wise or Payoneer verification now. It can take several days.</li><li>Order the router UPS and test your iPhone hotspot on a 20-minute video call.</li><li>Read Parts 00–06 of the roadmap once, end to end.</li><li>Pause CopperMediaAI on purpose (Part 08): screenshot its ManyChat flow and best numbers for your applications, then cancel any tool you paid for only because of it.</li><li>Review your AI-tool spend. Keep what earns or trains you; every ₹5K a month you save is about 14% of the ₹35K target.</li><li>Read the record rule and the way back in (Part 06). Leave Bet On Me closed for the 90 days: one log only, this tracker.</li><li>Optional head start: shortlist two show names and check the handles.</li></ul></div>
+  <div class="box sales"><div class="t">Before day 1</div><ul class="check" style="margin:0"><li>Set your start date in the tracker (More tab). A Monday keeps weekends in line with US/UK days off.</li><li>Start Wise or Payoneer verification now. It can take several days.</li><li>Order the router UPS and test your iPhone hotspot on a 20-minute video call.</li><li>Read Parts 00–06 of the roadmap once, end to end.</li><li>Pause CopperMediaAI on purpose (Part 08): screenshot its ManyChat flow and best numbers for your applications, then cancel any tool you paid for only because of it.</li><li>Review your AI-tool spend. Keep what earns or trains you; every ₹5K a month you save is about 14% of the ₹35K target.</li><li>Read the record rule and the way back in (Part 06). Leave Bet On Me closed for the 90 days: one log only, this tracker.</li><li>Set a daily 23:05 iPhone reminder called 'Debrief' with your tracker link. Each night's debrief unlocks the next day's tasks (Part 10, item 16).</li><li>Optional head start: shortlist two show names and check the handles.</li></ul></div>
   <div class="wkblock">
     <div class="wkhead"><span class="wkn">Week 1</span><span class="wkt">Voice, listening, setup</span><span class="wkd">Days 1–7 · 9 Nov – 15 Nov</span></div>
     <p class="wkproof"><strong>Proof by Sunday:</strong> Setup done · rung 3 reached · 2 shorts</p>
@@ -1660,7 +1674,7 @@ table.daytable tr.gate td{background:var(--amber-t); color:var(--ink)}
 <section class="part">
   <div class="kicker">Reference</div>
   <h1>Sources</h1>
-  <p class="sub">Research done November 2026 (v1), updated for v2, v3, the v3.1 cross-check, v3.2 and v3.3. Many creator and sales-leader figures are self-reported or come from secondary write-ups, and are flagged as such in the text. Books referenced without links are listed in Part 12.</p>
+  <p class="sub">Research done November 2026 (v1), updated for v2, v3, the v3.1 cross-check, v3.2, v3.3 and v3.4. Many creator and sales-leader figures are self-reported or come from secondary write-ups, and are flagged as such in the text. Books referenced without links are listed in Part 12.</p>
   <ol class="src">
     <li>Cleo Abram, Wikipedia. <a href="https://en.wikipedia.org/wiki/Cleo_Abram">en.wikipedia.org/wiki/Cleo_Abram</a></li>
     <li>YouTube Official Blog, "5 Huge If True moments for Cleo Abram". <a href="https://blog.youtube/creator-and-artist-stories/5-huge-if-true-moments-for-cleo-abram/">blog.youtube/…/5-huge-if-true-moments-for-cleo-abram</a></li>
@@ -1704,6 +1718,11 @@ table.daytable tr.gate td{background:var(--amber-t); color:var(--ink)}
     <li>Silverman &amp; Barasch, "On or off track: how (broken) streaks affect consumer decisions", <em>Journal of Consumer Research</em> 49(6), 1095–1117 (2023). <a href="https://doi.org/10.1093/jcr/ucac029">doi.org/10.1093/jcr/ucac029</a></li>
     <li>Dai, Milkman &amp; Riis, "Put your imperfections behind you: temporal landmarks spur goal initiation when they signal new beginnings", <em>Psychological Science</em> 26(12), 1927–1936 (2015). <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4839284">pmc.ncbi.nlm.nih.gov/articles/PMC4839284</a></li>
     <li>Wohl, Pychyl &amp; Bennett, "I forgive myself, now I can study: how self-forgiveness for procrastinating can reduce future procrastination", <em>Personality and Individual Differences</em> 48(7), 803–808 (2010). BPS Research Digest summary. <a href="https://bps.org.uk/research-digest/cure-procrastination-forgive-yourself">bps.org.uk/research-digest/…</a></li>
+    <li>Tannenbaum &amp; Cerasoli, "Do team and individual debriefs enhance performance? A meta-analysis", <em>Human Factors</em> 55(1), 231–245 (2013). <a href="https://pubmed.ncbi.nlm.nih.gov/23516804/">pubmed.ncbi.nlm.nih.gov/23516804</a></li>
+    <li>Lerner &amp; Tetlock, "Accounting for the effects of accountability", <em>Psychological Bulletin</em> 125(2), 255–275 (1999). <a href="https://doi.org/10.1037/0033-2909.125.2.255">doi.org/10.1037/0033-2909.125.2.255</a></li>
+    <li>Gollwitzer &amp; Sheeran, "Implementation intentions and goal achievement: a meta-analysis of effects and processes", <em>Advances in Experimental Social Psychology</em> 38, 69–119 (2006). <a href="https://doi.org/10.1016/S0065-2601(06)38002-1">doi.org/10.1016/S0065-2601(06)38002-1</a></li>
+    <li>Mezulis, Abramson, Hyde &amp; Hankin, "Is there a universal positivity bias in attributions? A meta-analytic review of individual, developmental, and cultural differences in the self-serving attributional bias", <em>Psychological Bulletin</em> 130(5), 711–747 (2004). <a href="https://doi.org/10.1037/0033-2909.130.5.711">doi.org/10.1037/0033-2909.130.5.711</a></li>
+    <li>Tangney, Stuewig &amp; Mashek, "Moral emotions and moral behavior", <em>Annual Review of Psychology</em> 58, 345–372 (2007). <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3083636/">pmc.ncbi.nlm.nih.gov/articles/PMC3083636</a></li>
   </ol>
 </section>
 

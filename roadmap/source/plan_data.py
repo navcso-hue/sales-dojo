@@ -25,6 +25,7 @@ PRESTART = [
     ("copper", "Pause CopperMediaAI on purpose (Part 08): screenshot its ManyChat flow and best numbers for your applications, then cancel any tool you paid for only because of it."),
     ("tools", "Review your AI-tool spend. Keep what earns or trains you; every ₹5K a month you save is about 14% of the ₹35K target."),
     ("record", "Read the record rule and the way back in (Part 06). Leave Bet On Me closed for the 90 days: one log only, this tracker."),
+    ("debrief", "Set a daily 23:05 iPhone reminder called 'Debrief' with your tracker link. Each night's debrief unlocks the next day's tasks (Part 10, item 16)."),
     ("name", "Optional head start: shortlist two show names and check the handles."),
 ]
 

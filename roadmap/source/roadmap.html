@@ -12,7 +12,7 @@
 }
 @page{
   size:A4; margin:17mm 16mm 19mm 16mm;
-  @bottom-left{content:"Sales × Content · 90-Day Roadmap · v3.2"; font:7.5pt Inter, sans-serif; color:#8A929E}
+  @bottom-left{content:"Sales × Content · 90-Day Roadmap · v3.3"; font:7.5pt Inter, sans-serif; color:#8A929E}
   @bottom-right{content:counter(page) " / " counter(pages); font:7.5pt Inter, sans-serif; color:#8A929E}
 }
 @page :first{margin:0; @bottom-left{content:none} @bottom-right{content:none}}
@@ -97,6 +97,8 @@ td.w{white-space:nowrap}
 table.tight td{padding:3.5pt 6pt}
 .wk td:first-child{font-weight:700; color:var(--ink); white-space:nowrap}
 .check li{list-style:none; position:relative; padding-left:2pt}
+.check.two{columns:2; column-gap:9mm}
+.check.two li{break-inside:avoid}
 .check{padding-left:13pt}
 .check li::before{content:""; position:absolute; left:-12pt; top:2.5pt; width:7.5pt; height:7.5pt; border:1.2px solid var(--faint); border-radius:2px}
 
@@ -130,13 +132,13 @@ table.tight td{padding:3.5pt 6pt}
 .script{font:8.5pt/1.5 Inter; background:#fff; border:1px dashed #C9CFD6; border-radius:6px; padding:7pt 9pt; margin:5pt 0 8pt; break-inside:avoid}
 .script b{color:var(--sales)}
 .script.c b{color:var(--content)}
-.src{font-size:7pt; line-height:1.3}
+.src{font-size:7pt; line-height:1.2}
 .onepage{font-size:9pt; line-height:1.45}
 .onepage h2{margin:9pt 0 4pt}
 .onepage ol li{margin-bottom:2pt}
 .onepage .box{padding:7pt 10pt; margin:7pt 0}
 .onepage table{margin:4pt 0 6pt}
-.src li{margin-bottom:1pt; word-break:break-word}
+.src li{margin-bottom:.6pt; word-break:break-word}
 .src a{color:var(--muted)}
 .wkblock{break-inside:avoid; margin:12pt 0 14pt}
 .wkhead{display:flex; flex-wrap:wrap; align-items:baseline; gap:3pt 10pt; border-bottom:2px solid var(--ink); padding-bottom:3pt; break-after:avoid}
@@ -173,7 +175,7 @@ table.daytable tr.gate td{background:var(--amber-t); color:var(--ink)}
   <div class="meta">
     <div><b>Built for</b>India-based · ~33–38 hrs a week (3 silent hrs a day) · live client work in your evening</div>
     <div><b>Target</b>₹35K/month floor by day 90 · months 4–12 to a real career</div>
-    <div><b>Version</b>v3.2 · November 2026 · cross-checked, day by day, with context from your other chats</div>
+    <div><b>Version</b>v3.3 · November 2026 · cross-checked, day by day, rebuilt for bad weeks</div>
   </div>
 </section>
 
@@ -185,7 +187,7 @@ table.daytable tr.gate td{background:var(--amber-t); color:var(--ink)}
 
   <div class="box truth">
     <div class="t">The verdict, straight</div>
-    <p><strong>Sales is your income engine. Content is your compounding asset.</strong> For you, that means a remote, text-first sales seat for a US or UK company, worked in your evening (their working day), paying at least ₹35K a month by day 90. Content is your own show: weird questions about space, AI and the human body, answered in English. It can stay faceless; only your job applications need a little camera time. Your biggest risk is not skill or time. <strong>It's fear.</strong> So this plan treats fear as a skill, with a ladder you climb one rung at a time.</p>
+    <p><strong>Sales is your income engine. Content is your compounding asset.</strong> For you, that means a remote, text-first sales seat for a US or UK company, worked in your evening (their working day), paying at least ₹35K a month by day 90. Content is your own show: weird questions about space, AI and the human body, answered in English. It can stay faceless; only your job applications need a little camera time. Your biggest risk is not skill or time. <strong>It's fear, and the avoidance it breeds.</strong> So this plan treats fear as a skill, with a ladder you climb one rung at a time.</p>
   </div>
 
   <h2>The plan in 7 lines</h2>
@@ -195,7 +197,7 @@ table.daytable tr.gate td{background:var(--amber-t); color:var(--ink)}
     <li><strong>Weeks 6–12: work the seat 19:00–23:00 IST, Monday to Friday.</strong> That's the UK afternoon and the US East Coast morning. Review your conversations daily. Fix the leakiest funnel stage weekly.</li>
     <li><strong>Content alongside:</strong> 3 faceless English shorts a week, each answering one curiosity question ("Does 4D exist?"). Your voice, your script, your visuals. About 33 shorts and 4 long videos by day 90.</li>
     <li><strong>Gates keep the deadline fixed:</strong> no seat by day 35 → run three pipelines at once (remote roles, editing for US/UK creators, a backup salaried sales job). Still nothing at day 45 → take the best offer that meets the floor. Under ₹20K a month at day 60 → add a second income line. Target window: <strong>day 70 on the fast lane, day 90 at the latest.</strong></li>
-    <li><strong>Your week:</strong> one 3-hour silent block every weekday plus the evening live block; light weekends. About 33–38 hours a week, inside your 5–6 h/day budget. Bad days have a 30-minute minimum. Never zero, never miss twice. No regular shifts past midnight IST.</li>
+    <li><strong>Your week:</strong> one 3-hour silent block every weekday plus the evening live block; light weekends. About 33–38 hours a week, inside your 5–6 h/day budget. Bad days have a 30-minute minimum, and that's all a day after a miss needs. Never zero, never miss twice. No regular shifts past midnight IST.</li>
     <li><strong>Months 4–12:</strong> setter → closer, or SDR → account executive. Content moves to long-form, a named show and a newsletter. Long-term model: <strong>Justin Welsh</strong> (sales expert turned creator) crossed with <strong>Cleo Abram</strong> (a specific, optimistic sci-tech show).</li>
   </ol>
 
@@ -381,7 +383,8 @@ table.daytable tr.gate td{background:var(--amber-t); color:var(--ink)}
       <tr><td><strong>"Random brainstorm" = questions like "Does 4D exist?" or "Can you cry from one eye?"</strong></td><td>Not a random channel: a proven format. One curious question, one surprising true answer.</td><td>It becomes your show's format, and possibly its name (Part 08).</td></tr>
       <tr><td><strong>Fear, most to least: camera → calls → rejection → messaging</strong></td><td>Messaging is your easiest entry point. Camera is the scariest, but job interviews and Looms need a little of it.</td><td>Part 03: content can stay faceless long-term; a separate 6-step "career camera" ladder gets you interview-ready by week 5.</td></tr>
       <tr><td><strong>MacBook Air M2, iPhone 16 Plus; internet fair-good; power mostly reliable</strong></td><td>Enough to make professional-looking faceless content and to work remotely. The weak links are internet and power during client hours.</td><td>No content gear to buy. Before your first shift: a small UPS for your Wi-Fi router, and your iPhone hotspot tested as backup (Part 04).</td></tr>
-      <tr><td><strong>From your other chats: you run @coppermedia.ai</strong> (automated AI-news Reels, a cloned voice, a ManyChat comment-to-DM funnel)</td><td>You already have funnel and automation skills most beginner setters don't, plus a content asset.</td><td>Use it as proof in applications (Part 04, Part 10 item 13). Keep the new show in your own voice and move CopperMediaAI approvals to the morning (Part 08).</td></tr>
+      <tr><td><strong>From your other chats: you built @coppermedia.ai</strong> (automated AI-news Reels, a cloned voice, a ManyChat comment-to-DM funnel). <strong>Update, 5 Nov:</strong> no posts for a few weeks.</td><td>The funnel and automation skills are real, and most beginner setters don't have them. They stay real with the page paused.</td><td>Use it as proof in applications, described honestly as paused (Part 04, Part 10 item 13). Don't restart it during the 90 days (Part 08).</td></tr>
+      <tr><td><strong>You, 5 Nov: you built Bet On Me, but close it when you see your record</strong></td><td>The likeliest way these 90 days end: a bad week, then avoiding the evidence, then quitting. It's the same avoidance as camera and call fear, aimed at your own numbers.</td><td>One log only: the phone tracker, rebuilt so Today never shows your misses. You face the record on Sundays, on purpose, and after a gap there's a set way back in (Part 06).</td></tr>
       <tr><td><strong>From your other chats: about ₹15K a month on AI tools</strong>, with ₹30K coming in</td><td>Tools cost close to half of the ₹35K target.</td><td>For these 90 days, keep only the tools that earn or train you. Every ₹5K a month saved is about 14% of the target.</td></tr>
       <tr><td><strong>From your other chats: you built Sales Dojo</strong> (AI voice buyers) and an AI-news automation pipeline</td><td>Real technical skill. "Skills: none" undersells you.</td><td>Say it in interviews. It also opens a third service under seat option 2: comment-to-DM setups for US/UK coaches.</td></tr>
     </tbody>
@@ -559,7 +562,7 @@ table.daytable tr.gate td{background:var(--amber-t); color:var(--ink)}
     <li><strong>"Hiring setters" posts</strong> on LinkedIn and X from coaches, agencies and founders. Reply with your Loom within the hour.</li>
     <li><strong>Direct outreach:</strong> 10 small US/UK agencies or coaching businesses a day, each with a 2-minute Loom on how you'd book calls for them.</li>
   </ul>
-  <div class="script"><b>Application message</b> · "Hi {first name}, saw you're hiring a setter. I'm based in India and work 1:30–5:30pm UK / 8:30am–12:30pm ET, so your leads get answered while they're warm. I built and run an automated comment-to-DM funnel on my AI-news Instagram page, and I train daily on discovery and objection handling. 2-minute intro: {Loom}. Happy to do a paid trial week. Would that be useful?"<br><b>Why it works</b> · short; their time zone; a reason to pick you; proof; a low-risk next step. Record one master Loom (script in Part 10, item 15) and re-record only the first 10 seconds for your top targets.</div>
+  <div class="script"><b>Application message</b> · "Hi {first name}, saw you're hiring a setter. I'm based in India and work 1:30–5:30pm UK / 8:30am–12:30pm ET, so your leads get answered while they're warm. I built an automated comment-to-DM funnel for my AI-news Instagram page, and I train daily on discovery and objection handling. 2-minute intro: {Loom}. Happy to do a paid trial week. Would that be useful?"<br><b>Why it works</b> · short; their time zone; a reason to pick you; proof; a low-risk next step. Record one master Loom (script in Part 10, item 15) and re-record only the first 10 seconds for your top targets.</div>
 </section>
 
 <section>
@@ -662,7 +665,19 @@ table.daytable tr.gate td{background:var(--amber-t); color:var(--ink)}
       <ol><li><strong>10 min sales:</strong> one Dojo call, or ten objection flashcards.</li><li><strong>10 min content:</strong> five hooks, or one voice-over take.</li><li><strong>5 min:</strong> read your Cookie Jar.</li><li><strong>5-min log.</strong> Done. No guilt.</li></ol>
       <p class="sm" style="margin:5pt 0 0">With a paid shift: tell your manager early if you can't work. The minimum day covers your own practice; it never replaces a shift.</p></div>
   </div>
-  <p style="margin-top:8pt"><strong>The two rules: never zero, never miss twice.</strong> A Minimum Viable Day counts. Two skipped days in a row is how plans die, so after any miss, the next day is at least Standard. (The "never miss twice" rule is James Clear's, from <em>Atomic Habits</em>.)</p>
+  <p style="margin-top:8pt"><strong>The two rules: never zero, never miss twice.</strong> A Minimum Viable Day counts. After a miss, the next day only has to be a Minimum Viable Day, done first thing. Don't make up for the miss: a bigger target is what makes a second miss likely. Volume is the Sunday review's job. (The "never miss twice" rule is James Clear's, from <em>Atomic Habits</em>.)</p>
+
+  <div class="cols avoid">
+    <div class="box warn"><div class="t">The record rule</div>
+      <p><strong>Today shows only today. You face your record on Sundays, on purpose.</strong> Closing Bet On Me when you see your record is the "ostrich problem": people avoid checking progress when they expect bad news.<span class="cite">[38]</span> Yet checking works: across 138 experiments it raised goal attainment, more so when progress was written down.<span class="cite">[39]</span> So keep the record and schedule facing it: the Score tab, in Sunday's review. On a bad day, open Today and nothing else.</p>
+      <p style="margin-top:4pt"><strong>No streak counter.</strong> When a log shows a broken streak, people become less likely to continue, whatever they actually did, and the drop is bigger when they blame themselves.<span class="cite">[40]</span> Your tracker counts the days you showed up, a number that can only grow.</p></div>
+    <div class="box sales"><div class="t">The way back in · after 2+ days away</div><ol style="margin:0">
+      <li><strong>Open Today, not Score.</strong> Do a Minimum Viable Day now, not "from Monday". Call today a fresh start: in experiments, framing a day as a new beginning made people keener to start.<span class="cite">[41]</span></li>
+      <li><strong>Write one line: what got in the way?</strong> An after-action note, not a verdict. In one observational study, students who forgave themselves for procrastinating procrastinated less before their next exams.<span class="cite">[42]</span></li>
+      <li><strong>Repeat your last cleared fear rung once</strong> before stepping up. Some fear returns after a break; that's expected.</li>
+      <li><strong>The calendar doesn't pause.</strong> If a gate passed while you were away, do its check today. That's what the gates are for.</li></ol></div>
+  </div>
+  <p style="margin-top:6pt"><strong>Building isn't a block.</strong> CopperMediaAI, Sales Dojo and Bet On Me show real skill. But when the plan gets scary, building a new tool will feel like progress while it lets you skip the calls and the camera. For these 90 days, building for yourself doesn't count as work: note the idea for day 91. Building for a paying client does.</p>
 
   <h2>Your day in IST (Monday–Friday, November to March)</h2>
   <p class="sm">Your 3 silent hours are one unbroken block here (10:30–13:45, with a 15-minute break in the middle). If your quiet time falls elsewhere, move the block, but keep the evening for live client work.</p>
@@ -716,22 +731,22 @@ table.daytable tr.gate td{background:var(--amber-t); color:var(--ink)}
     <tbody>
       <tr><td><strong>Low mood, no energy</strong></td><td>Minimum Viable Day. 10-minute walk outside first. Read the Cookie Jar.</td><td>Scroll for two hours and then call the day a write-off</td></tr>
       <tr><td><strong>Urgent errand, half day lost</strong></td><td>Standard Day: keep your paid shift if you have one, plus one 90-minute half of the silent block. Drop the rest.</td><td>Push the silent block "to tonight", into your shift</td></tr>
-      <tr><td><strong>Sick</strong></td><td>Rest. If you have a shift, message your manager before it starts. Log "sick". Resume with a Standard Day.</td><td>Use the 40% rule on your immune system</td></tr>
-      <tr><td><strong>Travel or family event (2–5 days)</strong></td><td>"Phone-only mode": listen to recordings, write hooks in notes, reply to leads. Batch two extra shorts the week before if you can see it coming, and tell your manager early if it overlaps shifts.</td><td>Drop everything, then try to restart cold</td></tr>
-      <tr><td><strong>Lost a whole week</strong></td><td>Restart with three Standard Days, then Full. Pick up the plan where you are, not where the calendar says.</td><td>Try to "make up" hours with 12-hour days (leads to burnout and another lost week)</td></tr>
-      <tr><td><strong>Brutal rejection day</strong></td><td>Review one call honestly, write one lesson, then stop. Rejection is data about the offer, timing or your delivery, not a verdict on you.</td><td>Replay it for hours, or quit the role in the moment</td></tr>
+      <tr><td><strong>Sick</strong></td><td>Rest. Message your manager before any shift. Log "sick". Come back with a Minimum Viable Day.</td><td>Use the 40% rule on your immune system</td></tr>
+      <tr><td><strong>Travel or family event (2–5 days)</strong></td><td>"Phone-only mode": recordings, hooks in notes, replies to leads. Seen it coming? Batch two extra shorts and tell your manager early.</td><td>Drop everything, then try to restart cold</td></tr>
+      <tr><td><strong>Lost a whole week</strong></td><td>The way back in, then three Standard Days, then Full. Tasks resume where you left off; gates go by the calendar.</td><td>Try to "make up" hours with 12-hour days (leads to burnout and another lost week)</td></tr>
+      <tr><td><strong>Brutal rejection day</strong></td><td>Review one call honestly, write one lesson, then stop. Rejection is data, not a verdict on you.</td><td>Replay it for hours, or quit the role in the moment</td></tr>
       <tr><td><strong>A video flops</strong></td><td>Check the retention graph: where did people leave? Fix that one thing in the next video.</td><td>Delete it, change niche, or buy a new camera</td></tr>
     </tbody>
   </table>
 
   <h2>The Sunday review (45 minutes)</h2>
-  <ol class="check">
-    <li>Review the week in your tracker (or the scorecard in Part 10): activity numbers, conversion rates, content metrics, days completed by type.</li>
-    <li>Find the single weakest number. Write one change to test this week.</li>
+  <ol class="check two">
+    <li>Open the Score tab: activity numbers, conversion rates, content, days you showed up. This is when you face the record.</li>
+    <li>Find the weakest number; pick one change to test.</li>
     <li>Re-read last week's log. What surprised you?</li>
-    <li>Update the Accountability Mirror: three targets for next week.</li>
+    <li>Accountability Mirror: three targets for next week.</li>
     <li>Add 2–3 entries to the Cookie Jar.</li>
-    <li>Plan the week: which days are Full and which are Standard, given what you know is coming.</li>
+    <li>Plan the week's Full and Standard days.</li>
     <li>Batch: write next week's three short scripts.</li>
   </ol>
 </section>
@@ -874,10 +889,10 @@ table.daytable tr.gate td{background:var(--amber-t); color:var(--ink)}
   </div>
 
   <div class="box warn"><div class="t">What about CopperMediaAI?</div><ul style="margin:0">
-    <li><strong>It's an asset.</strong> Automated AI-news Reels plus a ManyChat comment-to-DM funnel is exactly what many coaches hire setters to run. Lead with it in applications.</li>
+    <li><strong>It's paused, so pause it on purpose.</strong> As of 5 November it hadn't posted for a few weeks. Don't restart it during these 90 days: it would compete with your new show for the same 90-minute content block.</li>
+    <li><strong>Keep its proof.</strong> Screenshot the ManyChat comment-to-DM flow and the best numbers it produced (comments, DMs, link clicks). Automated Reels plus a comment-to-DM funnel is exactly what many coaches hire setters to run. In applications, say it straight: "I built and ran it; it's paused while I focus on sales." A paused project you can explain is still proof of skill.</li>
     <li><strong>Make the new show in your own voice, not the cloned one.</strong> A cloned voice can't build your confidence on calls or a personal brand people trust. Your own creator research reached the same point: one real human is what can't be copied.</li>
-    <li><strong>Protect your shift.</strong> Its posts go out at 7:30 and 9:30 PM IST, inside your 19:00–23:00 shift. Do approvals in the morning (15 minutes at most), and don't let browser automation run on the Mac you take calls on.</li>
-    <li><strong>Give it two weeks.</strong> If it brings no followers or leads, pause it and its tool costs. Keep Meta's AI label on realistic AI audio, and keep anything you cross-post to YouTube clear of the mass-produced-content rule.</li></ul></div>
+    <li><strong>Cut its costs now; decide its future on day 90:</strong> restart it, turn it into a service you sell, or archive it.</li></ul></div>
 
   <h3>30-question starter bank</h3>
   <p class="sm muted" style="margin-bottom:3pt">These are questions, not answers. Research each from two credible sources before scripting; some answers are more nuanced than the question suggests.</p>
@@ -1248,7 +1263,7 @@ table.daytable tr.gate td{background:var(--amber-t); color:var(--ink)}
   <table class="tight">
     <thead><tr><th style="width:34%">They ask</th><th>Your answer, in outline</th></tr></thead>
     <tbody>
-      <tr><td>"Tell me about yourself."</td><td>Three lines: what you do now (daily training on discovery and objection handling; an AI-news Instagram page with an automated comment-to-DM funnel), why this role, and the hours you cover in their time zone.</td></tr>
+      <tr><td>"Tell me about yourself."</td><td>Three lines: what you do now (daily training on discovery and objection handling) and what you've built (an AI-news Instagram page with an automated comment-to-DM funnel, now paused), why this role, and the hours you cover in their time zone.</td></tr>
       <tr><td>"Why sales, and why setting?"</td><td>You like conversations with numbers attached. Setting is where you learn the whole funnel, and you want to grow into closing.</td></tr>
       <tr><td>"How do you handle rejection?"</td><td>Your fear ladder: you track the reply rate, not the feeling. Give one real number from your tracker.</td></tr>
       <tr><td>"Walk me through booking a call from a cold DM."</td><td>Context and a question → the problem → why now → qualify → two specific times in their time zone → confirm and remind (item 1).</td></tr>
@@ -1385,7 +1400,8 @@ table.daytable tr.gate td{background:var(--amber-t); color:var(--ink)}
       <tr><td>What did "Random Brainstorm" mean?</td><td>Curiosity questions: "Does 4D exist?", "Can you cry from one eye?"</td><td>Part 08: your show's format, and possibly its name</td></tr>
       <tr><td>Fear ranking?</td><td>Camera → calls → rejection → messaging</td><td>Part 03: messaging-first seat, faceless content, a career-only camera ladder</td></tr>
       <tr><td>Equipment?</td><td>MacBook Air M2, iPhone 16 Plus, fair-good internet, mostly reliable power</td><td>Parts 04 and 08: no content gear needed; router UPS and hotspot backup</td></tr>
-      <tr><td>Your other chats (searched at your request)</td><td>CopperMediaAI, AI-tool budget, Sales Dojo, AI-news automation</td><td>Parts 02, 04, 08 and 10: funnel skills as proof, an own-voice show, morning approvals, a tighter tool budget</td></tr>
+      <tr><td>Your other chats (searched at your request)</td><td>CopperMediaAI, AI-tool budget, Sales Dojo, AI-news automation</td><td>Parts 02, 04, 08 and 10: funnel skills as proof, an own-voice show, a tighter tool budget</td></tr>
+      <tr><td>Update, 5 November</td><td>CopperMediaAI hasn't posted for weeks; you close Bet On Me when you see your record</td><td>Parts 02, 06 and 08 and the tracker: CopperMediaAI paused on purpose, the record rule, the way back in, no streak counter</td></tr>
     </tbody>
   </table>
 
@@ -1414,7 +1430,7 @@ table.daytable tr.gate td{background:var(--amber-t); color:var(--ink)}
     <div class="box"><div class="t">Weekends</div><p class="sm"><strong>Saturday</strong>: a 2-hour batch to finish the week's last short or long video. <strong>Sunday</strong>: a 45-minute review, then rest.</p></div>
     <div class="box warn"><div class="t">Gates</div><p class="sm">Days 21, 35, 45, 60, 75 and 90 carry a decision. They are what make the deadline fixed: each one switches you to a more certain income source in time.</p></div>
   </div>
-  <div class="box sales"><div class="t">Before day 1</div><ul class="check" style="margin:0"><li>Set your start date in the tracker (More tab). A Monday keeps weekends in line with US/UK days off.</li><li>Start Wise or Payoneer verification now. It can take several days.</li><li>Order the router UPS and test your iPhone hotspot on a 20-minute video call.</li><li>Read Parts 00–06 of the roadmap once, end to end.</li><li>Decide CopperMediaAI's role for these 90 days (Part 08): keep it automated with approvals done in the morning, or pause it.</li><li>Review your AI-tool spend. Keep what earns or trains you; every ₹5K a month you save is about 14% of the ₹35K target.</li><li>Put the gate days (21, 35, 45, 60, 75) into Bet On Me as promises with a stake.</li><li>Optional head start: shortlist two show names and check the handles.</li></ul></div>
+  <div class="box sales"><div class="t">Before day 1</div><ul class="check" style="margin:0"><li>Set your start date in the tracker (More tab). A Monday keeps weekends in line with US/UK days off.</li><li>Start Wise or Payoneer verification now. It can take several days.</li><li>Order the router UPS and test your iPhone hotspot on a 20-minute video call.</li><li>Read Parts 00–06 of the roadmap once, end to end.</li><li>Pause CopperMediaAI on purpose (Part 08): screenshot its ManyChat flow and best numbers for your applications, then cancel any tool you paid for only because of it.</li><li>Review your AI-tool spend. Keep what earns or trains you; every ₹5K a month you save is about 14% of the ₹35K target.</li><li>Read the record rule and the way back in (Part 06). Leave Bet On Me closed for the 90 days: one log only, this tracker.</li><li>Optional head start: shortlist two show names and check the handles.</li></ul></div>
   <div class="wkblock">
     <div class="wkhead"><span class="wkn">Week 1</span><span class="wkt">Voice, listening, setup</span><span class="wkd">Days 1–7 · 9 Nov – 15 Nov</span></div>
     <p class="wkproof"><strong>Proof by Sunday:</strong> Setup done · rung 3 reached · 2 shorts</p>
@@ -1644,7 +1660,7 @@ table.daytable tr.gate td{background:var(--amber-t); color:var(--ink)}
 <section class="part">
   <div class="kicker">Reference</div>
   <h1>Sources</h1>
-  <p class="sub">Research done November 2026 (v1), updated for v2, v3, the v3.1 cross-check and v3.2. Many creator and sales-leader figures are self-reported or come from secondary write-ups, and are flagged as such in the text. Books referenced without links are listed in Part 12.</p>
+  <p class="sub">Research done November 2026 (v1), updated for v2, v3, the v3.1 cross-check, v3.2 and v3.3. Many creator and sales-leader figures are self-reported or come from secondary write-ups, and are flagged as such in the text. Books referenced without links are listed in Part 12.</p>
   <ol class="src">
     <li>Cleo Abram, Wikipedia. <a href="https://en.wikipedia.org/wiki/Cleo_Abram">en.wikipedia.org/wiki/Cleo_Abram</a></li>
     <li>YouTube Official Blog, "5 Huge If True moments for Cleo Abram". <a href="https://blog.youtube/creator-and-artist-stories/5-huge-if-true-moments-for-cleo-abram/">blog.youtube/…/5-huge-if-true-moments-for-cleo-abram</a></li>
@@ -1683,6 +1699,11 @@ table.daytable tr.gate td{background:var(--amber-t); color:var(--ink)}
     <li>TikTok Creator Rewards eligibility by country (third-party summaries; check TikTok Studio for your account). <a href="https://ttcalculator.net/learn/creator-fund-countries/">ttcalculator.net/learn/creator-fund-countries</a> · <a href="https://shortsfast.com/blog/tiktok-creator-rewards-eligibility-2026/">shortsfast.com/blog/tiktok-creator-rewards-eligibility-2026</a></li>
     <li>Business Standard, "Instagram 'Edits', AI-powered video editing app, available on iOS, Android" (April 2025). <a href="https://business-standard.com/amp/technology/tech-news/instagram-edits-ai-powered-video-editing-app-available-on-ios-android-125042300730_1.html">business-standard.com/…</a> · App Store, "Edits: Video Editor". <a href="https://apps.apple.com/app/id6738967378">apps.apple.com/app/id6738967378</a></li>
     <li>Balban et al., "Brief structured respiration practices enhance mood and reduce physiological arousal", <em>Cell Reports Medicine</em> (January 2023). <a href="https://hubermanlab.stanford.edu/publications/brief-structured-respiration-practices-enhance-mood-and-reduce-physiological-arousal">hubermanlab.stanford.edu/publications/…</a> · Simply Psychology summary. <a href="https://www.simplypsychology.org/news/breathwork-practices-for-reducing-anxiety">simplypsychology.org/news/breathwork-practices-for-reducing-anxiety</a></li>
+    <li>Webb, Chang &amp; Benn, "'The Ostrich Problem': motivated avoidance or rejection of information about goal progress", <em>Social and Personality Psychology Compass</em> 7(11), 794–807 (2013). <a href="https://eprints.whiterose.ac.uk/76946/">eprints.whiterose.ac.uk/76946</a></li>
+    <li>Harkin et al., "Does monitoring goal progress promote goal attainment? A meta-analysis of the experimental evidence", <em>Psychological Bulletin</em> 142(2), 198–229 (2016). <a href="https://doi.org/10.1037/bul0000025">doi.org/10.1037/bul0000025</a></li>
+    <li>Silverman &amp; Barasch, "On or off track: how (broken) streaks affect consumer decisions", <em>Journal of Consumer Research</em> 49(6), 1095–1117 (2023). <a href="https://doi.org/10.1093/jcr/ucac029">doi.org/10.1093/jcr/ucac029</a></li>
+    <li>Dai, Milkman &amp; Riis, "Put your imperfections behind you: temporal landmarks spur goal initiation when they signal new beginnings", <em>Psychological Science</em> 26(12), 1927–1936 (2015). <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4839284">pmc.ncbi.nlm.nih.gov/articles/PMC4839284</a></li>
+    <li>Wohl, Pychyl &amp; Bennett, "I forgive myself, now I can study: how self-forgiveness for procrastinating can reduce future procrastination", <em>Personality and Individual Differences</em> 48(7), 803–808 (2010). BPS Research Digest summary. <a href="https://bps.org.uk/research-digest/cure-procrastination-forgive-yourself">bps.org.uk/research-digest/…</a></li>
   </ol>
 </section>
 

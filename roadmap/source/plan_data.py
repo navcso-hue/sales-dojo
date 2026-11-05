@@ -22,9 +22,9 @@ PRESTART = [
     ("payments", "Start Wise or Payoneer verification now. It can take several days."),
     ("power", "Order the router UPS and test your iPhone hotspot on a 20-minute video call."),
     ("read", "Read Parts 00–06 of the roadmap once, end to end."),
-    ("copper", "Decide CopperMediaAI's role for these 90 days (Part 08): keep it automated with approvals done in the morning, or pause it."),
+    ("copper", "Pause CopperMediaAI on purpose (Part 08): screenshot its ManyChat flow and best numbers for your applications, then cancel any tool you paid for only because of it."),
     ("tools", "Review your AI-tool spend. Keep what earns or trains you; every ₹5K a month you save is about 14% of the ₹35K target."),
-    ("betonme", "Put the gate days (21, 35, 45, 60, 75) into Bet On Me as promises with a stake."),
+    ("record", "Read the record rule and the way back in (Part 06). Leave Bet On Me closed for the 90 days: one log only, this tracker."),
     ("name", "Optional head start: shortlist two show names and check the handles."),
 ]
 
